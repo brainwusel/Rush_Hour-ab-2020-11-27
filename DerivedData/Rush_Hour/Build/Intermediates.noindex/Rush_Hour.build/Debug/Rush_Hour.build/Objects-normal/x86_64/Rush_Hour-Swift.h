@@ -216,22 +216,22 @@ SWIFT_CLASS("_TtC9Rush_Hour11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC9Rush_Hour6MyView")
+@interface MyView : NSView
+- (void)drawRect:(NSRect)dirtyRect;
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSBundle;
 
 SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 @interface ViewController : NSViewController
 - (void)viewDidLoad;
 @property (nonatomic) id _Nullable representedObject;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC9Rush_Hour6myView")
-@interface myView : NSView
-- (void)drawRect:(NSRect)dirtyRect;
-- (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 

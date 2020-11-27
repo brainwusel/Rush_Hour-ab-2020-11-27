@@ -7,14 +7,17 @@ provides-member:
 - ["9Rush_Hour6myViewC", ""]
 provides-dynamic-lookup:
 - "draw"
+- "d\xF6rtiRekt"
 - "erzeugeBasisQuadrat"
 - "erzeugeKleinesQuadrat"
+- "kleineQuadrate"
 depends-top-level:
 - !private "*"
 - !private "+"
 - !private "-"
 - !private "..."
 - !private "/"
+- !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
@@ -27,18 +30,25 @@ depends-top-level:
 - "NSRect"
 - "NSView"
 - !private "Spiel"
+- !private "d\xF6rtiRekt"
 - !private "erzeugeBasisQuadrat"
 - !private "erzeugeKleinesQuadrat"
+- !private "kleineQuadrate"
 - !private "min"
 - "myView"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["Sa", "first"]
+- ["Sa", "init"]
 - !private ["Sa", "last"]
+- !private ["Sa", "subscript"]
+- !private ["s10ArraySliceV", "subscript"]
 - ["SK", ""]
 - !private ["SK", "first"]
+- ["SK", "init"]
 - !private ["SK", "last"]
+- !private ["SK", "subscript"]
 - !private ["SB", "binade"]
 - !private ["SB", "exponentBitCount"]
 - !private ["SB", "exponentBitPattern"]
@@ -50,28 +60,32 @@ depends-member:
 - !private ["SB", "significandWidth"]
 - !private ["12CoreGraphics7CGFloatV", "init"]
 - !private ["So6CGRectV", "height"]
-- !private ["So6CGRectV", "init"]
+- ["So6CGRectV", "init"]
 - !private ["So6CGRectV", "maxX"]
 - !private ["So6CGRectV", "maxY"]
 - !private ["So6CGRectV", "minX"]
 - !private ["So6CGRectV", "minY"]
 - !private ["So6CGRectV", "width"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "first"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "last"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
 - !private ["s7CVarArgP", "CGFloat"]
 - !private ["s7CVarArgP", "NSBezierPath"]
 - !private ["s7CVarArgP", "NSColor"]
-- !private ["s7CVarArgP", "NSRect"]
+- ["s7CVarArgP", "NSRect"]
 - !private ["s7CVarArgP", "Spiel"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "appendRect"]
 - !private ["s7CVarArgP", "black"]
 - !private ["s7CVarArgP", "draw"]
+- !private ["s7CVarArgP", "d\xF6rtiRekt"]
 - !private ["s7CVarArgP", "erzeugeBasisQuadrat"]
 - !private ["s7CVarArgP", "erzeugeKleinesQuadrat"]
 - !private ["s7CVarArgP", "fill"]
 - !private ["s7CVarArgP", "first"]
-- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "kleineQuadrate"]
 - !private ["s7CVarArgP", "last"]
 - !private ["s7CVarArgP", "lightGray"]
 - !private ["s7CVarArgP", "lineWidth"]
@@ -80,31 +94,38 @@ depends-member:
 - !private ["s7CVarArgP", "setFill"]
 - !private ["s7CVarArgP", "setStroke"]
 - !private ["s7CVarArgP", "stroke"]
+- !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "white"]
 - !private ["9Rush_Hour3CarC", "farbe"]
 - !private ["9Rush_Hour3CarC", "zellenBelegt"]
 - ["Sl", ""]
 - !private ["Sl", "first"]
+- ["Sl", "init"]
 - !private ["Sl", "last"]
+- !private ["Sl", "subscript"]
 - ["SL", ""]
 - !private ["SL", "init"]
 - !private ["10Foundation15ContiguousBytesP", "first"]
+- ["10Foundation15ContiguousBytesP", "init"]
 - !private ["10Foundation15ContiguousBytesP", "last"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
 - !private ["s28CustomDebugStringConvertibleP", "NSBezierPath"]
 - !private ["s28CustomDebugStringConvertibleP", "NSColor"]
-- !private ["s28CustomDebugStringConvertibleP", "NSRect"]
+- ["s28CustomDebugStringConvertibleP", "NSRect"]
 - !private ["s28CustomDebugStringConvertibleP", "Spiel"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "appendRect"]
 - !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "draw"]
+- !private ["s28CustomDebugStringConvertibleP", "d\xF6rtiRekt"]
 - !private ["s28CustomDebugStringConvertibleP", "erzeugeBasisQuadrat"]
 - !private ["s28CustomDebugStringConvertibleP", "erzeugeKleinesQuadrat"]
 - !private ["s28CustomDebugStringConvertibleP", "fill"]
 - !private ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "kleineQuadrate"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
 - !private ["s28CustomDebugStringConvertibleP", "lightGray"]
 - !private ["s28CustomDebugStringConvertibleP", "lineWidth"]
@@ -117,31 +138,35 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "setFill"]
 - !private ["s28CustomDebugStringConvertibleP", "setStroke"]
 - !private ["s28CustomDebugStringConvertibleP", "stroke"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
 - !private ["s17CustomReflectableP", "first"]
 - !private ["s17CustomReflectableP", "height"]
-- !private ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "last"]
 - !private ["s17CustomReflectableP", "maxX"]
 - !private ["s17CustomReflectableP", "maxY"]
 - !private ["s17CustomReflectableP", "minX"]
 - !private ["s17CustomReflectableP", "minY"]
+- !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "width"]
 - !private ["s23CustomStringConvertibleP", "CGFloat"]
 - !private ["s23CustomStringConvertibleP", "NSBezierPath"]
 - !private ["s23CustomStringConvertibleP", "NSColor"]
-- !private ["s23CustomStringConvertibleP", "NSRect"]
+- ["s23CustomStringConvertibleP", "NSRect"]
 - !private ["s23CustomStringConvertibleP", "Spiel"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "appendRect"]
 - !private ["s23CustomStringConvertibleP", "black"]
 - !private ["s23CustomStringConvertibleP", "draw"]
+- !private ["s23CustomStringConvertibleP", "d\xF6rtiRekt"]
 - !private ["s23CustomStringConvertibleP", "erzeugeBasisQuadrat"]
 - !private ["s23CustomStringConvertibleP", "erzeugeKleinesQuadrat"]
 - !private ["s23CustomStringConvertibleP", "fill"]
 - !private ["s23CustomStringConvertibleP", "first"]
-- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "kleineQuadrate"]
 - !private ["s23CustomStringConvertibleP", "last"]
 - !private ["s23CustomStringConvertibleP", "lightGray"]
 - !private ["s23CustomStringConvertibleP", "lineWidth"]
@@ -150,43 +175,50 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "setFill"]
 - !private ["s23CustomStringConvertibleP", "setStroke"]
 - !private ["s23CustomStringConvertibleP", "stroke"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "white"]
-- !private ["10Foundation12DataProtocolP", ""]
+- ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "first"]
+- ["10Foundation12DataProtocolP", "init"]
 - !private ["10Foundation12DataProtocolP", "last"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
 - !private ["Se", "first"]
 - !private ["Se", "height"]
-- !private ["Se", "init"]
+- ["Se", "init"]
 - !private ["Se", "last"]
 - !private ["Se", "maxX"]
 - !private ["Se", "maxY"]
 - !private ["Se", "minX"]
 - !private ["Se", "minY"]
+- !private ["Se", "subscript"]
 - !private ["Se", "width"]
 - !private ["SE", "first"]
 - !private ["SE", "height"]
-- !private ["SE", "init"]
+- ["SE", "init"]
 - !private ["SE", "last"]
 - !private ["SE", "maxX"]
 - !private ["SE", "maxY"]
 - !private ["SE", "minX"]
 - !private ["SE", "minY"]
+- !private ["SE", "subscript"]
 - !private ["SE", "width"]
 - !private ["SQ", "CGFloat"]
 - !private ["SQ", "NSBezierPath"]
 - !private ["SQ", "NSColor"]
-- !private ["SQ", "NSRect"]
+- ["SQ", "NSRect"]
 - !private ["SQ", "Spiel"]
 - ["SQ", ""]
 - !private ["SQ", "appendRect"]
 - !private ["SQ", "black"]
 - !private ["SQ", "draw"]
+- !private ["SQ", "d\xF6rtiRekt"]
 - !private ["SQ", "erzeugeBasisQuadrat"]
 - !private ["SQ", "erzeugeKleinesQuadrat"]
 - !private ["SQ", "fill"]
 - !private ["SQ", "first"]
 - !private ["SQ", "height"]
-- !private ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "kleineQuadrate"]
 - !private ["SQ", "last"]
 - !private ["SQ", "lightGray"]
 - !private ["SQ", "lineWidth"]
@@ -199,11 +231,14 @@ depends-member:
 - !private ["SQ", "setFill"]
 - !private ["SQ", "setStroke"]
 - !private ["SQ", "stroke"]
+- !private ["SQ", "subscript"]
 - !private ["SQ", "white"]
 - !private ["SQ", "width"]
-- !private ["s25ExpressibleByArrayLiteralP", ""]
+- ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
@@ -269,17 +304,19 @@ depends-member:
 - !private ["SH", "CGFloat"]
 - !private ["SH", "NSBezierPath"]
 - !private ["SH", "NSColor"]
-- !private ["SH", "NSRect"]
+- ["SH", "NSRect"]
 - !private ["SH", "Spiel"]
 - ["SH", ""]
 - !private ["SH", "appendRect"]
 - !private ["SH", "black"]
 - !private ["SH", "draw"]
+- !private ["SH", "d\xF6rtiRekt"]
 - !private ["SH", "erzeugeBasisQuadrat"]
 - !private ["SH", "erzeugeKleinesQuadrat"]
 - !private ["SH", "fill"]
 - !private ["SH", "first"]
-- !private ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "kleineQuadrate"]
 - !private ["SH", "last"]
 - !private ["SH", "lightGray"]
 - !private ["SH", "lineWidth"]
@@ -288,13 +325,18 @@ depends-member:
 - !private ["SH", "setFill"]
 - !private ["SH", "setStroke"]
 - !private ["SH", "stroke"]
+- !private ["SH", "subscript"]
 - !private ["SH", "white"]
 - ["s25LosslessStringConvertibleP", ""]
-- !private ["SM", ""]
+- ["SM", ""]
 - !private ["SM", "first"]
+- ["SM", "init"]
 - !private ["SM", "last"]
+- !private ["SM", "subscript"]
 - !private ["10Foundation19MutableDataProtocolP", "first"]
+- ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "last"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
 - ["So22NSAccessibilityElementP", "Bool"]
 - !private ["So22NSAccessibilityElementP", "CGFloat"]
 - ["So22NSAccessibilityElementP", "Int"]
@@ -304,9 +346,11 @@ depends-member:
 - !private ["So22NSAccessibilityElementP", "Spiel"]
 - ["So22NSAccessibilityElementP", ""]
 - ["So22NSAccessibilityElementP", "draw"]
+- ["So22NSAccessibilityElementP", "d\xF6rtiRekt"]
 - ["So22NSAccessibilityElementP", "erzeugeBasisQuadrat"]
 - ["So22NSAccessibilityElementP", "erzeugeKleinesQuadrat"]
 - ["So22NSAccessibilityElementP", "init"]
+- ["So22NSAccessibilityElementP", "kleineQuadrate"]
 - !private ["So22NSAccessibilityElementP", "min"]
 - ["So15NSAccessibilityP", "Bool"]
 - !private ["So15NSAccessibilityP", "CGFloat"]
@@ -317,9 +361,11 @@ depends-member:
 - !private ["So15NSAccessibilityP", "Spiel"]
 - ["So15NSAccessibilityP", ""]
 - ["So15NSAccessibilityP", "draw"]
+- ["So15NSAccessibilityP", "d\xF6rtiRekt"]
 - ["So15NSAccessibilityP", "erzeugeBasisQuadrat"]
 - ["So15NSAccessibilityP", "erzeugeKleinesQuadrat"]
 - ["So15NSAccessibilityP", "init"]
+- ["So15NSAccessibilityP", "kleineQuadrate"]
 - !private ["So15NSAccessibilityP", "min"]
 - ["So29NSAnimatablePropertyContainerP", "Bool"]
 - !private ["So29NSAnimatablePropertyContainerP", "CGFloat"]
@@ -330,9 +376,11 @@ depends-member:
 - !private ["So29NSAnimatablePropertyContainerP", "Spiel"]
 - ["So29NSAnimatablePropertyContainerP", ""]
 - ["So29NSAnimatablePropertyContainerP", "draw"]
+- ["So29NSAnimatablePropertyContainerP", "d\xF6rtiRekt"]
 - ["So29NSAnimatablePropertyContainerP", "erzeugeBasisQuadrat"]
 - ["So29NSAnimatablePropertyContainerP", "erzeugeKleinesQuadrat"]
 - ["So29NSAnimatablePropertyContainerP", "init"]
+- ["So29NSAnimatablePropertyContainerP", "kleineQuadrate"]
 - !private ["So29NSAnimatablePropertyContainerP", "min"]
 - ["So25NSAppearanceCustomizationP", "Bool"]
 - !private ["So25NSAppearanceCustomizationP", "CGFloat"]
@@ -343,9 +391,11 @@ depends-member:
 - !private ["So25NSAppearanceCustomizationP", "Spiel"]
 - ["So25NSAppearanceCustomizationP", ""]
 - ["So25NSAppearanceCustomizationP", "draw"]
+- ["So25NSAppearanceCustomizationP", "d\xF6rtiRekt"]
 - ["So25NSAppearanceCustomizationP", "erzeugeBasisQuadrat"]
 - ["So25NSAppearanceCustomizationP", "erzeugeKleinesQuadrat"]
 - ["So25NSAppearanceCustomizationP", "init"]
+- ["So25NSAppearanceCustomizationP", "kleineQuadrate"]
 - !private ["So25NSAppearanceCustomizationP", "min"]
 - !private ["So12NSBezierPathC", "appendRect"]
 - !private ["So12NSBezierPathC", "fill"]
@@ -364,10 +414,12 @@ depends-member:
 - !private ["So8NSCodingP", "black"]
 - ["So8NSCodingP", "draw"]
 - ["So8NSCodingP", "drawRect"]
+- ["So8NSCodingP", "d\xF6rtiRekt"]
 - ["So8NSCodingP", "erzeugeBasisQuadrat"]
 - ["So8NSCodingP", "erzeugeKleinesQuadrat"]
 - !private ["So8NSCodingP", "fill"]
 - ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "kleineQuadrate"]
 - !private ["So8NSCodingP", "lightGray"]
 - !private ["So8NSCodingP", "lineWidth"]
 - !private ["So8NSCodingP", "min"]
@@ -402,9 +454,11 @@ depends-member:
 - !private ["So21NSDraggingDestinationP", "Spiel"]
 - ["So21NSDraggingDestinationP", ""]
 - ["So21NSDraggingDestinationP", "draw"]
+- ["So21NSDraggingDestinationP", "d\xF6rtiRekt"]
 - ["So21NSDraggingDestinationP", "erzeugeBasisQuadrat"]
 - ["So21NSDraggingDestinationP", "erzeugeKleinesQuadrat"]
 - ["So21NSDraggingDestinationP", "init"]
+- ["So21NSDraggingDestinationP", "kleineQuadrate"]
 - !private ["So21NSDraggingDestinationP", "min"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGFloat"]
@@ -423,11 +477,13 @@ depends-member:
 - !private ["So8NSObjectC", "black"]
 - ["So8NSObjectC", "draw"]
 - ["So8NSObjectC", "drawRect"]
+- ["So8NSObjectC", "d\xF6rtiRekt"]
 - ["So8NSObjectC", "erzeugeBasisQuadrat"]
 - ["So8NSObjectC", "erzeugeKleinesQuadrat"]
 - !private ["So8NSObjectC", "fill"]
 - !private ["So8NSObjectC", "fillRect"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "kleineQuadrate"]
 - !private ["So8NSObjectC", "lightGray"]
 - !private ["So8NSObjectC", "lineWidth"]
 - !private ["So8NSObjectC", "min"]
@@ -454,11 +510,13 @@ depends-member:
 - !private ["So8NSObjectP", "black"]
 - ["So8NSObjectP", "draw"]
 - ["So8NSObjectP", "drawRect"]
+- ["So8NSObjectP", "d\xF6rtiRekt"]
 - ["So8NSObjectP", "erzeugeBasisQuadrat"]
 - ["So8NSObjectP", "erzeugeKleinesQuadrat"]
 - !private ["So8NSObjectP", "fill"]
 - !private ["So8NSObjectP", "fillRect"]
 - ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "kleineQuadrate"]
 - !private ["So8NSObjectP", "lightGray"]
 - !private ["So8NSObjectP", "lineWidth"]
 - !private ["So8NSObjectP", "min"]
@@ -490,9 +548,11 @@ depends-member:
 - ["So11NSResponderC", ""]
 - ["So11NSResponderC", "draw"]
 - ["So11NSResponderC", "drawRect"]
+- ["So11NSResponderC", "d\xF6rtiRekt"]
 - ["So11NSResponderC", "erzeugeBasisQuadrat"]
 - ["So11NSResponderC", "erzeugeKleinesQuadrat"]
 - ["So11NSResponderC", "init"]
+- ["So11NSResponderC", "kleineQuadrate"]
 - !private ["So11NSResponderC", "min"]
 - !private ["So14NSSecureCodingP", "appendRect"]
 - !private ["So14NSSecureCodingP", "black"]
@@ -515,9 +575,11 @@ depends-member:
 - ["So30NSStandardKeyBindingRespondingP", ""]
 - ["So30NSStandardKeyBindingRespondingP", "draw"]
 - ["So30NSStandardKeyBindingRespondingP", "drawRect"]
+- ["So30NSStandardKeyBindingRespondingP", "d\xF6rtiRekt"]
 - ["So30NSStandardKeyBindingRespondingP", "erzeugeBasisQuadrat"]
 - ["So30NSStandardKeyBindingRespondingP", "erzeugeKleinesQuadrat"]
 - ["So30NSStandardKeyBindingRespondingP", "init"]
+- ["So30NSStandardKeyBindingRespondingP", "kleineQuadrate"]
 - !private ["So30NSStandardKeyBindingRespondingP", "min"]
 - ["So18NSTouchBarProviderP", "Bool"]
 - !private ["So18NSTouchBarProviderP", "CGFloat"]
@@ -529,9 +591,11 @@ depends-member:
 - ["So18NSTouchBarProviderP", ""]
 - ["So18NSTouchBarProviderP", "draw"]
 - ["So18NSTouchBarProviderP", "drawRect"]
+- ["So18NSTouchBarProviderP", "d\xF6rtiRekt"]
 - ["So18NSTouchBarProviderP", "erzeugeBasisQuadrat"]
 - ["So18NSTouchBarProviderP", "erzeugeKleinesQuadrat"]
 - ["So18NSTouchBarProviderP", "init"]
+- ["So18NSTouchBarProviderP", "kleineQuadrate"]
 - !private ["So18NSTouchBarProviderP", "min"]
 - ["So23NSUserActivityRestoringP", "Bool"]
 - !private ["So23NSUserActivityRestoringP", "CGFloat"]
@@ -543,9 +607,11 @@ depends-member:
 - ["So23NSUserActivityRestoringP", ""]
 - ["So23NSUserActivityRestoringP", "draw"]
 - ["So23NSUserActivityRestoringP", "drawRect"]
+- ["So23NSUserActivityRestoringP", "d\xF6rtiRekt"]
 - ["So23NSUserActivityRestoringP", "erzeugeBasisQuadrat"]
 - ["So23NSUserActivityRestoringP", "erzeugeKleinesQuadrat"]
 - ["So23NSUserActivityRestoringP", "init"]
+- ["So23NSUserActivityRestoringP", "kleineQuadrate"]
 - !private ["So23NSUserActivityRestoringP", "min"]
 - ["So33NSUserInterfaceItemIdentificationP", "Bool"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "CGFloat"]
@@ -556,9 +622,11 @@ depends-member:
 - !private ["So33NSUserInterfaceItemIdentificationP", "Spiel"]
 - ["So33NSUserInterfaceItemIdentificationP", ""]
 - ["So33NSUserInterfaceItemIdentificationP", "draw"]
+- ["So33NSUserInterfaceItemIdentificationP", "d\xF6rtiRekt"]
 - ["So33NSUserInterfaceItemIdentificationP", "erzeugeBasisQuadrat"]
 - ["So33NSUserInterfaceItemIdentificationP", "erzeugeKleinesQuadrat"]
 - ["So33NSUserInterfaceItemIdentificationP", "init"]
+- ["So33NSUserInterfaceItemIdentificationP", "kleineQuadrate"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "min"]
 - ["So6NSViewC", "Bool"]
 - !private ["So6NSViewC", "CGFloat"]
@@ -569,27 +637,35 @@ depends-member:
 - !private ["So6NSViewC", "Spiel"]
 - ["So6NSViewC", ""]
 - ["So6NSViewC", "draw"]
+- ["So6NSViewC", "d\xF6rtiRekt"]
 - ["So6NSViewC", "erzeugeBasisQuadrat"]
 - ["So6NSViewC", "erzeugeKleinesQuadrat"]
 - ["So6NSViewC", "init"]
+- ["So6NSViewC", "kleineQuadrate"]
 - !private ["So6NSViewC", "min"]
 - !private ["Sj", "*"]
 - !private ["Sj", "*="]
 - !private ["Sj", ""]
 - !private ["Sj", "init"]
 - !private ["Sj", "magnitude"]
-- !private ["Sk", ""]
+- ["Sk", ""]
 - !private ["Sk", "first"]
+- ["Sk", "init"]
 - !private ["Sk", "last"]
-- !private ["Sm", ""]
+- !private ["Sk", "subscript"]
+- ["Sm", ""]
 - !private ["Sm", "first"]
+- ["Sm", "init"]
 - !private ["Sm", "last"]
+- !private ["Sm", "subscript"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
 - ["ST", ""]
 - !private ["ST", "first"]
+- ["ST", "init"]
 - !private ["ST", "last"]
 - !private ["ST", "makeIterator"]
+- !private ["ST", "subscript"]
 - !private ["s13SignedNumericP", "-"]
 - !private ["s13SignedNumericP", ""]
 - !private ["s13SignedNumericP", "init"]
@@ -603,18 +679,22 @@ depends-member:
 - ["s16TextOutputStreamP", ""]
 - ["s20TextOutputStreamableP", ""]
 - !private ["s14_ArrayProtocolP", "first"]
+- ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "last"]
+- !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "height"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "maxX"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "maxY"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "minX"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "minY"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "width"]
 - !private ["s24_DestructorSafeContainerP", "first"]
+- ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "last"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
@@ -626,22 +706,28 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "setStroke"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s19_HasContiguousBytesP", "first"]
+- ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "last"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSBezierPath"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSColor"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSRect"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSRect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Spiel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "appendRect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "draw"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "d\xF6rtiRekt"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "erzeugeBasisQuadrat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "erzeugeKleinesQuadrat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fill"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kleineQuadrate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lightGray"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lineWidth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "min"]
@@ -653,16 +739,18 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSBezierPath"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSColor"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSRect"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSRect"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Spiel"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "appendRect"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "black"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "draw"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "d\xF6rtiRekt"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "erzeugeBasisQuadrat"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "erzeugeKleinesQuadrat"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fill"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kleineQuadrate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lightGray"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lineWidth"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "min"]
@@ -673,22 +761,25 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "last"]
 - !private ["s21_ObjectiveCBridgeableP", "maxX"]
 - !private ["s21_ObjectiveCBridgeableP", "maxY"]
 - !private ["s21_ObjectiveCBridgeableP", "minX"]
 - !private ["s21_ObjectiveCBridgeableP", "minY"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CGFloat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSBezierPath"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSColor"]
-- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSRect"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "NSRect"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "Spiel"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "draw"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "d\xF6rtiRekt"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "erzeugeBasisQuadrat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "erzeugeKleinesQuadrat"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "kleineQuadrate"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "min"]
 - ["9Rush_Hour6myViewC", "Bool"]
 - !private ["9Rush_Hour6myViewC", "CGFloat"]
@@ -700,31 +791,34 @@ depends-member:
 - ["9Rush_Hour6myViewC", ""]
 - ["9Rush_Hour6myViewC", "deinit"]
 - ["9Rush_Hour6myViewC", "draw"]
+- ["9Rush_Hour6myViewC", "d\xF6rtiRekt"]
 - ["9Rush_Hour6myViewC", "erzeugeBasisQuadrat"]
 - ["9Rush_Hour6myViewC", "erzeugeKleinesQuadrat"]
 - ["9Rush_Hour6myViewC", "init"]
+- ["9Rush_Hour6myViewC", "kleineQuadrate"]
 - !private ["9Rush_Hour6myViewC", "min"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
-- !private "Sa"
+- "Sa"
+- !private "s10ArraySliceV"
 - "SK"
 - !private "SB"
 - !private "12CoreGraphics7CGFloatV"
-- !private "So6CGRectV"
-- !private "8CloudKit21CKRecordValueProtocolP"
+- "So6CGRectV"
+- "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "9Rush_Hour3CarC"
 - "Sl"
 - "SL"
-- !private "10Foundation15ContiguousBytesP"
+- "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
-- !private "s17CustomReflectableP"
+- "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "10Foundation12DataProtocolP"
-- !private "Se"
-- !private "SE"
+- "10Foundation12DataProtocolP"
+- "Se"
+- "SE"
 - "SQ"
-- !private "s25ExpressibleByArrayLiteralP"
+- "s25ExpressibleByArrayLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
@@ -734,8 +828,8 @@ depends-nominal:
 - !private "SF"
 - "SH"
 - "s25LosslessStringConvertibleP"
-- !private "SM"
-- !private "10Foundation19MutableDataProtocolP"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
 - "So22NSAccessibilityElementP"
 - "So15NSAccessibilityP"
 - "So29NSAnimatablePropertyContainerP"
@@ -757,29 +851,29 @@ depends-nominal:
 - "So33NSUserInterfaceItemIdentificationP"
 - "So6NSViewC"
 - !private "Sj"
-- !private "Sk"
-- !private "Sm"
+- "Sk"
+- "Sm"
 - "ST"
 - !private "s13SignedNumericP"
 - !private "9Rush_Hour5SpielC"
 - !private "Sx"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
-- !private "s14_ArrayProtocolP"
+- "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
-- !private "s30_CustomPlaygroundQuickLookableP"
-- !private "s24_DestructorSafeContainerP"
+- "s30_CustomPlaygroundQuickLookableP"
+- "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
-- !private "s19_HasContiguousBytesP"
-- !private "s35_HasCustomAnyHashableRepresentationP"
+- "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
-- !private "s21_ObjectiveCBridgeableP"
+- "s21_ObjectiveCBridgeableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
 - "9Rush_Hour6myViewC"
 depends-dynamic-lookup:
@@ -820,4 +914,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "dab0b13efb0051fa482f8139d54abaa3"
+interface-hash: "e878f8d35ebd302336169b66ad866492"

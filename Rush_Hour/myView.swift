@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class myView: NSView {
+class MyView: NSView {
     
     var dörtiRekt = NSRect()
     var kleineQuadrate = [[NSRect]]()

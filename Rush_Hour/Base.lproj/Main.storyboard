@@ -705,7 +705,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Rush_Hour" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl" customClass="myView" customModule="Rush_Hour" customModuleProvider="target">
+                    <view key="view" id="m2S-Jp-Qdl" customClass="MyView" customModule="Rush_Hour" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1400" height="709"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>

@@ -1,10 +1,10 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "myView"
+- "MyView"
 provides-nominal:
-- "9Rush_Hour6myViewC"
+- "9Rush_Hour6MyViewC"
 provides-member:
-- ["9Rush_Hour6myViewC", ""]
+- ["9Rush_Hour6MyViewC", ""]
 provides-dynamic-lookup:
 - "draw"
 - "d\xF6rtiRekt"
@@ -25,6 +25,7 @@ depends-top-level:
 - !private "FloatLiteralType"
 - "Int"
 - !private "IntegerLiteralType"
+- "MyView"
 - !private "NSBezierPath"
 - "NSColor"
 - "NSRect"
@@ -35,7 +36,6 @@ depends-top-level:
 - !private "erzeugeKleinesQuadrat"
 - !private "kleineQuadrate"
 - !private "min"
-- "myView"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
@@ -337,6 +337,22 @@ depends-member:
 - ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "last"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- ["9Rush_Hour6MyViewC", "Bool"]
+- !private ["9Rush_Hour6MyViewC", "CGFloat"]
+- ["9Rush_Hour6MyViewC", "Int"]
+- !private ["9Rush_Hour6MyViewC", "NSBezierPath"]
+- ["9Rush_Hour6MyViewC", "NSColor"]
+- ["9Rush_Hour6MyViewC", "NSRect"]
+- !private ["9Rush_Hour6MyViewC", "Spiel"]
+- ["9Rush_Hour6MyViewC", ""]
+- ["9Rush_Hour6MyViewC", "deinit"]
+- ["9Rush_Hour6MyViewC", "draw"]
+- ["9Rush_Hour6MyViewC", "d\xF6rtiRekt"]
+- ["9Rush_Hour6MyViewC", "erzeugeBasisQuadrat"]
+- ["9Rush_Hour6MyViewC", "erzeugeKleinesQuadrat"]
+- ["9Rush_Hour6MyViewC", "init"]
+- ["9Rush_Hour6MyViewC", "kleineQuadrate"]
+- !private ["9Rush_Hour6MyViewC", "min"]
 - ["So22NSAccessibilityElementP", "Bool"]
 - !private ["So22NSAccessibilityElementP", "CGFloat"]
 - ["So22NSAccessibilityElementP", "Int"]
@@ -781,22 +797,6 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "erzeugeKleinesQuadrat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "kleineQuadrate"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "min"]
-- ["9Rush_Hour6myViewC", "Bool"]
-- !private ["9Rush_Hour6myViewC", "CGFloat"]
-- ["9Rush_Hour6myViewC", "Int"]
-- !private ["9Rush_Hour6myViewC", "NSBezierPath"]
-- ["9Rush_Hour6myViewC", "NSColor"]
-- ["9Rush_Hour6myViewC", "NSRect"]
-- !private ["9Rush_Hour6myViewC", "Spiel"]
-- ["9Rush_Hour6myViewC", ""]
-- ["9Rush_Hour6myViewC", "deinit"]
-- ["9Rush_Hour6myViewC", "draw"]
-- ["9Rush_Hour6myViewC", "d\xF6rtiRekt"]
-- ["9Rush_Hour6myViewC", "erzeugeBasisQuadrat"]
-- ["9Rush_Hour6myViewC", "erzeugeKleinesQuadrat"]
-- ["9Rush_Hour6myViewC", "init"]
-- ["9Rush_Hour6myViewC", "kleineQuadrate"]
-- !private ["9Rush_Hour6myViewC", "min"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - "Sa"
@@ -830,6 +830,7 @@ depends-nominal:
 - "s25LosslessStringConvertibleP"
 - "SM"
 - "10Foundation19MutableDataProtocolP"
+- "9Rush_Hour6MyViewC"
 - "So22NSAccessibilityElementP"
 - "So15NSAccessibilityP"
 - "So29NSAnimatablePropertyContainerP"
@@ -875,7 +876,6 @@ depends-nominal:
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - "s21_ObjectiveCBridgeableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
-- "9Rush_Hour6myViewC"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
@@ -914,4 +914,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e878f8d35ebd302336169b66ad866492"
+interface-hash: "b506638a0ad2b6601d7df18003c77df6"
