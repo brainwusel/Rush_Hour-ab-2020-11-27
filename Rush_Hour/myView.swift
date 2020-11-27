@@ -9,9 +9,24 @@ import Cocoa
 
 class myView: NSView {
     
+    var dörtiRekt = NSRect()
+    var kleineQuadrate = [[NSRect]]()
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
+        
+        dörtiRekt = dirtyRect
+        
+        let re_Null = NSRect(x: 0, y: 0, width: 0, height: 0)
+        kleineQuadrate = [[re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null]]
+        var kleinesQuadrat = NSRect()
+        
         
         // Hintergrund
         let re_HinterGrund = NSRect(x: 0, y: 0, width: dirtyRect.width, height: dirtyRect.height)
@@ -26,7 +41,8 @@ class myView: NSView {
         // kleine Quadrate -> Grid
         for w in 1 ... 6 {
             for s in 1 ... 6 {
-                _ = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
+                kleinesQuadrat = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
+                kleineQuadrate[w][s] = kleinesQuadrat
             }
         }
         
