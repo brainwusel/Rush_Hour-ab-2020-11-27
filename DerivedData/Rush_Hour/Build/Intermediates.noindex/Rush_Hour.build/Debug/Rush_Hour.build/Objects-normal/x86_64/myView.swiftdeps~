@@ -1,16 +1,17 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "myView"
+- "MyView"
 provides-nominal:
-- "9Rush_Hour6myViewC"
+- "9Rush_Hour6MyViewC"
 provides-member:
-- ["9Rush_Hour6myViewC", ""]
+- ["9Rush_Hour6MyViewC", ""]
 provides-dynamic-lookup:
 - "draw"
 - "d\xF6rtiRekt"
 - "erzeugeBasisQuadrat"
 - "erzeugeKleinesQuadrat"
 - "kleineQuadrate"
+- "kleineQuadrateReset"
 depends-top-level:
 - !private "*"
 - !private "+"
@@ -25,26 +26,31 @@ depends-top-level:
 - !private "FloatLiteralType"
 - "Int"
 - !private "IntegerLiteralType"
+- "MyView"
 - !private "NSBezierPath"
 - "NSColor"
 - "NSRect"
 - "NSView"
 - !private "Spiel"
+- !private "StringLiteralType"
 - !private "d\xF6rtiRekt"
 - !private "erzeugeBasisQuadrat"
 - !private "erzeugeKleinesQuadrat"
 - !private "kleineQuadrate"
+- !private "kleineQuadrateReset"
 - !private "min"
-- "myView"
+- !private "print"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
+- !private ["Sa", "count"]
 - !private ["Sa", "first"]
 - ["Sa", "init"]
 - !private ["Sa", "last"]
 - !private ["Sa", "subscript"]
 - !private ["s10ArraySliceV", "subscript"]
 - ["SK", ""]
+- !private ["SK", "count"]
 - !private ["SK", "first"]
 - ["SK", "init"]
 - !private ["SK", "last"]
@@ -66,6 +72,7 @@ depends-member:
 - !private ["So6CGRectV", "minX"]
 - !private ["So6CGRectV", "minY"]
 - !private ["So6CGRectV", "width"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "first"]
 - ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "last"]
@@ -78,6 +85,7 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "appendRect"]
 - !private ["s7CVarArgP", "black"]
+- !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "draw"]
 - !private ["s7CVarArgP", "d\xF6rtiRekt"]
 - !private ["s7CVarArgP", "erzeugeBasisQuadrat"]
@@ -86,10 +94,12 @@ depends-member:
 - !private ["s7CVarArgP", "first"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "kleineQuadrate"]
+- !private ["s7CVarArgP", "kleineQuadrateReset"]
 - !private ["s7CVarArgP", "last"]
 - !private ["s7CVarArgP", "lightGray"]
 - !private ["s7CVarArgP", "lineWidth"]
 - !private ["s7CVarArgP", "min"]
+- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "set"]
 - !private ["s7CVarArgP", "setFill"]
 - !private ["s7CVarArgP", "setStroke"]
@@ -99,12 +109,14 @@ depends-member:
 - !private ["9Rush_Hour3CarC", "farbe"]
 - !private ["9Rush_Hour3CarC", "zellenBelegt"]
 - ["Sl", ""]
+- !private ["Sl", "count"]
 - !private ["Sl", "first"]
 - ["Sl", "init"]
 - !private ["Sl", "last"]
 - !private ["Sl", "subscript"]
 - ["SL", ""]
 - !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["10Foundation15ContiguousBytesP", "first"]
 - ["10Foundation15ContiguousBytesP", "init"]
 - !private ["10Foundation15ContiguousBytesP", "last"]
@@ -117,6 +129,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "appendRect"]
 - !private ["s28CustomDebugStringConvertibleP", "black"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "draw"]
 - !private ["s28CustomDebugStringConvertibleP", "d\xF6rtiRekt"]
 - !private ["s28CustomDebugStringConvertibleP", "erzeugeBasisQuadrat"]
@@ -126,6 +139,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "height"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "kleineQuadrate"]
+- !private ["s28CustomDebugStringConvertibleP", "kleineQuadrateReset"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
 - !private ["s28CustomDebugStringConvertibleP", "lightGray"]
 - !private ["s28CustomDebugStringConvertibleP", "lineWidth"]
@@ -134,6 +148,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "min"]
 - !private ["s28CustomDebugStringConvertibleP", "minX"]
 - !private ["s28CustomDebugStringConvertibleP", "minY"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "set"]
 - !private ["s28CustomDebugStringConvertibleP", "setFill"]
 - !private ["s28CustomDebugStringConvertibleP", "setStroke"]
@@ -141,6 +156,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "first"]
 - !private ["s17CustomReflectableP", "height"]
 - ["s17CustomReflectableP", "init"]
@@ -157,8 +173,11 @@ depends-member:
 - ["s23CustomStringConvertibleP", "NSRect"]
 - !private ["s23CustomStringConvertibleP", "Spiel"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "appendRect"]
 - !private ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "draw"]
 - !private ["s23CustomStringConvertibleP", "d\xF6rtiRekt"]
 - !private ["s23CustomStringConvertibleP", "erzeugeBasisQuadrat"]
@@ -167,10 +186,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "first"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "kleineQuadrate"]
+- !private ["s23CustomStringConvertibleP", "kleineQuadrateReset"]
 - !private ["s23CustomStringConvertibleP", "last"]
 - !private ["s23CustomStringConvertibleP", "lightGray"]
 - !private ["s23CustomStringConvertibleP", "lineWidth"]
 - !private ["s23CustomStringConvertibleP", "min"]
+- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "set"]
 - !private ["s23CustomStringConvertibleP", "setFill"]
 - !private ["s23CustomStringConvertibleP", "setStroke"]
@@ -178,10 +199,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "white"]
 - ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "first"]
 - ["10Foundation12DataProtocolP", "init"]
 - !private ["10Foundation12DataProtocolP", "last"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "count"]
 - !private ["Se", "first"]
 - !private ["Se", "height"]
 - ["Se", "init"]
@@ -192,6 +215,9 @@ depends-member:
 - !private ["Se", "minY"]
 - !private ["Se", "subscript"]
 - !private ["Se", "width"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SE", "count"]
 - !private ["SE", "first"]
 - !private ["SE", "height"]
 - ["SE", "init"]
@@ -210,6 +236,7 @@ depends-member:
 - ["SQ", ""]
 - !private ["SQ", "appendRect"]
 - !private ["SQ", "black"]
+- !private ["SQ", "count"]
 - !private ["SQ", "draw"]
 - !private ["SQ", "d\xF6rtiRekt"]
 - !private ["SQ", "erzeugeBasisQuadrat"]
@@ -219,6 +246,7 @@ depends-member:
 - !private ["SQ", "height"]
 - ["SQ", "init"]
 - !private ["SQ", "kleineQuadrate"]
+- !private ["SQ", "kleineQuadrateReset"]
 - !private ["SQ", "last"]
 - !private ["SQ", "lightGray"]
 - !private ["SQ", "lineWidth"]
@@ -227,6 +255,7 @@ depends-member:
 - !private ["SQ", "min"]
 - !private ["SQ", "minX"]
 - !private ["SQ", "minY"]
+- !private ["SQ", "print"]
 - !private ["SQ", "set"]
 - !private ["SQ", "setFill"]
 - !private ["SQ", "setStroke"]
@@ -235,6 +264,7 @@ depends-member:
 - !private ["SQ", "white"]
 - !private ["SQ", "width"]
 - ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
@@ -245,7 +275,9 @@ depends-member:
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
 - ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
 - ["s26ExpressibleByStringLiteralP", ""]
 - ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "*"]
@@ -309,6 +341,7 @@ depends-member:
 - ["SH", ""]
 - !private ["SH", "appendRect"]
 - !private ["SH", "black"]
+- !private ["SH", "count"]
 - !private ["SH", "draw"]
 - !private ["SH", "d\xF6rtiRekt"]
 - !private ["SH", "erzeugeBasisQuadrat"]
@@ -317,10 +350,12 @@ depends-member:
 - !private ["SH", "first"]
 - ["SH", "init"]
 - !private ["SH", "kleineQuadrate"]
+- !private ["SH", "kleineQuadrateReset"]
 - !private ["SH", "last"]
 - !private ["SH", "lightGray"]
 - !private ["SH", "lineWidth"]
 - !private ["SH", "min"]
+- !private ["SH", "print"]
 - !private ["SH", "set"]
 - !private ["SH", "setFill"]
 - !private ["SH", "setStroke"]
@@ -329,14 +364,34 @@ depends-member:
 - !private ["SH", "white"]
 - ["s25LosslessStringConvertibleP", ""]
 - ["SM", ""]
+- !private ["SM", "count"]
 - !private ["SM", "first"]
 - ["SM", "init"]
 - !private ["SM", "last"]
 - !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "first"]
 - ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "last"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- ["9Rush_Hour6MyViewC", "Bool"]
+- !private ["9Rush_Hour6MyViewC", "CGFloat"]
+- ["9Rush_Hour6MyViewC", "Int"]
+- !private ["9Rush_Hour6MyViewC", "NSBezierPath"]
+- ["9Rush_Hour6MyViewC", "NSColor"]
+- ["9Rush_Hour6MyViewC", "NSRect"]
+- !private ["9Rush_Hour6MyViewC", "Spiel"]
+- ["9Rush_Hour6MyViewC", ""]
+- ["9Rush_Hour6MyViewC", "deinit"]
+- ["9Rush_Hour6MyViewC", "draw"]
+- ["9Rush_Hour6MyViewC", "d\xF6rtiRekt"]
+- ["9Rush_Hour6MyViewC", "erzeugeBasisQuadrat"]
+- ["9Rush_Hour6MyViewC", "erzeugeKleinesQuadrat"]
+- ["9Rush_Hour6MyViewC", "init"]
+- ["9Rush_Hour6MyViewC", "kleineQuadrate"]
+- ["9Rush_Hour6MyViewC", "kleineQuadrateReset"]
+- !private ["9Rush_Hour6MyViewC", "min"]
+- !private ["9Rush_Hour6MyViewC", "print"]
 - ["So22NSAccessibilityElementP", "Bool"]
 - !private ["So22NSAccessibilityElementP", "CGFloat"]
 - ["So22NSAccessibilityElementP", "Int"]
@@ -351,7 +406,9 @@ depends-member:
 - ["So22NSAccessibilityElementP", "erzeugeKleinesQuadrat"]
 - ["So22NSAccessibilityElementP", "init"]
 - ["So22NSAccessibilityElementP", "kleineQuadrate"]
+- ["So22NSAccessibilityElementP", "kleineQuadrateReset"]
 - !private ["So22NSAccessibilityElementP", "min"]
+- !private ["So22NSAccessibilityElementP", "print"]
 - ["So15NSAccessibilityP", "Bool"]
 - !private ["So15NSAccessibilityP", "CGFloat"]
 - ["So15NSAccessibilityP", "Int"]
@@ -366,7 +423,9 @@ depends-member:
 - ["So15NSAccessibilityP", "erzeugeKleinesQuadrat"]
 - ["So15NSAccessibilityP", "init"]
 - ["So15NSAccessibilityP", "kleineQuadrate"]
+- ["So15NSAccessibilityP", "kleineQuadrateReset"]
 - !private ["So15NSAccessibilityP", "min"]
+- !private ["So15NSAccessibilityP", "print"]
 - ["So29NSAnimatablePropertyContainerP", "Bool"]
 - !private ["So29NSAnimatablePropertyContainerP", "CGFloat"]
 - ["So29NSAnimatablePropertyContainerP", "Int"]
@@ -381,7 +440,9 @@ depends-member:
 - ["So29NSAnimatablePropertyContainerP", "erzeugeKleinesQuadrat"]
 - ["So29NSAnimatablePropertyContainerP", "init"]
 - ["So29NSAnimatablePropertyContainerP", "kleineQuadrate"]
+- ["So29NSAnimatablePropertyContainerP", "kleineQuadrateReset"]
 - !private ["So29NSAnimatablePropertyContainerP", "min"]
+- !private ["So29NSAnimatablePropertyContainerP", "print"]
 - ["So25NSAppearanceCustomizationP", "Bool"]
 - !private ["So25NSAppearanceCustomizationP", "CGFloat"]
 - ["So25NSAppearanceCustomizationP", "Int"]
@@ -396,7 +457,9 @@ depends-member:
 - ["So25NSAppearanceCustomizationP", "erzeugeKleinesQuadrat"]
 - ["So25NSAppearanceCustomizationP", "init"]
 - ["So25NSAppearanceCustomizationP", "kleineQuadrate"]
+- ["So25NSAppearanceCustomizationP", "kleineQuadrateReset"]
 - !private ["So25NSAppearanceCustomizationP", "min"]
+- !private ["So25NSAppearanceCustomizationP", "print"]
 - !private ["So12NSBezierPathC", "appendRect"]
 - !private ["So12NSBezierPathC", "fill"]
 - !private ["So12NSBezierPathC", "init"]
@@ -420,9 +483,12 @@ depends-member:
 - !private ["So8NSCodingP", "fill"]
 - ["So8NSCodingP", "init"]
 - ["So8NSCodingP", "kleineQuadrate"]
+- ["So8NSCodingP", "kleineQuadrateReset"]
 - !private ["So8NSCodingP", "lightGray"]
 - !private ["So8NSCodingP", "lineWidth"]
 - !private ["So8NSCodingP", "min"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "printView"]
 - !private ["So8NSCodingP", "set"]
 - !private ["So8NSCodingP", "setFill"]
 - !private ["So8NSCodingP", "setStroke"]
@@ -459,7 +525,9 @@ depends-member:
 - ["So21NSDraggingDestinationP", "erzeugeKleinesQuadrat"]
 - ["So21NSDraggingDestinationP", "init"]
 - ["So21NSDraggingDestinationP", "kleineQuadrate"]
+- ["So21NSDraggingDestinationP", "kleineQuadrateReset"]
 - !private ["So21NSDraggingDestinationP", "min"]
+- !private ["So21NSDraggingDestinationP", "print"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGFloat"]
 - ["So8NSObjectC", "Int"]
@@ -484,9 +552,12 @@ depends-member:
 - !private ["So8NSObjectC", "fillRect"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "kleineQuadrate"]
+- ["So8NSObjectC", "kleineQuadrateReset"]
 - !private ["So8NSObjectC", "lightGray"]
 - !private ["So8NSObjectC", "lineWidth"]
 - !private ["So8NSObjectC", "min"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "printView"]
 - !private ["So8NSObjectC", "set"]
 - !private ["So8NSObjectC", "setFill"]
 - !private ["So8NSObjectC", "setStroke"]
@@ -517,9 +588,12 @@ depends-member:
 - !private ["So8NSObjectP", "fillRect"]
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "kleineQuadrate"]
+- ["So8NSObjectP", "kleineQuadrateReset"]
 - !private ["So8NSObjectP", "lightGray"]
 - !private ["So8NSObjectP", "lineWidth"]
 - !private ["So8NSObjectP", "min"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "printView"]
 - !private ["So8NSObjectP", "set"]
 - !private ["So8NSObjectP", "setFill"]
 - !private ["So8NSObjectP", "setStroke"]
@@ -553,7 +627,10 @@ depends-member:
 - ["So11NSResponderC", "erzeugeKleinesQuadrat"]
 - ["So11NSResponderC", "init"]
 - ["So11NSResponderC", "kleineQuadrate"]
+- ["So11NSResponderC", "kleineQuadrateReset"]
 - !private ["So11NSResponderC", "min"]
+- !private ["So11NSResponderC", "print"]
+- !private ["So11NSResponderC", "printView"]
 - !private ["So14NSSecureCodingP", "appendRect"]
 - !private ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "fill"]
@@ -580,7 +657,10 @@ depends-member:
 - ["So30NSStandardKeyBindingRespondingP", "erzeugeKleinesQuadrat"]
 - ["So30NSStandardKeyBindingRespondingP", "init"]
 - ["So30NSStandardKeyBindingRespondingP", "kleineQuadrate"]
+- ["So30NSStandardKeyBindingRespondingP", "kleineQuadrateReset"]
 - !private ["So30NSStandardKeyBindingRespondingP", "min"]
+- !private ["So30NSStandardKeyBindingRespondingP", "print"]
+- !private ["So30NSStandardKeyBindingRespondingP", "printView"]
 - ["So18NSTouchBarProviderP", "Bool"]
 - !private ["So18NSTouchBarProviderP", "CGFloat"]
 - ["So18NSTouchBarProviderP", "Int"]
@@ -596,7 +676,10 @@ depends-member:
 - ["So18NSTouchBarProviderP", "erzeugeKleinesQuadrat"]
 - ["So18NSTouchBarProviderP", "init"]
 - ["So18NSTouchBarProviderP", "kleineQuadrate"]
+- ["So18NSTouchBarProviderP", "kleineQuadrateReset"]
 - !private ["So18NSTouchBarProviderP", "min"]
+- !private ["So18NSTouchBarProviderP", "print"]
+- !private ["So18NSTouchBarProviderP", "printView"]
 - ["So23NSUserActivityRestoringP", "Bool"]
 - !private ["So23NSUserActivityRestoringP", "CGFloat"]
 - ["So23NSUserActivityRestoringP", "Int"]
@@ -612,7 +695,10 @@ depends-member:
 - ["So23NSUserActivityRestoringP", "erzeugeKleinesQuadrat"]
 - ["So23NSUserActivityRestoringP", "init"]
 - ["So23NSUserActivityRestoringP", "kleineQuadrate"]
+- ["So23NSUserActivityRestoringP", "kleineQuadrateReset"]
 - !private ["So23NSUserActivityRestoringP", "min"]
+- !private ["So23NSUserActivityRestoringP", "print"]
+- !private ["So23NSUserActivityRestoringP", "printView"]
 - ["So33NSUserInterfaceItemIdentificationP", "Bool"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "CGFloat"]
 - ["So33NSUserInterfaceItemIdentificationP", "Int"]
@@ -627,7 +713,9 @@ depends-member:
 - ["So33NSUserInterfaceItemIdentificationP", "erzeugeKleinesQuadrat"]
 - ["So33NSUserInterfaceItemIdentificationP", "init"]
 - ["So33NSUserInterfaceItemIdentificationP", "kleineQuadrate"]
+- ["So33NSUserInterfaceItemIdentificationP", "kleineQuadrateReset"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "min"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "print"]
 - ["So6NSViewC", "Bool"]
 - !private ["So6NSViewC", "CGFloat"]
 - ["So6NSViewC", "Int"]
@@ -642,18 +730,22 @@ depends-member:
 - ["So6NSViewC", "erzeugeKleinesQuadrat"]
 - ["So6NSViewC", "init"]
 - ["So6NSViewC", "kleineQuadrate"]
+- ["So6NSViewC", "kleineQuadrateReset"]
 - !private ["So6NSViewC", "min"]
+- !private ["So6NSViewC", "print"]
 - !private ["Sj", "*"]
 - !private ["Sj", "*="]
 - !private ["Sj", ""]
 - !private ["Sj", "init"]
 - !private ["Sj", "magnitude"]
 - ["Sk", ""]
+- !private ["Sk", "count"]
 - !private ["Sk", "first"]
 - ["Sk", "init"]
 - !private ["Sk", "last"]
 - !private ["Sk", "subscript"]
 - ["Sm", ""]
+- !private ["Sm", "count"]
 - !private ["Sm", "first"]
 - ["Sm", "init"]
 - !private ["Sm", "last"]
@@ -661,6 +753,7 @@ depends-member:
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
 - ["ST", ""]
+- !private ["ST", "count"]
 - !private ["ST", "first"]
 - ["ST", "init"]
 - !private ["ST", "last"]
@@ -676,8 +769,14 @@ depends-member:
 - !private ["Sx", "advanced"]
 - !private ["Sx", "distance"]
 - !private ["Sx", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
 - ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
 - ["s20TextOutputStreamableP", ""]
+- !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "first"]
 - ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "last"]
@@ -691,6 +790,7 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "minX"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "minY"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "width"]
+- !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "first"]
 - ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "last"]
@@ -698,6 +798,7 @@ depends-member:
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
@@ -705,10 +806,12 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "setFill"]
 - !private ["s26_ExpressibleByColorLiteralP", "setStroke"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
+- !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "first"]
 - ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "last"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
@@ -728,9 +831,11 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fill"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "kleineQuadrate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kleineQuadrateReset"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lightGray"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lineWidth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "min"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setFill"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setStroke"]
@@ -751,14 +856,17 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fill"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kleineQuadrate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kleineQuadrateReset"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lightGray"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lineWidth"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "min"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "set"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setFill"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setStroke"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stroke"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "white"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
 - ["s21_ObjectiveCBridgeableP", "init"]
@@ -780,23 +888,9 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "erzeugeBasisQuadrat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "erzeugeKleinesQuadrat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "kleineQuadrate"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "kleineQuadrateReset"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "min"]
-- ["9Rush_Hour6myViewC", "Bool"]
-- !private ["9Rush_Hour6myViewC", "CGFloat"]
-- ["9Rush_Hour6myViewC", "Int"]
-- !private ["9Rush_Hour6myViewC", "NSBezierPath"]
-- ["9Rush_Hour6myViewC", "NSColor"]
-- ["9Rush_Hour6myViewC", "NSRect"]
-- !private ["9Rush_Hour6myViewC", "Spiel"]
-- ["9Rush_Hour6myViewC", ""]
-- ["9Rush_Hour6myViewC", "deinit"]
-- ["9Rush_Hour6myViewC", "draw"]
-- ["9Rush_Hour6myViewC", "d\xF6rtiRekt"]
-- ["9Rush_Hour6myViewC", "erzeugeBasisQuadrat"]
-- ["9Rush_Hour6myViewC", "erzeugeKleinesQuadrat"]
-- ["9Rush_Hour6myViewC", "init"]
-- ["9Rush_Hour6myViewC", "kleineQuadrate"]
-- !private ["9Rush_Hour6myViewC", "min"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "print"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - "Sa"
@@ -816,6 +910,7 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - "10Foundation12DataProtocolP"
 - "Se"
+- !private "s26DefaultStringInterpolationV"
 - "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
@@ -830,6 +925,7 @@ depends-nominal:
 - "s25LosslessStringConvertibleP"
 - "SM"
 - "10Foundation19MutableDataProtocolP"
+- "9Rush_Hour6MyViewC"
 - "So22NSAccessibilityElementP"
 - "So15NSAccessibilityP"
 - "So29NSAnimatablePropertyContainerP"
@@ -857,6 +953,7 @@ depends-nominal:
 - !private "s13SignedNumericP"
 - !private "9Rush_Hour5SpielC"
 - !private "Sx"
+- !private "s27StringInterpolationProtocolP"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - "s14_ArrayProtocolP"
@@ -867,6 +964,7 @@ depends-nominal:
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "s19_HasContiguousBytesP"
@@ -875,7 +973,6 @@ depends-nominal:
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - "s21_ObjectiveCBridgeableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
-- "9Rush_Hour6myViewC"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
@@ -914,4 +1011,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e878f8d35ebd302336169b66ad866492"
+interface-hash: "d40e16215896f0b2f65fe6e1963c66b8"

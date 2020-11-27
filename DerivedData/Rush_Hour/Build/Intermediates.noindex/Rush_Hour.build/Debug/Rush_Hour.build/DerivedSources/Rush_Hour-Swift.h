@@ -225,12 +225,14 @@ SWIFT_CLASS("_TtC9Rush_Hour6MyView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEvent;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 @interface ViewController : NSViewController
 - (void)viewDidLoad;
 @property (nonatomic) id _Nullable representedObject;
+- (void)mouseDown:(NSEvent * _Nonnull)event;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

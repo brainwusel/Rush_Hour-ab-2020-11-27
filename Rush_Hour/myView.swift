@@ -17,14 +17,8 @@ class MyView: NSView {
         
         dörtiRekt = dirtyRect
         
-        let re_Null = NSRect(x: 0, y: 0, width: 0, height: 0)
-        kleineQuadrate = [[re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null]]
+        kleineQuadrateReset()
+       
         var kleinesQuadrat = NSRect()
         
         
@@ -138,5 +132,17 @@ class MyView: NSView {
             kQ.fill()
         }
         return kleinesQuadrat
+    }
+    
+    func kleineQuadrateReset () {
+        let re_Null = NSRect(x: 0, y: 0, width: 0, height: 0)
+        kleineQuadrate = [[re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null]]
+        
     }
 }
