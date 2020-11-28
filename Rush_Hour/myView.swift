@@ -9,10 +9,7 @@ import Cocoa
 
 class MyView: NSView {
     
-    static var dörtiRekt = NSRect() {
-        willSet {print ("dörtiRekt \(newValue)")
-        }
-    }
+    static var dörtiRekt = NSRect()
     
     static var kleineQuadrate = [[NSRect]]()
     
@@ -146,4 +143,33 @@ class MyView: NSView {
                           [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null]]
         
     }
+    
+    override func mouseUp(with event: NSEvent) {
+        let locationInView = self.convert(event.locationInWindow, from: nil)
+        let x = locationInView.x
+        let y = locationInView.y
+        var reAngeklickt = NSRect()
+        
+        for w in 1...6 {
+            for s in 1...6 {
+                if Self.kleineQuadrate[w][s].contains(CGPoint(x: x, y: y)) {
+                    reAngeklickt = Self.kleineQuadrate[w][s]
+                    print("angeklickt: w: \(w) - s: \(s) - \(reAngeklickt)")
+                    print(reAngeklickt)
+                    print("Grid: \(Spiel.grid)")
+                    
+                    if Spiel.grid[w - 1][s - 1] != " " {
+                        for i in 0...5  {
+                            if Spiel.cars[i].id == Spiel.grid[w - 1][s - 1] {
+                                Spiel.cars[i].randFarbe = .red
+                                self.setNeedsDisplay(Self.dörtiRekt)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
 }
