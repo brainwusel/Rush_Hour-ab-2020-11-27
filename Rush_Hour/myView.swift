@@ -32,6 +32,7 @@ class MyView: NSView {
         _ = erzeugeBasisQuadrat(füllFarbe: .white, randFarbe: .black, zeichnen: true, dirtyRect)
         
         // kleine Quadrate -> Grid
+        
         for w in 1 ... 6 {
             for s in 1 ... 6 {
                 _ = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
@@ -136,7 +137,7 @@ class MyView: NSView {
         return kleinesQuadrat
     }
     
-    override func mouseUp(with event: NSEvent) {
+    override func mouseDown(with event: NSEvent) {
         let locationInView = self.convert(event.locationInWindow, from: nil)
         let punkt = CGPoint(x: locationInView.x, y: locationInView.y)
         
@@ -149,10 +150,28 @@ class MyView: NSView {
         }
     }
     
-    override func keyDown(with event: NSEvent) {
-        print("keyCode")
-        print (event.keyCode)
+    override func mouseDragged(with event: NSEvent) {
+        let dx = event.deltaX
+        let dy = event.deltaY
+        var richtung = String()
+        if dx >= 0 && dy >= 0 && dx > dy {
+            richtung = "rechts"
+        }
+        if dx >= 0 && dy >= 0 && dy > dx {
+            richtung = "runter"
+        }
+        if dx < 0 && abs(dx) > abs(dy) {
+            richtung = "links"
+        }
+        if dy < 0 && abs(dx) < abs(dy) {
+            richtung = "rauf"
+        }
+        print (dx,dy,richtung)
+        
+        
     }
+    
+    
     
     
 }
