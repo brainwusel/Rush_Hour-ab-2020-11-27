@@ -149,13 +149,17 @@ class MyView: NSView {
         let x = locationInView.x
         let y = locationInView.y
         
+        for i in 0...7 {
+            Spiel.cars[i].randFarbe = .black
+        }
+        
         for w in 1...6 {
             for s in 1...6 {
                 if kleineQuadrate[w][s].contains(CGPoint(x: x, y: y)) {
                     if Spiel.grid[w - 1][s - 1] != " " {
                         for i in 0...Spiel.cars.count - 1  {
                             if Spiel.cars[i].id == Spiel.grid[w - 1][s - 1] {
-                                Spiel.cars[i].randFarbe = .red
+                                Spiel.cars[i].randFarbe = .white
                                 self.setNeedsDisplay(dörtiRekt)
                             }
                         }
