@@ -120,7 +120,6 @@ class Spiel {
         var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
         for auto in cars {
             for pos in auto.zellenBelegt {
-                print("g_pos.w/s: \(pos.w) \(pos.s)")
                 g[pos.w - 1][pos.s - 1] = auto.id
             }
         }
@@ -161,6 +160,7 @@ class Spiel {
         grid = gridUpdate()
         
         for i in 0...7 {
+            cars[i].bewegungsOptionen.removeAll()
             
             let links = cars[i].zellenBelegt.first?.w
             let rechts = cars[i].zellenBelegt.last?.w

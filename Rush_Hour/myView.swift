@@ -160,6 +160,8 @@ class MyView: NSView {
                 aktuelleAutoID = spiel.cars[i].id
             }
         }
+        
+        self.becomeFirstResponder()
     }
     
     override func mouseDragged(with event: NSEvent) {
@@ -180,16 +182,16 @@ class MyView: NSView {
                 bewegungsRichtung = .rauf
             }
             print(dx, dy, bewegungsRichtung)
+        spiel.move(autoID: aktuelleAutoID, wohin: bewegungsRichtung)
+        autosZeichnen()
         
     }
     
-    override func mouseUp(with event: NSEvent) {
-        print (aktuelleAutoID, bewegungsRichtung)
-        spiel.move(autoID: aktuelleAutoID, wohin: bewegungsRichtung)
-        autosZeichnen()
+
+    
+    override func keyDown(with event: NSEvent) {
+        print(event.keyCode)
     }
-    
-    
     
     
 }
