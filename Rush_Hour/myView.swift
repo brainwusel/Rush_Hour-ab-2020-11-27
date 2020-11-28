@@ -18,14 +18,10 @@ class MyView: NSView {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-//        print ("Aufruf draw Funktion, dirtyRect = \(dirtyRect)")
+        
         MyView.dörtiRekt = dirtyRect
-//        print ("dörtiRekt-Zuweisung in draw = \(Self.dörtiRekt)")
-        
-        kleineQuadrateReset()
-       
         var kleinesQuadrat = NSRect()
-        
+        kleineQuadrateReset()
         
         // Hintergrund
         let re_HinterGrund = NSRect(x: 0, y: 0, width: dirtyRect.width, height: dirtyRect.height)
@@ -42,13 +38,11 @@ class MyView: NSView {
             for s in 1 ... 6 {
                 kleinesQuadrat = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
                 MyView.kleineQuadrate[w][s] = kleinesQuadrat
-//                print(kleineQuadrate)
             }
         }
         
         // Autos
-        let spiel = Spiel()
-        let cars = spiel.cars
+        let cars = Spiel.cars
         for auto in cars {
             let re_linksUnten = erzeugeKleinesQuadrat(
                 waagerecht: (auto.zellenBelegt.first?.w)!,
@@ -68,10 +62,11 @@ class MyView: NSView {
                                     y: re_linksUnten.minY + 10,
                                     width: re_rechtsOben.maxX - re_linksUnten.minX - 20,
                                     height: re_rechtsOben.maxY - re_linksUnten.minY - 20))
-            let farbe = auto.farbe
-            farbe.setFill()
+            let füllFarbe = auto.füllFarbe
+            füllFarbe.setFill()
             autoPath.fill()
-            NSColor.black.setStroke()
+            let randFarbe = auto.randFarbe
+            randFarbe.setStroke()
             autoPath.lineWidth = 5
             autoPath.stroke()
         }

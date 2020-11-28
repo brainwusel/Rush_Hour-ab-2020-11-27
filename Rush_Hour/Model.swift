@@ -39,14 +39,16 @@ enum Richtung {
 // einzelnes Auto - identifiziert durch Länge und Farbe in der computet prop. ID als String. Aus der Aufgabenstellung ergeben sich die Eigenschaften POSITIONLINKSOBEN und ORIENTIERUNG. Die Eigenschaft BEWEGUNGSOPTIONEN zeigt als Array von Richtungen an, wohin ein Auto bewegt werden könnte; sie wird zunächst mit einem Element .UNBEWEGLICH initialisiert und später durch die Methode SPIEL.BEWEGUNGSOPTIONENUPDATE aus den Positionsdaten aller Autos berechnet. Die Eigenschaft ZELLENBELEGT zeigt an, welche Zellen gerade von einem Auto im Grid belegt werden und wird berechnet aus der POSITIONLINKSOBEN, der LÄNGE und der ORIENTIERUNG des Autos; in der get-Funktion sind KEINE Überprüfungen der waagerechten oder senkrechten Limits enthalten - diese Aufgabe sollte vollständig von der Methode SPIEL.BEWEGUNSOPTIONENUPDATE übernommen werden
 class Car {
     var länge: Länge
-    var farbe: NSColor
+    var füllFarbe: NSColor
+    var randFarbe: NSColor
     var orientierung: Orientierung
     var positionLinksUnten: (w: Int, s: Int)
     var bewegungsOptionen: [Richtung]
     
-    init (länge: Länge, farbe: NSColor, positionLinksUnten: (w: Int, s: Int), richtung: Orientierung) {
+    init (länge: Länge, füllFarbe: NSColor, randFarbe: NSColor, positionLinksUnten: (w: Int, s: Int), richtung: Orientierung) {
         self.länge = länge
-        self.farbe = farbe
+        self.füllFarbe = füllFarbe
+        self.randFarbe = randFarbe
         self.orientierung = richtung
         self.positionLinksUnten = positionLinksUnten
         self.bewegungsOptionen = [.unbeweglich]
@@ -77,7 +79,7 @@ class Car {
     
     var id: String {
         get {
-            return ("\(self.länge)/\(self.farbe)")
+            return ("\(self.länge)/\(self.füllFarbe)")
         }
     }
 }
@@ -87,15 +89,15 @@ class Car {
 func initAutos () -> [Car] {
     var autos = [Car]()
     
-    autos.append(Car(länge: .zwei, farbe: .red, positionLinksUnten: (w: 2, s: 3), richtung: .waagerecht))    // Index 0 = Exit-Auto
-    autos.append(Car(länge: .zwei, farbe: .yellow, positionLinksUnten: (w: 1, s: 1), richtung: .waagerecht)) // Index 1
-    autos.append(Car(länge: .zwei, farbe: .green, positionLinksUnten: (w: 5, s: 5), richtung: .waagerecht))  // Index 2
-    autos.append(Car(länge: .zwei, farbe: .blue, positionLinksUnten: (w: 1, s: 5), richtung: .senkrecht))    // Index 3
+    autos.append(Car(länge: .zwei, füllFarbe: .red, randFarbe: .black, positionLinksUnten: (w: 2, s: 3), richtung: .waagerecht))    // Index 0 = Exit-Auto
+    autos.append(Car(länge: .zwei, füllFarbe: .yellow, randFarbe: .black, positionLinksUnten: (w: 1, s: 1), richtung: .waagerecht)) // Index 1
+    autos.append(Car(länge: .zwei, füllFarbe: .green, randFarbe: .black, positionLinksUnten: (w: 5, s: 5), richtung: .waagerecht))  // Index 2
+    autos.append(Car(länge: .zwei, füllFarbe: .blue, randFarbe: .black, positionLinksUnten: (w: 1, s: 5), richtung: .senkrecht))    // Index 3
     
-    autos.append(Car(länge: .drei, farbe: .red, positionLinksUnten: (w: 1, s: 2), richtung: .senkrecht))     // Index 4
-    autos.append(Car(länge: .drei, farbe: .yellow, positionLinksUnten: (w: 6, s: 1), richtung: .senkrecht))  // Index 5
-    autos.append(Car(länge: .drei, farbe: .green, positionLinksUnten: (w: 3, s: 6), richtung: .waagerecht))  // Index 6
-    autos.append(Car(länge: .drei, farbe: .blue, positionLinksUnten: (w: 4, s: 2), richtung: .senkrecht))    // Index 7
+    autos.append(Car(länge: .drei, füllFarbe: .orange, randFarbe: .black, positionLinksUnten: (w: 1, s: 2), richtung: .senkrecht))     // Index 4
+    autos.append(Car(länge: .drei, füllFarbe: .systemYellow, randFarbe: .black, positionLinksUnten: (w: 6, s: 1), richtung: .senkrecht))  // Index 5
+    autos.append(Car(länge: .drei, füllFarbe: .systemGreen, randFarbe: .black, positionLinksUnten: (w: 3, s: 6), richtung: .waagerecht))  // Index 6
+    autos.append(Car(länge: .drei, füllFarbe: .systemBlue, randFarbe: .black, positionLinksUnten: (w: 4, s: 2), richtung: .senkrecht))    // Index 7
     
     return autos
 }
@@ -104,10 +106,10 @@ func initAutos () -> [Car] {
 class Spiel {
     
     //  alle Autos aus dem Rush Hour ScreenShot = Aufgabe1
-    var cars: [Car] = initAutos()
+    static var cars: [Car] = initAutos()
     
     //  Belegung der einzelnen Zellen durch Auto-ID (String aus LÄNGE und FARBE), falls leer: " ". Die Funktion überprüft NICHT, ob die Autos korrekt platziert wurden; das sollte vollständig durch die Methode BEWEGUNGSOPTIONENUPDATE sichergestellt werden. Es setzt auch voraus, dass die Aufgabenstellung korrekt formuliert ist.
-    var grid: [[String]] {
+    static var grid: [[String]] {
         get {
             var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
             for auto in cars {
@@ -120,7 +122,7 @@ class Spiel {
     }
     
     //    verschiebe ein bestimmtes Auto um eine Zelle, Identifizierung des Autos über den String ID
-    func move (autoID: String, wohin: Richtung) {      // AUTOID: und WOHIN: werden von Maus- bzw. Tastatursignalen bestimmt
+    static func move (autoID: String, wohin: Richtung) {      // AUTOID: und WOHIN: werden von Maus- bzw. Tastatursignalen bestimmt
         bewegungsOptionenUpdate(cars: &cars)
         for auto in cars {
             if auto.id == autoID {
@@ -145,7 +147,7 @@ class Spiel {
     }
     
     //    wohin kann welches Auto bewegt werden?
-    func bewegungsOptionenUpdate (cars: inout [Car]) {
+    static func bewegungsOptionenUpdate (cars: inout [Car]) {
         for auto in cars {
             
             let links = auto.zellenBelegt.first?.w
@@ -178,7 +180,7 @@ class Spiel {
     }
     
     //    welches Auto belegt eine bestimmte Zelle?
-    func autoAufZelle (waagerecht: Int, senkrecht: Int) -> Car? {       // waagerecht, senkrecht: 1 ... 6
+   static func autoAufZelle (waagerecht: Int, senkrecht: Int) -> Car? {       // waagerecht, senkrecht: 1 ... 6
         let identifier = grid[waagerecht - 1][senkrecht - 1]
         var auto: Car? = nil
         for c in cars {
