@@ -9,14 +9,14 @@ import Cocoa
 
 class MyView: NSView {
     
-    static var dörtiRekt = NSRect()
+    var dörtiRekt = NSRect()
     
-    static var kleineQuadrate = [[NSRect]]()
+    var kleineQuadrate = [[NSRect]]()
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        MyView.dörtiRekt = dirtyRect
+        dörtiRekt = dirtyRect
         var kleinesQuadrat = NSRect()
         kleineQuadrateReset()
         
@@ -34,7 +34,7 @@ class MyView: NSView {
         for w in 1 ... 6 {
             for s in 1 ... 6 {
                 kleinesQuadrat = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
-                MyView.kleineQuadrate[w][s] = kleinesQuadrat
+                kleineQuadrate[w][s] = kleinesQuadrat
             }
         }
         
@@ -104,7 +104,7 @@ class MyView: NSView {
         
         
         return basisQuadrat
-      
+        
     }
     
     func erzeugeKleinesQuadrat (waagerecht w: Int, senkrecht s: Int, farbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
@@ -134,7 +134,7 @@ class MyView: NSView {
     
     func kleineQuadrateReset () {
         let re_Null = NSRect(x: 0, y: 0, width: 0, height: 0)
-        MyView.kleineQuadrate = [[re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+        kleineQuadrate = [[re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
                           [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
                           [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
                           [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
@@ -148,21 +148,15 @@ class MyView: NSView {
         let locationInView = self.convert(event.locationInWindow, from: nil)
         let x = locationInView.x
         let y = locationInView.y
-        var reAngeklickt = NSRect()
         
         for w in 1...6 {
             for s in 1...6 {
-                if Self.kleineQuadrate[w][s].contains(CGPoint(x: x, y: y)) {
-                    reAngeklickt = Self.kleineQuadrate[w][s]
-                    print("angeklickt: w: \(w) - s: \(s) - \(reAngeklickt)")
-                    print(reAngeklickt)
-                    print("Grid: \(Spiel.grid)")
-                    
+                if kleineQuadrate[w][s].contains(CGPoint(x: x, y: y)) {
                     if Spiel.grid[w - 1][s - 1] != " " {
-                        for i in 0...5  {
+                        for i in 0...Spiel.cars.count - 1  {
                             if Spiel.cars[i].id == Spiel.grid[w - 1][s - 1] {
                                 Spiel.cars[i].randFarbe = .red
-                                self.setNeedsDisplay(Self.dörtiRekt)
+                                self.setNeedsDisplay(dörtiRekt)
                             }
                         }
                     }
