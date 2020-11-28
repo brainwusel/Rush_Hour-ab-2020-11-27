@@ -14,6 +14,7 @@ class MyView: NSView {
     var kleineQuadrate = [[NSRect]]()
     
     override func draw(_ dirtyRect: NSRect) {
+        
         super.draw(dirtyRect)
         
         dörtiRekt = dirtyRect
@@ -39,35 +40,39 @@ class MyView: NSView {
         }
         
         // Autos
-        let cars = Spiel.cars
-        for auto in cars {
+       
+        for i in 0...7 {
             let re_linksUnten = erzeugeKleinesQuadrat(
-                waagerecht: (auto.zellenBelegt.first?.w)!,
-                senkrecht: (auto.zellenBelegt.first?.s)!,
+                waagerecht: (Spiel.cars[i].zellenBelegt.first?.w)!,
+                senkrecht: (Spiel.cars[i].zellenBelegt.first?.s)!,
                 farbe: .white,
                 zeichnen: false,
                 dirtyRect)
+            
             let re_rechtsOben = erzeugeKleinesQuadrat(
-                waagerecht: (auto.zellenBelegt.last?.w)!,
-                senkrecht: (auto.zellenBelegt.last?.s)!,
+                waagerecht: (Spiel.cars[i].zellenBelegt.last?.w)!,
+                senkrecht: (Spiel.cars[i].zellenBelegt.last?.s)!,
                 farbe: .white,
                 zeichnen: false,
                 dirtyRect)
+            
+            let rechtEck = NSRect(
+                x: re_linksUnten.minX + 10,
+                y: re_linksUnten.minY + 10,
+                width: re_rechtsOben.maxX - re_linksUnten.minX - 20,
+                height: re_rechtsOben.maxY - re_linksUnten.minY - 20)
+            Spiel.cars[i].rechtEck = rechtEck
+            
             let autoPath = NSBezierPath()
-            autoPath.appendRect(NSRect(
-                                    x: re_linksUnten.minX + 10,
-                                    y: re_linksUnten.minY + 10,
-                                    width: re_rechtsOben.maxX - re_linksUnten.minX - 20,
-                                    height: re_rechtsOben.maxY - re_linksUnten.minY - 20))
-            let füllFarbe = auto.füllFarbe
+            autoPath.appendRect(rechtEck)
+            let füllFarbe = Spiel.cars[i].füllFarbe
             füllFarbe.setFill()
             autoPath.fill()
-            let randFarbe = auto.randFarbe
+            let randFarbe = Spiel.cars[i].randFarbe
             randFarbe.setStroke()
             autoPath.lineWidth = 5
             autoPath.stroke()
         }
-        
     }
     
     func erzeugeBasisQuadrat (füllFarbe: NSColor, randFarbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
@@ -146,27 +151,20 @@ class MyView: NSView {
     
     override func mouseUp(with event: NSEvent) {
         let locationInView = self.convert(event.locationInWindow, from: nil)
-        let x = locationInView.x
-        let y = locationInView.y
+        let punkt = CGPoint(x: locationInView.x, y: locationInView.y)
         
         for i in 0...7 {
             Spiel.cars[i].randFarbe = .black
-        }
-        
-        for w in 1...6 {
-            for s in 1...6 {
-                if kleineQuadrate[w][s].contains(CGPoint(x: x, y: y)) {
-                    if Spiel.grid[w - 1][s - 1] != " " {
-                        for i in 0...Spiel.cars.count - 1  {
-                            if Spiel.cars[i].id == Spiel.grid[w - 1][s - 1] {
-                                Spiel.cars[i].randFarbe = .white
-                                self.setNeedsDisplay(dörtiRekt)
-                            }
-                        }
-                    }
-                }
+            if Spiel.cars[i].rechtEck.contains(punkt) {
+                Spiel.cars[i].randFarbe = .white
+                self.setNeedsDisplay(dörtiRekt)
             }
         }
+    }
+    
+    override func keyDown(with event: NSEvent) {
+        print("keyCode")
+        print (event.keyCode)
     }
     
     

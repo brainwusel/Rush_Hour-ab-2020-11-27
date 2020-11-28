@@ -44,6 +44,7 @@ class Car {
     var orientierung: Orientierung
     var positionLinksUnten: (w: Int, s: Int)
     var bewegungsOptionen: [Richtung]
+    var rechtEck = NSRect()
     
     init (länge: Länge, füllFarbe: NSColor, randFarbe: NSColor, positionLinksUnten: (w: Int, s: Int), richtung: Orientierung) {
         self.länge = länge

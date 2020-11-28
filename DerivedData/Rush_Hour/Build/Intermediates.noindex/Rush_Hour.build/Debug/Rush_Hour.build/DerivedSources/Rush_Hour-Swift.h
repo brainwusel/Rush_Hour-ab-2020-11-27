@@ -223,6 +223,7 @@ SWIFT_CLASS("_TtC9Rush_Hour6MyView")
 @interface MyView : NSView
 - (void)drawRect:(NSRect)dirtyRect;
 - (void)mouseUp:(NSEvent * _Nonnull)event;
+- (void)keyDown:(NSEvent * _Nonnull)event;
 - (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
