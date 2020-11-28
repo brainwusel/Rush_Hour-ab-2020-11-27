@@ -9,13 +9,18 @@ import Cocoa
 
 class MyView: NSView {
     
-    var dörtiRekt = NSRect()
-    var kleineQuadrate = [[NSRect]]()
+    static var dörtiRekt = NSRect() {
+        willSet {print ("dörtiRekt \(newValue)")
+        }
+    }
+    
+    static var kleineQuadrate = [[NSRect]]()
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        
-        dörtiRekt = dirtyRect
+//        print ("Aufruf draw Funktion, dirtyRect = \(dirtyRect)")
+        MyView.dörtiRekt = dirtyRect
+//        print ("dörtiRekt-Zuweisung in draw = \(Self.dörtiRekt)")
         
         kleineQuadrateReset()
        
@@ -36,8 +41,8 @@ class MyView: NSView {
         for w in 1 ... 6 {
             for s in 1 ... 6 {
                 kleinesQuadrat = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
-                kleineQuadrate[w][s] = kleinesQuadrat
-                print(kleineQuadrate)
+                MyView.kleineQuadrate[w][s] = kleinesQuadrat
+//                print(kleineQuadrate)
             }
         }
         
@@ -137,7 +142,7 @@ class MyView: NSView {
     
     func kleineQuadrateReset () {
         let re_Null = NSRect(x: 0, y: 0, width: 0, height: 0)
-        kleineQuadrate = [[re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
+        MyView.kleineQuadrate = [[re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
                           [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
                           [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
                           [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],

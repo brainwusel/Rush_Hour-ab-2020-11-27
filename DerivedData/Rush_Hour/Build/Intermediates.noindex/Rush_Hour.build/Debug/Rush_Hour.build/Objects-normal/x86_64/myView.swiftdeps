@@ -32,10 +32,9 @@ depends-top-level:
 - "NSRect"
 - "NSView"
 - !private "Spiel"
-- !private "d\xF6rtiRekt"
+- !private "StringLiteralType"
 - !private "erzeugeBasisQuadrat"
 - !private "erzeugeKleinesQuadrat"
-- !private "kleineQuadrate"
 - !private "kleineQuadrateReset"
 - !private "min"
 - !private "print"
@@ -74,6 +73,7 @@ depends-member:
 - !private ["8CloudKit21CKRecordValueProtocolP", "last"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
 - !private ["s7CVarArgP", "CGFloat"]
+- !private ["s7CVarArgP", "MyView"]
 - !private ["s7CVarArgP", "NSBezierPath"]
 - !private ["s7CVarArgP", "NSColor"]
 - ["s7CVarArgP", "NSRect"]
@@ -115,6 +115,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "last"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- !private ["s28CustomDebugStringConvertibleP", "MyView"]
 - !private ["s28CustomDebugStringConvertibleP", "NSBezierPath"]
 - !private ["s28CustomDebugStringConvertibleP", "NSColor"]
 - ["s28CustomDebugStringConvertibleP", "NSRect"]
@@ -159,11 +160,14 @@ depends-member:
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "width"]
 - !private ["s23CustomStringConvertibleP", "CGFloat"]
+- !private ["s23CustomStringConvertibleP", "MyView"]
 - !private ["s23CustomStringConvertibleP", "NSBezierPath"]
 - !private ["s23CustomStringConvertibleP", "NSColor"]
 - ["s23CustomStringConvertibleP", "NSRect"]
 - !private ["s23CustomStringConvertibleP", "Spiel"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "appendRect"]
 - !private ["s23CustomStringConvertibleP", "black"]
 - !private ["s23CustomStringConvertibleP", "draw"]
@@ -201,6 +205,8 @@ depends-member:
 - !private ["Se", "minY"]
 - !private ["Se", "subscript"]
 - !private ["Se", "width"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SE", "first"]
 - !private ["SE", "height"]
 - ["SE", "init"]
@@ -212,6 +218,7 @@ depends-member:
 - !private ["SE", "subscript"]
 - !private ["SE", "width"]
 - !private ["SQ", "CGFloat"]
+- !private ["SQ", "MyView"]
 - !private ["SQ", "NSBezierPath"]
 - !private ["SQ", "NSColor"]
 - ["SQ", "NSRect"]
@@ -256,7 +263,9 @@ depends-member:
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
 - ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
 - ["s26ExpressibleByStringLiteralP", ""]
 - ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "*"]
@@ -313,6 +322,7 @@ depends-member:
 - !private ["SF", "ulp"]
 - !private ["SF", "ulpOfOne"]
 - !private ["SH", "CGFloat"]
+- !private ["SH", "MyView"]
 - !private ["SH", "NSBezierPath"]
 - !private ["SH", "NSColor"]
 - ["SH", "NSRect"]
@@ -353,6 +363,7 @@ depends-member:
 - ["9Rush_Hour6MyViewC", "Bool"]
 - !private ["9Rush_Hour6MyViewC", "CGFloat"]
 - ["9Rush_Hour6MyViewC", "Int"]
+- !private ["9Rush_Hour6MyViewC", "MyView"]
 - !private ["9Rush_Hour6MyViewC", "NSBezierPath"]
 - ["9Rush_Hour6MyViewC", "NSColor"]
 - ["9Rush_Hour6MyViewC", "NSRect"]
@@ -371,6 +382,7 @@ depends-member:
 - ["So22NSAccessibilityElementP", "Bool"]
 - !private ["So22NSAccessibilityElementP", "CGFloat"]
 - ["So22NSAccessibilityElementP", "Int"]
+- !private ["So22NSAccessibilityElementP", "MyView"]
 - !private ["So22NSAccessibilityElementP", "NSBezierPath"]
 - ["So22NSAccessibilityElementP", "NSColor"]
 - ["So22NSAccessibilityElementP", "NSRect"]
@@ -388,6 +400,7 @@ depends-member:
 - ["So15NSAccessibilityP", "Bool"]
 - !private ["So15NSAccessibilityP", "CGFloat"]
 - ["So15NSAccessibilityP", "Int"]
+- !private ["So15NSAccessibilityP", "MyView"]
 - !private ["So15NSAccessibilityP", "NSBezierPath"]
 - ["So15NSAccessibilityP", "NSColor"]
 - ["So15NSAccessibilityP", "NSRect"]
@@ -405,6 +418,7 @@ depends-member:
 - ["So29NSAnimatablePropertyContainerP", "Bool"]
 - !private ["So29NSAnimatablePropertyContainerP", "CGFloat"]
 - ["So29NSAnimatablePropertyContainerP", "Int"]
+- !private ["So29NSAnimatablePropertyContainerP", "MyView"]
 - !private ["So29NSAnimatablePropertyContainerP", "NSBezierPath"]
 - ["So29NSAnimatablePropertyContainerP", "NSColor"]
 - ["So29NSAnimatablePropertyContainerP", "NSRect"]
@@ -422,6 +436,7 @@ depends-member:
 - ["So25NSAppearanceCustomizationP", "Bool"]
 - !private ["So25NSAppearanceCustomizationP", "CGFloat"]
 - ["So25NSAppearanceCustomizationP", "Int"]
+- !private ["So25NSAppearanceCustomizationP", "MyView"]
 - !private ["So25NSAppearanceCustomizationP", "NSBezierPath"]
 - ["So25NSAppearanceCustomizationP", "NSColor"]
 - ["So25NSAppearanceCustomizationP", "NSRect"]
@@ -444,6 +459,7 @@ depends-member:
 - ["So8NSCodingP", "Bool"]
 - !private ["So8NSCodingP", "CGFloat"]
 - ["So8NSCodingP", "Int"]
+- !private ["So8NSCodingP", "MyView"]
 - !private ["So8NSCodingP", "NSBezierPath"]
 - ["So8NSCodingP", "NSColor"]
 - ["So8NSCodingP", "NSRect"]
@@ -490,6 +506,7 @@ depends-member:
 - ["So21NSDraggingDestinationP", "Bool"]
 - !private ["So21NSDraggingDestinationP", "CGFloat"]
 - ["So21NSDraggingDestinationP", "Int"]
+- !private ["So21NSDraggingDestinationP", "MyView"]
 - !private ["So21NSDraggingDestinationP", "NSBezierPath"]
 - ["So21NSDraggingDestinationP", "NSColor"]
 - ["So21NSDraggingDestinationP", "NSRect"]
@@ -507,6 +524,7 @@ depends-member:
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGFloat"]
 - ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "MyView"]
 - !private ["So8NSObjectC", "NSBezierPath"]
 - ["So8NSObjectC", "NSColor"]
 - ["So8NSObjectC", "NSRect"]
@@ -543,6 +561,7 @@ depends-member:
 - ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CGFloat"]
 - ["So8NSObjectP", "Int"]
+- !private ["So8NSObjectP", "MyView"]
 - !private ["So8NSObjectP", "NSBezierPath"]
 - ["So8NSObjectP", "NSColor"]
 - ["So8NSObjectP", "NSRect"]
@@ -591,6 +610,7 @@ depends-member:
 - ["So11NSResponderC", "Bool"]
 - !private ["So11NSResponderC", "CGFloat"]
 - ["So11NSResponderC", "Int"]
+- !private ["So11NSResponderC", "MyView"]
 - !private ["So11NSResponderC", "NSBezierPath"]
 - ["So11NSResponderC", "NSColor"]
 - ["So11NSResponderC", "NSRect"]
@@ -621,6 +641,7 @@ depends-member:
 - ["So30NSStandardKeyBindingRespondingP", "Bool"]
 - !private ["So30NSStandardKeyBindingRespondingP", "CGFloat"]
 - ["So30NSStandardKeyBindingRespondingP", "Int"]
+- !private ["So30NSStandardKeyBindingRespondingP", "MyView"]
 - !private ["So30NSStandardKeyBindingRespondingP", "NSBezierPath"]
 - ["So30NSStandardKeyBindingRespondingP", "NSColor"]
 - ["So30NSStandardKeyBindingRespondingP", "NSRect"]
@@ -640,6 +661,7 @@ depends-member:
 - ["So18NSTouchBarProviderP", "Bool"]
 - !private ["So18NSTouchBarProviderP", "CGFloat"]
 - ["So18NSTouchBarProviderP", "Int"]
+- !private ["So18NSTouchBarProviderP", "MyView"]
 - !private ["So18NSTouchBarProviderP", "NSBezierPath"]
 - ["So18NSTouchBarProviderP", "NSColor"]
 - ["So18NSTouchBarProviderP", "NSRect"]
@@ -659,6 +681,7 @@ depends-member:
 - ["So23NSUserActivityRestoringP", "Bool"]
 - !private ["So23NSUserActivityRestoringP", "CGFloat"]
 - ["So23NSUserActivityRestoringP", "Int"]
+- !private ["So23NSUserActivityRestoringP", "MyView"]
 - !private ["So23NSUserActivityRestoringP", "NSBezierPath"]
 - ["So23NSUserActivityRestoringP", "NSColor"]
 - ["So23NSUserActivityRestoringP", "NSRect"]
@@ -678,6 +701,7 @@ depends-member:
 - ["So33NSUserInterfaceItemIdentificationP", "Bool"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "CGFloat"]
 - ["So33NSUserInterfaceItemIdentificationP", "Int"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "MyView"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "NSBezierPath"]
 - ["So33NSUserInterfaceItemIdentificationP", "NSColor"]
 - ["So33NSUserInterfaceItemIdentificationP", "NSRect"]
@@ -695,6 +719,7 @@ depends-member:
 - ["So6NSViewC", "Bool"]
 - !private ["So6NSViewC", "CGFloat"]
 - ["So6NSViewC", "Int"]
+- !private ["So6NSViewC", "MyView"]
 - !private ["So6NSViewC", "NSBezierPath"]
 - ["So6NSViewC", "NSColor"]
 - ["So6NSViewC", "NSRect"]
@@ -742,7 +767,12 @@ depends-member:
 - !private ["Sx", "advanced"]
 - !private ["Sx", "distance"]
 - !private ["Sx", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
 - ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
 - ["s20TextOutputStreamableP", ""]
 - !private ["s14_ArrayProtocolP", "first"]
 - ["s14_ArrayProtocolP", "init"]
@@ -764,6 +794,7 @@ depends-member:
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
@@ -780,6 +811,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MyView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSBezierPath"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSColor"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "NSRect"]
@@ -805,6 +837,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "stroke"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "MyView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSBezierPath"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSColor"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSRect"]
@@ -840,6 +873,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CGFloat"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "MyView"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSBezierPath"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSColor"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "NSRect"]
@@ -872,6 +906,7 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - "10Foundation12DataProtocolP"
 - "Se"
+- !private "s26DefaultStringInterpolationV"
 - "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
@@ -914,6 +949,7 @@ depends-nominal:
 - !private "s13SignedNumericP"
 - !private "9Rush_Hour5SpielC"
 - !private "Sx"
+- !private "s27StringInterpolationProtocolP"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - "s14_ArrayProtocolP"
@@ -924,6 +960,7 @@ depends-nominal:
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "s19_HasContiguousBytesP"
@@ -970,4 +1007,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d40e16215896f0b2f65fe6e1963c66b8"
+interface-hash: "69c5744e670c08e5a56233e2d6875329"
