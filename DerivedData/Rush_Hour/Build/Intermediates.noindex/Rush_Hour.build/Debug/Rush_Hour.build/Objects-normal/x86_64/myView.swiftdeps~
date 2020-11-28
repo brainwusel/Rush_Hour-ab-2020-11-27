@@ -12,7 +12,6 @@ provides-dynamic-lookup:
 - "erzeugeKleinesQuadrat"
 - "keyDown"
 - "kleineQuadrate"
-- "kleineQuadrateReset"
 - "mouseUp"
 depends-top-level:
 - !private "*"
@@ -20,7 +19,6 @@ depends-top-level:
 - !private "-"
 - !private "..."
 - !private "/"
-- !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
@@ -40,8 +38,6 @@ depends-top-level:
 - !private "d\xF6rtiRekt"
 - !private "erzeugeBasisQuadrat"
 - !private "erzeugeKleinesQuadrat"
-- !private "kleineQuadrate"
-- !private "kleineQuadrateReset"
 - !private "min"
 - !private "print"
 depends-member:
@@ -54,7 +50,6 @@ depends-member:
 - !private ["s10ArraySliceV", "f\xFCllFarbe"]
 - !private ["s10ArraySliceV", "randFarbe"]
 - !private ["s10ArraySliceV", "rechtEck"]
-- !private ["s10ArraySliceV", "subscript"]
 - !private ["s10ArraySliceV", "zellenBelegt"]
 - ["SK", ""]
 - !private ["SK", "first"]
@@ -109,8 +104,6 @@ depends-member:
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "keyCode"]
 - !private ["s7CVarArgP", "keyDown"]
-- !private ["s7CVarArgP", "kleineQuadrate"]
-- !private ["s7CVarArgP", "kleineQuadrateReset"]
 - !private ["s7CVarArgP", "last"]
 - !private ["s7CVarArgP", "lightGray"]
 - !private ["s7CVarArgP", "lineWidth"]
@@ -170,8 +163,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "keyCode"]
 - !private ["s28CustomDebugStringConvertibleP", "keyDown"]
-- !private ["s28CustomDebugStringConvertibleP", "kleineQuadrate"]
-- !private ["s28CustomDebugStringConvertibleP", "kleineQuadrateReset"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
 - !private ["s28CustomDebugStringConvertibleP", "lightGray"]
 - !private ["s28CustomDebugStringConvertibleP", "lineWidth"]
@@ -233,8 +224,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "keyCode"]
 - !private ["s23CustomStringConvertibleP", "keyDown"]
-- !private ["s23CustomStringConvertibleP", "kleineQuadrate"]
-- !private ["s23CustomStringConvertibleP", "kleineQuadrateReset"]
 - !private ["s23CustomStringConvertibleP", "last"]
 - !private ["s23CustomStringConvertibleP", "lightGray"]
 - !private ["s23CustomStringConvertibleP", "lineWidth"]
@@ -309,8 +298,6 @@ depends-member:
 - ["SQ", "init"]
 - !private ["SQ", "keyCode"]
 - !private ["SQ", "keyDown"]
-- !private ["SQ", "kleineQuadrate"]
-- !private ["SQ", "kleineQuadrateReset"]
 - !private ["SQ", "last"]
 - !private ["SQ", "lightGray"]
 - !private ["SQ", "lineWidth"]
@@ -426,8 +413,6 @@ depends-member:
 - ["SH", "init"]
 - !private ["SH", "keyCode"]
 - !private ["SH", "keyDown"]
-- !private ["SH", "kleineQuadrate"]
-- !private ["SH", "kleineQuadrateReset"]
 - !private ["SH", "last"]
 - !private ["SH", "lightGray"]
 - !private ["SH", "lineWidth"]
@@ -478,7 +463,6 @@ depends-member:
 - ["9Rush_Hour6MyViewC", "init"]
 - ["9Rush_Hour6MyViewC", "keyDown"]
 - ["9Rush_Hour6MyViewC", "kleineQuadrate"]
-- ["9Rush_Hour6MyViewC", "kleineQuadrateReset"]
 - !private ["9Rush_Hour6MyViewC", "min"]
 - ["9Rush_Hour6MyViewC", "mouseUp"]
 - !private ["9Rush_Hour6MyViewC", "print"]
@@ -501,7 +485,6 @@ depends-member:
 - ["So22NSAccessibilityElementP", "init"]
 - ["So22NSAccessibilityElementP", "keyDown"]
 - ["So22NSAccessibilityElementP", "kleineQuadrate"]
-- ["So22NSAccessibilityElementP", "kleineQuadrateReset"]
 - !private ["So22NSAccessibilityElementP", "min"]
 - ["So22NSAccessibilityElementP", "mouseUp"]
 - !private ["So22NSAccessibilityElementP", "print"]
@@ -524,7 +507,6 @@ depends-member:
 - ["So15NSAccessibilityP", "init"]
 - ["So15NSAccessibilityP", "keyDown"]
 - ["So15NSAccessibilityP", "kleineQuadrate"]
-- ["So15NSAccessibilityP", "kleineQuadrateReset"]
 - !private ["So15NSAccessibilityP", "min"]
 - ["So15NSAccessibilityP", "mouseUp"]
 - !private ["So15NSAccessibilityP", "print"]
@@ -547,7 +529,6 @@ depends-member:
 - ["So29NSAnimatablePropertyContainerP", "init"]
 - ["So29NSAnimatablePropertyContainerP", "keyDown"]
 - ["So29NSAnimatablePropertyContainerP", "kleineQuadrate"]
-- ["So29NSAnimatablePropertyContainerP", "kleineQuadrateReset"]
 - !private ["So29NSAnimatablePropertyContainerP", "min"]
 - ["So29NSAnimatablePropertyContainerP", "mouseUp"]
 - !private ["So29NSAnimatablePropertyContainerP", "print"]
@@ -570,7 +551,6 @@ depends-member:
 - ["So25NSAppearanceCustomizationP", "init"]
 - ["So25NSAppearanceCustomizationP", "keyDown"]
 - ["So25NSAppearanceCustomizationP", "kleineQuadrate"]
-- ["So25NSAppearanceCustomizationP", "kleineQuadrateReset"]
 - !private ["So25NSAppearanceCustomizationP", "min"]
 - ["So25NSAppearanceCustomizationP", "mouseUp"]
 - !private ["So25NSAppearanceCustomizationP", "print"]
@@ -606,7 +586,6 @@ depends-member:
 - !private ["So8NSCodingP", "keyCode"]
 - ["So8NSCodingP", "keyDown"]
 - ["So8NSCodingP", "kleineQuadrate"]
-- ["So8NSCodingP", "kleineQuadrateReset"]
 - !private ["So8NSCodingP", "lightGray"]
 - !private ["So8NSCodingP", "lineWidth"]
 - !private ["So8NSCodingP", "locationInWindow"]
@@ -658,7 +637,6 @@ depends-member:
 - ["So21NSDraggingDestinationP", "init"]
 - ["So21NSDraggingDestinationP", "keyDown"]
 - ["So21NSDraggingDestinationP", "kleineQuadrate"]
-- ["So21NSDraggingDestinationP", "kleineQuadrateReset"]
 - !private ["So21NSDraggingDestinationP", "min"]
 - ["So21NSDraggingDestinationP", "mouseUp"]
 - !private ["So21NSDraggingDestinationP", "print"]
@@ -697,7 +675,6 @@ depends-member:
 - !private ["So8NSObjectC", "keyCode"]
 - ["So8NSObjectC", "keyDown"]
 - ["So8NSObjectC", "kleineQuadrate"]
-- ["So8NSObjectC", "kleineQuadrateReset"]
 - !private ["So8NSObjectC", "lightGray"]
 - !private ["So8NSObjectC", "lineWidth"]
 - !private ["So8NSObjectC", "locationInWindow"]
@@ -745,7 +722,6 @@ depends-member:
 - !private ["So8NSObjectP", "keyCode"]
 - ["So8NSObjectP", "keyDown"]
 - ["So8NSObjectP", "kleineQuadrate"]
-- ["So8NSObjectP", "kleineQuadrateReset"]
 - !private ["So8NSObjectP", "lightGray"]
 - !private ["So8NSObjectP", "lineWidth"]
 - !private ["So8NSObjectP", "locationInWindow"]
@@ -795,7 +771,6 @@ depends-member:
 - ["So11NSResponderC", "init"]
 - ["So11NSResponderC", "keyDown"]
 - ["So11NSResponderC", "kleineQuadrate"]
-- ["So11NSResponderC", "kleineQuadrateReset"]
 - !private ["So11NSResponderC", "min"]
 - ["So11NSResponderC", "mouseUp"]
 - !private ["So11NSResponderC", "print"]
@@ -835,7 +810,6 @@ depends-member:
 - ["So30NSStandardKeyBindingRespondingP", "init"]
 - ["So30NSStandardKeyBindingRespondingP", "keyDown"]
 - ["So30NSStandardKeyBindingRespondingP", "kleineQuadrate"]
-- ["So30NSStandardKeyBindingRespondingP", "kleineQuadrateReset"]
 - !private ["So30NSStandardKeyBindingRespondingP", "min"]
 - ["So30NSStandardKeyBindingRespondingP", "mouseUp"]
 - !private ["So30NSStandardKeyBindingRespondingP", "print"]
@@ -864,7 +838,6 @@ depends-member:
 - ["So18NSTouchBarProviderP", "init"]
 - ["So18NSTouchBarProviderP", "keyDown"]
 - ["So18NSTouchBarProviderP", "kleineQuadrate"]
-- ["So18NSTouchBarProviderP", "kleineQuadrateReset"]
 - !private ["So18NSTouchBarProviderP", "min"]
 - ["So18NSTouchBarProviderP", "mouseUp"]
 - !private ["So18NSTouchBarProviderP", "print"]
@@ -893,7 +866,6 @@ depends-member:
 - ["So23NSUserActivityRestoringP", "init"]
 - ["So23NSUserActivityRestoringP", "keyDown"]
 - ["So23NSUserActivityRestoringP", "kleineQuadrate"]
-- ["So23NSUserActivityRestoringP", "kleineQuadrateReset"]
 - !private ["So23NSUserActivityRestoringP", "min"]
 - ["So23NSUserActivityRestoringP", "mouseUp"]
 - !private ["So23NSUserActivityRestoringP", "print"]
@@ -918,7 +890,6 @@ depends-member:
 - ["So33NSUserInterfaceItemIdentificationP", "init"]
 - ["So33NSUserInterfaceItemIdentificationP", "keyDown"]
 - ["So33NSUserInterfaceItemIdentificationP", "kleineQuadrate"]
-- ["So33NSUserInterfaceItemIdentificationP", "kleineQuadrateReset"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "min"]
 - ["So33NSUserInterfaceItemIdentificationP", "mouseUp"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "print"]
@@ -941,7 +912,6 @@ depends-member:
 - ["So6NSViewC", "init"]
 - ["So6NSViewC", "keyDown"]
 - ["So6NSViewC", "kleineQuadrate"]
-- ["So6NSViewC", "kleineQuadrateReset"]
 - !private ["So6NSViewC", "min"]
 - ["So6NSViewC", "mouseUp"]
 - !private ["So6NSViewC", "print"]
@@ -1057,8 +1027,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "keyCode"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "keyDown"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "kleineQuadrate"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "kleineQuadrateReset"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lightGray"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lineWidth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "locationInWindow"]
@@ -1089,8 +1057,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "keyCode"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "keyDown"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kleineQuadrate"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kleineQuadrateReset"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lightGray"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lineWidth"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "locationInWindow"]
@@ -1129,8 +1095,6 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "erzeugeBasisQuadrat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "erzeugeKleinesQuadrat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "keyDown"]
-- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "kleineQuadrate"]
-- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "kleineQuadrateReset"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "min"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "mouseUp"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "print"]
@@ -1255,4 +1219,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "b4a4f303219ebb564071491f731ad684"
+interface-hash: "db37088d5c865de60198425081f57b56"

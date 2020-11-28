@@ -18,10 +18,9 @@ class MyView: NSView {
         super.draw(dirtyRect)
         
         dörtiRekt = dirtyRect
-        var kleinesQuadrat = NSRect()
-        kleineQuadrateReset()
         
         // Hintergrund
+        
         let re_HinterGrund = NSRect(x: 0, y: 0, width: dirtyRect.width, height: dirtyRect.height)
         let re_HinterGrundPath = NSBezierPath()
         re_HinterGrundPath.appendRect(re_HinterGrund)
@@ -29,13 +28,13 @@ class MyView: NSView {
         re_HinterGrundPath.fill()
         
         // Basisquadrat
+        
         _ = erzeugeBasisQuadrat(füllFarbe: .white, randFarbe: .black, zeichnen: true, dirtyRect)
         
         // kleine Quadrate -> Grid
         for w in 1 ... 6 {
             for s in 1 ... 6 {
-                kleinesQuadrat = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
-                kleineQuadrate[w][s] = kleinesQuadrat
+                _ = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
             }
         }
         
@@ -135,18 +134,6 @@ class MyView: NSView {
             kQ.fill()
         }
         return kleinesQuadrat
-    }
-    
-    func kleineQuadrateReset () {
-        let re_Null = NSRect(x: 0, y: 0, width: 0, height: 0)
-        kleineQuadrate = [[re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null],
-                          [re_Null, re_Null, re_Null, re_Null, re_Null, re_Null, re_Null]]
-        
     }
     
     override func mouseUp(with event: NSEvent) {
