@@ -37,6 +37,7 @@ class MyView: NSView {
             for s in 1 ... 6 {
                 kleinesQuadrat = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
                 kleineQuadrate[w][s] = kleinesQuadrat
+                print(kleineQuadrate)
             }
         }
         
