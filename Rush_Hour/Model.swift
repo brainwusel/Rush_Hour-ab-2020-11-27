@@ -58,21 +58,27 @@ class Car {
     var zellenBelegt: [(w: Int, s: Int)] {
         get {
             var zB = [(w: Int, s: Int)]()
-            zB.append(positionLinksUnten)
+            zB.append((w: min(6, max(1, positionLinksUnten.w)), s: min(6, max(1, positionLinksUnten.s))))
             
             if länge == .zwei && orientierung == .waagerecht {
-                zB.append((w: positionLinksUnten.w + 1, s: positionLinksUnten.s))
+                zB.append((w: min(positionLinksUnten.w + 1, 6),
+                            s: positionLinksUnten.s))
             }
             if länge == .zwei && orientierung == .senkrecht {
-                zB.append((w: positionLinksUnten.w, s: positionLinksUnten.s + 1))
+                zB.append((w: positionLinksUnten.w,
+                            s: min(positionLinksUnten.s + 1, 6)))
             }
             if länge == .drei && orientierung == .waagerecht {
-                zB.append((w: positionLinksUnten.w + 1, s: positionLinksUnten.s))
-                zB.append((w: positionLinksUnten.w + 2, s: positionLinksUnten.s))
+                zB.append((w: min(positionLinksUnten.w + 1, 6),
+                            s: positionLinksUnten.s))
+                zB.append((w: min(positionLinksUnten.w + 2, 6),
+                            s: positionLinksUnten.s))
             }
             if länge == .drei && orientierung == .senkrecht {
-                zB.append((w: positionLinksUnten.w, s: positionLinksUnten.s + 1))
-                zB.append((w: positionLinksUnten.w, s: positionLinksUnten.s + 2))
+                zB.append((w: positionLinksUnten.w,
+                           s: min(positionLinksUnten.s + 1, 6)))
+                zB.append((w: positionLinksUnten.w,
+                           s: min(positionLinksUnten.s + 2, 6)))
             }
             return zB
         }
@@ -107,81 +113,86 @@ func initAutos () -> [Car] {
 class Spiel {
     
     //  alle Autos aus dem Rush Hour ScreenShot = Aufgabe1
-    static var cars: [Car] = initAutos()
+    var cars = [Car]()
+    var grid = [[String]]()
     
-    //  Belegung der einzelnen Zellen durch Auto-ID (String aus LÄNGE und FARBE), falls leer: " ". Die Funktion überprüft NICHT, ob die Autos korrekt platziert wurden; das sollte vollständig durch die Methode BEWEGUNGSOPTIONENUPDATE sichergestellt werden. Es setzt auch voraus, dass die Aufgabenstellung korrekt formuliert ist.
-    static var grid: [[String]] {
-        get {
-            var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
-            for auto in cars {
-                for pos in auto.zellenBelegt {
-                    g[pos.w - 1][pos.s - 1] = auto.id
-                }
+    func gridUpdate () -> [[String]]{
+        var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
+        for auto in cars {
+            for pos in auto.zellenBelegt {
+                print("g_pos.w/s: \(pos.w) \(pos.s)")
+                g[pos.w - 1][pos.s - 1] = auto.id
             }
-            return g
         }
+        return g
     }
     
-    //    verschiebe ein bestimmtes Auto um eine Zelle, Identifizierung des Autos über den String ID
-    static func move (autoID: String, wohin: Richtung) {      // AUTOID: und WOHIN: werden von Maus- bzw. Tastatursignalen bestimmt
-        bewegungsOptionenUpdate(cars: &cars)
+    init () {
+        self.grid = gridUpdate()
+        self.cars = initAutos()
+    }
+    
+
+    func move (autoID: String, wohin: Richtung) {
+//        bewegungsOptionenUpdate()
         for auto in cars {
             if auto.id == autoID {
                 if auto.bewegungsOptionen.contains(wohin) {
                     switch wohin {
                     case .rechts:
-                        auto.positionLinksUnten.w += 1
+                        auto.positionLinksUnten.w = min(auto.positionLinksUnten.w + 1, 6)
                     case .links:
-                        auto.positionLinksUnten.w -= 1
+                        auto.positionLinksUnten.w = max(auto.positionLinksUnten.w - 1, 1)
                     case .rauf:
-                        auto.positionLinksUnten.s += 1
+                        auto.positionLinksUnten.s = min(auto.positionLinksUnten.s + 1, 6)
                     case .runter:
-                        auto.positionLinksUnten.s -= 1
+                        auto.positionLinksUnten.s = max(auto.positionLinksUnten.s - 1, 1)
                     default:
                         return
                     }
                 }
             }
         }
-        //aktualisiert die Eigenschaft ZELLENBELEGT für jedes Autos, aus der sich automatisch das GRID berechnet
-        bewegungsOptionenUpdate(cars: &cars)
+        bewegungsOptionenUpdate()
+        grid = gridUpdate()
     }
     
-    //    wohin kann welches Auto bewegt werden?
-    static func bewegungsOptionenUpdate (cars: inout [Car]) {
-        for auto in cars {
+    func bewegungsOptionenUpdate () {
+        grid = gridUpdate()
+        
+        for i in 0...7 {
             
-            let links = auto.zellenBelegt.first?.w
-            let rechts = auto.zellenBelegt.last?.w
-            let unten = auto.zellenBelegt.first?.s
-            let oben = auto.zellenBelegt.last?.s
+            let links = cars[i].zellenBelegt.first?.w
+            let rechts = cars[i].zellenBelegt.last?.w
+            let unten = cars[i].zellenBelegt.first?.s
+            let oben = cars[i].zellenBelegt.last?.s
             
-            if auto.orientierung == .waagerecht {
+            if cars[i].orientierung == .waagerecht {
                 
                 if links! > 1 && grid[links! - 2][unten! - 1] == " " {
-                    auto.bewegungsOptionen.append(.links)
+                    cars[i].bewegungsOptionen.append(.links)
                 }
                 if rechts! < 6 && grid[rechts!][oben! - 1] == " " {
-                    auto.bewegungsOptionen.append(.rechts)
+                    cars[i].bewegungsOptionen.append(.rechts)
                 }
                 if rechts! == 6 && oben! == 3 {                    // Exit!
-                    auto.bewegungsOptionen.append(.rechts)
+                    cars[i].bewegungsOptionen.append(.rechts)
                 }
             }
             
-            if auto.orientierung == .senkrecht {
+            if cars[i].orientierung == .senkrecht {
                 if unten! > 1 && grid[links! - 1][unten! - 2] == " " {
-                    auto.bewegungsOptionen.append(.runter)
+                    cars[i].bewegungsOptionen.append(.runter)
                 }
                 if oben! < 6 && grid[rechts! - 1][oben!] == " " {
-                    auto.bewegungsOptionen.append(.rauf)
+                    cars[i].bewegungsOptionen.append(.rauf)
                 }
             }
         }
     }
     
     //    welches Auto belegt eine bestimmte Zelle?
-   static func autoAufZelle (waagerecht: Int, senkrecht: Int) -> Car? {       // waagerecht, senkrecht: 1 ... 6
+    func autoAufZelle (waagerecht: Int, senkrecht: Int) -> Car? {       // waagerecht, senkrecht: 1 ... 6
         let identifier = grid[waagerecht - 1][senkrecht - 1]
         var auto: Car? = nil
         for c in cars {

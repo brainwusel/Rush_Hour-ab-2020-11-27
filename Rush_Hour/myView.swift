@@ -9,16 +9,12 @@ import Cocoa
 
 class MyView: NSView {
     
+    var spiel = Spiel()
     var dörtiRekt = NSRect()
     var kleineQuadrate = [[NSRect]]()
     var aktuelleAutoID = " "
-    var bewegungsRichtung: Richtung = .unbeweglich {
-        didSet (newValue) {
-            print (aktuelleAutoID, newValue)
-            Spiel.move(autoID: aktuelleAutoID, wohin: newValue)
-        }
-    }
-    var move = false
+    var bewegungsRichtung: Richtung = .unbeweglich
+    
     
     override func draw(_ dirtyRect: NSRect) {
         
@@ -49,7 +45,7 @@ class MyView: NSView {
         // Autos
         
         autosZeichnen()
-       
+        
     }
     
     func erzeugeBasisQuadrat (füllFarbe: NSColor, randFarbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
@@ -118,15 +114,15 @@ class MyView: NSView {
     func autosZeichnen () {
         for i in 0...7 {
             let re_linksUnten = erzeugeKleinesQuadrat(
-                waagerecht: (Spiel.cars[i].zellenBelegt.first?.w)!,
-                senkrecht: (Spiel.cars[i].zellenBelegt.first?.s)!,
+                waagerecht: (spiel.cars[i].zellenBelegt.first?.w)!,
+                senkrecht: (spiel.cars[i].zellenBelegt.first?.s)!,
                 farbe: .white,
                 zeichnen: false,
                 dörtiRekt)
             
             let re_rechtsOben = erzeugeKleinesQuadrat(
-                waagerecht: (Spiel.cars[i].zellenBelegt.last?.w)!,
-                senkrecht: (Spiel.cars[i].zellenBelegt.last?.s)!,
+                waagerecht: (spiel.cars[i].zellenBelegt.last?.w)!,
+                senkrecht: (spiel.cars[i].zellenBelegt.last?.s)!,
                 farbe: .white,
                 zeichnen: false,
                 dörtiRekt)
@@ -137,14 +133,14 @@ class MyView: NSView {
                 width: re_rechtsOben.maxX - re_linksUnten.minX - 20,
                 height: re_rechtsOben.maxY - re_linksUnten.minY - 20)
             
-            Spiel.cars[i].rechtEck = rechtEck
+            spiel.cars[i].rechtEck = rechtEck
             
             let autoPath = NSBezierPath()
             autoPath.appendRect(rechtEck)
-            let füllFarbe = Spiel.cars[i].füllFarbe
+            let füllFarbe = spiel.cars[i].füllFarbe
             füllFarbe.setFill()
             autoPath.fill()
-            let randFarbe = Spiel.cars[i].randFarbe
+            let randFarbe = spiel.cars[i].randFarbe
             randFarbe.setStroke()
             autoPath.lineWidth = 5
             autoPath.stroke()
@@ -152,41 +148,45 @@ class MyView: NSView {
     }
     
     override func mouseDown(with event: NSEvent) {
-        move = true
+        
         let locationInView = self.convert(event.locationInWindow, from: nil)
         let punkt = CGPoint(x: locationInView.x, y: locationInView.y)
         
         for i in 0...7 {
-            Spiel.cars[i].randFarbe = .black
-            if Spiel.cars[i].rechtEck.contains(punkt) {
-                Spiel.cars[i].randFarbe = .white
+            spiel.cars[i].randFarbe = .black
+            if spiel.cars[i].rechtEck.contains(punkt) {
+                spiel.cars[i].randFarbe = .white
                 self.setNeedsDisplay(dörtiRekt)
+                aktuelleAutoID = spiel.cars[i].id
             }
         }
     }
     
     override func mouseDragged(with event: NSEvent) {
-        if move {
-        let dx = event.deltaX
-        let dy = event.deltaY
         
-        if dx >= 0 && dy >= 0 && dx > dy {
-            bewegungsRichtung = .rechts
-        }
-        if dx >= 0 && dy >= 0 && dy > dx {
-            bewegungsRichtung = .runter
-        }
-        if dx < 0 && abs(dx) > abs(dy) {
-            bewegungsRichtung = .links
-        }
-        if dy < 0 && abs(dx) < abs(dy) {
-            bewegungsRichtung = .rauf
-        }}
-        move = false
+            let dx = event.deltaX
+            let dy = event.deltaY
+            
+            if dx >= 0 && dy >= 0 && dx > dy {
+                bewegungsRichtung = .rechts
+            }
+            if dx >= 0 && dy >= 0 && dy > dx {
+                bewegungsRichtung = .runter
+            }
+            if dx < 0 && abs(dx) > abs(dy) {
+                bewegungsRichtung = .links
+            }
+            if dy < 0 && abs(dx) < abs(dy) {
+                bewegungsRichtung = .rauf
+            }
+            print(dx, dy, bewegungsRichtung)
+        
     }
     
     override func mouseUp(with event: NSEvent) {
-        move = true
+        print (aktuelleAutoID, bewegungsRichtung)
+        spiel.move(autoID: aktuelleAutoID, wohin: bewegungsRichtung)
+        autosZeichnen()
     }
     
     
