@@ -62,17 +62,17 @@ class Car {
             
             if länge == .zwei && orientierung == .waagerecht {
                 zB.append((w: min(positionLinksUnten.w + 1, 6),
-                            s: positionLinksUnten.s))
+                           s: positionLinksUnten.s))
             }
             if länge == .zwei && orientierung == .senkrecht {
                 zB.append((w: positionLinksUnten.w,
-                            s: min(positionLinksUnten.s + 1, 6)))
+                           s: min(positionLinksUnten.s + 1, 6)))
             }
             if länge == .drei && orientierung == .waagerecht {
                 zB.append((w: min(positionLinksUnten.w + 1, 6),
-                            s: positionLinksUnten.s))
+                           s: positionLinksUnten.s))
                 zB.append((w: min(positionLinksUnten.w + 2, 6),
-                            s: positionLinksUnten.s))
+                           s: positionLinksUnten.s))
             }
             if länge == .drei && orientierung == .senkrecht {
                 zB.append((w: positionLinksUnten.w,
@@ -115,12 +115,19 @@ class Spiel {
     //  alle Autos aus dem Rush Hour ScreenShot = Aufgabe1
     var cars = [Car]()
     var grid = [[String]]()
+    var gewonnen = false
     
     func gridUpdate () -> [[String]]{
         var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
+        gewonnen = false
         for auto in cars {
             for pos in auto.zellenBelegt {
                 g[pos.w - 1][pos.s - 1] = auto.id
+                if auto.zellenBelegt.first! == (w: 6, s: 3) &&
+                    auto.füllFarbe == .red &&
+                    auto.länge == .zwei {
+                    gewonnen = true
+                }
             }
         }
         return g
@@ -131,9 +138,9 @@ class Spiel {
         self.cars = initAutos()
     }
     
-
+    
     func move (autoID: String, wohin: Richtung) {
-//        bewegungsOptionenUpdate()
+        //        bewegungsOptionenUpdate()
         for auto in cars {
             if auto.id == autoID {
                 if auto.bewegungsOptionen.contains(wohin) {

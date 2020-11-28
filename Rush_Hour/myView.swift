@@ -13,7 +13,15 @@ class MyView: NSView {
     var dörtiRekt = NSRect()
     var kleineQuadrate = [[NSRect]]()
     var aktuelleAutoID = " "
-    var bewegungsRichtung: Richtung = .unbeweglich
+    var bewegungsRichtung: Richtung = .unbeweglich {
+        didSet (newValue) {
+            spiel.move(autoID: aktuelleAutoID, wohin: newValue)
+            autosZeichnen()
+            display()
+        }
+    }
+    var hintergrundFarbe = NSColor.white
+    
     
     
     override func draw(_ dirtyRect: NSRect) {
@@ -27,7 +35,13 @@ class MyView: NSView {
         let re_HinterGrund = NSRect(x: 0, y: 0, width: dirtyRect.width, height: dirtyRect.height)
         let re_HinterGrundPath = NSBezierPath()
         re_HinterGrundPath.appendRect(re_HinterGrund)
-        NSColor.white.setFill()
+        if spiel.gewonnen {
+            hintergrundFarbe = .red
+        }
+        else {
+            hintergrundFarbe = .white
+        }
+        hintergrundFarbe.setFill()
         re_HinterGrundPath.fill()
         
         // Basisquadrat
@@ -127,11 +141,23 @@ class MyView: NSView {
                 zeichnen: false,
                 dörtiRekt)
             
-            let rechtEck = NSRect(
-                x: re_linksUnten.minX + 10,
-                y: re_linksUnten.minY + 10,
-                width: re_rechtsOben.maxX - re_linksUnten.minX - 20,
-                height: re_rechtsOben.maxY - re_linksUnten.minY - 20)
+            var rechtEck = NSRect()
+            
+            if spiel.gewonnen &&
+                spiel.cars[i].länge == .zwei &&
+                spiel.cars[i].füllFarbe == .red {
+                rechtEck = NSRect(
+                    x: re_linksUnten.minX + 10,
+                    y: re_linksUnten.minY + 10,
+                    width: (re_rechtsOben.maxX - re_linksUnten.minX) * 2 - 20,
+                    height: re_rechtsOben.maxY - re_linksUnten.minY - 20)
+            } else {
+                rechtEck = NSRect(
+                    x: re_linksUnten.minX + 10,
+                    y: re_linksUnten.minY + 10,
+                    width: re_rechtsOben.maxX - re_linksUnten.minX - 20,
+                    height: re_rechtsOben.maxY - re_linksUnten.minY - 20)
+            }
             
             spiel.cars[i].rechtEck = rechtEck
             
@@ -155,39 +181,37 @@ class MyView: NSView {
         for i in 0...7 {
             spiel.cars[i].randFarbe = .black
             if spiel.cars[i].rechtEck.contains(punkt) {
-                spiel.cars[i].randFarbe = .white
+                spiel.cars[i].randFarbe = .black
                 self.setNeedsDisplay(dörtiRekt)
                 aktuelleAutoID = spiel.cars[i].id
             }
         }
-        
-        self.becomeFirstResponder()
     }
     
     override func mouseDragged(with event: NSEvent) {
         
-            let dx = event.deltaX
-            let dy = event.deltaY
-            
-            if dx >= 0 && dy >= 0 && dx > dy {
-                bewegungsRichtung = .rechts
-            }
-            if dx >= 0 && dy >= 0 && dy > dx {
-                bewegungsRichtung = .runter
-            }
-            if dx < 0 && abs(dx) > abs(dy) {
-                bewegungsRichtung = .links
-            }
-            if dy < 0 && abs(dx) < abs(dy) {
-                bewegungsRichtung = .rauf
-            }
-            print(dx, dy, bewegungsRichtung)
-        spiel.move(autoID: aktuelleAutoID, wohin: bewegungsRichtung)
-        autosZeichnen()
+        let dx = event.deltaX
+        let dy = event.deltaY
+        
+        if dx >= 0 && dy >= 0 && dx > dy {
+            bewegungsRichtung = .rechts
+        }
+        if dx >= 0 && dy >= 0 && dy > dx {
+            bewegungsRichtung = .runter
+        }
+        if dx < 0 && abs(dx) > abs(dy) {
+            bewegungsRichtung = .links
+        }
+        if dy < 0 && abs(dx) < abs(dy) {
+            bewegungsRichtung = .rauf
+        }
+        //        print(dx, dy, bewegungsRichtung)
+        //        spiel.move(autoID: aktuelleAutoID, wohin: bewegungsRichtung)
+        //        autosZeichnen()
         
     }
     
-
+    
     
     override func keyDown(with event: NSEvent) {
         print(event.keyCode)
