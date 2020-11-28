@@ -36,7 +36,7 @@ class MyView: NSView {
         let re_HinterGrundPath = NSBezierPath()
         re_HinterGrundPath.appendRect(re_HinterGrund)
         if spiel.gewonnen {
-            hintergrundFarbe = .red
+            hintergrundFarbe = .green
         }
         else {
             hintergrundFarbe = .white
