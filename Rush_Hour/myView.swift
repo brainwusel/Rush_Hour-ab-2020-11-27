@@ -96,7 +96,6 @@ class MyView: NSView {
         
         
         return basisQuadrat
-        
     }
     
     func erzeugeKleinesQuadrat (waagerecht w: Int, senkrecht s: Int, farbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
@@ -181,7 +180,7 @@ class MyView: NSView {
         for i in 0...7 {
             spiel.cars[i].randFarbe = .black
             if spiel.cars[i].rechtEck.contains(punkt) {
-                spiel.cars[i].randFarbe = .black
+                spiel.cars[i].randFarbe = .white
                 self.setNeedsDisplay(dörtiRekt)
                 aktuelleAutoID = spiel.cars[i].id
             }
@@ -205,17 +204,5 @@ class MyView: NSView {
         if dy < 0 && abs(dx) < abs(dy) {
             bewegungsRichtung = .rauf
         }
-        //        print(dx, dy, bewegungsRichtung)
-        //        spiel.move(autoID: aktuelleAutoID, wohin: bewegungsRichtung)
-        //        autosZeichnen()
-        
     }
-    
-    
-    
-    override func keyDown(with event: NSEvent) {
-        print(event.keyCode)
-    }
-    
-    
 }

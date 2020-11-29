@@ -19,7 +19,6 @@ provides-member:
 - ["9Rush_Hour3CarC", ""]
 - ["9Rush_Hour5SpielC", ""]
 provides-dynamic-lookup:
-- "autoAufZelle"
 - "bewegungsOptionen"
 - "bewegungsOptionenUpdate"
 - "cars"
@@ -521,10 +520,8 @@ depends-member:
 - !private ["ST", "zellenBelegt"]
 - !private ["s5SliceV", "subscript"]
 - ["9Rush_Hour5SpielC", "Car"]
-- ["9Rush_Hour5SpielC", "Int"]
 - ["9Rush_Hour5SpielC", "Richtung"]
 - ["9Rush_Hour5SpielC", "String"]
-- ["9Rush_Hour5SpielC", "autoAufZelle"]
 - ["9Rush_Hour5SpielC", "bewegungsOptionenUpdate"]
 - ["9Rush_Hour5SpielC", "cars"]
 - ["9Rush_Hour5SpielC", "deinit"]
@@ -719,4 +716,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "33e252fb3b73991b67c0902a124136cc"
+interface-hash: "02cdfb3a98825833cb3d23ddd9fcab97"

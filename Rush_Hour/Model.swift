@@ -93,6 +93,7 @@ class Car {
 
 //  Aufgabe 1 aus ScreenShot - eine Logik für die Auswahl verschiedender Aufgaben fehlt noch
 //  standardisierte Reihenfolge der Autos im Auto-Array: "Zweier" rot gelb grün blau "Dreier" rot gelb grün blau, "Zweier" rot ist das Exit-Auto
+
 func initAutos () -> [Car] {
     var autos = [Car]()
     
@@ -196,18 +197,6 @@ class Spiel {
                 }
             }
         }
-    }
-    
-    //    welches Auto belegt eine bestimmte Zelle?
-    func autoAufZelle (waagerecht: Int, senkrecht: Int) -> Car? {       // waagerecht, senkrecht: 1 ... 6
-        let identifier = grid[waagerecht - 1][senkrecht - 1]
-        var auto: Car? = nil
-        for c in cars {
-            if c.id == identifier {
-                auto = c
-            }
-        }
-        return auto                                                     // gibt NIL aus, wenn Zelle nicht von Auto belegt
     }
 }
 
