@@ -9,6 +9,8 @@ import Cocoa
 
 class MyView: NSView {
     
+    static let shared = MyView()
+    
     var spiel = Spiel()
     
     var dörtiRekt = NSRect()
@@ -17,7 +19,6 @@ class MyView: NSView {
     var bewegungsRichtung: Richtung = .unbeweglich {
         didSet (newValue) {
             spiel.move(autoID: aktuelleAutoID, wohin: newValue)
-            autosZeichnen()
             display()
         }
     }
@@ -209,7 +210,8 @@ class MyView: NSView {
     
     func startVonVorne () {
         spiel.cars = aufgabeLaden(nummer: spiel.aufgabeNummer)
-        autosZeichnen()
+        print ("startVonVorne")
+        display()
     }
     
     

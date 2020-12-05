@@ -132,12 +132,8 @@ class Spiel {
     
     //  alle Autos aus dem Rush Hour ScreenShot = Aufgabe1
     var cars = [Car]()
-    var grid = [[String]]()
-    var gewonnen = false
-    var aufgabeNummer = 1
-    
-    func gridUpdate () -> [[String]]{
-        var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
+    var grid: [[String]]
+    {    var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
         gewonnen = false
         for auto in cars {
             for pos in auto.zellenBelegt {
@@ -152,26 +148,29 @@ class Spiel {
         return g
     }
     
+    
+    
+    var gewonnen = false
+    var aufgabeNummer = 1
+    
     init () {
-        self.grid = gridUpdate()
         self.cars = aufgabeLaden(nummer: aufgabeNummer)
     }
     
     
     func move (autoID: String, wohin: Richtung) {
-        //        bewegungsOptionenUpdate()
-        for auto in cars {
-            if auto.id == autoID {
-                if auto.bewegungsOptionen.contains(wohin) {
+        for i in 0 ... cars.count - 1 {
+            if cars[i].id == autoID {
+                if cars[i].bewegungsOptionen.contains(wohin) {
                     switch wohin {
                     case .rechts:
-                        auto.positionLinksUnten.w = min(auto.positionLinksUnten.w + 1, 6)
+                        cars[i].positionLinksUnten.w = min(cars[i].positionLinksUnten.w + 1, 6)
                     case .links:
-                        auto.positionLinksUnten.w = max(auto.positionLinksUnten.w - 1, 1)
+                        cars[i].positionLinksUnten.w = max(cars[i].positionLinksUnten.w - 1, 1)
                     case .rauf:
-                        auto.positionLinksUnten.s = min(auto.positionLinksUnten.s + 1, 6)
+                        cars[i].positionLinksUnten.s = min(cars[i].positionLinksUnten.s + 1, 6)
                     case .runter:
-                        auto.positionLinksUnten.s = max(auto.positionLinksUnten.s - 1, 1)
+                        cars[i].positionLinksUnten.s = max(cars[i].positionLinksUnten.s - 1, 1)
                     default:
                         return
                     }
@@ -179,12 +178,9 @@ class Spiel {
             }
         }
         bewegungsOptionenUpdate()
-        grid = gridUpdate()
     }
     
-    func bewegungsOptionenUpdate () {
-        grid = gridUpdate()
-        
+    func bewegungsOptionenUpdate () {        
         for i in 0...cars.count - 1 {
             cars[i].bewegungsOptionen.removeAll()
             
