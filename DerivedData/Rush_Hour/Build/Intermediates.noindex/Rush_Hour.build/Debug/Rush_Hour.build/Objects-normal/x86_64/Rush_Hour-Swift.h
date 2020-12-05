@@ -231,12 +231,10 @@ SWIFT_CLASS("_TtC9Rush_Hour6MyView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSButton;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 @interface ViewController : NSViewController
-- (IBAction)startVonVorne:(NSButton * _Nonnull)sender;
 - (void)viewDidLoad;
 @property (nonatomic) id _Nullable representedObject;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

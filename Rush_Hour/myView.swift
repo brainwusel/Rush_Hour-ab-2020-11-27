@@ -9,10 +9,7 @@ import Cocoa
 
 class MyView: NSView {
     
-    static let shared = MyView()
-    
     var spiel = Spiel()
-    
     var dörtiRekt = NSRect()
     var kleineQuadrate = [[NSRect]]()
     var aktuelleAutoID = " "
@@ -23,7 +20,6 @@ class MyView: NSView {
         }
     }
     var hintergrundFarbe = NSColor.white
-    
     
     
     override func draw(_ dirtyRect: NSRect) {
@@ -208,14 +204,7 @@ class MyView: NSView {
         }
     }
     
-    func startVonVorne () {
-        spiel.cars = aufgabeLaden(nummer: spiel.aufgabeNummer)
-        print ("startVonVorne")
-        display()
-    }
-    
-    
-    
+
     override var acceptsFirstResponder: Bool {return true}
     override func becomeFirstResponder() -> Bool {
         return true

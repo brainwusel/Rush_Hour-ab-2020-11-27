@@ -9,12 +9,6 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    var myView = MyView()
-    
-    @IBAction func startVonVorne (_ sender: NSButton) {
-        myView.startVonVorne()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
