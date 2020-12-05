@@ -4,7 +4,7 @@ provides-top-level:
 - "Orientierung"
 - "Richtung"
 - "Car"
-- "initAutos"
+- "aufgabeLaden"
 - "Spiel"
 provides-nominal:
 - "9Rush_Hour008Lnge_loaO"
@@ -19,6 +19,7 @@ provides-member:
 - ["9Rush_Hour3CarC", ""]
 - ["9Rush_Hour5SpielC", ""]
 provides-dynamic-lookup:
+- "aufgabeNummer"
 - "bewegungsOptionen"
 - "bewegungsOptionenUpdate"
 - "cars"
@@ -59,12 +60,13 @@ depends-top-level:
 - "StringLiteralType"
 - "UnicodeScalarType"
 - !private "_findStringSwitchCase"
+- "aufgabeLaden"
+- !private "aufgabeNummer"
 - !private "bewegungsOptionenUpdate"
 - !private "cars"
 - !private "gewonnen"
 - !private "grid"
 - !private "gridUpdate"
-- "initAutos"
 - !private "l\xE4nge"
 - !private "max"
 - !private "min"
@@ -74,6 +76,7 @@ depends-top-level:
 depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "contains"]
+- !private ["Sa", "count"]
 - !private ["Sa", "first"]
 - ["Sa", "init"]
 - !private ["Sa", "last"]
@@ -87,6 +90,7 @@ depends-member:
 - !private ["SK", "append"]
 - !private ["SK", "bewegungsOptionen"]
 - !private ["SK", "contains"]
+- !private ["SK", "count"]
 - !private ["SK", "first"]
 - ["SK", "init"]
 - !private ["SK", "last"]
@@ -97,6 +101,7 @@ depends-member:
 - ["So6CGRectV", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "append"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "contains"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "first"]
 - ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "last"]
@@ -106,6 +111,7 @@ depends-member:
 - !private ["s7CVarArgP", "black"]
 - !private ["s7CVarArgP", "blue"]
 - !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "green"]
 - ["s7CVarArgP", "init"]
@@ -116,6 +122,7 @@ depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "systemBlue"]
 - !private ["s7CVarArgP", "systemGreen"]
+- !private ["s7CVarArgP", "systemRed"]
 - !private ["s7CVarArgP", "systemYellow"]
 - !private ["s7CVarArgP", "yellow"]
 - ["9Rush_Hour3CarC", "Int"]
@@ -142,6 +149,7 @@ depends-member:
 - !private ["Sl", "append"]
 - !private ["Sl", "bewegungsOptionen"]
 - !private ["Sl", "contains"]
+- !private ["Sl", "count"]
 - !private ["Sl", "first"]
 - ["Sl", "init"]
 - !private ["Sl", "last"]
@@ -153,6 +161,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "append"]
 - !private ["10Foundation15ContiguousBytesP", "bewegungsOptionen"]
 - !private ["10Foundation15ContiguousBytesP", "contains"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["10Foundation15ContiguousBytesP", "first"]
 - ["10Foundation15ContiguousBytesP", "init"]
 - !private ["10Foundation15ContiguousBytesP", "last"]
@@ -165,6 +174,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "blue"]
 - !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
 - ["s28CustomDebugStringConvertibleP", "init"]
@@ -176,12 +186,14 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "systemBlue"]
 - !private ["s28CustomDebugStringConvertibleP", "systemGreen"]
+- !private ["s28CustomDebugStringConvertibleP", "systemRed"]
 - !private ["s28CustomDebugStringConvertibleP", "systemYellow"]
 - !private ["s28CustomDebugStringConvertibleP", "yellow"]
 - !private ["s28CustomDebugStringConvertibleP", "zellenBelegt"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "bewegungsOptionen"]
 - !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "first"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "last"]
@@ -197,6 +209,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "black"]
 - !private ["s23CustomStringConvertibleP", "blue"]
 - !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "first"]
 - !private ["s23CustomStringConvertibleP", "green"]
 - ["s23CustomStringConvertibleP", "init"]
@@ -208,6 +221,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "systemBlue"]
 - !private ["s23CustomStringConvertibleP", "systemGreen"]
+- !private ["s23CustomStringConvertibleP", "systemRed"]
 - !private ["s23CustomStringConvertibleP", "systemYellow"]
 - !private ["s23CustomStringConvertibleP", "yellow"]
 - !private ["s23CustomStringConvertibleP", "zellenBelegt"]
@@ -215,6 +229,7 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "append"]
 - !private ["10Foundation12DataProtocolP", "bewegungsOptionen"]
 - !private ["10Foundation12DataProtocolP", "contains"]
+- !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "first"]
 - ["10Foundation12DataProtocolP", "init"]
 - !private ["10Foundation12DataProtocolP", "last"]
@@ -224,6 +239,7 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "zellenBelegt"]
 - !private ["Se", "append"]
 - !private ["Se", "contains"]
+- !private ["Se", "count"]
 - !private ["Se", "first"]
 - ["Se", "init"]
 - !private ["Se", "last"]
@@ -233,6 +249,7 @@ depends-member:
 - !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SE", "append"]
 - !private ["SE", "contains"]
+- !private ["SE", "count"]
 - !private ["SE", "first"]
 - ["SE", "init"]
 - !private ["SE", "last"]
@@ -250,6 +267,7 @@ depends-member:
 - !private ["SQ", "black"]
 - !private ["SQ", "blue"]
 - !private ["SQ", "contains"]
+- !private ["SQ", "count"]
 - !private ["SQ", "drei"]
 - !private ["SQ", "findStringSwitchCase"]
 - !private ["SQ", "first"]
@@ -271,6 +289,7 @@ depends-member:
 - !private ["SQ", "subscript"]
 - !private ["SQ", "systemBlue"]
 - !private ["SQ", "systemGreen"]
+- !private ["SQ", "systemRed"]
 - !private ["SQ", "systemYellow"]
 - !private ["SQ", "unbeweglich"]
 - !private ["SQ", "waagerecht"]
@@ -281,6 +300,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "bewegungsOptionen"]
 - !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
@@ -306,6 +326,7 @@ depends-member:
 - !private ["SH", "black"]
 - !private ["SH", "blue"]
 - !private ["SH", "contains"]
+- !private ["SH", "count"]
 - !private ["SH", "drei"]
 - !private ["SH", "findStringSwitchCase"]
 - !private ["SH", "first"]
@@ -327,6 +348,7 @@ depends-member:
 - !private ["SH", "subscript"]
 - !private ["SH", "systemBlue"]
 - !private ["SH", "systemGreen"]
+- !private ["SH", "systemRed"]
 - !private ["SH", "systemYellow"]
 - !private ["SH", "unbeweglich"]
 - !private ["SH", "waagerecht"]
@@ -352,6 +374,7 @@ depends-member:
 - !private ["SM", "append"]
 - !private ["SM", "bewegungsOptionen"]
 - !private ["SM", "contains"]
+- !private ["SM", "count"]
 - !private ["SM", "first"]
 - ["SM", "init"]
 - !private ["SM", "last"]
@@ -361,6 +384,7 @@ depends-member:
 - !private ["SM", "zellenBelegt"]
 - !private ["10Foundation19MutableDataProtocolP", "append"]
 - !private ["10Foundation19MutableDataProtocolP", "contains"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "first"]
 - ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "last"]
@@ -374,6 +398,7 @@ depends-member:
 - !private ["So8NSCodingP", "red"]
 - !private ["So8NSCodingP", "systemBlue"]
 - !private ["So8NSCodingP", "systemGreen"]
+- !private ["So8NSCodingP", "systemRed"]
 - !private ["So8NSCodingP", "systemYellow"]
 - !private ["So8NSCodingP", "yellow"]
 - !private ["So7NSColorC", "black"]
@@ -383,6 +408,7 @@ depends-member:
 - !private ["So7NSColorC", "red"]
 - !private ["So7NSColorC", "systemBlue"]
 - !private ["So7NSColorC", "systemGreen"]
+- !private ["So7NSColorC", "systemRed"]
 - !private ["So7NSColorC", "systemYellow"]
 - !private ["So7NSColorC", "yellow"]
 - !private ["So9NSCopyingP", "black"]
@@ -392,6 +418,7 @@ depends-member:
 - !private ["So9NSCopyingP", "red"]
 - !private ["So9NSCopyingP", "systemBlue"]
 - !private ["So9NSCopyingP", "systemGreen"]
+- !private ["So9NSCopyingP", "systemRed"]
 - !private ["So9NSCopyingP", "systemYellow"]
 - !private ["So9NSCopyingP", "yellow"]
 - ["So8NSObjectC", ""]
@@ -402,6 +429,7 @@ depends-member:
 - !private ["So8NSObjectC", "red"]
 - !private ["So8NSObjectC", "systemBlue"]
 - !private ["So8NSObjectC", "systemGreen"]
+- !private ["So8NSObjectC", "systemRed"]
 - !private ["So8NSObjectC", "systemYellow"]
 - !private ["So8NSObjectC", "yellow"]
 - ["So8NSObjectP", ""]
@@ -412,6 +440,7 @@ depends-member:
 - !private ["So8NSObjectP", "red"]
 - !private ["So8NSObjectP", "systemBlue"]
 - !private ["So8NSObjectP", "systemGreen"]
+- !private ["So8NSObjectP", "systemRed"]
 - !private ["So8NSObjectP", "systemYellow"]
 - !private ["So8NSObjectP", "yellow"]
 - !private ["So19NSPasteboardReadingP", "black"]
@@ -421,6 +450,7 @@ depends-member:
 - !private ["So19NSPasteboardReadingP", "red"]
 - !private ["So19NSPasteboardReadingP", "systemBlue"]
 - !private ["So19NSPasteboardReadingP", "systemGreen"]
+- !private ["So19NSPasteboardReadingP", "systemRed"]
 - !private ["So19NSPasteboardReadingP", "systemYellow"]
 - !private ["So19NSPasteboardReadingP", "yellow"]
 - !private ["So19NSPasteboardWritingP", "black"]
@@ -430,6 +460,7 @@ depends-member:
 - !private ["So19NSPasteboardWritingP", "red"]
 - !private ["So19NSPasteboardWritingP", "systemBlue"]
 - !private ["So19NSPasteboardWritingP", "systemGreen"]
+- !private ["So19NSPasteboardWritingP", "systemRed"]
 - !private ["So19NSPasteboardWritingP", "systemYellow"]
 - !private ["So19NSPasteboardWritingP", "yellow"]
 - !private ["So14NSSecureCodingP", "black"]
@@ -439,6 +470,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "red"]
 - !private ["So14NSSecureCodingP", "systemBlue"]
 - !private ["So14NSSecureCodingP", "systemGreen"]
+- !private ["So14NSSecureCodingP", "systemRed"]
 - !private ["So14NSSecureCodingP", "systemYellow"]
 - !private ["So14NSSecureCodingP", "yellow"]
 - ["9Rush_Hour12OrientierungO", "=="]
@@ -459,6 +491,7 @@ depends-member:
 - !private ["Sk", "append"]
 - !private ["Sk", "bewegungsOptionen"]
 - !private ["Sk", "contains"]
+- !private ["Sk", "count"]
 - !private ["Sk", "first"]
 - ["Sk", "init"]
 - !private ["Sk", "last"]
@@ -470,6 +503,7 @@ depends-member:
 - !private ["Sm", "append"]
 - !private ["Sm", "bewegungsOptionen"]
 - !private ["Sm", "contains"]
+- !private ["Sm", "count"]
 - !private ["Sm", "first"]
 - ["Sm", "init"]
 - !private ["Sm", "last"]
@@ -510,6 +544,7 @@ depends-member:
 - !private ["ST", "append"]
 - !private ["ST", "bewegungsOptionen"]
 - !private ["ST", "contains"]
+- !private ["ST", "count"]
 - !private ["ST", "first"]
 - ["ST", "init"]
 - !private ["ST", "last"]
@@ -522,6 +557,8 @@ depends-member:
 - ["9Rush_Hour5SpielC", "Car"]
 - ["9Rush_Hour5SpielC", "Richtung"]
 - ["9Rush_Hour5SpielC", "String"]
+- !private ["9Rush_Hour5SpielC", "aufgabeLaden"]
+- ["9Rush_Hour5SpielC", "aufgabeNummer"]
 - ["9Rush_Hour5SpielC", "bewegungsOptionenUpdate"]
 - ["9Rush_Hour5SpielC", "cars"]
 - ["9Rush_Hour5SpielC", "deinit"]
@@ -529,7 +566,6 @@ depends-member:
 - ["9Rush_Hour5SpielC", "grid"]
 - ["9Rush_Hour5SpielC", "gridUpdate"]
 - ["9Rush_Hour5SpielC", "init"]
-- !private ["9Rush_Hour5SpielC", "initAutos"]
 - !private ["9Rush_Hour5SpielC", "max"]
 - !private ["9Rush_Hour5SpielC", "min"]
 - ["9Rush_Hour5SpielC", "move"]
@@ -543,6 +579,7 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "bewegungsOptionen"]
 - !private ["s14_ArrayProtocolP", "contains"]
+- !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "first"]
 - ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "last"]
@@ -554,6 +591,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "bewegungsOptionen"]
 - !private ["s24_DestructorSafeContainerP", "contains"]
+- !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "first"]
 - ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "last"]
@@ -573,10 +611,12 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "red"]
 - !private ["s26_ExpressibleByColorLiteralP", "systemBlue"]
 - !private ["s26_ExpressibleByColorLiteralP", "systemGreen"]
+- !private ["s26_ExpressibleByColorLiteralP", "systemRed"]
 - !private ["s26_ExpressibleByColorLiteralP", "systemYellow"]
 - !private ["s26_ExpressibleByColorLiteralP", "yellow"]
 - !private ["s19_HasContiguousBytesP", "append"]
 - !private ["s19_HasContiguousBytesP", "contains"]
+- !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "first"]
 - ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "last"]
@@ -584,6 +624,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
@@ -596,6 +637,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "red"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "systemBlue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "systemGreen"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "systemRed"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "systemYellow"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "yellow"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "black"]
@@ -605,10 +647,12 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "red"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemBlue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemGreen"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemRed"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemYellow"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "yellow"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "last"]
@@ -716,4 +760,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "02cdfb3a98825833cb3d23ddd9fcab97"
+interface-hash: "654edd33a24c80b6b7abb0e6b2a2365a"

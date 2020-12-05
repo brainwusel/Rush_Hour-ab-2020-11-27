@@ -11,6 +11,8 @@ class ViewController: NSViewController {
     
     var myView = MyView()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

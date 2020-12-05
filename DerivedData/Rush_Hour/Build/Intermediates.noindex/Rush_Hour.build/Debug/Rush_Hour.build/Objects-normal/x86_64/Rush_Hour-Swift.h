@@ -224,6 +224,9 @@ SWIFT_CLASS("_TtC9Rush_Hour6MyView")
 - (void)drawRect:(NSRect)dirtyRect;
 - (void)mouseDown:(NSEvent * _Nonnull)event;
 - (void)mouseDragged:(NSEvent * _Nonnull)event;
+@property (nonatomic, readonly) BOOL acceptsFirstResponder;
+- (BOOL)becomeFirstResponder SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)resignFirstResponder SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

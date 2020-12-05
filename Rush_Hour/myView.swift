@@ -10,6 +10,7 @@ import Cocoa
 class MyView: NSView {
     
     var spiel = Spiel()
+    
     var dörtiRekt = NSRect()
     var kleineQuadrate = [[NSRect]]()
     var aktuelleAutoID = " "
@@ -87,7 +88,7 @@ class MyView: NSView {
         
         let exitRechteck = NSRect(
             x: basisQuadrat.maxX - 6,
-            y: basisQuadrat.minY + basisQuadrat.height * 2 / 6 ,
+            y: basisQuadrat.minY + basisQuadrat.height * 3 / 6 ,
             width: 11, height: basisQuadrat.height / 6 + 2)
         let eR = NSBezierPath()
         eR.appendRect(exitRechteck)
@@ -125,7 +126,7 @@ class MyView: NSView {
     
     
     func autosZeichnen () {
-        for i in 0...7 {
+        for i in 0...spiel.cars.count - 1 {
             let re_linksUnten = erzeugeKleinesQuadrat(
                 waagerecht: (spiel.cars[i].zellenBelegt.first?.w)!,
                 senkrecht: (spiel.cars[i].zellenBelegt.first?.s)!,
@@ -177,11 +178,11 @@ class MyView: NSView {
         let locationInView = self.convert(event.locationInWindow, from: nil)
         let punkt = CGPoint(x: locationInView.x, y: locationInView.y)
         
-        for i in 0...7 {
+        for i in 0...spiel.cars.count - 1 {
             spiel.cars[i].randFarbe = .black
             if spiel.cars[i].rechtEck.contains(punkt) {
-                spiel.cars[i].randFarbe = .white
-                self.setNeedsDisplay(dörtiRekt)
+//              spiel.cars[i].randFarbe = .white
+//              self.setNeedsDisplay(dörtiRekt)
                 aktuelleAutoID = spiel.cars[i].id
             }
         }
@@ -204,5 +205,20 @@ class MyView: NSView {
         if dy < 0 && abs(dx) < abs(dy) {
             bewegungsRichtung = .rauf
         }
+    }
+    
+    func startVonVorne () {
+        spiel.cars = aufgabeLaden(nummer: spiel.aufgabeNummer)
+        autosZeichnen()
+    }
+    
+    
+    
+    override var acceptsFirstResponder: Bool {return true}
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    override func resignFirstResponder() -> Bool {
+        return true
     }
 }
