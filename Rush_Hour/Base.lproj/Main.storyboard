@@ -720,6 +720,24 @@
                                     <action selector="vonVorne:" target="XfG-lQ-9wD" id="3Bw-Yt-Hru"/>
                                 </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGm-II-1kT">
+                                <rect key="frame" x="6" y="625" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="lNA-bm-pDI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="682-MC-D9M">
+                                <rect key="frame" x="6" y="654" width="114" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Aufgabe Nummer:" id="TeQ-Kf-AqA">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="KOo-WO-qP5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="2" id="htt-d4-S4F"/>
@@ -727,6 +745,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="a_ufgabeNummer" destination="AGm-II-1kT" id="vXJ-eu-uS7"/>
                         <outlet property="myView" destination="m2S-Jp-Qdl" id="5u2-ZC-W8g"/>
                         <outlet property="v_onVorne" destination="KOo-WO-qP5" id="s0s-B0-W8G"/>
                     </connections>

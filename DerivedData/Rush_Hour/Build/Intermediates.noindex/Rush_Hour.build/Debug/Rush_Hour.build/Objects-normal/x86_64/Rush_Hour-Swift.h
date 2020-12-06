@@ -226,18 +226,23 @@ SWIFT_CLASS("_TtC9Rush_Hour6MyView")
 @end
 
 @class NSButton;
+@class NSTextField;
 @class NSEvent;
+@class NSControl;
+@class NSText;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <NSTextFieldDelegate>
 @property (nonatomic, weak) IBOutlet MyView * _Null_unspecified myView;
 @property (nonatomic, weak) IBOutlet NSButton * _Null_unspecified v_onVorne;
 - (IBAction)vonVorne:(NSButton * _Nonnull)sender;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified a_ufgabeNummer;
 - (void)viewDidLoad;
 @property (nonatomic) id _Nullable representedObject;
 - (void)mouseDown:(NSEvent * _Nonnull)event;
 - (void)mouseDragged:(NSEvent * _Nonnull)event;
+- (BOOL)control:(NSControl * _Nonnull)control textShouldEndEditing:(NSText * _Nonnull)fieldEditor SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

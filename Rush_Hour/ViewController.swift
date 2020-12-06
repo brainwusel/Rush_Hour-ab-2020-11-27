@@ -7,17 +7,18 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTextFieldDelegate {
     
     var spiel = Spiel()
     
     @IBOutlet weak var myView: MyView!
     @IBOutlet weak var v_onVorne: NSButton!
     @IBAction func vonVorne (_ sender: NSButton) {
+        spiel.cars.removeAll()
         spiel.cars = aufgabeLaden(nummer: spiel.aufgabeNummer)
         myView.cars = spiel.cars
     }
-    
+    @IBOutlet weak var a_ufgabeNummer: NSTextField!
    
     var aktuelleAutoID = " "
     var bewegungsRichtung: Richtung = .unbeweglich {
@@ -34,6 +35,7 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         
         myView.cars = spiel.cars
+        a_ufgabeNummer.delegate = self
         
     }
     
@@ -74,6 +76,22 @@ class ViewController: NSViewController {
             bewegungsRichtung = .rauf
         }
     }
+    
+    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
+        if control == a_ufgabeNummer {
+            let s = a_ufgabeNummer.stringValue
+            if var nr = Int(s) {
+                nr = max(0, min(1, nr))
+                spiel.aufgabeNummer = nr
+                spiel.cars.removeAll()
+                spiel.cars = aufgabeLaden(nummer: nr)
+                myView.cars = spiel.cars
+            }
+            
+        }
+        return true
+    }
+    
 }
 
 
