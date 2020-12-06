@@ -9,16 +9,22 @@ import Cocoa
 
 class MyView: NSView {
     
-    var spiel = Spiel()
-    var dörtiRekt = NSRect()
-    var kleineQuadrate = [[NSRect]]()
-    var aktuelleAutoID = " "
-    var bewegungsRichtung: Richtung = .unbeweglich {
-        didSet (newValue) {
-            spiel.move(autoID: aktuelleAutoID, wohin: newValue)
+//    var spiel = Spiel()
+    var cars = [Car]() {
+        didSet {
             display()
         }
     }
+    var gewonnen = false
+    var dörtiRekt = NSRect()
+    var kleineQuadrate = [[NSRect]]()
+    var aktuelleAutoID = " "
+//    var bewegungsRichtung: Richtung = .unbeweglich {
+//        didSet (newValue) {
+//            spiel.move(autoID: aktuelleAutoID, wohin: newValue)
+//            display()
+//        }
+//    }
     var hintergrundFarbe = NSColor.white
     
     
@@ -33,7 +39,7 @@ class MyView: NSView {
         let re_HinterGrund = NSRect(x: 0, y: 0, width: dirtyRect.width, height: dirtyRect.height)
         let re_HinterGrundPath = NSBezierPath()
         re_HinterGrundPath.appendRect(re_HinterGrund)
-        if spiel.gewonnen {
+        if gewonnen {
             hintergrundFarbe = .green
         }
         else {
@@ -123,26 +129,26 @@ class MyView: NSView {
     
     
     func autosZeichnen () {
-        for i in 0...spiel.cars.count - 1 {
+        for i in 0...cars.count - 1 {
             let re_linksUnten = erzeugeKleinesQuadrat(
-                waagerecht: (spiel.cars[i].zellenBelegt.first?.w)!,
-                senkrecht: (spiel.cars[i].zellenBelegt.first?.s)!,
+                waagerecht: (cars[i].zellenBelegt.first?.w)!,
+                senkrecht: (cars[i].zellenBelegt.first?.s)!,
                 farbe: .white,
                 zeichnen: false,
                 dörtiRekt)
             
             let re_rechtsOben = erzeugeKleinesQuadrat(
-                waagerecht: (spiel.cars[i].zellenBelegt.last?.w)!,
-                senkrecht: (spiel.cars[i].zellenBelegt.last?.s)!,
+                waagerecht: (cars[i].zellenBelegt.last?.w)!,
+                senkrecht: (cars[i].zellenBelegt.last?.s)!,
                 farbe: .white,
                 zeichnen: false,
                 dörtiRekt)
             
             var rechtEck = NSRect()
             
-            if spiel.gewonnen &&
-                spiel.cars[i].länge == .zwei &&
-                spiel.cars[i].füllFarbe == .red {
+            if gewonnen &&
+                cars[i].länge == .zwei &&
+                cars[i].füllFarbe == .red {
                 rechtEck = NSRect(
                     x: re_linksUnten.minX + 10,
                     y: re_linksUnten.minY + 10,
@@ -156,53 +162,53 @@ class MyView: NSView {
                     height: re_rechtsOben.maxY - re_linksUnten.minY - 20)
             }
             
-            spiel.cars[i].rechtEck = rechtEck
+            cars[i].rechtEck = rechtEck
             
             let autoPath = NSBezierPath()
             autoPath.appendRect(rechtEck)
-            let füllFarbe = spiel.cars[i].füllFarbe
+            let füllFarbe = cars[i].füllFarbe
             füllFarbe.setFill()
             autoPath.fill()
-            let randFarbe = spiel.cars[i].randFarbe
+            let randFarbe = cars[i].randFarbe
             randFarbe.setStroke()
             autoPath.lineWidth = 5
             autoPath.stroke()
         }
     }
     
-    override func mouseDown(with event: NSEvent) {
-        
-        let locationInView = self.convert(event.locationInWindow, from: nil)
-        let punkt = CGPoint(x: locationInView.x, y: locationInView.y)
-        
-        for i in 0...spiel.cars.count - 1 {
-            spiel.cars[i].randFarbe = .black
-            if spiel.cars[i].rechtEck.contains(punkt) {
-//              spiel.cars[i].randFarbe = .white
-//              self.setNeedsDisplay(dörtiRekt)
-                aktuelleAutoID = spiel.cars[i].id
-            }
-        }
-    }
+//    override func mouseDown(with event: NSEvent) {
+//
+//        let locationInView = self.convert(event.locationInWindow, from: nil)
+//        let punkt = CGPoint(x: locationInView.x, y: locationInView.y)
+//
+//        for i in 0...spiel.cars.count - 1 {
+//            spiel.cars[i].randFarbe = .black
+//            if spiel.cars[i].rechtEck.contains(punkt) {
+////              spiel.cars[i].randFarbe = .white
+////              self.setNeedsDisplay(dörtiRekt)
+//                aktuelleAutoID = spiel.cars[i].id
+//            }
+//        }
+//    }
     
-    override func mouseDragged(with event: NSEvent) {
-        
-        let dx = event.deltaX
-        let dy = event.deltaY
-        
-        if dx >= 0 && dy >= 0 && dx > dy {
-            bewegungsRichtung = .rechts
-        }
-        if dx >= 0 && dy >= 0 && dy > dx {
-            bewegungsRichtung = .runter
-        }
-        if dx < 0 && abs(dx) > abs(dy) {
-            bewegungsRichtung = .links
-        }
-        if dy < 0 && abs(dx) < abs(dy) {
-            bewegungsRichtung = .rauf
-        }
-    }
+//    override func mouseDragged(with event: NSEvent) {
+//
+//        let dx = event.deltaX
+//        let dy = event.deltaY
+//
+//        if dx >= 0 && dy >= 0 && dx > dy {
+//            bewegungsRichtung = .rechts
+//        }
+//        if dx >= 0 && dy >= 0 && dy > dx {
+//            bewegungsRichtung = .runter
+//        }
+//        if dx < 0 && abs(dx) > abs(dy) {
+//            bewegungsRichtung = .links
+//        }
+//        if dy < 0 && abs(dx) < abs(dy) {
+//            bewegungsRichtung = .rauf
+//        }
+//    }
     
 
     override var acceptsFirstResponder: Bool {return true}

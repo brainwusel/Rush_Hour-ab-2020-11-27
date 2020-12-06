@@ -709,6 +709,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1400" height="709"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
+                    <connections>
+                        <outlet property="myView" destination="m2S-Jp-Qdl" id="5u2-ZC-W8g"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
