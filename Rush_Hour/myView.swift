@@ -15,17 +15,11 @@ class MyView: NSView {
         }
     }
     var gewonnen = false
-    var dörtiRekt = NSRect()
     var kleineQuadrate = [[NSRect]]()
-    var aktuelleAutoID = " "
-    var hintergrundFarbe = NSColor.white
-    
     
     override func draw(_ dirtyRect: NSRect) {
         
         super.draw(dirtyRect)
-        
-        dörtiRekt = dirtyRect
         
         // Hintergrund
         
@@ -34,15 +28,12 @@ class MyView: NSView {
                                         y: 0,
                                         width: dirtyRect.width,
                                         height: dirtyRect.height))
-        
-        
         if gewonnen {
-            hintergrundFarbe = .green
+            NSColor.green.setFill()
         }
         else {
-            hintergrundFarbe = .brown
+            NSColor.brown.setFill()
         }
-        hintergrundFarbe.setFill()
         hinterGrund.fill()
         
         // Basisquadrat
@@ -59,8 +50,7 @@ class MyView: NSView {
         
         // Autos
         
-        autosZeichnen()
-        
+        autosZeichnen(dirtyRect)
     }
     
     func erzeugeBasisQuadrat (füllFarbe: NSColor, randFarbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
@@ -125,7 +115,8 @@ class MyView: NSView {
     }
     
     
-    func autosZeichnen () {
+    func autosZeichnen (_ dirtyRect: NSRect) {
+        let dörtiRekt = dirtyRect
         for i in 0...cars.count - 1 {
             let re_linksUnten = erzeugeKleinesQuadrat(
                 waagerecht: (cars[i].zellenBelegt.first?.w)!,
@@ -171,13 +162,5 @@ class MyView: NSView {
             autoPath.lineWidth = 5
             autoPath.stroke()
         }
-    }    
-    
-    override var acceptsFirstResponder: Bool {return true}
-    override func becomeFirstResponder() -> Bool {
-        return true
-    }
-    override func resignFirstResponder() -> Bool {
-        return true
     }
 }

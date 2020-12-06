@@ -25,6 +25,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
         myView.cars = spiel.cars
     }
     
@@ -42,8 +43,6 @@ class ViewController: NSViewController {
         for i in 0...spiel.cars.count - 1 {
             spiel.cars[i].randFarbe = .black
             if spiel.cars[i].rechtEck.contains(punkt) {
-//              spiel.cars[i].randFarbe = .white
-//              self.setNeedsDisplay(dörtiRekt)
                 aktuelleAutoID = spiel.cars[i].id
             }
         }
@@ -67,8 +66,6 @@ class ViewController: NSViewController {
             bewegungsRichtung = .rauf
         }
     }
-    
-    
 }
 
 

@@ -221,9 +221,6 @@ SWIFT_CLASS("_TtC9Rush_Hour11AppDelegate")
 SWIFT_CLASS("_TtC9Rush_Hour6MyView")
 @interface MyView : NSView
 - (void)drawRect:(NSRect)dirtyRect;
-@property (nonatomic, readonly) BOOL acceptsFirstResponder;
-- (BOOL)becomeFirstResponder SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)resignFirstResponder SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
