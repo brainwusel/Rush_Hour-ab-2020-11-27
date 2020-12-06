@@ -9,18 +9,9 @@ import Cocoa
 
 class ViewController: NSViewController, NSTextFieldDelegate {
     
-    var spiel = Spiel()
-    
-    @IBOutlet weak var myView: MyView!
-    @IBOutlet weak var v_onVorne: NSButton!
-    @IBAction func vonVorne (_ sender: NSButton) {
-        spiel.cars.removeAll()
-        spiel.cars = aufgabeLaden(nummer: spiel.aufgabeNummer)
-        myView.cars = spiel.cars
-    }
-    @IBOutlet weak var a_ufgabeNummer: NSTextField!
-   
+    var spiel = Spiel(Aufgabe: 0)
     var aktuelleAutoID = " "
+    var aktuelleAufgabe = 0
     var bewegungsRichtung: Richtung = .unbeweglich {
         didSet (newValue) {
             spiel.move(autoID: aktuelleAutoID, wohin: newValue)
@@ -29,6 +20,15 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         }
     }
     
+    @IBOutlet weak var myView: MyView!
+    @IBOutlet weak var v_onVorne: NSButton!
+    @IBAction func vonVorne (_ sender: NSButton) {
+        spiel = Spiel(Aufgabe: aktuelleAufgabe)
+        myView.gewonnen = spiel.gewonnen
+        myView.cars = spiel.cars
+    }
+    @IBOutlet weak var a_ufgabeNummer: NSTextField!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,10 +82,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             let s = a_ufgabeNummer.stringValue
             if var nr = Int(s) {
                 nr = max(0, min(1, nr))
-                spiel.aufgabeNummer = nr
-                spiel.cars.removeAll()
-                spiel.cars = aufgabeLaden(nummer: nr)
+                aktuelleAufgabe = nr
+                spiel = Spiel(Aufgabe: aktuelleAufgabe)
                 myView.cars = spiel.cars
+                myView.gewonnen = spiel.gewonnen
             }
             
         }

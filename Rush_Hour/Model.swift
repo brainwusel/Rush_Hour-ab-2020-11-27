@@ -131,7 +131,16 @@ func aufgabeLaden (nummer: Int) -> [Car] {
 class Spiel {
     
     //  alle Autos aus dem Rush Hour ScreenShot = Aufgabe1
-    var cars = [Car]()
+    var cars: [Car]
+    var gewonnen: Bool
+    var aufgabeNummer: Int
+    
+    init (Aufgabe nr: Int) {
+        self.gewonnen = false
+        self.aufgabeNummer = nr
+        self.cars = aufgabeLaden(nummer: aufgabeNummer)
+    }
+    
     var grid: [[String]]
     {    var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
         gewonnen = false
@@ -146,15 +155,6 @@ class Spiel {
             }
         }
         return g
-    }
-    
-    
-    
-    var gewonnen = false
-    var aufgabeNummer = 1
-    
-    init () {
-        self.cars = aufgabeLaden(nummer: aufgabeNummer)
     }
     
     

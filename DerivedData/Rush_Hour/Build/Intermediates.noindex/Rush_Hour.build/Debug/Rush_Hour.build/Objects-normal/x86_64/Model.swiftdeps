@@ -44,7 +44,8 @@ depends-top-level:
 - !private ">"
 - !private "Array"
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
+- "Bool"
+- !private "BooleanLiteralType"
 - "Car"
 - "FloatLiteralType"
 - "Int"
@@ -76,7 +77,7 @@ depends-member:
 - !private ["Sa", "contains"]
 - !private ["Sa", "count"]
 - !private ["Sa", "first"]
-- ["Sa", "init"]
+- !private ["Sa", "init"]
 - !private ["Sa", "last"]
 - !private ["Sa", "removeAll"]
 - !private ["Sa", "subscript"]
@@ -86,14 +87,14 @@ depends-member:
 - !private ["s10ArraySliceV", "positionLinksUnten"]
 - !private ["s10ArraySliceV", "subscript"]
 - !private ["s10ArraySliceV", "zellenBelegt"]
-- ["SK", ""]
+- !private ["SK", ""]
 - !private ["SK", "append"]
 - !private ["SK", "bewegungsOptionen"]
 - !private ["SK", "contains"]
 - !private ["SK", "count"]
 - !private ["SK", "first"]
 - !private ["SK", "id"]
-- ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["SK", "last"]
 - !private ["SK", "orientierung"]
 - !private ["SK", "positionLinksUnten"]
@@ -105,7 +106,7 @@ depends-member:
 - !private ["8CloudKit21CKRecordValueProtocolP", "contains"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "count"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "first"]
-- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "last"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "removeAll"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
@@ -116,7 +117,7 @@ depends-member:
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "green"]
-- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "last"]
 - !private ["s7CVarArgP", "orange"]
 - !private ["s7CVarArgP", "red"]
@@ -147,14 +148,14 @@ depends-member:
 - ["9Rush_Hour3CarC", "randFarbe"]
 - ["9Rush_Hour3CarC", "rechtEck"]
 - ["9Rush_Hour3CarC", "zellenBelegt"]
-- ["Sl", ""]
+- !private ["Sl", ""]
 - !private ["Sl", "append"]
 - !private ["Sl", "bewegungsOptionen"]
 - !private ["Sl", "contains"]
 - !private ["Sl", "count"]
 - !private ["Sl", "first"]
 - !private ["Sl", "id"]
-- ["Sl", "init"]
+- !private ["Sl", "init"]
 - !private ["Sl", "last"]
 - !private ["Sl", "orientierung"]
 - !private ["Sl", "positionLinksUnten"]
@@ -168,7 +169,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["10Foundation15ContiguousBytesP", "first"]
 - !private ["10Foundation15ContiguousBytesP", "id"]
-- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
 - !private ["10Foundation15ContiguousBytesP", "last"]
 - !private ["10Foundation15ContiguousBytesP", "orientierung"]
 - !private ["10Foundation15ContiguousBytesP", "positionLinksUnten"]
@@ -223,7 +224,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "first"]
 - !private ["s23CustomStringConvertibleP", "green"]
 - !private ["s23CustomStringConvertibleP", "id"]
-- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "last"]
 - !private ["s23CustomStringConvertibleP", "orange"]
 - !private ["s23CustomStringConvertibleP", "orientierung"]
@@ -237,14 +238,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "systemYellow"]
 - !private ["s23CustomStringConvertibleP", "yellow"]
 - !private ["s23CustomStringConvertibleP", "zellenBelegt"]
-- ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "append"]
 - !private ["10Foundation12DataProtocolP", "bewegungsOptionen"]
 - !private ["10Foundation12DataProtocolP", "contains"]
 - !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "first"]
 - !private ["10Foundation12DataProtocolP", "id"]
-- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "init"]
 - !private ["10Foundation12DataProtocolP", "last"]
 - !private ["10Foundation12DataProtocolP", "orientierung"]
 - !private ["10Foundation12DataProtocolP", "positionLinksUnten"]
@@ -312,14 +313,14 @@ depends-member:
 - !private ["SQ", "yellow"]
 - !private ["SQ", "zellenBelegt"]
 - !private ["SQ", "zwei"]
-- ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "bewegungsOptionen"]
 - !private ["s25ExpressibleByArrayLiteralP", "contains"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
 - !private ["s25ExpressibleByArrayLiteralP", "id"]
-- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
 - !private ["s25ExpressibleByArrayLiteralP", "orientierung"]
 - !private ["s25ExpressibleByArrayLiteralP", "positionLinksUnten"]
@@ -390,14 +391,14 @@ depends-member:
 - ["9Rush_Hour008Lnge_loaO", "init"]
 - ["9Rush_Hour008Lnge_loaO", "rawValue"]
 - ["9Rush_Hour008Lnge_loaO", "zwei"]
-- ["SM", ""]
+- !private ["SM", ""]
 - !private ["SM", "append"]
 - !private ["SM", "bewegungsOptionen"]
 - !private ["SM", "contains"]
 - !private ["SM", "count"]
 - !private ["SM", "first"]
 - !private ["SM", "id"]
-- ["SM", "init"]
+- !private ["SM", "init"]
 - !private ["SM", "last"]
 - !private ["SM", "orientierung"]
 - !private ["SM", "positionLinksUnten"]
@@ -408,7 +409,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "contains"]
 - !private ["10Foundation19MutableDataProtocolP", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "first"]
-- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "last"]
 - !private ["10Foundation19MutableDataProtocolP", "removeAll"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
@@ -509,28 +510,28 @@ depends-member:
 - ["9Rush_Hour12OrientierungO", "rawValue"]
 - ["9Rush_Hour12OrientierungO", "senkrecht"]
 - ["9Rush_Hour12OrientierungO", "waagerecht"]
-- ["Sk", ""]
+- !private ["Sk", ""]
 - !private ["Sk", "append"]
 - !private ["Sk", "bewegungsOptionen"]
 - !private ["Sk", "contains"]
 - !private ["Sk", "count"]
 - !private ["Sk", "first"]
 - !private ["Sk", "id"]
-- ["Sk", "init"]
+- !private ["Sk", "init"]
 - !private ["Sk", "last"]
 - !private ["Sk", "orientierung"]
 - !private ["Sk", "positionLinksUnten"]
 - !private ["Sk", "removeAll"]
 - !private ["Sk", "subscript"]
 - !private ["Sk", "zellenBelegt"]
-- ["Sm", ""]
+- !private ["Sm", ""]
 - !private ["Sm", "append"]
 - !private ["Sm", "bewegungsOptionen"]
 - !private ["Sm", "contains"]
 - !private ["Sm", "count"]
 - !private ["Sm", "first"]
 - !private ["Sm", "id"]
-- ["Sm", "init"]
+- !private ["Sm", "init"]
 - !private ["Sm", "last"]
 - !private ["Sm", "orientierung"]
 - !private ["Sm", "positionLinksUnten"]
@@ -566,14 +567,14 @@ depends-member:
 - ["9Rush_Hour8RichtungO", "unbeweglich"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "append"]
 - !private ["ST", "bewegungsOptionen"]
 - !private ["ST", "contains"]
 - !private ["ST", "count"]
 - !private ["ST", "first"]
 - !private ["ST", "id"]
-- ["ST", "init"]
+- !private ["ST", "init"]
 - !private ["ST", "last"]
 - !private ["ST", "makeIterator"]
 - !private ["ST", "orientierung"]
@@ -582,7 +583,9 @@ depends-member:
 - !private ["ST", "subscript"]
 - !private ["ST", "zellenBelegt"]
 - !private ["s5SliceV", "subscript"]
+- ["9Rush_Hour5SpielC", "Bool"]
 - ["9Rush_Hour5SpielC", "Car"]
+- ["9Rush_Hour5SpielC", "Int"]
 - ["9Rush_Hour5SpielC", "Richtung"]
 - ["9Rush_Hour5SpielC", "String"]
 - !private ["9Rush_Hour5SpielC", "aufgabeLaden"]
@@ -609,7 +612,7 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "first"]
 - !private ["s14_ArrayProtocolP", "id"]
-- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "last"]
 - !private ["s14_ArrayProtocolP", "orientierung"]
 - !private ["s14_ArrayProtocolP", "positionLinksUnten"]
@@ -623,14 +626,14 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "first"]
 - !private ["s24_DestructorSafeContainerP", "id"]
-- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "last"]
 - !private ["s24_DestructorSafeContainerP", "orientierung"]
 - !private ["s24_DestructorSafeContainerP", "positionLinksUnten"]
 - !private ["s24_DestructorSafeContainerP", "removeAll"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "zellenBelegt"]
-- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
@@ -649,7 +652,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "contains"]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "first"]
-- ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "last"]
 - !private ["s19_HasContiguousBytesP", "removeAll"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
@@ -657,7 +660,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
-- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
@@ -690,25 +693,25 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "removeAll"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 depends-nominal:
-- "Sa"
+- !private "Sa"
 - !private "s10ArraySliceV"
-- "SK"
+- !private "SK"
 - "So6CGRectV"
-- "8CloudKit21CKRecordValueProtocolP"
-- "s7CVarArgP"
+- !private "8CloudKit21CKRecordValueProtocolP"
+- !private "s7CVarArgP"
 - "9Rush_Hour3CarC"
-- "Sl"
+- !private "Sl"
 - !private "SL"
-- "10Foundation15ContiguousBytesP"
+- !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
-- "s23CustomStringConvertibleP"
-- "10Foundation12DataProtocolP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
 - "Se"
 - !private "s26DefaultStringInterpolationV"
 - "SE"
 - "SQ"
-- "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
@@ -718,8 +721,8 @@ depends-nominal:
 - !private "s20LazySequenceProtocolP"
 - !private "s25LosslessStringConvertibleP"
 - "9Rush_Hour008Lnge_loaO"
-- "SM"
-- "10Foundation19MutableDataProtocolP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
 - !private "So7NSColorC"
 - !private "So9NSCopyingP"
@@ -729,27 +732,27 @@ depends-nominal:
 - !private "So19NSPasteboardWritingP"
 - !private "So14NSSecureCodingP"
 - "9Rush_Hour12OrientierungO"
-- "Sk"
-- "Sm"
+- !private "Sk"
+- !private "Sm"
 - "SY"
 - "9Rush_Hour8RichtungO"
-- "ST"
+- !private "ST"
 - !private "s5SliceV"
 - "9Rush_Hour5SpielC"
 - !private "s27StringInterpolationProtocolP"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
-- "s14_ArrayProtocolP"
+- !private "s14_ArrayProtocolP"
 - "s30_CustomPlaygroundQuickLookableP"
-- "s24_DestructorSafeContainerP"
-- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
-- "s19_HasContiguousBytesP"
-- "s35_HasCustomAnyHashableRepresentationP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - "s21_ObjectiveCBridgeableP"
@@ -791,4 +794,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "2c9efd05615836adb4918a30b4ae3a0c"
+interface-hash: "f8c0ef28b5b16a9f19f16657fe3951c8"
