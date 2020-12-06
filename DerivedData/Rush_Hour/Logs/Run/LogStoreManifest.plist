@@ -6,6 +6,74 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>090E8D0D-FD87-455A-8845-8C9729C0C874</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>090E8D0D-FD87-455A-8845-8C9729C0C874.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rush_Hour project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rush_Hour</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Rush_Hour</string>
+			<key>timeStartedRecording</key>
+			<real>628971644.93298399</real>
+			<key>timeStoppedRecording</key>
+			<real>628971728.19610298</real>
+			<key>title</key>
+			<string>Run Rush_Hour</string>
+			<key>uniqueIdentifier</key>
+			<string>090E8D0D-FD87-455A-8845-8C9729C0C874</string>
+		</dict>
+		<key>0F128207-BEDE-4E0B-8CAF-CA1634E0E5BC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0F128207-BEDE-4E0B-8CAF-CA1634E0E5BC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rush_Hour project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rush_Hour</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Rush_Hour</string>
+			<key>timeStartedRecording</key>
+			<real>628971798.32716596</real>
+			<key>timeStoppedRecording</key>
+			<real>628971909.13345897</real>
+			<key>title</key>
+			<string>Run Rush_Hour</string>
+			<key>uniqueIdentifier</key>
+			<string>0F128207-BEDE-4E0B-8CAF-CA1634E0E5BC</string>
+		</dict>
 		<key>16C6E446-8BE0-4320-803D-1ADF8324A4AD</key>
 		<dict>
 			<key>className</key>
@@ -210,6 +278,40 @@
 			<key>uniqueIdentifier</key>
 			<string>83A728A3-5F83-41DA-ABE1-18AA843768A8</string>
 		</dict>
+		<key>88519BB8-2801-430E-834B-F8C8FC7A468E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>88519BB8-2801-430E-834B-F8C8FC7A468E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rush_Hour project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rush_Hour</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Rush_Hour</string>
+			<key>timeStartedRecording</key>
+			<real>628971729.886482</real>
+			<key>timeStoppedRecording</key>
+			<real>628971797.43096197</real>
+			<key>title</key>
+			<string>Run Rush_Hour</string>
+			<key>uniqueIdentifier</key>
+			<string>88519BB8-2801-430E-834B-F8C8FC7A468E</string>
+		</dict>
 		<key>8FEA6FD1-82E7-4ECB-BF22-DDDA0BB73134</key>
 		<dict>
 			<key>className</key>
@@ -244,6 +346,40 @@
 			<key>uniqueIdentifier</key>
 			<string>8FEA6FD1-82E7-4ECB-BF22-DDDA0BB73134</string>
 		</dict>
+		<key>A00C46B4-A768-4EA7-840F-C2B97E47FCE9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A00C46B4-A768-4EA7-840F-C2B97E47FCE9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rush_Hour project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rush_Hour</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Rush_Hour</string>
+			<key>timeStartedRecording</key>
+			<real>628971015.93653202</real>
+			<key>timeStoppedRecording</key>
+			<real>628971135.91808796</real>
+			<key>title</key>
+			<string>Run Rush_Hour</string>
+			<key>uniqueIdentifier</key>
+			<string>A00C46B4-A768-4EA7-840F-C2B97E47FCE9</string>
+		</dict>
 		<key>A1B25C7D-7D2D-4EA9-B300-FC9D261E6F09</key>
 		<dict>
 			<key>className</key>
@@ -277,6 +413,40 @@
 			<string>Run Rush_Hour</string>
 			<key>uniqueIdentifier</key>
 			<string>A1B25C7D-7D2D-4EA9-B300-FC9D261E6F09</string>
+		</dict>
+		<key>A79FED15-B933-43BF-9022-4862D7092FEE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A79FED15-B933-43BF-9022-4862D7092FEE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rush_Hour project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rush_Hour</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Rush_Hour</string>
+			<key>timeStartedRecording</key>
+			<real>628971608.91759896</real>
+			<key>timeStoppedRecording</key>
+			<real>628971644.04473102</real>
+			<key>title</key>
+			<string>Run Rush_Hour</string>
+			<key>uniqueIdentifier</key>
+			<string>A79FED15-B933-43BF-9022-4862D7092FEE</string>
 		</dict>
 		<key>B0371447-1070-4A4E-91C7-B938226E3B4C</key>
 		<dict>
@@ -413,6 +583,40 @@
 			<string>Run Rush_Hour</string>
 			<key>uniqueIdentifier</key>
 			<string>D8E5F290-8BCE-4ABF-85E2-8AD5097BEA6D</string>
+		</dict>
+		<key>DE9233A8-D3AD-44C7-A28C-EEAA495ACA2D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DE9233A8-D3AD-44C7-A28C-EEAA495ACA2D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rush_Hour project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rush_Hour</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Rush_Hour</string>
+			<key>timeStartedRecording</key>
+			<real>628971426.99493206</real>
+			<key>timeStoppedRecording</key>
+			<real>628971441.51236403</real>
+			<key>title</key>
+			<string>Run Rush_Hour</string>
+			<key>uniqueIdentifier</key>
+			<string>DE9233A8-D3AD-44C7-A28C-EEAA495ACA2D</string>
 		</dict>
 		<key>F3CE451C-610C-4FBA-BCA4-C940C20ED89D</key>
 		<dict>

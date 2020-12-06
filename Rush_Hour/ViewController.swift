@@ -9,9 +9,16 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var myView: MyView!
-    
     var spiel = Spiel()
+    
+    @IBOutlet weak var myView: MyView!
+    @IBOutlet weak var v_onVorne: NSButton!
+    @IBAction func vonVorne (_ sender: NSButton) {
+        spiel.cars = aufgabeLaden(nummer: spiel.aufgabeNummer)
+        myView.cars = spiel.cars
+    }
+    
+   
     var aktuelleAutoID = " "
     var bewegungsRichtung: Richtung = .unbeweglich {
         didSet (newValue) {
@@ -27,6 +34,7 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         
         myView.cars = spiel.cars
+        
     }
     
     override var representedObject: Any? {

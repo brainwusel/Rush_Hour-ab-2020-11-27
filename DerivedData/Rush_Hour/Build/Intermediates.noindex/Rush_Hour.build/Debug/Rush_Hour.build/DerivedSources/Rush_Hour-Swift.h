@@ -225,12 +225,15 @@ SWIFT_CLASS("_TtC9Rush_Hour6MyView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSButton;
 @class NSEvent;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 @interface ViewController : NSViewController
 @property (nonatomic, weak) IBOutlet MyView * _Null_unspecified myView;
+@property (nonatomic, weak) IBOutlet NSButton * _Null_unspecified v_onVorne;
+- (IBAction)vonVorne:(NSButton * _Nonnull)sender;
 - (void)viewDidLoad;
 @property (nonatomic) id _Nullable representedObject;
 - (void)mouseDown:(NSEvent * _Nonnull)event;

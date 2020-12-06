@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>5E2B2544-FA35-4C4D-861E-307FDEB02427</key>
+		<key>B827872A-6BD8-4B2D-B277-8493047B434F</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>5E2B2544-FA35-4C4D-861E-307FDEB02427.xcactivitylog</string>
+			<string>B827872A-6BD8-4B2D-B277-8493047B434F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,13 +26,13 @@
 			<key>signature</key>
 			<string>Rush_Hour-ckswhmswezvbtfaaquegcecisrvi</string>
 			<key>timeStartedRecording</key>
-			<real>628970316.11212099</real>
+			<real>628971797.48111999</real>
 			<key>timeStoppedRecording</key>
-			<real>628970317.37155604</real>
+			<real>628971798.31827295</real>
 			<key>title</key>
 			<string>Build target Rush_Hour</string>
 			<key>uniqueIdentifier</key>
-			<string>5E2B2544-FA35-4C4D-861E-307FDEB02427</string>
+			<string>B827872A-6BD8-4B2D-B277-8493047B434F</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

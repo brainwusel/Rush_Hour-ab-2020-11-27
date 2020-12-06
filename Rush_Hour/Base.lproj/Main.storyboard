@@ -708,9 +708,27 @@
                     <view key="view" id="m2S-Jp-Qdl" customClass="MyView" customModule="Rush_Hour" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1400" height="709"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KOo-WO-qP5">
+                                <rect key="frame" x="6" y="692" width="144" height="15"/>
+                                <buttonCell key="cell" type="roundRect" title="NOCHMAL VON VORNE" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="uff-Cy-HiY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="vonVorne:" target="XfG-lQ-9wD" id="3Bw-Yt-Hru"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KOo-WO-qP5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="2" id="htt-d4-S4F"/>
+                            <constraint firstItem="KOo-WO-qP5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="6" id="iR6-in-o8b"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="myView" destination="m2S-Jp-Qdl" id="5u2-ZC-W8g"/>
+                        <outlet property="v_onVorne" destination="KOo-WO-qP5" id="s0s-B0-W8G"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
