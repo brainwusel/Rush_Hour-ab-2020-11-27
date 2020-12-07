@@ -243,6 +243,7 @@ SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 - (void)mouseDown:(NSEvent * _Nonnull)event;
 - (void)mouseDragged:(NSEvent * _Nonnull)event;
 - (BOOL)control:(NSControl * _Nonnull)control textShouldEndEditing:(NSText * _Nonnull)fieldEditor SWIFT_WARN_UNUSED_RESULT;
+- (void)updateView;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

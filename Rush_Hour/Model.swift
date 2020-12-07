@@ -91,8 +91,7 @@ class Car {
     }
 }
 
-//  Aufgabe 1 aus ScreenShot - eine Logik für die Auswahl verschiedender Aufgaben fehlt noch
-//  standardisierte Reihenfolge der Autos im Auto-Array: "Zweier" rot gelb grün blau "Dreier" rot gelb grün blau, "Zweier" rot ist das Exit-Auto
+//  Aufgabe 0 aus ScreenShot - "Zweier" rot ist das Exit-Auto
 
 func aufgabeLaden (nummer: Int) -> [Car] {
     var autos = [Car]()
@@ -130,9 +129,18 @@ func aufgabeLaden (nummer: Int) -> [Car] {
 
 class Spiel {
     
-    //  alle Autos aus dem Rush Hour ScreenShot = Aufgabe1
-    var cars: [Car]
-    var gewonnen: Bool
+    var cars: [Car] {
+        didSet {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "updateView"), object: nil)
+            print("NotifPost Cars didSet")
+        }
+    }
+    var gewonnen: Bool {
+        didSet {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "updateView"), object: nil)
+            print("NotifPost gewonnen didSet")
+        }
+    }
     var aufgabeNummer: Int
     
     init (Aufgabe nr: Int) {
@@ -178,6 +186,8 @@ class Spiel {
             }
         }
         bewegungsOptionenUpdate()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "updateView"), object: nil)
+        print("NotifPost move")
     }
     
     func bewegungsOptionenUpdate () {        
@@ -211,6 +221,11 @@ class Spiel {
                 }
             }
         }
+    }
+    
+    func zurückAufAnfang () {
+        self.gewonnen = false
+        self.cars = aufgabeLaden(nummer: aufgabeNummer)
     }
 }
 

@@ -15,17 +15,14 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     var bewegungsRichtung: Richtung = .unbeweglich {
         didSet (newValue) {
             spiel.move(autoID: aktuelleAutoID, wohin: newValue)
-            myView.gewonnen = spiel.gewonnen
-            myView.cars = spiel.cars
+           updateView()
         }
     }
     
     @IBOutlet weak var myView: MyView!
     @IBOutlet weak var v_onVorne: NSButton!
     @IBAction func vonVorne (_ sender: NSButton) {
-        spiel = Spiel(Aufgabe: aktuelleAufgabe)
-        myView.gewonnen = spiel.gewonnen
-        myView.cars = spiel.cars
+        spiel.zurückAufAnfang()
     }
     @IBOutlet weak var a_ufgabeNummer: NSTextField!
    
@@ -34,8 +31,12 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         
         // Do any additional setup after loading the view.
         
-        myView.cars = spiel.cars
         a_ufgabeNummer.delegate = self
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateView),
+                                               name: Notification.Name(rawValue: "updateView"),
+                                                object: nil)
         
     }
     
@@ -80,16 +81,23 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
         if control == a_ufgabeNummer {
             let s = a_ufgabeNummer.stringValue
-            if var nr = Int(s) {
-                nr = max(0, min(1, nr))
-                aktuelleAufgabe = nr
-                spiel = Spiel(Aufgabe: aktuelleAufgabe)
-                myView.cars = spiel.cars
-                myView.gewonnen = spiel.gewonnen
+            if let nr = Int(s) {
+                if nr >= 0 && nr <= 1 {
+                print (nr)
+                spiel = Spiel(Aufgabe: nr)
+                updateView()
+                }
             }
             
         }
         return true
+    }
+    
+    @objc func updateView () {
+        myView.gewonnen = spiel.gewonnen
+        print (myView.gewonnen)
+        myView.cars = spiel.cars
+        print (myView.cars[0])
     }
     
 }

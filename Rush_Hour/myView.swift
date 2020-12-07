@@ -49,8 +49,13 @@ class MyView: NSView {
         }
         
         // Autos
-        
-        autosZeichnen(dirtyRect)
+        if cars.isEmpty {
+            return }
+        else {
+            autosZeichnen(dirtyRect)
+            
+        }
+            
     }
     
     func erzeugeBasisQuadrat (füllFarbe: NSColor, randFarbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
