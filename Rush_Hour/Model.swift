@@ -42,7 +42,11 @@ class Car {
     var füllFarbe: NSColor
     var randFarbe: NSColor
     var orientierung: Orientierung
-    var positionLinksUnten: (w: Int, s: Int)
+    var positionLinksUnten: (w: Int, s: Int) {
+        didSet {
+            print("positionLinksUnten didSet")
+        }
+    }
     var bewegungsOptionen: [Richtung]
     var rechtEck = NSRect()
     
@@ -129,7 +133,11 @@ func aufgabeLaden (nummer: Int) -> [Car] {
 
 class Spiel {
     
-    var cars: [Car]
+    var cars: [Car] {
+        didSet {
+            print("CARS CHANGED")
+        }
+    }
     var gewonnen: Bool
     var aufgabeNummer: Int
     
@@ -176,8 +184,6 @@ class Spiel {
             }
         }
         bewegungsOptionenUpdate()
-//        NotificationCenter.default.post(name: Notification.Name(rawValue: "updateView"), object: nil)
-//        print("NotifPost move")
     }
     
     func bewegungsOptionenUpdate () {        

@@ -72,6 +72,7 @@ depends-top-level:
 - !private "min"
 - !private "orientierung"
 - !private "positionLinksUnten"
+- !private "print"
 - !private "~="
 depends-member:
 - !private ["Sa", "append"]
@@ -146,6 +147,7 @@ depends-member:
 - !private ["9Rush_Hour3CarC", "min"]
 - ["9Rush_Hour3CarC", "orientierung"]
 - ["9Rush_Hour3CarC", "positionLinksUnten"]
+- !private ["9Rush_Hour3CarC", "print"]
 - ["9Rush_Hour3CarC", "randFarbe"]
 - ["9Rush_Hour3CarC", "rechtEck"]
 - ["9Rush_Hour3CarC", "zellenBelegt"]
@@ -600,6 +602,7 @@ depends-member:
 - !private ["9Rush_Hour5SpielC", "max"]
 - !private ["9Rush_Hour5SpielC", "min"]
 - ["9Rush_Hour5SpielC", "move"]
+- !private ["9Rush_Hour5SpielC", "print"]
 - ["9Rush_Hour5SpielC", "zur\xFCckAufAnfang"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
@@ -796,4 +799,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "204d8adb0718089a59abeffbc7e79b07"
+interface-hash: "7a798733bdd3f556eb8d1f0c0d405e68"

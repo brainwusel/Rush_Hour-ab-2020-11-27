@@ -33,6 +33,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         // Do any additional setup after loading the view.
         
         a_ufgabeNummer.delegate = self
+        updateView()
         
         //        NotificationCenter.default.addObserver(self,
         //                                               selector: #selector(updateView),
@@ -96,9 +97,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     @objc func updateView () {
         myView.gewonnen = spiel.gewonnen
-        print (myView.gewonnen)
         myView.cars = spiel.cars
-        print (myView.cars[0])
     }
     
 }
