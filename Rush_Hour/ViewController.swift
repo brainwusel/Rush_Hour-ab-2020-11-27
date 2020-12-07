@@ -15,7 +15,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     var bewegungsRichtung: Richtung = .unbeweglich {
         didSet (newValue) {
             spiel.move(autoID: aktuelleAutoID, wohin: newValue)
-           updateView()
+            updateView()
         }
     }
     
@@ -23,9 +23,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var v_onVorne: NSButton!
     @IBAction func vonVorne (_ sender: NSButton) {
         spiel.zurückAufAnfang()
+        updateView()
     }
     @IBOutlet weak var a_ufgabeNummer: NSTextField!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,10 +34,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         
         a_ufgabeNummer.delegate = self
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(updateView),
-                                               name: Notification.Name(rawValue: "updateView"),
-                                                object: nil)
+        //        NotificationCenter.default.addObserver(self,
+        //                                               selector: #selector(updateView),
+        //                                               name: Notification.Name(rawValue: "updateView"),
+        //                                                object: nil)
         
     }
     
@@ -83,9 +84,9 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             let s = a_ufgabeNummer.stringValue
             if let nr = Int(s) {
                 if nr >= 0 && nr <= 1 {
-                print (nr)
-                spiel = Spiel(Aufgabe: nr)
-                updateView()
+                    print (nr)
+                    spiel = Spiel(Aufgabe: nr)
+                    updateView()
                 }
             }
             

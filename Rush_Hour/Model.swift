@@ -129,18 +129,8 @@ func aufgabeLaden (nummer: Int) -> [Car] {
 
 class Spiel {
     
-    var cars: [Car] {
-        didSet {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "updateView"), object: nil)
-            print("NotifPost Cars didSet")
-        }
-    }
-    var gewonnen: Bool {
-        didSet {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "updateView"), object: nil)
-            print("NotifPost gewonnen didSet")
-        }
-    }
+    var cars: [Car]
+    var gewonnen: Bool
     var aufgabeNummer: Int
     
     init (Aufgabe nr: Int) {
@@ -186,8 +176,8 @@ class Spiel {
             }
         }
         bewegungsOptionenUpdate()
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "updateView"), object: nil)
-        print("NotifPost move")
+//        NotificationCenter.default.post(name: Notification.Name(rawValue: "updateView"), object: nil)
+//        print("NotifPost move")
     }
     
     func bewegungsOptionenUpdate () {        

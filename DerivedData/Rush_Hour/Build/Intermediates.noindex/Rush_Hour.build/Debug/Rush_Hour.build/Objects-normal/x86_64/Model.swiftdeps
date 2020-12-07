@@ -54,8 +54,6 @@ depends-top-level:
 - "L\xE4nge"
 - "NSColor"
 - "NSRect"
-- !private "Notification"
-- !private "NotificationCenter"
 - "Orientierung"
 - "Richtung"
 - "Spiel"
@@ -74,7 +72,6 @@ depends-top-level:
 - !private "min"
 - !private "orientierung"
 - !private "positionLinksUnten"
-- !private "print"
 - !private "~="
 depends-member:
 - !private ["Sa", "append"]
@@ -119,13 +116,11 @@ depends-member:
 - !private ["s7CVarArgP", "blue"]
 - !private ["s7CVarArgP", "contains"]
 - !private ["s7CVarArgP", "count"]
-- !private ["s7CVarArgP", "default"]
 - !private ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "green"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "last"]
 - !private ["s7CVarArgP", "orange"]
-- !private ["s7CVarArgP", "post"]
 - !private ["s7CVarArgP", "red"]
 - !private ["s7CVarArgP", "removeAll"]
 - !private ["s7CVarArgP", "subscript"]
@@ -182,15 +177,12 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "removeAll"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["10Foundation15ContiguousBytesP", "zellenBelegt"]
-- !private ["s28CustomDebugStringConvertibleP", "Name"]
-- !private ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "bewegungsOptionen"]
 - !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "blue"]
 - !private ["s28CustomDebugStringConvertibleP", "contains"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
-- !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
 - !private ["s28CustomDebugStringConvertibleP", "id"]
@@ -199,7 +191,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "orange"]
 - !private ["s28CustomDebugStringConvertibleP", "orientierung"]
 - !private ["s28CustomDebugStringConvertibleP", "positionLinksUnten"]
-- !private ["s28CustomDebugStringConvertibleP", "post"]
 - !private ["s28CustomDebugStringConvertibleP", "red"]
 - !private ["s28CustomDebugStringConvertibleP", "removeAll"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
@@ -209,7 +200,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "systemYellow"]
 - !private ["s28CustomDebugStringConvertibleP", "yellow"]
 - !private ["s28CustomDebugStringConvertibleP", "zellenBelegt"]
-- !private ["s17CustomReflectableP", "Name"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "bewegungsOptionen"]
 - !private ["s17CustomReflectableP", "contains"]
@@ -223,7 +213,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "removeAll"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "zellenBelegt"]
-- !private ["s23CustomStringConvertibleP", "Name"]
 - !private ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "appendInterpolation"]
@@ -233,7 +222,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "blue"]
 - !private ["s23CustomStringConvertibleP", "contains"]
 - !private ["s23CustomStringConvertibleP", "count"]
-- !private ["s23CustomStringConvertibleP", "default"]
 - !private ["s23CustomStringConvertibleP", "first"]
 - !private ["s23CustomStringConvertibleP", "green"]
 - !private ["s23CustomStringConvertibleP", "id"]
@@ -242,7 +230,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "orange"]
 - !private ["s23CustomStringConvertibleP", "orientierung"]
 - !private ["s23CustomStringConvertibleP", "positionLinksUnten"]
-- !private ["s23CustomStringConvertibleP", "post"]
 - !private ["s23CustomStringConvertibleP", "red"]
 - !private ["s23CustomStringConvertibleP", "removeAll"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
@@ -286,7 +273,6 @@ depends-member:
 - !private ["SE", "subscript"]
 - ["SQ", "=="]
 - ["SQ", "Default_RawValue"]
-- !private ["SQ", "Name"]
 - ["SQ", "RawValue"]
 - ["SQ", ""]
 - ["SQ", "_Default_RawValue"]
@@ -298,7 +284,6 @@ depends-member:
 - !private ["SQ", "blue"]
 - !private ["SQ", "contains"]
 - !private ["SQ", "count"]
-- !private ["SQ", "default"]
 - !private ["SQ", "drei"]
 - !private ["SQ", "findStringSwitchCase"]
 - !private ["SQ", "first"]
@@ -312,7 +297,6 @@ depends-member:
 - !private ["SQ", "orange"]
 - !private ["SQ", "orientierung"]
 - !private ["SQ", "positionLinksUnten"]
-- !private ["SQ", "post"]
 - ["SQ", "rauf"]
 - ["SQ", "rawValue"]
 - ["SQ", "rechts"]
@@ -352,7 +336,6 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - ["SH", "=="]
 - ["SH", "Default_RawValue"]
-- !private ["SH", "Name"]
 - ["SH", "RawValue"]
 - ["SH", ""]
 - ["SH", "_Default_RawValue"]
@@ -364,7 +347,6 @@ depends-member:
 - !private ["SH", "blue"]
 - !private ["SH", "contains"]
 - !private ["SH", "count"]
-- !private ["SH", "default"]
 - !private ["SH", "drei"]
 - !private ["SH", "findStringSwitchCase"]
 - !private ["SH", "first"]
@@ -378,7 +360,6 @@ depends-member:
 - !private ["SH", "orange"]
 - !private ["SH", "orientierung"]
 - !private ["SH", "positionLinksUnten"]
-- !private ["SH", "post"]
 - ["SH", "rauf"]
 - ["SH", "rawValue"]
 - ["SH", "rechts"]
@@ -433,10 +414,6 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "last"]
 - !private ["10Foundation19MutableDataProtocolP", "removeAll"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
-- !private ["So22NSAccessibilityElementP", ""]
-- !private ["So20NSAccessibilityGroupP", ""]
-- !private ["So25NSAccessibilityStaticTextP", ""]
-- !private ["So20NSAccessibilityTableP", ""]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "black"]
 - !private ["So8NSCodingP", "blue"]
@@ -471,12 +448,8 @@ depends-member:
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "black"]
 - !private ["So8NSObjectC", "blue"]
-- !private ["So8NSObjectC", "default"]
 - !private ["So8NSObjectC", "green"]
 - !private ["So8NSObjectC", "orange"]
-- !private ["So8NSObjectC", "post"]
-- !private ["So8NSObjectC", "postNotification"]
-- !private ["So8NSObjectC", "postNotificationName"]
 - !private ["So8NSObjectC", "red"]
 - !private ["So8NSObjectC", "systemBlue"]
 - !private ["So8NSObjectC", "systemGreen"]
@@ -486,12 +459,8 @@ depends-member:
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "black"]
 - !private ["So8NSObjectP", "blue"]
-- !private ["So8NSObjectP", "default"]
 - !private ["So8NSObjectP", "green"]
 - !private ["So8NSObjectP", "orange"]
-- !private ["So8NSObjectP", "post"]
-- !private ["So8NSObjectP", "postNotification"]
-- !private ["So8NSObjectP", "postNotificationName"]
 - !private ["So8NSObjectP", "red"]
 - !private ["So8NSObjectP", "systemBlue"]
 - !private ["So8NSObjectP", "systemGreen"]
@@ -528,12 +497,6 @@ depends-member:
 - !private ["So14NSSecureCodingP", "systemRed"]
 - !private ["So14NSSecureCodingP", "systemYellow"]
 - !private ["So14NSSecureCodingP", "yellow"]
-- !private ["So14NSTextDelegateP", ""]
-- !private ["So18NSNotificationNamea", "RawValue"]
-- !private ["So18NSNotificationNamea", "init"]
-- !private ["10Foundation12NotificationV", "Name"]
-- !private ["So20NSNotificationCenterC", "default"]
-- !private ["So20NSNotificationCenterC", "post"]
 - ["9Rush_Hour12OrientierungO", "=="]
 - ["9Rush_Hour12OrientierungO", "Default_RawValue"]
 - ["9Rush_Hour12OrientierungO", "RawValue"]
@@ -592,7 +555,6 @@ depends-member:
 - !private ["SY", "senkrecht"]
 - !private ["SY", "waagerecht"]
 - !private ["SY", "zwei"]
-- !private ["10Foundation20ReferenceConvertibleP", "Name"]
 - ["9Rush_Hour8RichtungO", "=="]
 - ["9Rush_Hour8RichtungO", ""]
 - ["9Rush_Hour8RichtungO", "__derived_enum_equals"]
@@ -625,8 +587,6 @@ depends-member:
 - ["9Rush_Hour5SpielC", "Bool"]
 - ["9Rush_Hour5SpielC", "Car"]
 - ["9Rush_Hour5SpielC", "Int"]
-- !private ["9Rush_Hour5SpielC", "Notification"]
-- !private ["9Rush_Hour5SpielC", "NotificationCenter"]
 - ["9Rush_Hour5SpielC", "Richtung"]
 - ["9Rush_Hour5SpielC", "String"]
 - !private ["9Rush_Hour5SpielC", "aufgabeLaden"]
@@ -640,7 +600,6 @@ depends-member:
 - !private ["9Rush_Hour5SpielC", "max"]
 - !private ["9Rush_Hour5SpielC", "min"]
 - ["9Rush_Hour5SpielC", "move"]
-- !private ["9Rush_Hour5SpielC", "print"]
 - ["9Rush_Hour5SpielC", "zur\xFCckAufAnfang"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
@@ -699,8 +658,6 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "last"]
 - !private ["s19_HasContiguousBytesP", "removeAll"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "RawValue"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
@@ -711,10 +668,8 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "blue"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "green"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "orange"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "post"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "red"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "systemBlue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "systemGreen"]
@@ -723,19 +678,14 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "yellow"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "black"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "blue"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "default"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "green"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "orange"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "post"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "red"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemBlue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemGreen"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemRed"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemYellow"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "yellow"]
-- !private ["s21_ObjectiveCBridgeableP", "Name"]
-- !private ["s21_ObjectiveCBridgeableP", "RawValue"]
-- !private ["s21_ObjectiveCBridgeableP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "contains"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
@@ -744,8 +694,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "last"]
 - !private ["s21_ObjectiveCBridgeableP", "removeAll"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
-- !private ["s20_SwiftNewtypeWrapperP", "RawValue"]
-- !private ["s20_SwiftNewtypeWrapperP", "init"]
 depends-nominal:
 - !private "Sa"
 - !private "s10ArraySliceV"
@@ -777,10 +725,6 @@ depends-nominal:
 - "9Rush_Hour008Lnge_loaO"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
-- !private "So22NSAccessibilityElementP"
-- !private "So20NSAccessibilityGroupP"
-- !private "So25NSAccessibilityStaticTextP"
-- !private "So20NSAccessibilityTableP"
 - "So8NSCodingP"
 - !private "So7NSColorC"
 - !private "So9NSCopyingP"
@@ -789,15 +733,10 @@ depends-nominal:
 - !private "So19NSPasteboardReadingP"
 - !private "So19NSPasteboardWritingP"
 - !private "So14NSSecureCodingP"
-- !private "So14NSTextDelegateP"
-- !private "So18NSNotificationNamea"
-- !private "10Foundation12NotificationV"
-- !private "So20NSNotificationCenterC"
 - "9Rush_Hour12OrientierungO"
 - !private "Sk"
 - !private "Sm"
 - "SY"
-- !private "10Foundation20ReferenceConvertibleP"
 - "9Rush_Hour8RichtungO"
 - !private "ST"
 - !private "s5SliceV"
@@ -819,7 +758,6 @@ depends-nominal:
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - "s21_ObjectiveCBridgeableP"
-- !private "s20_SwiftNewtypeWrapperP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
@@ -858,4 +796,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d54b57fd94742e2f1e7dadb1f4c81d04"
+interface-hash: "204d8adb0718089a59abeffbc7e79b07"
