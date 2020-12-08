@@ -3,6 +3,7 @@ provides-top-level:
 - "L\xE4nge"
 - "Orientierung"
 - "Richtung"
+- "Inhalt"
 - "bildContainer"
 - "Car"
 - "aufgabeLaden"
@@ -11,12 +12,14 @@ provides-nominal:
 - "9Rush_Hour008Lnge_loaO"
 - "9Rush_Hour12OrientierungO"
 - "9Rush_Hour8RichtungO"
+- "9Rush_Hour6InhaltO"
 - "9Rush_Hour3CarC"
 - "9Rush_Hour5SpielC"
 provides-member:
 - ["9Rush_Hour008Lnge_loaO", ""]
 - ["9Rush_Hour12OrientierungO", ""]
 - ["9Rush_Hour8RichtungO", ""]
+- ["9Rush_Hour6InhaltO", ""]
 - ["9Rush_Hour3CarC", ""]
 - ["9Rush_Hour5SpielC", ""]
 provides-dynamic-lookup:
@@ -52,6 +55,7 @@ depends-top-level:
 - !private "BooleanLiteralType"
 - "Car"
 - !private "FloatLiteralType"
+- "Inhalt"
 - "Int"
 - !private "IntegerLiteralType"
 - "L\xE4nge"
@@ -321,6 +325,7 @@ depends-member:
 - ["SQ", "init"]
 - !private ["SQ", "insert"]
 - !private ["SQ", "last"]
+- ["SQ", "leer"]
 - ["SQ", "links"]
 - !private ["SQ", "l\xE4nge"]
 - !private ["SQ", "orange"]
@@ -338,6 +343,7 @@ depends-member:
 - !private ["SQ", "systemRed"]
 - !private ["SQ", "systemYellow"]
 - !private ["SQ", "unbeweglich"]
+- ["SQ", "voll"]
 - ["SQ", "waagerecht"]
 - !private ["SQ", "yellow"]
 - !private ["SQ", "zellenBelegt"]
@@ -387,6 +393,7 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "insert"]
 - !private ["SH", "last"]
+- ["SH", "leer"]
 - ["SH", "links"]
 - !private ["SH", "l\xE4nge"]
 - !private ["SH", "orange"]
@@ -404,11 +411,20 @@ depends-member:
 - !private ["SH", "systemRed"]
 - !private ["SH", "systemYellow"]
 - !private ["SH", "unbeweglich"]
+- ["SH", "voll"]
 - ["SH", "waagerecht"]
 - !private ["SH", "yellow"]
 - !private ["SH", "zellenBelegt"]
 - ["SH", "zwei"]
 - !private ["s6HasherV", "combine"]
+- ["9Rush_Hour6InhaltO", "=="]
+- ["9Rush_Hour6InhaltO", ""]
+- ["9Rush_Hour6InhaltO", "__derived_enum_equals"]
+- ["9Rush_Hour6InhaltO", "_rawHashValue"]
+- ["9Rush_Hour6InhaltO", "hash"]
+- ["9Rush_Hour6InhaltO", "hashValue"]
+- ["9Rush_Hour6InhaltO", "leer"]
+- ["9Rush_Hour6InhaltO", "voll"]
 - !private ["s20LazySequenceProtocolP", "subscript"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - ["9Rush_Hour008Lnge_loaO", "=="]
@@ -768,6 +784,7 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
 - !private "s6HasherV"
+- "9Rush_Hour6InhaltO"
 - !private "s20LazySequenceProtocolP"
 - !private "s25LosslessStringConvertibleP"
 - "9Rush_Hour008Lnge_loaO"
@@ -847,4 +864,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d03753c34252e74158c01c3155f0889a"
+interface-hash: "1d8705d86f7a2f7111502f8da9e059dc"
