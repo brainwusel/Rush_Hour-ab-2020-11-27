@@ -35,10 +35,6 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         a_ufgabeNummer.delegate = self
         updateView()
         
-        //        NotificationCenter.default.addObserver(self,
-        //                                               selector: #selector(updateView),
-        //                                               name: Notification.Name(rawValue: "updateView"),
-        //                                                object: nil)
         
     }
     

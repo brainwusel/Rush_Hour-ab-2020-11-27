@@ -9,6 +9,9 @@ import Cocoa
 
 class MyView: NSView {
     
+//    let auto1Image = NSImage(imageLiteralResourceName: "Auto1")
+    
+    
     var cars = [Car]() {
         didSet {
             display()
@@ -166,6 +169,9 @@ class MyView: NSView {
             randFarbe.setStroke()
             autoPath.lineWidth = 5
             autoPath.stroke()
+            if let bild = cars[i].image {
+                bild.draw(in: rechtEck)
+            }
         }
     }
 }

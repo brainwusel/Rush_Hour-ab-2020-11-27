@@ -36,19 +36,20 @@ enum Richtung {
     case unbeweglich
 }
 
+let autobilderWaagerechtNamen = [String]()
+let autobilderSenkrechtNamen = ["s1"]
+
+
 // einzelnes Auto - identifiziert durch Länge und Farbe in der computet prop. ID als String. Aus der Aufgabenstellung ergeben sich die Eigenschaften POSITIONLINKSOBEN und ORIENTIERUNG. Die Eigenschaft BEWEGUNGSOPTIONEN zeigt als Array von Richtungen an, wohin ein Auto bewegt werden könnte; sie wird zunächst mit einem Element .UNBEWEGLICH initialisiert und später durch die Methode SPIEL.BEWEGUNGSOPTIONENUPDATE aus den Positionsdaten aller Autos berechnet. Die Eigenschaft ZELLENBELEGT zeigt an, welche Zellen gerade von einem Auto im Grid belegt werden und wird berechnet aus der POSITIONLINKSOBEN, der LÄNGE und der ORIENTIERUNG des Autos; in der get-Funktion sind KEINE Überprüfungen der waagerechten oder senkrechten Limits enthalten - diese Aufgabe sollte vollständig von der Methode SPIEL.BEWEGUNSOPTIONENUPDATE übernommen werden
 class Car {
     var länge: Länge
     var füllFarbe: NSColor
     var randFarbe: NSColor
     var orientierung: Orientierung
-    var positionLinksUnten: (w: Int, s: Int) {
-        didSet {
-            print("positionLinksUnten didSet")
-        }
-    }
+    var positionLinksUnten: (w: Int, s: Int)
     var bewegungsOptionen: [Richtung]
     var rechtEck = NSRect()
+    var image: NSImage?
     
     init (länge: Länge, füllFarbe: NSColor, randFarbe: NSColor, positionLinksUnten: (w: Int, s: Int), richtung: Orientierung) {
         self.länge = länge
@@ -57,6 +58,7 @@ class Car {
         self.orientierung = richtung
         self.positionLinksUnten = positionLinksUnten
         self.bewegungsOptionen = [.unbeweglich]
+//        self.image = NSImage()
     }
     
     var zellenBelegt: [(w: Int, s: Int)] {
@@ -133,36 +135,100 @@ func aufgabeLaden (nummer: Int) -> [Car] {
 
 class Spiel {
     
-    var cars: [Car] {
-        didSet {
-            print("CARS CHANGED")
-        }
-    }
+    var cars: [Car] 
     var gewonnen: Bool
     var aufgabeNummer: Int
+    var autobilderWaagerecht = Set<NSImage>()
+    var autobilderSenkrecht = Set<NSImage>()
+    
     
     init (Aufgabe nr: Int) {
         self.gewonnen = false
         self.aufgabeNummer = nr
         self.cars = aufgabeLaden(nummer: aufgabeNummer)
+        self.autobilderWaagerecht = {
+            var waagerechtSet = Set<NSImage>()
+            if autobilderWaagerechtNamen.isEmpty == false
+            {
+                for name in autobilderWaagerechtNamen {
+                    let element = NSImage(imageLiteralResourceName: name)
+                    waagerechtSet.insert(element)
+                }
+            }
+            return (waagerechtSet)
+        }()
+        self.autobilderSenkrecht = {
+            var senkrechtSet = Set<NSImage>()
+            if autobilderSenkrechtNamen.isEmpty == false
+            {
+                for name in autobilderSenkrechtNamen {
+                    let element = NSImage(imageLiteralResourceName: name)
+                    senkrechtSet.insert(element)
+                }
+            }
+            return (senkrechtSet)
+        }()
+        autobilderZuordnen()
     }
     
-    var grid: [[String]]
-    {    var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
-        gewonnen = false
-        for auto in cars {
-            for pos in auto.zellenBelegt {
-                g[pos.w - 1][pos.s - 1] = auto.id
-                if auto.zellenBelegt.first! == (w: 6, s: 4) &&
-                    auto.füllFarbe == .red &&
-                    auto.länge == .zwei {
-                    gewonnen = true
+    var grid: [[String]] {
+        get
+        {    var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
+            gewonnen = false
+            for auto in cars {
+                for pos in auto.zellenBelegt {
+                    g[pos.w - 1][pos.s - 1] = auto.id
+                    if auto.zellenBelegt.first! == (w: 6, s: 4) &&
+                        auto.füllFarbe == .red &&
+                        auto.länge == .zwei {
+                        gewonnen = true
+                    }
+                }
+            }
+            return g
+        }
+    }
+    
+    func autobilderWaagerechtLaden () -> Set<NSImage> {
+        var waagerechtSet = Set<NSImage>()
+        if autobilderWaagerechtNamen.isEmpty == false
+        {
+            for name in autobilderWaagerechtNamen {
+                let element = NSImage(imageLiteralResourceName: name)
+                waagerechtSet.insert(element)
+            }
+        }
+        return (waagerechtSet)
+    }
+    
+    func autobilderSenkrechtLaden () -> Set<NSImage> {
+        var senkrechtSet = Set<NSImage>()
+        if autobilderSenkrechtNamen.isEmpty == false
+        {
+            for name in autobilderSenkrechtNamen {
+                let element = NSImage(imageLiteralResourceName: name)
+                senkrechtSet.insert(element)
+            }
+        }
+        return (senkrechtSet)
+    }
+    
+    func autobilderZuordnen () {
+        for i in 0...cars.count - 1 {
+            if cars[i].orientierung == .senkrecht {
+                if let e = autobilderSenkrecht.randomElement() {
+                    autobilderSenkrecht.remove(e)
+                    cars[i].image = e
+                }
+            }
+            if cars[i].orientierung == .waagerecht {
+                if let e = autobilderWaagerecht.randomElement() {
+                    autobilderWaagerecht.remove(e)
+                    cars[i].image = e
                 }
             }
         }
-        return g
     }
-    
     
     func move (autoID: String, wohin: Richtung) {
         for i in 0 ... cars.count - 1 {
@@ -219,9 +285,15 @@ class Spiel {
         }
     }
     
+    
+    
     func zurückAufAnfang () {
         self.gewonnen = false
         self.cars = aufgabeLaden(nummer: aufgabeNummer)
+        autobilderWaagerecht = autobilderWaagerechtLaden()
+        autobilderSenkrecht = autobilderSenkrechtLaden()
+        autobilderZuordnen()
+        
     }
 }
 
