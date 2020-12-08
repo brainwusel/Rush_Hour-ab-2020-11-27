@@ -153,37 +153,37 @@ class Spiel {
     var cars: [Car] 
     var gewonnen: Bool
     var aufgabeNummer: Int
-    var autobilderWaagerecht = Set<NSImage>()
-    var autobilderSenkrecht = Set<NSImage>()
+//    var autobilderWaagerecht = Set<NSImage>()
+//    var autobilderSenkrecht = Set<NSImage>()
     
     
     init (Aufgabe nr: Int) {
         self.gewonnen = false
         self.aufgabeNummer = nr
         self.cars = aufgabeLaden(nummer: aufgabeNummer)
-        self.autobilderWaagerecht = {
-            var waagerechtSet = Set<NSImage>()
-            if autobilderWaagerechtNamen.isEmpty == false
-            {
-                for name in autobilderWaagerechtNamen {
-                    let element = NSImage(imageLiteralResourceName: name)
-                    waagerechtSet.insert(element)
-                }
-            }
-            return (waagerechtSet)
-        }()
-        self.autobilderSenkrecht = {
-            var senkrechtSet = Set<NSImage>()
-            if autobilderSenkrechtNamen.isEmpty == false
-            {
-                for name in autobilderSenkrechtNamen {
-                    let element = NSImage(imageLiteralResourceName: name)
-                    senkrechtSet.insert(element)
-                }
-            }
-            return (senkrechtSet)
-        }()
-        autobilderZuordnen()
+//        self.autobilderWaagerecht = {
+//            var waagerechtSet = Set<NSImage>()
+//            if autobilderWaagerechtNamen.isEmpty == false
+//            {
+//                for name in autobilderWaagerechtNamen {
+//                    let element = NSImage(imageLiteralResourceName: name)
+//                    waagerechtSet.insert(element)
+//                }
+//            }
+//            return (waagerechtSet)
+//        }()
+//        self.autobilderSenkrecht = {
+//            var senkrechtSet = Set<NSImage>()
+//            if autobilderSenkrechtNamen.isEmpty == false
+//            {
+//                for name in autobilderSenkrechtNamen {
+//                    let element = NSImage(imageLiteralResourceName: name)
+//                    senkrechtSet.insert(element)
+//                }
+//            }
+//            return (senkrechtSet)
+//        }()
+//        autobilderZuordnen()
     }
     
     var grid: [[String]] {
@@ -204,46 +204,46 @@ class Spiel {
         }
     }
     
-    func autobilderWaagerechtLaden () -> Set<NSImage> {
-        var waagerechtSet = Set<NSImage>()
-        if autobilderWaagerechtNamen.isEmpty == false
-        {
-            for name in autobilderWaagerechtNamen {
-                let element = NSImage(imageLiteralResourceName: name)
-                waagerechtSet.insert(element)
-            }
-        }
-        return (waagerechtSet)
-    }
+//    func autobilderWaagerechtLaden () -> Set<NSImage> {
+//        var waagerechtSet = Set<NSImage>()
+//        if autobilderWaagerechtNamen.isEmpty == false
+//        {
+//            for name in autobilderWaagerechtNamen {
+//                let element = NSImage(imageLiteralResourceName: name)
+//                waagerechtSet.insert(element)
+//            }
+//        }
+//        return (waagerechtSet)
+//    }
     
-    func autobilderSenkrechtLaden () -> Set<NSImage> {
-        var senkrechtSet = Set<NSImage>()
-        if autobilderSenkrechtNamen.isEmpty == false
-        {
-            for name in autobilderSenkrechtNamen {
-                let element = NSImage(imageLiteralResourceName: name)
-                senkrechtSet.insert(element)
-            }
-        }
-        return (senkrechtSet)
-    }
+//    func autobilderSenkrechtLaden () -> Set<NSImage> {
+//        var senkrechtSet = Set<NSImage>()
+//        if autobilderSenkrechtNamen.isEmpty == false
+//        {
+//            for name in autobilderSenkrechtNamen {
+//                let element = NSImage(imageLiteralResourceName: name)
+//                senkrechtSet.insert(element)
+//            }
+//        }
+//        return (senkrechtSet)
+//    }
     
-    func autobilderZuordnen () {
-        for i in 0...cars.count - 1 {
-            if cars[i].orientierung == .senkrecht {
-                if let e = autobilderSenkrecht.randomElement() {
-                    autobilderSenkrecht.remove(e)
-                    cars[i].image = e
-                }
-            }
-            if cars[i].orientierung == .waagerecht {
-                if let e = autobilderWaagerecht.randomElement() {
-                    autobilderWaagerecht.remove(e)
-                    cars[i].image = e
-                }
-            }
-        }
-    }
+//    func autobilderZuordnen () {
+//        for i in 0...cars.count - 1 {
+//            if cars[i].orientierung == .senkrecht {
+//                if let e = autobilderSenkrecht.randomElement() {
+//                    autobilderSenkrecht.remove(e)
+//                    cars[i].image = e
+//                }
+//            }
+//            if cars[i].orientierung == .waagerecht {
+//                if let e = autobilderWaagerecht.randomElement() {
+//                    autobilderWaagerecht.remove(e)
+//                    cars[i].image = e
+//                }
+//            }
+//        }
+//    }
     
     func move (autoID: String, wohin: Richtung) {
         for i in 0 ... cars.count - 1 {
@@ -305,9 +305,9 @@ class Spiel {
     func zurückAufAnfang () {
         self.gewonnen = false
         self.cars = aufgabeLaden(nummer: aufgabeNummer)
-        autobilderWaagerecht = autobilderWaagerechtLaden()
-        autobilderSenkrecht = autobilderSenkrechtLaden()
-        autobilderZuordnen()
+//        autobilderWaagerecht = autobilderWaagerechtLaden()
+//        autobilderSenkrecht = autobilderSenkrechtLaden()
+//        autobilderZuordnen()
         
     }
 }

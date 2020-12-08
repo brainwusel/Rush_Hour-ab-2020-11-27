@@ -25,11 +25,6 @@ provides-member:
 - ["9Rush_Hour5SpielC", ""]
 provides-dynamic-lookup:
 - "aufgabeNummer"
-- "autobilderSenkrecht"
-- "autobilderSenkrechtLaden"
-- "autobilderWaagerecht"
-- "autobilderWaagerechtLaden"
-- "autobilderZuordnen"
 - "bewegungsOptionen"
 - "bewegungsOptionenUpdate"
 - "cars"
@@ -70,20 +65,14 @@ depends-top-level:
 - "NSRect"
 - "Orientierung"
 - "Richtung"
-- "Set"
 - "Spiel"
 - "String"
 - "StringLiteralType"
 - !private "UnicodeScalarType"
 - "aufgabeLaden"
 - !private "aufgabeNummer"
-- !private "autobilderSenkrecht"
-- !private "autobilderSenkrechtLaden"
 - "autobilderSenkrechtNamen"
-- !private "autobilderWaagerecht"
-- !private "autobilderWaagerechtLaden"
 - "autobilderWaagerechtNamen"
-- !private "autobilderZuordnen"
 - !private "bewegungsOptionenUpdate"
 - !private "cars"
 - !private "gewonnen"
@@ -101,13 +90,11 @@ depends-member:
 - !private ["Sa", "count"]
 - !private ["Sa", "first"]
 - !private ["Sa", "init"]
-- !private ["Sa", "isEmpty"]
 - !private ["Sa", "last"]
 - !private ["Sa", "removeAll"]
 - !private ["Sa", "subscript"]
 - !private ["s10ArraySliceV", "bewegungsOptionen"]
 - !private ["s10ArraySliceV", "id"]
-- !private ["s10ArraySliceV", "image"]
 - !private ["s10ArraySliceV", "orientierung"]
 - !private ["s10ArraySliceV", "positionLinksUnten"]
 - !private ["s10ArraySliceV", "subscript"]
@@ -119,9 +106,7 @@ depends-member:
 - !private ["SK", "count"]
 - !private ["SK", "first"]
 - !private ["SK", "id"]
-- !private ["SK", "image"]
 - !private ["SK", "init"]
-- !private ["SK", "isEmpty"]
 - !private ["SK", "last"]
 - !private ["SK", "orientierung"]
 - !private ["SK", "positionLinksUnten"]
@@ -144,7 +129,6 @@ depends-member:
 - !private ["8CloudKit21CKRecordValueProtocolP", "count"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "first"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "init"]
-- !private ["8CloudKit21CKRecordValueProtocolP", "isEmpty"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "last"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "removeAll"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
@@ -155,14 +139,10 @@ depends-member:
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "green"]
-- ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "insert"]
-- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "last"]
 - !private ["s7CVarArgP", "orange"]
-- !private ["s7CVarArgP", "randomElement"]
 - !private ["s7CVarArgP", "red"]
-- !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "removeAll"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "systemBlue"]
@@ -199,15 +179,10 @@ depends-member:
 - !private ["Sl", "count"]
 - !private ["Sl", "first"]
 - !private ["Sl", "id"]
-- !private ["Sl", "image"]
-- ["Sl", "init"]
-- !private ["Sl", "insert"]
-- !private ["Sl", "isEmpty"]
+- !private ["Sl", "init"]
 - !private ["Sl", "last"]
 - !private ["Sl", "orientierung"]
 - !private ["Sl", "positionLinksUnten"]
-- !private ["Sl", "randomElement"]
-- !private ["Sl", "remove"]
 - !private ["Sl", "removeAll"]
 - !private ["Sl", "subscript"]
 - !private ["Sl", "zellenBelegt"]
@@ -218,9 +193,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["10Foundation15ContiguousBytesP", "first"]
 - !private ["10Foundation15ContiguousBytesP", "id"]
-- !private ["10Foundation15ContiguousBytesP", "image"]
 - !private ["10Foundation15ContiguousBytesP", "init"]
-- !private ["10Foundation15ContiguousBytesP", "isEmpty"]
 - !private ["10Foundation15ContiguousBytesP", "last"]
 - !private ["10Foundation15ContiguousBytesP", "orientierung"]
 - !private ["10Foundation15ContiguousBytesP", "positionLinksUnten"]
@@ -236,17 +209,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
 - !private ["s28CustomDebugStringConvertibleP", "id"]
-- !private ["s28CustomDebugStringConvertibleP", "image"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "insert"]
-- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
 - !private ["s28CustomDebugStringConvertibleP", "orange"]
 - !private ["s28CustomDebugStringConvertibleP", "orientierung"]
 - !private ["s28CustomDebugStringConvertibleP", "positionLinksUnten"]
-- !private ["s28CustomDebugStringConvertibleP", "randomElement"]
 - !private ["s28CustomDebugStringConvertibleP", "red"]
-- !private ["s28CustomDebugStringConvertibleP", "remove"]
 - !private ["s28CustomDebugStringConvertibleP", "removeAll"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "systemBlue"]
@@ -261,15 +229,10 @@ depends-member:
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "first"]
 - !private ["s17CustomReflectableP", "id"]
-- !private ["s17CustomReflectableP", "image"]
 - ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "insert"]
-- !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "last"]
 - !private ["s17CustomReflectableP", "orientierung"]
 - !private ["s17CustomReflectableP", "positionLinksUnten"]
-- !private ["s17CustomReflectableP", "randomElement"]
-- !private ["s17CustomReflectableP", "remove"]
 - !private ["s17CustomReflectableP", "removeAll"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "zellenBelegt"]
@@ -285,17 +248,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "first"]
 - !private ["s23CustomStringConvertibleP", "green"]
 - !private ["s23CustomStringConvertibleP", "id"]
-- !private ["s23CustomStringConvertibleP", "image"]
-- ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "insert"]
-- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "last"]
 - !private ["s23CustomStringConvertibleP", "orange"]
 - !private ["s23CustomStringConvertibleP", "orientierung"]
 - !private ["s23CustomStringConvertibleP", "positionLinksUnten"]
-- !private ["s23CustomStringConvertibleP", "randomElement"]
 - !private ["s23CustomStringConvertibleP", "red"]
-- !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "removeAll"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "systemBlue"]
@@ -311,9 +269,7 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "first"]
 - !private ["10Foundation12DataProtocolP", "id"]
-- !private ["10Foundation12DataProtocolP", "image"]
 - !private ["10Foundation12DataProtocolP", "init"]
-- !private ["10Foundation12DataProtocolP", "isEmpty"]
 - !private ["10Foundation12DataProtocolP", "last"]
 - !private ["10Foundation12DataProtocolP", "orientierung"]
 - !private ["10Foundation12DataProtocolP", "positionLinksUnten"]
@@ -325,11 +281,7 @@ depends-member:
 - !private ["Se", "count"]
 - !private ["Se", "first"]
 - ["Se", "init"]
-- !private ["Se", "insert"]
-- !private ["Se", "isEmpty"]
 - !private ["Se", "last"]
-- !private ["Se", "randomElement"]
-- !private ["Se", "remove"]
 - !private ["Se", "removeAll"]
 - !private ["Se", "subscript"]
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
@@ -339,11 +291,7 @@ depends-member:
 - !private ["SE", "count"]
 - !private ["SE", "first"]
 - ["SE", "init"]
-- !private ["SE", "insert"]
-- !private ["SE", "isEmpty"]
 - !private ["SE", "last"]
-- !private ["SE", "randomElement"]
-- !private ["SE", "remove"]
 - !private ["SE", "removeAll"]
 - !private ["SE", "subscript"]
 - ["SQ", "=="]
@@ -361,20 +309,15 @@ depends-member:
 - ["SQ", "hash"]
 - ["SQ", "hashValue"]
 - !private ["SQ", "id"]
-- !private ["SQ", "image"]
 - ["SQ", "init"]
-- !private ["SQ", "insert"]
-- !private ["SQ", "isEmpty"]
 - !private ["SQ", "last"]
 - ["SQ", "links"]
 - !private ["SQ", "orange"]
 - !private ["SQ", "orientierung"]
 - !private ["SQ", "positionLinksUnten"]
-- !private ["SQ", "randomElement"]
 - ["SQ", "rauf"]
 - ["SQ", "rechts"]
 - !private ["SQ", "red"]
-- !private ["SQ", "remove"]
 - !private ["SQ", "removeAll"]
 - ["SQ", "runter"]
 - !private ["SQ", "senkrecht"]
@@ -388,22 +331,17 @@ depends-member:
 - !private ["SQ", "yellow"]
 - !private ["SQ", "zellenBelegt"]
 - !private ["SQ", "zwei"]
-- ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "bewegungsOptionen"]
 - !private ["s25ExpressibleByArrayLiteralP", "contains"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
 - !private ["s25ExpressibleByArrayLiteralP", "id"]
-- !private ["s25ExpressibleByArrayLiteralP", "image"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
-- !private ["s25ExpressibleByArrayLiteralP", "insert"]
-- !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
 - !private ["s25ExpressibleByArrayLiteralP", "orientierung"]
 - !private ["s25ExpressibleByArrayLiteralP", "positionLinksUnten"]
-- !private ["s25ExpressibleByArrayLiteralP", "randomElement"]
-- !private ["s25ExpressibleByArrayLiteralP", "remove"]
 - !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "zellenBelegt"]
@@ -428,20 +366,15 @@ depends-member:
 - ["SH", "hash"]
 - ["SH", "hashValue"]
 - !private ["SH", "id"]
-- !private ["SH", "image"]
-- ["SH", "init"]
-- !private ["SH", "insert"]
-- !private ["SH", "isEmpty"]
+- !private ["SH", "init"]
 - !private ["SH", "last"]
 - ["SH", "links"]
 - !private ["SH", "orange"]
 - !private ["SH", "orientierung"]
 - !private ["SH", "positionLinksUnten"]
-- !private ["SH", "randomElement"]
 - ["SH", "rauf"]
 - ["SH", "rechts"]
 - !private ["SH", "red"]
-- !private ["SH", "remove"]
 - !private ["SH", "removeAll"]
 - ["SH", "runter"]
 - !private ["SH", "senkrecht"]
@@ -473,9 +406,7 @@ depends-member:
 - !private ["SM", "count"]
 - !private ["SM", "first"]
 - !private ["SM", "id"]
-- !private ["SM", "image"]
 - !private ["SM", "init"]
-- !private ["SM", "isEmpty"]
 - !private ["SM", "last"]
 - !private ["SM", "orientierung"]
 - !private ["SM", "positionLinksUnten"]
@@ -487,7 +418,6 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "first"]
 - !private ["10Foundation19MutableDataProtocolP", "init"]
-- !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
 - !private ["10Foundation19MutableDataProtocolP", "last"]
 - !private ["10Foundation19MutableDataProtocolP", "removeAll"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
@@ -603,9 +533,7 @@ depends-member:
 - !private ["Sk", "count"]
 - !private ["Sk", "first"]
 - !private ["Sk", "id"]
-- !private ["Sk", "image"]
 - !private ["Sk", "init"]
-- !private ["Sk", "isEmpty"]
 - !private ["Sk", "last"]
 - !private ["Sk", "orientierung"]
 - !private ["Sk", "positionLinksUnten"]
@@ -619,9 +547,7 @@ depends-member:
 - !private ["Sm", "count"]
 - !private ["Sm", "first"]
 - !private ["Sm", "id"]
-- !private ["Sm", "image"]
 - !private ["Sm", "init"]
-- !private ["Sm", "isEmpty"]
 - !private ["Sm", "last"]
 - !private ["Sm", "orientierung"]
 - !private ["Sm", "positionLinksUnten"]
@@ -641,51 +567,29 @@ depends-member:
 - ["9Rush_Hour8RichtungO", "unbeweglich"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "append"]
 - !private ["ST", "bewegungsOptionen"]
 - !private ["ST", "contains"]
 - !private ["ST", "count"]
 - !private ["ST", "first"]
 - !private ["ST", "id"]
-- !private ["ST", "image"]
-- ["ST", "init"]
-- !private ["ST", "insert"]
-- !private ["ST", "isEmpty"]
+- !private ["ST", "init"]
 - !private ["ST", "last"]
 - !private ["ST", "makeIterator"]
 - !private ["ST", "orientierung"]
 - !private ["ST", "positionLinksUnten"]
-- !private ["ST", "randomElement"]
-- !private ["ST", "remove"]
 - !private ["ST", "removeAll"]
 - !private ["ST", "subscript"]
 - !private ["ST", "zellenBelegt"]
-- ["Sh", "init"]
-- !private ["Sh", "insert"]
-- !private ["Sh", "randomElement"]
-- !private ["Sh", "remove"]
-- ["s10SetAlgebraP", "init"]
-- !private ["s10SetAlgebraP", "insert"]
-- !private ["s10SetAlgebraP", "randomElement"]
-- !private ["s10SetAlgebraP", "remove"]
 - !private ["s5SliceV", "subscript"]
 - ["9Rush_Hour5SpielC", "Bool"]
 - ["9Rush_Hour5SpielC", "Car"]
 - ["9Rush_Hour5SpielC", "Int"]
-- ["9Rush_Hour5SpielC", "NSImage"]
 - ["9Rush_Hour5SpielC", "Richtung"]
-- ["9Rush_Hour5SpielC", "Set"]
 - ["9Rush_Hour5SpielC", "String"]
 - !private ["9Rush_Hour5SpielC", "aufgabeLaden"]
 - ["9Rush_Hour5SpielC", "aufgabeNummer"]
-- ["9Rush_Hour5SpielC", "autobilderSenkrecht"]
-- ["9Rush_Hour5SpielC", "autobilderSenkrechtLaden"]
-- !private ["9Rush_Hour5SpielC", "autobilderSenkrechtNamen"]
-- ["9Rush_Hour5SpielC", "autobilderWaagerecht"]
-- ["9Rush_Hour5SpielC", "autobilderWaagerechtLaden"]
-- !private ["9Rush_Hour5SpielC", "autobilderWaagerechtNamen"]
-- ["9Rush_Hour5SpielC", "autobilderZuordnen"]
 - ["9Rush_Hour5SpielC", "bewegungsOptionenUpdate"]
 - ["9Rush_Hour5SpielC", "cars"]
 - ["9Rush_Hour5SpielC", "deinit"]
@@ -709,9 +613,7 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "first"]
 - !private ["s14_ArrayProtocolP", "id"]
-- !private ["s14_ArrayProtocolP", "image"]
 - !private ["s14_ArrayProtocolP", "init"]
-- !private ["s14_ArrayProtocolP", "isEmpty"]
 - !private ["s14_ArrayProtocolP", "last"]
 - !private ["s14_ArrayProtocolP", "orientierung"]
 - !private ["s14_ArrayProtocolP", "positionLinksUnten"]
@@ -725,9 +627,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "first"]
 - !private ["s24_DestructorSafeContainerP", "id"]
-- !private ["s24_DestructorSafeContainerP", "image"]
 - !private ["s24_DestructorSafeContainerP", "init"]
-- !private ["s24_DestructorSafeContainerP", "isEmpty"]
 - !private ["s24_DestructorSafeContainerP", "last"]
 - !private ["s24_DestructorSafeContainerP", "orientierung"]
 - !private ["s24_DestructorSafeContainerP", "positionLinksUnten"]
@@ -755,7 +655,6 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "first"]
 - !private ["s19_HasContiguousBytesP", "init"]
-- !private ["s19_HasContiguousBytesP", "isEmpty"]
 - !private ["s19_HasContiguousBytesP", "last"]
 - !private ["s19_HasContiguousBytesP", "removeAll"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
@@ -763,12 +662,8 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
-- ["s35_HasCustomAnyHashableRepresentationP", "init"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "insert"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "randomElement"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
@@ -798,11 +693,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
 - ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "insert"]
-- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "last"]
-- !private ["s21_ObjectiveCBridgeableP", "randomElement"]
-- !private ["s21_ObjectiveCBridgeableP", "remove"]
 - !private ["s21_ObjectiveCBridgeableP", "removeAll"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 depends-nominal:
@@ -812,14 +703,14 @@ depends-nominal:
 - "9Rush_Hour4BildC"
 - "So6CGRectV"
 - !private "8CloudKit21CKRecordValueProtocolP"
-- "s7CVarArgP"
+- !private "s7CVarArgP"
 - "9Rush_Hour3CarC"
-- "Sl"
+- !private "Sl"
 - !private "SL"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
-- "s23CustomStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
 - !private "10Foundation12DataProtocolP"
 - "Se"
 - !private "s26DefaultStringInterpolationV"
@@ -850,9 +741,7 @@ depends-nominal:
 - !private "Sk"
 - !private "Sm"
 - "9Rush_Hour8RichtungO"
-- "ST"
-- "Sh"
-- "s10SetAlgebraP"
+- !private "ST"
 - !private "s5SliceV"
 - "9Rush_Hour5SpielC"
 - !private "s27StringInterpolationProtocolP"
@@ -869,7 +758,7 @@ depends-nominal:
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - !private "s19_HasContiguousBytesP"
-- "s35_HasCustomAnyHashableRepresentationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - "s21_ObjectiveCBridgeableP"
@@ -911,4 +800,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "eefb096f3aeb29d38e9c3215edf6de49"
+interface-hash: "21077b2268952ed8928740db5db844ae"

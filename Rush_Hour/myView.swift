@@ -169,9 +169,9 @@ class MyView: NSView {
             randFarbe.setStroke()
             autoPath.lineWidth = 5
             autoPath.stroke()
-            if let bild = cars[i].image {
-                bild.draw(in: rechtEck)
+//            if let bild = cars[i].image {
+//                bild.draw(in: rechtEck)
             }
         }
     }
-}
+
