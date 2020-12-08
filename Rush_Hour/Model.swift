@@ -16,15 +16,15 @@ import Cocoa
 // CAVE im zweidimensionalen Array SPIEL.GRID, welches die einzelnen Zellen das 6 x 6 Spielfeldes repräsentiert, sind die Indizes der einzelnen Felder um den Wert 1 KLEINER (0 ... 5, da Array) als die Positionsbezeichnung in der KLasse CAR (w bzw. s 1...6)
 
 // Länge des Autos
-enum Länge: Int {
-    case zwei = 2
-    case drei = 3
+enum Länge {
+    case zwei
+    case drei
 }
 
 // Orientierung des Autos auf dem Spielfeld
-enum Orientierung: String {
-    case waagerecht = "w"
-    case senkrecht = "s"
+enum Orientierung {
+    case waagerecht
+    case senkrecht
 }
 
 // Bewegungsrichtung: Optionen für Autos bzw. Input über Maus / Taste
@@ -36,8 +36,23 @@ enum Richtung {
     case unbeweglich
 }
 
-let autobilderWaagerechtNamen = [String]()
-let autobilderSenkrechtNamen = ["s1"]
+class Bild {
+    var name: String
+    var orientierung: Orientierung
+    var länge: Länge
+    var image: NSImage? {
+        let i = try? NSImage(imageLiteralResourceName: name)
+        return i
+    }
+    init (name: String, orientierung: Orientierung, länge: Länge) {
+        self.name = name
+        self.länge = länge
+        self.orientierung = orientierung
+    }
+}
+
+let autobilderWaagerechtNamen = ["w1"]
+let autobilderSenkrechtNamen = ["s1", "s2", "s3"]
 
 
 // einzelnes Auto - identifiziert durch Länge und Farbe in der computet prop. ID als String. Aus der Aufgabenstellung ergeben sich die Eigenschaften POSITIONLINKSOBEN und ORIENTIERUNG. Die Eigenschaft BEWEGUNGSOPTIONEN zeigt als Array von Richtungen an, wohin ein Auto bewegt werden könnte; sie wird zunächst mit einem Element .UNBEWEGLICH initialisiert und später durch die Methode SPIEL.BEWEGUNGSOPTIONENUPDATE aus den Positionsdaten aller Autos berechnet. Die Eigenschaft ZELLENBELEGT zeigt an, welche Zellen gerade von einem Auto im Grid belegt werden und wird berechnet aus der POSITIONLINKSOBEN, der LÄNGE und der ORIENTIERUNG des Autos; in der get-Funktion sind KEINE Überprüfungen der waagerechten oder senkrechten Limits enthalten - diese Aufgabe sollte vollständig von der Methode SPIEL.BEWEGUNSOPTIONENUPDATE übernommen werden

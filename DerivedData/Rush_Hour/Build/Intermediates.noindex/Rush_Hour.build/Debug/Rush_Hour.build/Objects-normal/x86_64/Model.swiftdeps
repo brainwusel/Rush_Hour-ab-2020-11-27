@@ -3,6 +3,7 @@ provides-top-level:
 - "L\xE4nge"
 - "Orientierung"
 - "Richtung"
+- "Bild"
 - "autobilderWaagerechtNamen"
 - "autobilderSenkrechtNamen"
 - "Car"
@@ -12,12 +13,14 @@ provides-nominal:
 - "9Rush_Hour008Lnge_loaO"
 - "9Rush_Hour12OrientierungO"
 - "9Rush_Hour8RichtungO"
+- "9Rush_Hour4BildC"
 - "9Rush_Hour3CarC"
 - "9Rush_Hour5SpielC"
 provides-member:
 - ["9Rush_Hour008Lnge_loaO", ""]
 - ["9Rush_Hour12OrientierungO", ""]
 - ["9Rush_Hour8RichtungO", ""]
+- ["9Rush_Hour4BildC", ""]
 - ["9Rush_Hour3CarC", ""]
 - ["9Rush_Hour5SpielC", ""]
 provides-dynamic-lookup:
@@ -37,6 +40,7 @@ provides-dynamic-lookup:
 - "image"
 - "l\xE4nge"
 - "move"
+- "name"
 - "orientierung"
 - "positionLinksUnten"
 - "randFarbe"
@@ -53,12 +57,13 @@ depends-top-level:
 - !private ">"
 - "Array"
 - "AssignmentPrecedence"
+- "Bild"
 - "Bool"
 - !private "BooleanLiteralType"
 - "Car"
-- "FloatLiteralType"
+- !private "FloatLiteralType"
 - "Int"
-- "IntegerLiteralType"
+- !private "IntegerLiteralType"
 - "L\xE4nge"
 - "NSColor"
 - "NSImage"
@@ -69,8 +74,7 @@ depends-top-level:
 - "Spiel"
 - "String"
 - "StringLiteralType"
-- "UnicodeScalarType"
-- !private "_findStringSwitchCase"
+- !private "UnicodeScalarType"
 - "aufgabeLaden"
 - !private "aufgabeNummer"
 - !private "autobilderSenkrecht"
@@ -87,6 +91,7 @@ depends-top-level:
 - !private "l\xE4nge"
 - !private "max"
 - !private "min"
+- !private "name"
 - !private "orientierung"
 - !private "positionLinksUnten"
 - !private "~="
@@ -95,7 +100,7 @@ depends-member:
 - !private ["Sa", "contains"]
 - !private ["Sa", "count"]
 - !private ["Sa", "first"]
-- ["Sa", "init"]
+- !private ["Sa", "init"]
 - !private ["Sa", "isEmpty"]
 - !private ["Sa", "last"]
 - !private ["Sa", "removeAll"]
@@ -107,7 +112,7 @@ depends-member:
 - !private ["s10ArraySliceV", "positionLinksUnten"]
 - !private ["s10ArraySliceV", "subscript"]
 - !private ["s10ArraySliceV", "zellenBelegt"]
-- ["SK", ""]
+- !private ["SK", ""]
 - !private ["SK", "append"]
 - !private ["SK", "bewegungsOptionen"]
 - !private ["SK", "contains"]
@@ -115,7 +120,7 @@ depends-member:
 - !private ["SK", "first"]
 - !private ["SK", "id"]
 - !private ["SK", "image"]
-- ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["SK", "isEmpty"]
 - !private ["SK", "last"]
 - !private ["SK", "orientierung"]
@@ -123,12 +128,22 @@ depends-member:
 - !private ["SK", "removeAll"]
 - !private ["SK", "subscript"]
 - !private ["SK", "zellenBelegt"]
+- ["9Rush_Hour4BildC", "L\xE4nge"]
+- ["9Rush_Hour4BildC", "NSImage"]
+- ["9Rush_Hour4BildC", "Orientierung"]
+- ["9Rush_Hour4BildC", "String"]
+- ["9Rush_Hour4BildC", "deinit"]
+- ["9Rush_Hour4BildC", "image"]
+- ["9Rush_Hour4BildC", "init"]
+- ["9Rush_Hour4BildC", "l\xE4nge"]
+- ["9Rush_Hour4BildC", "name"]
+- ["9Rush_Hour4BildC", "orientierung"]
 - ["So6CGRectV", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "append"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "contains"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "count"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "first"]
-- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "isEmpty"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "last"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "removeAll"]
@@ -177,7 +192,7 @@ depends-member:
 - ["9Rush_Hour3CarC", "randFarbe"]
 - ["9Rush_Hour3CarC", "rechtEck"]
 - ["9Rush_Hour3CarC", "zellenBelegt"]
-- ["Sl", ""]
+- !private ["Sl", ""]
 - !private ["Sl", "append"]
 - !private ["Sl", "bewegungsOptionen"]
 - !private ["Sl", "contains"]
@@ -204,7 +219,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "first"]
 - !private ["10Foundation15ContiguousBytesP", "id"]
 - !private ["10Foundation15ContiguousBytesP", "image"]
-- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
 - !private ["10Foundation15ContiguousBytesP", "isEmpty"]
 - !private ["10Foundation15ContiguousBytesP", "last"]
 - !private ["10Foundation15ContiguousBytesP", "orientierung"]
@@ -289,7 +304,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "systemYellow"]
 - !private ["s23CustomStringConvertibleP", "yellow"]
 - !private ["s23CustomStringConvertibleP", "zellenBelegt"]
-- ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "append"]
 - !private ["10Foundation12DataProtocolP", "bewegungsOptionen"]
 - !private ["10Foundation12DataProtocolP", "contains"]
@@ -297,7 +312,7 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "first"]
 - !private ["10Foundation12DataProtocolP", "id"]
 - !private ["10Foundation12DataProtocolP", "image"]
-- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "init"]
 - !private ["10Foundation12DataProtocolP", "isEmpty"]
 - !private ["10Foundation12DataProtocolP", "last"]
 - !private ["10Foundation12DataProtocolP", "orientierung"]
@@ -332,11 +347,7 @@ depends-member:
 - !private ["SE", "removeAll"]
 - !private ["SE", "subscript"]
 - ["SQ", "=="]
-- ["SQ", "Default_RawValue"]
-- ["SQ", "RawValue"]
 - ["SQ", ""]
-- ["SQ", "_Default_RawValue"]
-- !private ["SQ", "_findStringSwitchCase"]
 - ["SQ", "_rawHashValue"]
 - !private ["SQ", "append"]
 - !private ["SQ", "bewegungsOptionen"]
@@ -345,7 +356,6 @@ depends-member:
 - !private ["SQ", "contains"]
 - !private ["SQ", "count"]
 - !private ["SQ", "drei"]
-- !private ["SQ", "findStringSwitchCase"]
 - !private ["SQ", "first"]
 - !private ["SQ", "green"]
 - ["SQ", "hash"]
@@ -362,7 +372,6 @@ depends-member:
 - !private ["SQ", "positionLinksUnten"]
 - !private ["SQ", "randomElement"]
 - ["SQ", "rauf"]
-- ["SQ", "rawValue"]
 - ["SQ", "rechts"]
 - !private ["SQ", "red"]
 - !private ["SQ", "remove"]
@@ -405,11 +414,7 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - ["SH", "=="]
-- ["SH", "Default_RawValue"]
-- ["SH", "RawValue"]
 - ["SH", ""]
-- ["SH", "_Default_RawValue"]
-- !private ["SH", "_findStringSwitchCase"]
 - ["SH", "_rawHashValue"]
 - !private ["SH", "append"]
 - !private ["SH", "bewegungsOptionen"]
@@ -418,7 +423,6 @@ depends-member:
 - !private ["SH", "contains"]
 - !private ["SH", "count"]
 - !private ["SH", "drei"]
-- !private ["SH", "findStringSwitchCase"]
 - !private ["SH", "first"]
 - !private ["SH", "green"]
 - ["SH", "hash"]
@@ -435,7 +439,6 @@ depends-member:
 - !private ["SH", "positionLinksUnten"]
 - !private ["SH", "randomElement"]
 - ["SH", "rauf"]
-- ["SH", "rawValue"]
 - ["SH", "rechts"]
 - !private ["SH", "red"]
 - !private ["SH", "remove"]
@@ -456,18 +459,14 @@ depends-member:
 - !private ["s20LazySequenceProtocolP", "subscript"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - ["9Rush_Hour008Lnge_loaO", "=="]
-- ["9Rush_Hour008Lnge_loaO", "Default_RawValue"]
-- ["9Rush_Hour008Lnge_loaO", "RawValue"]
 - ["9Rush_Hour008Lnge_loaO", ""]
-- ["9Rush_Hour008Lnge_loaO", "_Default_RawValue"]
+- ["9Rush_Hour008Lnge_loaO", "__derived_enum_equals"]
 - ["9Rush_Hour008Lnge_loaO", "_rawHashValue"]
 - ["9Rush_Hour008Lnge_loaO", "drei"]
 - ["9Rush_Hour008Lnge_loaO", "hash"]
 - ["9Rush_Hour008Lnge_loaO", "hashValue"]
-- ["9Rush_Hour008Lnge_loaO", "init"]
-- ["9Rush_Hour008Lnge_loaO", "rawValue"]
 - ["9Rush_Hour008Lnge_loaO", "zwei"]
-- ["SM", ""]
+- !private ["SM", ""]
 - !private ["SM", "append"]
 - !private ["SM", "bewegungsOptionen"]
 - !private ["SM", "contains"]
@@ -475,7 +474,7 @@ depends-member:
 - !private ["SM", "first"]
 - !private ["SM", "id"]
 - !private ["SM", "image"]
-- ["SM", "init"]
+- !private ["SM", "init"]
 - !private ["SM", "isEmpty"]
 - !private ["SM", "last"]
 - !private ["SM", "orientierung"]
@@ -487,7 +486,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "contains"]
 - !private ["10Foundation19MutableDataProtocolP", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "first"]
-- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
 - !private ["10Foundation19MutableDataProtocolP", "last"]
 - !private ["10Foundation19MutableDataProtocolP", "removeAll"]
@@ -590,20 +589,14 @@ depends-member:
 - !private ["So14NSSecureCodingP", "systemYellow"]
 - !private ["So14NSSecureCodingP", "yellow"]
 - ["9Rush_Hour12OrientierungO", "=="]
-- ["9Rush_Hour12OrientierungO", "Default_RawValue"]
-- ["9Rush_Hour12OrientierungO", "RawValue"]
 - ["9Rush_Hour12OrientierungO", ""]
-- ["9Rush_Hour12OrientierungO", "_Default_RawValue"]
-- !private ["9Rush_Hour12OrientierungO", "_findStringSwitchCase"]
+- ["9Rush_Hour12OrientierungO", "__derived_enum_equals"]
 - ["9Rush_Hour12OrientierungO", "_rawHashValue"]
-- !private ["9Rush_Hour12OrientierungO", "findStringSwitchCase"]
 - ["9Rush_Hour12OrientierungO", "hash"]
 - ["9Rush_Hour12OrientierungO", "hashValue"]
-- ["9Rush_Hour12OrientierungO", "init"]
-- ["9Rush_Hour12OrientierungO", "rawValue"]
 - ["9Rush_Hour12OrientierungO", "senkrecht"]
 - ["9Rush_Hour12OrientierungO", "waagerecht"]
-- ["Sk", ""]
+- !private ["Sk", ""]
 - !private ["Sk", "append"]
 - !private ["Sk", "bewegungsOptionen"]
 - !private ["Sk", "contains"]
@@ -611,7 +604,7 @@ depends-member:
 - !private ["Sk", "first"]
 - !private ["Sk", "id"]
 - !private ["Sk", "image"]
-- ["Sk", "init"]
+- !private ["Sk", "init"]
 - !private ["Sk", "isEmpty"]
 - !private ["Sk", "last"]
 - !private ["Sk", "orientierung"]
@@ -619,7 +612,7 @@ depends-member:
 - !private ["Sk", "removeAll"]
 - !private ["Sk", "subscript"]
 - !private ["Sk", "zellenBelegt"]
-- ["Sm", ""]
+- !private ["Sm", ""]
 - !private ["Sm", "append"]
 - !private ["Sm", "bewegungsOptionen"]
 - !private ["Sm", "contains"]
@@ -627,7 +620,7 @@ depends-member:
 - !private ["Sm", "first"]
 - !private ["Sm", "id"]
 - !private ["Sm", "image"]
-- ["Sm", "init"]
+- !private ["Sm", "init"]
 - !private ["Sm", "isEmpty"]
 - !private ["Sm", "last"]
 - !private ["Sm", "orientierung"]
@@ -635,22 +628,6 @@ depends-member:
 - !private ["Sm", "removeAll"]
 - !private ["Sm", "subscript"]
 - !private ["Sm", "zellenBelegt"]
-- ["SY", "=="]
-- ["SY", "Default_RawValue"]
-- ["SY", "RawValue"]
-- ["SY", ""]
-- ["SY", "_Default_RawValue"]
-- !private ["SY", "_findStringSwitchCase"]
-- ["SY", "_rawHashValue"]
-- !private ["SY", "drei"]
-- !private ["SY", "findStringSwitchCase"]
-- ["SY", "hash"]
-- ["SY", "hashValue"]
-- ["SY", "init"]
-- ["SY", "rawValue"]
-- !private ["SY", "senkrecht"]
-- !private ["SY", "waagerecht"]
-- !private ["SY", "zwei"]
 - ["9Rush_Hour8RichtungO", "=="]
 - ["9Rush_Hour8RichtungO", ""]
 - ["9Rush_Hour8RichtungO", "__derived_enum_equals"]
@@ -733,7 +710,7 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "first"]
 - !private ["s14_ArrayProtocolP", "id"]
 - !private ["s14_ArrayProtocolP", "image"]
-- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "isEmpty"]
 - !private ["s14_ArrayProtocolP", "last"]
 - !private ["s14_ArrayProtocolP", "orientierung"]
@@ -749,7 +726,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "first"]
 - !private ["s24_DestructorSafeContainerP", "id"]
 - !private ["s24_DestructorSafeContainerP", "image"]
-- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "isEmpty"]
 - !private ["s24_DestructorSafeContainerP", "last"]
 - !private ["s24_DestructorSafeContainerP", "orientierung"]
@@ -759,7 +736,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "zellenBelegt"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
-- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
@@ -777,7 +754,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "contains"]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "first"]
-- ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "isEmpty"]
 - !private ["s19_HasContiguousBytesP", "last"]
 - !private ["s19_HasContiguousBytesP", "removeAll"]
@@ -829,20 +806,21 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "removeAll"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 depends-nominal:
-- "Sa"
+- !private "Sa"
 - !private "s10ArraySliceV"
-- "SK"
+- !private "SK"
+- "9Rush_Hour4BildC"
 - "So6CGRectV"
-- "8CloudKit21CKRecordValueProtocolP"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - "9Rush_Hour3CarC"
 - "Sl"
 - !private "SL"
-- "10Foundation15ContiguousBytesP"
+- !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "10Foundation12DataProtocolP"
+- !private "10Foundation12DataProtocolP"
 - "Se"
 - !private "s26DefaultStringInterpolationV"
 - "SE"
@@ -857,8 +835,8 @@ depends-nominal:
 - !private "s20LazySequenceProtocolP"
 - !private "s25LosslessStringConvertibleP"
 - "9Rush_Hour008Lnge_loaO"
-- "SM"
-- "10Foundation19MutableDataProtocolP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
 - !private "So7NSColorC"
 - !private "So9NSCopyingP"
@@ -869,9 +847,8 @@ depends-nominal:
 - !private "So19NSPasteboardWritingP"
 - !private "So14NSSecureCodingP"
 - "9Rush_Hour12OrientierungO"
-- "Sk"
-- "Sm"
-- "SY"
+- !private "Sk"
+- !private "Sm"
 - "9Rush_Hour8RichtungO"
 - "ST"
 - "Sh"
@@ -881,17 +858,17 @@ depends-nominal:
 - !private "s27StringInterpolationProtocolP"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
-- "s14_ArrayProtocolP"
+- !private "s14_ArrayProtocolP"
 - "s30_CustomPlaygroundQuickLookableP"
-- "s24_DestructorSafeContainerP"
+- !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
-- "s19_HasContiguousBytesP"
+- !private "s19_HasContiguousBytesP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
@@ -934,4 +911,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9d6b5607f5304e32ca3f16de0d357cbb"
+interface-hash: "eefb096f3aeb29d38e9c3215edf6de49"
