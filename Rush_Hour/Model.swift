@@ -128,7 +128,7 @@ func aufgabeLaden (nummer: Int) -> [Car] {
     
     switch nummer {
     
-    case 0:
+    case 1:
         autos.append(Car(länge: .zwei, füllFarbe: .red, randFarbe: .black, positionLinksUnten: (w: 2, s: 4), richtung: .waagerecht))    // Index 0 = Exit-Auto
         autos.append(Car(länge: .zwei, füllFarbe: .yellow, randFarbe: .black, positionLinksUnten: (w: 1, s: 6), richtung: .waagerecht)) // Index 1
         autos.append(Car(länge: .zwei, füllFarbe: .green, randFarbe: .black, positionLinksUnten: (w: 5, s: 2), richtung: .waagerecht))  // Index 2
@@ -138,7 +138,7 @@ func aufgabeLaden (nummer: Int) -> [Car] {
         autos.append(Car(länge: .drei, füllFarbe: .systemYellow, randFarbe: .black, positionLinksUnten: (w: 6, s: 4), richtung: .senkrecht))  // Index 5
         autos.append(Car(länge: .drei, füllFarbe: .systemGreen, randFarbe: .black, positionLinksUnten: (w: 3, s: 1), richtung: .waagerecht))  // Index 6
         autos.append(Car(länge: .drei, füllFarbe: .systemBlue, randFarbe: .black, positionLinksUnten: (w: 4, s: 3), richtung: .senkrecht))    // Index 7
-    case 1:
+    case 2:
         autos.append(Car(länge: .zwei, füllFarbe: .red, randFarbe: .black, positionLinksUnten: (w: 1, s: 4), richtung: .waagerecht))    // Index 0 = Exit-Auto
         autos.append(Car(länge: .zwei, füllFarbe: .yellow, randFarbe: .black, positionLinksUnten: (w: 4, s: 5), richtung: .senkrecht)) // Index 1
         autos.append(Car(länge: .zwei, füllFarbe: .green, randFarbe: .black, positionLinksUnten: (w: 4, s: 3), richtung: .senkrecht))  // Index 2

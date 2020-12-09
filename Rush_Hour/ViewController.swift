@@ -9,9 +9,9 @@ import Cocoa
 
 class ViewController: NSViewController, NSTextFieldDelegate {
     
-    var spiel = Spiel(Aufgabe: 0)
+    var spiel = Spiel(Aufgabe: 1)
     var aktuelleAutoID = " "
-    var aktuelleAufgabe = 0
+    var aktuelleAufgabe = 1
     var bewegungsRichtung: Richtung = .unbeweglich {
         didSet (newValue) {
             spiel.move(autoID: aktuelleAutoID, wohin: newValue)
@@ -80,7 +80,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         if control == a_ufgabeNummer {
             let s = a_ufgabeNummer.stringValue
             if let nr = Int(s) {
-                if nr >= 0 && nr <= 1 {
+                if nr >= 1 && nr <= 2 {
                     print (nr)
                     spiel = Spiel(Aufgabe: nr)
                     updateView()
