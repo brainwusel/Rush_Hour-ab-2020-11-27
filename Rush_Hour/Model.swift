@@ -205,10 +205,12 @@ class Spiel {
                     {
                         cars[c].image = NSImage(imageLiteralResourceName: "w20")
                         used.insert("w20")
+                        break
                     } else
                     {
                         cars[c].image = NSImage(imageLiteralResourceName: b.key)
                         used.insert(b.key)
+                        break
                     }
                 }
             }

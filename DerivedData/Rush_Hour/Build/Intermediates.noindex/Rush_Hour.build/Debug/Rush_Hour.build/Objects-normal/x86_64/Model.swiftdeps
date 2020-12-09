@@ -82,6 +82,7 @@ depends-top-level:
 - !private "min"
 - !private "orientierung"
 - !private "positionLinksUnten"
+- !private "print"
 - !private "~="
 depends-member:
 - !private ["Sa", "append"]
@@ -654,6 +655,7 @@ depends-member:
 - !private ["9Rush_Hour5SpielC", "max"]
 - !private ["9Rush_Hour5SpielC", "min"]
 - ["9Rush_Hour5SpielC", "move"]
+- !private ["9Rush_Hour5SpielC", "print"]
 - ["9Rush_Hour5SpielC", "zur\xFCckAufAnfang"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
