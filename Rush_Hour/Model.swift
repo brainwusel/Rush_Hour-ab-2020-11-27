@@ -40,24 +40,24 @@ enum Inhalt {
     case voll
 }
 
-var bildContainer: [String: (Orientierung: Orientierung, Länge: Länge, Inhalt: Inhalt)] =
+var bildContainer: [String: (Orientierung: Orientierung, Länge: Länge)] =
     [
-        "w20": (.waagerecht, .zwei, .voll),
-        "w21": (.waagerecht, .zwei, .voll),
-        "w22": (.waagerecht, .zwei, .voll),
-        "w23": (.waagerecht, .zwei, .voll),
-        "w30": (.waagerecht, .drei, .voll),
-        "w31": (.waagerecht, .drei, .voll),
-        "w32": (.waagerecht, .drei, .voll),
-        "w33": (.waagerecht, .drei, .voll),
-        "s20": (.senkrecht, .zwei, .voll),
-        "s21": (.senkrecht, .zwei, .voll),
-        "s22": (.senkrecht, .zwei, .voll),
-        "s23": (.senkrecht, .zwei, .voll),
-        "s30": (.senkrecht, .drei, .voll),
-        "s31": (.senkrecht, .drei, .voll),
-        "s32": (.senkrecht, .drei, .voll),
-        "s33": (.senkrecht, .drei, .voll),
+        "w20": (.waagerecht, .zwei),
+        "w21": (.waagerecht, .zwei),
+        "w22": (.waagerecht, .zwei),
+        "w23": (.waagerecht, .zwei),
+        "w30": (.waagerecht, .drei),
+        "w31": (.waagerecht, .drei),
+        "w32": (.waagerecht, .drei),
+        "w33": (.waagerecht, .drei),
+        "s20": (.senkrecht, .zwei),
+        "s21": (.senkrecht, .zwei),
+        "s22": (.senkrecht, .zwei),
+        "s23": (.senkrecht, .zwei),
+        "s30": (.senkrecht, .drei),
+        "s31": (.senkrecht, .drei),
+        "s32": (.senkrecht, .drei),
+        "s33": (.senkrecht, .drei),
     ]
 
 // einzelnes Auto - identifiziert durch Länge und Farbe in der computet prop. ID als String. Aus der Aufgabenstellung ergeben sich die Eigenschaften POSITIONLINKSOBEN und ORIENTIERUNG. Die Eigenschaft BEWEGUNGSOPTIONEN zeigt als Array von Richtungen an, wohin ein Auto bewegt werden könnte; sie wird zunächst mit einem Element .UNBEWEGLICH initialisiert und später durch die Methode SPIEL.BEWEGUNGSOPTIONENUPDATE aus den Positionsdaten aller Autos berechnet. Die Eigenschaft ZELLENBELEGT zeigt an, welche Zellen gerade von einem Auto im Grid belegt werden und wird berechnet aus der POSITIONLINKSOBEN, der LÄNGE und der ORIENTIERUNG des Autos; in der get-Funktion sind KEINE Überprüfungen der waagerechten oder senkrechten Limits enthalten - diese Aufgabe sollte vollständig von der Methode SPIEL.BEWEGUNSOPTIONENUPDATE übernommen werden
@@ -121,7 +121,7 @@ class Car {
     }
 }
 
-//  Aufgabe 0 aus ScreenShot - "Zweier" rot ist das Exit-Auto
+//  Aufgabe 1 aus ScreenShot - "Zweier" rot ist das Exit-Auto
 
 func aufgabeLaden (nummer: Int) -> [Car] {
     var autos = [Car]()
@@ -163,7 +163,6 @@ class Spiel {
     var gewonnen: Bool
     var aufgabeNummer: Int
     
-    
     init (Aufgabe nr: Int) {
         self.gewonnen = false
         self.aufgabeNummer = nr
@@ -196,8 +195,8 @@ class Spiel {
         {
             for b in bildContainer
             {
-                if b.value.Inhalt == .voll &&
-                    cars[c].orientierung == b.value.Orientierung &&
+                let _ = b.key
+                if cars[c].orientierung == b.value.Orientierung &&
                     cars[c].länge == b.value.Länge &&
                     used.contains(b.key) == false
                 {
@@ -214,11 +213,8 @@ class Spiel {
                     }
                 }
             }
-            
         }
     }
-    
-    
     
     func move (autoID: String, wohin: Richtung) {
         for i in 0 ... cars.count - 1 {

@@ -342,7 +342,6 @@ depends-member:
 - !private ["SQ", "systemRed"]
 - !private ["SQ", "systemYellow"]
 - !private ["SQ", "unbeweglich"]
-- ["SQ", "voll"]
 - ["SQ", "waagerecht"]
 - !private ["SQ", "yellow"]
 - !private ["SQ", "zellenBelegt"]
@@ -409,7 +408,6 @@ depends-member:
 - !private ["SH", "systemRed"]
 - !private ["SH", "systemYellow"]
 - !private ["SH", "unbeweglich"]
-- ["SH", "voll"]
 - ["SH", "waagerecht"]
 - !private ["SH", "yellow"]
 - !private ["SH", "zellenBelegt"]
@@ -862,4 +860,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "dadded9f46d855dfbc00751262ab6f14"
+interface-hash: "0aaaa451ca608446ed5fc153377027cc"

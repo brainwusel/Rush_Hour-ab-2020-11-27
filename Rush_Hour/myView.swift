@@ -32,7 +32,7 @@ class MyView: NSView {
                                         width: dirtyRect.width,
                                         height: dirtyRect.height))
         if gewonnen {
-            NSColor.green.setFill()
+            NSColor.systemGreen.setFill()
         }
         else {
             NSColor.brown.setFill()

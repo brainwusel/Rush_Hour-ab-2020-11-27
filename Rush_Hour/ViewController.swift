@@ -12,8 +12,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     var spiel = Spiel(Aufgabe: 1)
     var aktuelleAutoID = " "
     var aktuelleAufgabe = 1
-    var bewegungsRichtung: Richtung = .unbeweglich {
-        didSet (newValue) {
+    var bewegungsRichtung: Richtung = .unbeweglich
+    {
+        didSet (newValue)
+        {
             spiel.move(autoID: aktuelleAutoID, wohin: newValue)
             updateView()
         }
@@ -21,10 +23,12 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var myView: MyView!
     @IBOutlet weak var v_onVorne: NSButton!
-    @IBAction func vonVorne (_ sender: NSButton) {
+    @IBAction func vonVorne (_ sender: NSButton)
+    {
         spiel.zurückAufAnfang()
         updateView()
     }
+    
     @IBOutlet weak var a_ufgabeNummer: NSTextField!
     
     override func viewDidLoad() {
@@ -81,7 +85,6 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             let s = a_ufgabeNummer.stringValue
             if let nr = Int(s) {
                 if nr >= 1 && nr <= 2 {
-                    print (nr)
                     spiel = Spiel(Aufgabe: nr)
                     updateView()
                 }
