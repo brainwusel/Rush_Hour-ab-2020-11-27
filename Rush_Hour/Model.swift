@@ -43,10 +43,10 @@ enum Inhalt {
 var bildContainer: [String: (Orientierung: Orientierung, Länge: Länge, Inhalt: Inhalt)] =
     [
         "w20": (.waagerecht, .zwei, .voll),
-        "w21": (.waagerecht, .zwei, .leer),
-        "w22": (.waagerecht, .zwei, .leer),
+        "w21": (.waagerecht, .zwei, .voll),
+        "w22": (.waagerecht, .zwei, .voll),
         "w23": (.waagerecht, .zwei, .leer),
-        "w30": (.waagerecht, .drei, .leer),
+        "w30": (.waagerecht, .drei, .voll),
         "w31": (.waagerecht, .drei, .leer),
         "w32": (.waagerecht, .drei, .leer),
         "w33": (.waagerecht, .drei, .leer),
@@ -56,7 +56,7 @@ var bildContainer: [String: (Orientierung: Orientierung, Länge: Länge, Inhalt:
         "s23": (.senkrecht, .zwei, .leer),
         "s30": (.senkrecht, .drei, .voll),
         "s31": (.senkrecht, .drei, .voll),
-        "s32": (.senkrecht, .drei, .leer),
+        "s32": (.senkrecht, .drei, .voll),
         "s33": (.senkrecht, .drei, .leer),
     ]
 
@@ -192,16 +192,24 @@ class Spiel {
     
     func bilderZuordnen () {
         var used = Set<String>()
-        for c in 0...cars.count - 1 {
-            for b in bildContainer {
+        for c in 0...cars.count - 1
+        {
+            for b in bildContainer
+            {
                 if b.value.Inhalt == .voll &&
                     cars[c].orientierung == b.value.Orientierung &&
                     cars[c].länge == b.value.Länge &&
                     used.contains(b.key) == false
                 {
-                    cars[c].image = NSImage(imageLiteralResourceName: b.key)
-                    used.insert(b.key)
-                    
+                    if c == 0
+                    {
+                        cars[c].image = NSImage(imageLiteralResourceName: "w20")
+                        used.insert("w20")
+                    } else
+                    {
+                        cars[c].image = NSImage(imageLiteralResourceName: b.key)
+                        used.insert(b.key)
+                    }
                 }
             }
             

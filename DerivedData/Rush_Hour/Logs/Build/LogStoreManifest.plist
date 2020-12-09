@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>03D5B05D-68A4-4ADC-8858-E114F9EFA291</key>
+		<key>02699FBE-55A0-4276-89DC-8DFF9B86E06B</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>03D5B05D-68A4-4ADC-8858-E114F9EFA291.xcactivitylog</string>
+			<string>02699FBE-55A0-4276-89DC-8DFF9B86E06B.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Build Rush_Hour</string>
 			<key>timeStartedRecording</key>
-			<real>629155626.47245395</real>
+			<real>629195786.78017294</real>
 			<key>timeStoppedRecording</key>
-			<real>629155630.65431905</real>
+			<real>629195788.14443302</real>
 			<key>title</key>
 			<string>Build Rush_Hour</string>
 			<key>uniqueIdentifier</key>
-			<string>03D5B05D-68A4-4ADC-8858-E114F9EFA291</string>
+			<string>02699FBE-55A0-4276-89DC-8DFF9B86E06B</string>
 		</dict>
-		<key>05E75B34-539A-491D-A692-70EDD042853B</key>
+		<key>4EEB8D1E-E57E-4F4D-AB4B-C0BEB01263B1</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>05E75B34-539A-491D-A692-70EDD042853B.xcactivitylog</string>
+			<string>4EEB8D1E-E57E-4F4D-AB4B-C0BEB01263B1.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,115 +66,13 @@
 			<key>signature</key>
 			<string>Build Rush_Hour</string>
 			<key>timeStartedRecording</key>
-			<real>629156090.47558606</real>
+			<real>629201081.57438004</real>
 			<key>timeStoppedRecording</key>
-			<real>629156091.76202905</real>
+			<real>629201083.05535996</real>
 			<key>title</key>
 			<string>Build Rush_Hour</string>
 			<key>uniqueIdentifier</key>
-			<string>05E75B34-539A-491D-A692-70EDD042853B</string>
-		</dict>
-		<key>0AB3E8E4-F710-4F6E-BFF8-2D2D22347974</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>0AB3E8E4-F710-4F6E-BFF8-2D2D22347974.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Rush_Hour project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Rush_Hour</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Rush_Hour</string>
-			<key>timeStartedRecording</key>
-			<real>629156066.55119503</real>
-			<key>timeStoppedRecording</key>
-			<real>629156067.81544304</real>
-			<key>title</key>
-			<string>Build Rush_Hour</string>
-			<key>uniqueIdentifier</key>
-			<string>0AB3E8E4-F710-4F6E-BFF8-2D2D22347974</string>
-		</dict>
-		<key>1205FC1D-DA4A-4CF5-83E6-3E5953DBCE4E</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1205FC1D-DA4A-4CF5-83E6-3E5953DBCE4E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Rush_Hour project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Rush_Hour</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Rush_Hour</string>
-			<key>timeStartedRecording</key>
-			<real>629155752.51301897</real>
-			<key>timeStoppedRecording</key>
-			<real>629155753.81654096</real>
-			<key>title</key>
-			<string>Build Rush_Hour</string>
-			<key>uniqueIdentifier</key>
-			<string>1205FC1D-DA4A-4CF5-83E6-3E5953DBCE4E</string>
-		</dict>
-		<key>37FAE3B3-CCE7-48BF-B17C-1559E0C463F0</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>37FAE3B3-CCE7-48BF-B17C-1559E0C463F0.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Rush_Hour project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Rush_Hour</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Rush_Hour</string>
-			<key>timeStartedRecording</key>
-			<real>629156123.91602898</real>
-			<key>timeStoppedRecording</key>
-			<real>629156125.20030701</real>
-			<key>title</key>
-			<string>Build Rush_Hour</string>
-			<key>uniqueIdentifier</key>
-			<string>37FAE3B3-CCE7-48BF-B17C-1559E0C463F0</string>
+			<string>4EEB8D1E-E57E-4F4D-AB4B-C0BEB01263B1</string>
 		</dict>
 		<key>50777BFA-3962-403A-AE13-8FAC8DAB2B57</key>
 		<dict>
@@ -210,7 +108,7 @@
 			<key>uniqueIdentifier</key>
 			<string>50777BFA-3962-403A-AE13-8FAC8DAB2B57</string>
 		</dict>
-		<key>764B6D75-60F5-48A1-86E8-18B217B48D95</key>
+		<key>85763C9D-FC13-473F-B759-3096F2C3DEC0</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -219,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>764B6D75-60F5-48A1-86E8-18B217B48D95.xcactivitylog</string>
+			<string>85763C9D-FC13-473F-B759-3096F2C3DEC0.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -236,15 +134,15 @@
 			<key>signature</key>
 			<string>Build Rush_Hour</string>
 			<key>timeStartedRecording</key>
-			<real>629139241.15693402</real>
+			<real>629195884.76180196</real>
 			<key>timeStoppedRecording</key>
-			<real>629139242.39719903</real>
+			<real>629195886.70151496</real>
 			<key>title</key>
 			<string>Build Rush_Hour</string>
 			<key>uniqueIdentifier</key>
-			<string>764B6D75-60F5-48A1-86E8-18B217B48D95</string>
+			<string>85763C9D-FC13-473F-B759-3096F2C3DEC0</string>
 		</dict>
-		<key>BE22D258-3D96-47E8-AB1B-8F371898839C</key>
+		<key>D259E4DE-A844-4804-8E8C-2C6EC7CA1F4C</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -253,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>BE22D258-3D96-47E8-AB1B-8F371898839C.xcactivitylog</string>
+			<string>D259E4DE-A844-4804-8E8C-2C6EC7CA1F4C.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -270,13 +168,81 @@
 			<key>signature</key>
 			<string>Build Rush_Hour</string>
 			<key>timeStartedRecording</key>
-			<real>629155952.35294294</real>
+			<real>629195608.97632802</real>
 			<key>timeStoppedRecording</key>
-			<real>629155953.65180504</real>
+			<real>629195615.81868804</real>
 			<key>title</key>
 			<string>Build Rush_Hour</string>
 			<key>uniqueIdentifier</key>
-			<string>BE22D258-3D96-47E8-AB1B-8F371898839C</string>
+			<string>D259E4DE-A844-4804-8E8C-2C6EC7CA1F4C</string>
+		</dict>
+		<key>E743E95F-87D8-425D-9BF9-5A87BE2342D9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E743E95F-87D8-425D-9BF9-5A87BE2342D9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rush_Hour project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rush_Hour</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Rush_Hour</string>
+			<key>timeStartedRecording</key>
+			<real>629195752.17132401</real>
+			<key>timeStoppedRecording</key>
+			<real>629195756.91216803</real>
+			<key>title</key>
+			<string>Build Rush_Hour</string>
+			<key>uniqueIdentifier</key>
+			<string>E743E95F-87D8-425D-9BF9-5A87BE2342D9</string>
+		</dict>
+		<key>F1DDD0F0-359B-4605-AC37-3A3B5F12A02F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F1DDD0F0-359B-4605-AC37-3A3B5F12A02F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rush_Hour project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rush_Hour</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Rush_Hour</string>
+			<key>timeStartedRecording</key>
+			<real>629202468.96092403</real>
+			<key>timeStoppedRecording</key>
+			<real>629202471.33143497</real>
+			<key>title</key>
+			<string>Build Rush_Hour</string>
+			<key>uniqueIdentifier</key>
+			<string>F1DDD0F0-359B-4605-AC37-3A3B5F12A02F</string>
 		</dict>
 	</dict>
 </dict>
