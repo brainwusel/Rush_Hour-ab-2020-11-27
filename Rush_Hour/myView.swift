@@ -165,8 +165,8 @@ class MyView: NSView {
             let füllFarbe = cars[i].füllFarbe
             füllFarbe.setFill()
             autoPath.fill()
-            let randFarbe = cars[i].randFarbe
-            randFarbe.setStroke()
+//            let randFarbe = cars[i].randFarbe
+//            randFarbe.setStroke()
             autoPath.lineWidth = 5
             autoPath.stroke()
             if let bild = cars[i].image {

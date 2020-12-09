@@ -82,7 +82,6 @@ depends-top-level:
 - !private "min"
 - !private "orientierung"
 - !private "positionLinksUnten"
-- !private "print"
 - !private "~="
 depends-member:
 - !private ["Sa", "append"]
@@ -326,7 +325,6 @@ depends-member:
 - ["SQ", "init"]
 - !private ["SQ", "insert"]
 - !private ["SQ", "last"]
-- ["SQ", "leer"]
 - ["SQ", "links"]
 - !private ["SQ", "l\xE4nge"]
 - !private ["SQ", "orange"]
@@ -394,7 +392,6 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "insert"]
 - !private ["SH", "last"]
-- ["SH", "leer"]
 - ["SH", "links"]
 - !private ["SH", "l\xE4nge"]
 - !private ["SH", "orange"]
@@ -655,7 +652,6 @@ depends-member:
 - !private ["9Rush_Hour5SpielC", "max"]
 - !private ["9Rush_Hour5SpielC", "min"]
 - ["9Rush_Hour5SpielC", "move"]
-- !private ["9Rush_Hour5SpielC", "print"]
 - ["9Rush_Hour5SpielC", "zur\xFCckAufAnfang"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
@@ -866,4 +862,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "19ad49ac28581b07d122881c8086c106"
+interface-hash: "dadded9f46d855dfbc00751262ab6f14"
