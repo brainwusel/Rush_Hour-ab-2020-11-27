@@ -4,6 +4,7 @@ provides-top-level:
 - "Orientierung"
 - "Richtung"
 - "Inhalt"
+- "Bild"
 - "bildContainer"
 - "Car"
 - "aufgabeLaden"
@@ -13,6 +14,7 @@ provides-nominal:
 - "9Rush_Hour12OrientierungO"
 - "9Rush_Hour8RichtungO"
 - "9Rush_Hour6InhaltO"
+- "9Rush_Hour4BildV"
 - "9Rush_Hour3CarC"
 - "9Rush_Hour5SpielC"
 provides-member:
@@ -20,6 +22,7 @@ provides-member:
 - ["9Rush_Hour12OrientierungO", ""]
 - ["9Rush_Hour8RichtungO", ""]
 - ["9Rush_Hour6InhaltO", ""]
+- ["9Rush_Hour4BildV", ""]
 - ["9Rush_Hour3CarC", ""]
 - ["9Rush_Hour5SpielC", ""]
 provides-dynamic-lookup:
@@ -51,10 +54,13 @@ depends-top-level:
 - !private ">"
 - !private "Array"
 - "AssignmentPrecedence"
+- "Bild"
 - "Bool"
 - !private "BooleanLiteralType"
 - "Car"
+- "Equatable"
 - !private "FloatLiteralType"
+- "Hashable"
 - "Inhalt"
 - "Int"
 - !private "IntegerLiteralType"
@@ -64,10 +70,10 @@ depends-top-level:
 - "NSRect"
 - "Orientierung"
 - "Richtung"
-- !private "Set"
+- "Set"
 - "Spiel"
 - "String"
-- "StringLiteralType"
+- !private "StringLiteralType"
 - !private "UnicodeScalarType"
 - "aufgabeLaden"
 - !private "aufgabeNummer"
@@ -116,6 +122,19 @@ depends-member:
 - !private ["SK", "removeAll"]
 - !private ["SK", "subscript"]
 - !private ["SK", "zellenBelegt"]
+- ["9Rush_Hour4BildV", "=="]
+- ["9Rush_Hour4BildV", "L\xE4nge"]
+- ["9Rush_Hour4BildV", "Orientierung"]
+- ["9Rush_Hour4BildV", "String"]
+- ["9Rush_Hour4BildV", ""]
+- ["9Rush_Hour4BildV", "__derived_struct_equals"]
+- ["9Rush_Hour4BildV", "_rawHashValue"]
+- ["9Rush_Hour4BildV", "hash"]
+- ["9Rush_Hour4BildV", "hashValue"]
+- ["9Rush_Hour4BildV", "init"]
+- ["9Rush_Hour4BildV", "l\xE4nge"]
+- ["9Rush_Hour4BildV", "name"]
+- ["9Rush_Hour4BildV", "orientierung"]
 - ["So6CGRectV", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "append"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "contains"]
@@ -134,9 +153,12 @@ depends-member:
 - !private ["s7CVarArgP", "green"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "insert"]
+- !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "last"]
 - !private ["s7CVarArgP", "orange"]
+- !private ["s7CVarArgP", "randomElement"]
 - !private ["s7CVarArgP", "red"]
+- !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "removeAll"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "systemBlue"]
@@ -176,10 +198,13 @@ depends-member:
 - !private ["Sl", "image"]
 - !private ["Sl", "init"]
 - !private ["Sl", "insert"]
+- !private ["Sl", "isEmpty"]
 - !private ["Sl", "last"]
 - !private ["Sl", "l\xE4nge"]
 - !private ["Sl", "orientierung"]
 - !private ["Sl", "positionLinksUnten"]
+- !private ["Sl", "randomElement"]
+- !private ["Sl", "remove"]
 - !private ["Sl", "removeAll"]
 - !private ["Sl", "subscript"]
 - !private ["Sl", "zellenBelegt"]
@@ -211,12 +236,15 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "image"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "insert"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
 - !private ["s28CustomDebugStringConvertibleP", "l\xE4nge"]
 - !private ["s28CustomDebugStringConvertibleP", "orange"]
 - !private ["s28CustomDebugStringConvertibleP", "orientierung"]
 - !private ["s28CustomDebugStringConvertibleP", "positionLinksUnten"]
+- !private ["s28CustomDebugStringConvertibleP", "randomElement"]
 - !private ["s28CustomDebugStringConvertibleP", "red"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
 - !private ["s28CustomDebugStringConvertibleP", "removeAll"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "systemBlue"]
@@ -234,10 +262,13 @@ depends-member:
 - !private ["s17CustomReflectableP", "image"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "insert"]
+- !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "last"]
 - !private ["s17CustomReflectableP", "l\xE4nge"]
 - !private ["s17CustomReflectableP", "orientierung"]
 - !private ["s17CustomReflectableP", "positionLinksUnten"]
+- !private ["s17CustomReflectableP", "randomElement"]
+- !private ["s17CustomReflectableP", "remove"]
 - !private ["s17CustomReflectableP", "removeAll"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "zellenBelegt"]
@@ -256,12 +287,15 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "image"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "insert"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "last"]
 - !private ["s23CustomStringConvertibleP", "l\xE4nge"]
 - !private ["s23CustomStringConvertibleP", "orange"]
 - !private ["s23CustomStringConvertibleP", "orientierung"]
 - !private ["s23CustomStringConvertibleP", "positionLinksUnten"]
+- !private ["s23CustomStringConvertibleP", "randomElement"]
 - !private ["s23CustomStringConvertibleP", "red"]
+- !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "removeAll"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "systemBlue"]
@@ -292,7 +326,10 @@ depends-member:
 - !private ["Se", "first"]
 - ["Se", "init"]
 - !private ["Se", "insert"]
+- !private ["Se", "isEmpty"]
 - !private ["Se", "last"]
+- !private ["Se", "randomElement"]
+- !private ["Se", "remove"]
 - !private ["Se", "removeAll"]
 - !private ["Se", "subscript"]
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
@@ -303,11 +340,15 @@ depends-member:
 - !private ["SE", "first"]
 - ["SE", "init"]
 - !private ["SE", "insert"]
+- !private ["SE", "isEmpty"]
 - !private ["SE", "last"]
+- !private ["SE", "randomElement"]
+- !private ["SE", "remove"]
 - !private ["SE", "removeAll"]
 - !private ["SE", "subscript"]
 - ["SQ", "=="]
 - ["SQ", ""]
+- !private ["SQ", "__derived_struct_equals"]
 - ["SQ", "_rawHashValue"]
 - !private ["SQ", "append"]
 - !private ["SQ", "bewegungsOptionen"]
@@ -315,7 +356,7 @@ depends-member:
 - !private ["SQ", "blue"]
 - !private ["SQ", "contains"]
 - !private ["SQ", "count"]
-- ["SQ", "drei"]
+- !private ["SQ", "drei"]
 - !private ["SQ", "first"]
 - !private ["SQ", "green"]
 - ["SQ", "hash"]
@@ -324,28 +365,32 @@ depends-member:
 - !private ["SQ", "image"]
 - ["SQ", "init"]
 - !private ["SQ", "insert"]
+- !private ["SQ", "isEmpty"]
 - !private ["SQ", "last"]
 - ["SQ", "links"]
 - !private ["SQ", "l\xE4nge"]
+- !private ["SQ", "name"]
 - !private ["SQ", "orange"]
 - !private ["SQ", "orientierung"]
 - !private ["SQ", "positionLinksUnten"]
+- !private ["SQ", "randomElement"]
 - ["SQ", "rauf"]
 - ["SQ", "rechts"]
 - !private ["SQ", "red"]
+- !private ["SQ", "remove"]
 - !private ["SQ", "removeAll"]
 - ["SQ", "runter"]
-- ["SQ", "senkrecht"]
+- !private ["SQ", "senkrecht"]
 - !private ["SQ", "subscript"]
 - !private ["SQ", "systemBlue"]
 - !private ["SQ", "systemGreen"]
 - !private ["SQ", "systemRed"]
 - !private ["SQ", "systemYellow"]
 - !private ["SQ", "unbeweglich"]
-- ["SQ", "waagerecht"]
+- !private ["SQ", "waagerecht"]
 - !private ["SQ", "yellow"]
 - !private ["SQ", "zellenBelegt"]
-- ["SQ", "zwei"]
+- !private ["SQ", "zwei"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "bewegungsOptionen"]
@@ -356,16 +401,16 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "image"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "insert"]
+- !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
 - !private ["s25ExpressibleByArrayLiteralP", "l\xE4nge"]
 - !private ["s25ExpressibleByArrayLiteralP", "orientierung"]
 - !private ["s25ExpressibleByArrayLiteralP", "positionLinksUnten"]
+- !private ["s25ExpressibleByArrayLiteralP", "randomElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
 - !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "zellenBelegt"]
-- ["s30ExpressibleByDictionaryLiteralP", "Key"]
-- ["s30ExpressibleByDictionaryLiteralP", "Value"]
-- ["s30ExpressibleByDictionaryLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
 - !private ["s32ExpressibleByStringInterpolationP", ""]
@@ -374,6 +419,7 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - ["SH", "=="]
 - ["SH", ""]
+- !private ["SH", "__derived_struct_equals"]
 - ["SH", "_rawHashValue"]
 - !private ["SH", "append"]
 - !private ["SH", "bewegungsOptionen"]
@@ -381,7 +427,7 @@ depends-member:
 - !private ["SH", "blue"]
 - !private ["SH", "contains"]
 - !private ["SH", "count"]
-- ["SH", "drei"]
+- !private ["SH", "drei"]
 - !private ["SH", "first"]
 - !private ["SH", "green"]
 - ["SH", "hash"]
@@ -390,28 +436,32 @@ depends-member:
 - !private ["SH", "image"]
 - !private ["SH", "init"]
 - !private ["SH", "insert"]
+- !private ["SH", "isEmpty"]
 - !private ["SH", "last"]
 - ["SH", "links"]
 - !private ["SH", "l\xE4nge"]
+- !private ["SH", "name"]
 - !private ["SH", "orange"]
 - !private ["SH", "orientierung"]
 - !private ["SH", "positionLinksUnten"]
+- !private ["SH", "randomElement"]
 - ["SH", "rauf"]
 - ["SH", "rechts"]
 - !private ["SH", "red"]
+- !private ["SH", "remove"]
 - !private ["SH", "removeAll"]
 - ["SH", "runter"]
-- ["SH", "senkrecht"]
+- !private ["SH", "senkrecht"]
 - !private ["SH", "subscript"]
 - !private ["SH", "systemBlue"]
 - !private ["SH", "systemGreen"]
 - !private ["SH", "systemRed"]
 - !private ["SH", "systemYellow"]
 - !private ["SH", "unbeweglich"]
-- ["SH", "waagerecht"]
+- !private ["SH", "waagerecht"]
 - !private ["SH", "yellow"]
 - !private ["SH", "zellenBelegt"]
-- ["SH", "zwei"]
+- !private ["SH", "zwei"]
 - !private ["s6HasherV", "combine"]
 - ["9Rush_Hour6InhaltO", "=="]
 - ["9Rush_Hour6InhaltO", ""]
@@ -615,27 +665,33 @@ depends-member:
 - !private ["ST", "image"]
 - !private ["ST", "init"]
 - !private ["ST", "insert"]
+- !private ["ST", "isEmpty"]
 - !private ["ST", "last"]
 - !private ["ST", "l\xE4nge"]
 - !private ["ST", "makeIterator"]
 - !private ["ST", "orientierung"]
 - !private ["ST", "positionLinksUnten"]
+- !private ["ST", "randomElement"]
+- !private ["ST", "remove"]
 - !private ["ST", "removeAll"]
 - !private ["ST", "subscript"]
 - !private ["ST", "zellenBelegt"]
-- !private ["Sh", "contains"]
 - !private ["Sh", "init"]
 - !private ["Sh", "insert"]
-- !private ["s10SetAlgebraP", "contains"]
+- !private ["Sh", "isEmpty"]
+- !private ["Sh", "randomElement"]
+- !private ["Sh", "remove"]
 - !private ["s10SetAlgebraP", "init"]
 - !private ["s10SetAlgebraP", "insert"]
+- !private ["s10SetAlgebraP", "isEmpty"]
+- !private ["s10SetAlgebraP", "randomElement"]
+- !private ["s10SetAlgebraP", "remove"]
 - !private ["s5SliceV", "subscript"]
 - ["9Rush_Hour5SpielC", "Bool"]
 - ["9Rush_Hour5SpielC", "Car"]
 - ["9Rush_Hour5SpielC", "Int"]
 - !private ["9Rush_Hour5SpielC", "NSImage"]
 - ["9Rush_Hour5SpielC", "Richtung"]
-- !private ["9Rush_Hour5SpielC", "Set"]
 - ["9Rush_Hour5SpielC", "String"]
 - !private ["9Rush_Hour5SpielC", "aufgabeLaden"]
 - ["9Rush_Hour5SpielC", "aufgabeNummer"]
@@ -692,7 +748,7 @@ depends-member:
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "blue"]
@@ -719,7 +775,10 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "insert"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "randomElement"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
@@ -750,13 +809,17 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "first"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "insert"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "last"]
+- !private ["s21_ObjectiveCBridgeableP", "randomElement"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
 - !private ["s21_ObjectiveCBridgeableP", "removeAll"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 depends-nominal:
 - !private "Sa"
 - !private "s10ArraySliceV"
 - !private "SK"
+- "9Rush_Hour4BildV"
 - "So6CGRectV"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - !private "s7CVarArgP"
@@ -773,7 +836,6 @@ depends-nominal:
 - "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
@@ -813,7 +875,7 @@ depends-nominal:
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
@@ -860,4 +922,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0aaaa451ca608446ed5fc153377027cc"
+interface-hash: "d4e3f6a1c5645abbc385e9c17d26c87d"

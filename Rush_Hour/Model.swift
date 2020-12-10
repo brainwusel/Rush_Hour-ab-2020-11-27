@@ -40,25 +40,39 @@ enum Inhalt {
     case voll
 }
 
-var bildContainer: [String: (Orientierung: Orientierung, Länge: Länge)] =
-    [
-        "w20": (.waagerecht, .zwei),
-        "w21": (.waagerecht, .zwei),
-        "w22": (.waagerecht, .zwei),
-        "w23": (.waagerecht, .zwei),
-        "w30": (.waagerecht, .drei),
-        "w31": (.waagerecht, .drei),
-        "w32": (.waagerecht, .drei),
-        "w33": (.waagerecht, .drei),
-        "s20": (.senkrecht, .zwei),
-        "s21": (.senkrecht, .zwei),
-        "s22": (.senkrecht, .zwei),
-        "s23": (.senkrecht, .zwei),
-        "s30": (.senkrecht, .drei),
-        "s31": (.senkrecht, .drei),
-        "s32": (.senkrecht, .drei),
-        "s33": (.senkrecht, .drei),
-    ]
+struct Bild: Hashable, Equatable {
+    var name: String
+    var orientierung: Orientierung
+    var länge: Länge
+    init (Name: String, Orientierung: Orientierung, Länge: Länge) {
+        self.name = Name
+        self.orientierung = Orientierung
+        self.länge = Länge
+    }
+}
+
+
+var bildContainer: Set <Bild> {
+    var s = Set <Bild>()
+    s.insert(Bild(Name: "w20", Orientierung: .waagerecht, Länge: .zwei))
+    s.insert(Bild(Name: "w21", Orientierung: .waagerecht, Länge: .zwei))
+    s.insert(Bild(Name: "w22", Orientierung: .waagerecht, Länge: .zwei))
+    s.insert(Bild(Name: "w23", Orientierung: .waagerecht, Länge: .zwei))
+    s.insert(Bild(Name: "w30", Orientierung: .waagerecht, Länge: .drei))
+    s.insert(Bild(Name: "w31", Orientierung: .waagerecht, Länge: .drei))
+    s.insert(Bild(Name: "w32", Orientierung: .waagerecht, Länge: .drei))
+    s.insert(Bild(Name: "w33", Orientierung: .waagerecht, Länge: .drei))
+    s.insert(Bild(Name: "s20", Orientierung: .senkrecht, Länge: .zwei))
+    s.insert(Bild(Name: "s21", Orientierung: .senkrecht, Länge: .zwei))
+    s.insert(Bild(Name: "s22", Orientierung: .senkrecht, Länge: .zwei))
+    s.insert(Bild(Name: "s23", Orientierung: .senkrecht, Länge: .zwei))
+    s.insert(Bild(Name: "s30", Orientierung: .senkrecht, Länge: .drei))
+    s.insert(Bild(Name: "s31", Orientierung: .senkrecht, Länge: .drei))
+    s.insert(Bild(Name: "s32", Orientierung: .senkrecht, Länge: .drei))
+    s.insert(Bild(Name: "s33", Orientierung: .senkrecht, Länge: .drei))
+    return s
+}
+
 
 // einzelnes Auto - identifiziert durch Länge und Farbe in der computet prop. ID als String. Aus der Aufgabenstellung ergeben sich die Eigenschaften POSITIONLINKSOBEN und ORIENTIERUNG. Die Eigenschaft BEWEGUNGSOPTIONEN zeigt als Array von Richtungen an, wohin ein Auto bewegt werden könnte; sie wird zunächst mit einem Element .UNBEWEGLICH initialisiert und später durch die Methode SPIEL.BEWEGUNGSOPTIONENUPDATE aus den Positionsdaten aller Autos berechnet. Die Eigenschaft ZELLENBELEGT zeigt an, welche Zellen gerade von einem Auto im Grid belegt werden und wird berechnet aus der POSITIONLINKSOBEN, der LÄNGE und der ORIENTIERUNG des Autos; in der get-Funktion sind KEINE Überprüfungen der waagerechten oder senkrechten Limits enthalten - diese Aufgabe sollte vollständig von der Methode SPIEL.BEWEGUNSOPTIONENUPDATE übernommen werden
 
@@ -138,6 +152,7 @@ func aufgabeLaden (nummer: Int) -> [Car] {
         autos.append(Car(länge: .drei, füllFarbe: .systemYellow, randFarbe: .black, positionLinksUnten: (w: 6, s: 4), richtung: .senkrecht))  // Index 5
         autos.append(Car(länge: .drei, füllFarbe: .systemGreen, randFarbe: .black, positionLinksUnten: (w: 3, s: 1), richtung: .waagerecht))  // Index 6
         autos.append(Car(länge: .drei, füllFarbe: .systemBlue, randFarbe: .black, positionLinksUnten: (w: 4, s: 3), richtung: .senkrecht))    // Index 7
+    
     case 2:
         autos.append(Car(länge: .zwei, füllFarbe: .red, randFarbe: .black, positionLinksUnten: (w: 1, s: 4), richtung: .waagerecht))    // Index 0 = Exit-Auto
         autos.append(Car(länge: .zwei, füllFarbe: .yellow, randFarbe: .black, positionLinksUnten: (w: 4, s: 5), richtung: .senkrecht)) // Index 1
@@ -150,6 +165,7 @@ func aufgabeLaden (nummer: Int) -> [Car] {
         autos.append(Car(länge: .drei, füllFarbe: .systemBlue, randFarbe: .black, positionLinksUnten: (w: 1, s: 1), richtung: .senkrecht))    // Index 7
         
         autos.append(Car(länge: .drei, füllFarbe: .systemRed, randFarbe: .black, positionLinksUnten: (w: 3, s: 1), richtung: .senkrecht))    // Index 8
+    
     default:
         return autos
     }
@@ -172,7 +188,7 @@ class Spiel {
     
     var grid: [[String]] {
         get
-        {    var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
+        {   var g = [[String]](repeating: [String](repeating: " ", count: 6), count: 6) // 6 x 6 - alle Felder mit " " belegen
             gewonnen = false
             for auto in cars {
                 for pos in auto.zellenBelegt {
@@ -190,31 +206,28 @@ class Spiel {
     }
     
     func bilderZuordnen () {
-        var used = Set<String>()
-        for c in 0...cars.count - 1
+        var bc = bildContainer
+        for bild in bc {
+            if bild.name == "w20" {
+                cars[0].image = NSImage(imageLiteralResourceName: "w20")
+                bc.remove(bild)
+            }
+        }
+        for c in 1...cars.count - 1
         {
-            for b in bildContainer
+            while bc.isEmpty == false
             {
-                let _ = b.key
-                if cars[c].orientierung == b.value.Orientierung &&
-                    cars[c].länge == b.value.Länge &&
-                    used.contains(b.key) == false
+                let bild = bc.randomElement()
+                if cars[c].orientierung == bild!.orientierung && cars[c].länge == bild!.länge
                 {
-                    if c == 0
-                    {
-                        cars[c].image = NSImage(imageLiteralResourceName: "w20")
-                        used.insert("w20")
-                        break
-                    } else
-                    {
-                        cars[c].image = NSImage(imageLiteralResourceName: b.key)
-                        used.insert(b.key)
-                        break
-                    }
+                    cars[c].image = NSImage(imageLiteralResourceName: bild!.name)
+                    bc.remove(bild!)
+                    break
                 }
             }
         }
     }
+    
     
     func move (autoID: String, wohin: Richtung) {
         for i in 0 ... cars.count - 1 {
