@@ -10,19 +10,27 @@
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		dSWBKTGE3MwI2pqh0BsBWER+A7g=
+		hjZ/Cm95tjHt/lJKp89yHkeV6Lk=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		2NwS+RjFlQLKbCL09Lnd1NtrJtU=
+		kk6MwIjM5Tsi5GWKDBVnugSb+H8=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<data>
-		p30rVzXtwTMP2QVdk8LBBuKdHiw=
+		7MaMu1c/ginfhHlTKU1TGCFqc74=
+		</data>
+		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-VQ4-Hq-ksh.nib</key>
+		<data>
+		tRjoHvn3vi3riA3Xj9zY2SFuSe4=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<data>
-		YrcaAeeM7HEQIkpGcXeawmYmqnA=
+		67c5zPVbmJL0wl/u+DGOYoeWWeU=
+		</data>
+		<key>Resources/Base.lproj/Main.storyboardc/yIe-ex-3nZ-view-prd-ZT-iIm.nib</key>
+		<data>
+		gZWXTp8HEobTR0nsM5GhVATWCXI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -38,28 +46,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sggM+Nd546t0FQxfu9z4ed++HXvkVXJxb8INcP0k7mg=
+			Bxbva6D6BFejM7Ff/n9HTH0iobIvGRGLkUawx7IqbUM=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5rBeEOJmYdRjXl/Zyt9xO7PJOp//RpsBqwQnNY7VBY4=
+			5B94/WD1GZHlMJjXFwVTimK8R1o1z2ZtYD5VXAu4/+I=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/tOHWvswMxBi6W02erCWAPhmnB00N53xBrIix5LBt2I=
+			O1hDiD0ff8cTqPNf8xSRx4ooryJGHx+rS8AWdcbb2sU=
+			</data>
+		</dict>
+		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-VQ4-Hq-ksh.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3U4C8//fOkj869TwjtnBFLbjdznZ2CgoFw2AQ2Sn8T0=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ppBmLdIVIgttM5alVjm4Naa4sXnRVCrU+vrZnj0bh+0=
+			uCPPIY5Ul7fetAYm431hN2sUoiF+XoXcAzrz8a/VL9g=
+			</data>
+		</dict>
+		<key>Resources/Base.lproj/Main.storyboardc/yIe-ex-3nZ-view-prd-ZT-iIm.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RQABQveJAeJGEHuCWSCfjxnKOsFW2DaaCXwTqAf7dow=
 			</data>
 		</dict>
 	</dict>

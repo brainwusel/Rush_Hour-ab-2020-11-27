@@ -62,12 +62,10 @@ depends-member:
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
 - !private ["s10ArraySliceV", "id"]
-- !private ["s10ArraySliceV", "randFarbe"]
 - !private ["s10ArraySliceV", "rechtEck"]
 - !private ["SK", ""]
 - !private ["SK", "count"]
 - !private ["SK", "id"]
-- !private ["SK", "randFarbe"]
 - !private ["SK", "rechtEck"]
 - !private ["SK", "subscript"]
 - !private ["Sz", ""]
@@ -87,7 +85,6 @@ depends-member:
 - !private ["s7CVarArgP", "abs"]
 - !private ["s7CVarArgP", "aktuelleAutoID"]
 - !private ["s7CVarArgP", "bewegungsRichtung"]
-- !private ["s7CVarArgP", "black"]
 - !private ["s7CVarArgP", "cars"]
 - ["s7CVarArgP", "control"]
 - ["s7CVarArgP", "controlTextDidBeginEditing"]
@@ -112,12 +109,10 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "vonVorne"]
 - !private ["9Rush_Hour3CarC", "id"]
-- !private ["9Rush_Hour3CarC", "randFarbe"]
 - !private ["9Rush_Hour3CarC", "rechtEck"]
 - !private ["Sl", ""]
 - !private ["Sl", "count"]
 - !private ["Sl", "id"]
-- !private ["Sl", "randFarbe"]
 - !private ["Sl", "rechtEck"]
 - !private ["Sl", "subscript"]
 - !private ["SL", "<"]
@@ -128,7 +123,6 @@ depends-member:
 - !private ["SL", "init"]
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["10Foundation15ContiguousBytesP", "id"]
-- !private ["10Foundation15ContiguousBytesP", "randFarbe"]
 - !private ["10Foundation15ContiguousBytesP", "rechtEck"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
@@ -139,7 +133,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "abs"]
 - !private ["s28CustomDebugStringConvertibleP", "aktuelleAutoID"]
 - !private ["s28CustomDebugStringConvertibleP", "bewegungsRichtung"]
-- !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "cars"]
 - !private ["s28CustomDebugStringConvertibleP", "contains"]
 - ["s28CustomDebugStringConvertibleP", "control"]
@@ -158,7 +151,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "mouseDown"]
 - !private ["s28CustomDebugStringConvertibleP", "mouseDragged"]
 - !private ["s28CustomDebugStringConvertibleP", "myView"]
-- !private ["s28CustomDebugStringConvertibleP", "randFarbe"]
 - !private ["s28CustomDebugStringConvertibleP", "rechtEck"]
 - !private ["s28CustomDebugStringConvertibleP", "spiel"]
 - !private ["s28CustomDebugStringConvertibleP", "stringValue"]
@@ -177,7 +169,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "gewonnen"]
 - !private ["s17CustomReflectableP", "id"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "randFarbe"]
 - !private ["s17CustomReflectableP", "rechtEck"]
 - !private ["s17CustomReflectableP", "stringValue"]
 - !private ["s17CustomReflectableP", "subscript"]
@@ -191,7 +182,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "abs"]
 - !private ["s23CustomStringConvertibleP", "aktuelleAutoID"]
 - !private ["s23CustomStringConvertibleP", "bewegungsRichtung"]
-- !private ["s23CustomStringConvertibleP", "black"]
 - !private ["s23CustomStringConvertibleP", "cars"]
 - ["s23CustomStringConvertibleP", "control"]
 - ["s23CustomStringConvertibleP", "controlTextDidBeginEditing"]
@@ -209,7 +199,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "mouseDown"]
 - !private ["s23CustomStringConvertibleP", "mouseDragged"]
 - !private ["s23CustomStringConvertibleP", "myView"]
-- !private ["s23CustomStringConvertibleP", "randFarbe"]
 - !private ["s23CustomStringConvertibleP", "rechtEck"]
 - !private ["s23CustomStringConvertibleP", "spiel"]
 - !private ["s23CustomStringConvertibleP", "stringValue"]
@@ -221,7 +210,6 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "id"]
-- !private ["10Foundation12DataProtocolP", "randFarbe"]
 - !private ["10Foundation12DataProtocolP", "rechtEck"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
 - !private ["Se", "cars"]
@@ -254,7 +242,6 @@ depends-member:
 - !private ["SQ", "abs"]
 - !private ["SQ", "aktuelleAutoID"]
 - !private ["SQ", "bewegungsRichtung"]
-- !private ["SQ", "black"]
 - !private ["SQ", "cars"]
 - !private ["SQ", "contains"]
 - ["SQ", "control"]
@@ -274,7 +261,6 @@ depends-member:
 - !private ["SQ", "mouseDown"]
 - !private ["SQ", "mouseDragged"]
 - !private ["SQ", "myView"]
-- !private ["SQ", "randFarbe"]
 - !private ["SQ", "rauf"]
 - !private ["SQ", "rechtEck"]
 - !private ["SQ", "rechts"]
@@ -292,7 +278,6 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "id"]
-- !private ["s25ExpressibleByArrayLiteralP", "randFarbe"]
 - !private ["s25ExpressibleByArrayLiteralP", "rechtEck"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
@@ -320,7 +305,6 @@ depends-member:
 - !private ["SH", "abs"]
 - !private ["SH", "aktuelleAutoID"]
 - !private ["SH", "bewegungsRichtung"]
-- !private ["SH", "black"]
 - !private ["SH", "cars"]
 - ["SH", "control"]
 - ["SH", "controlTextDidBeginEditing"]
@@ -339,7 +323,6 @@ depends-member:
 - !private ["SH", "mouseDown"]
 - !private ["SH", "mouseDragged"]
 - !private ["SH", "myView"]
-- !private ["SH", "randFarbe"]
 - !private ["SH", "rauf"]
 - !private ["SH", "rechtEck"]
 - !private ["SH", "rechts"]
@@ -359,7 +342,6 @@ depends-member:
 - !private ["SM", ""]
 - !private ["SM", "count"]
 - !private ["SM", "id"]
-- !private ["SM", "randFarbe"]
 - !private ["SM", "rechtEck"]
 - !private ["SM", "subscript"]
 - !private ["10Foundation19MutableDataProtocolP", "count"]
@@ -413,7 +395,6 @@ depends-member:
 - ["So8NSCodingP", "aktuelleAufgabe"]
 - ["So8NSCodingP", "aktuelleAutoID"]
 - ["So8NSCodingP", "bewegungsRichtung"]
-- !private ["So8NSCodingP", "black"]
 - !private ["So8NSCodingP", "cars"]
 - ["So8NSCodingP", "control"]
 - ["So8NSCodingP", "controlTextDidBeginEditing"]
@@ -441,7 +422,6 @@ depends-member:
 - ["So8NSCodingP", "v_onVorne"]
 - ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", "vonVorne"]
-- !private ["So7NSColorC", "black"]
 - ["So9NSControlC", ""]
 - !private ["So9NSControlC", "delegate"]
 - !private ["So9NSControlC", "stringValue"]
@@ -470,7 +450,6 @@ depends-member:
 - ["So28NSControlTextEditingDelegateP", "v_onVorne"]
 - ["So28NSControlTextEditingDelegateP", "viewDidLoad"]
 - ["So28NSControlTextEditingDelegateP", "vonVorne"]
-- !private ["So9NSCopyingP", "black"]
 - !private ["So9NSCopyingP", "deltaX"]
 - !private ["So9NSCopyingP", "deltaY"]
 - !private ["So9NSCopyingP", "locationInWindow"]
@@ -566,7 +545,6 @@ depends-member:
 - ["So8NSObjectC", "aktuelleAufgabe"]
 - ["So8NSObjectC", "aktuelleAutoID"]
 - ["So8NSObjectC", "bewegungsRichtung"]
-- !private ["So8NSObjectC", "black"]
 - !private ["So8NSObjectC", "cars"]
 - ["So8NSObjectC", "control"]
 - ["So8NSObjectC", "controlTextDidBeginEditing"]
@@ -610,7 +588,6 @@ depends-member:
 - ["So8NSObjectP", "aktuelleAufgabe"]
 - ["So8NSObjectP", "aktuelleAutoID"]
 - ["So8NSObjectP", "bewegungsRichtung"]
-- !private ["So8NSObjectP", "black"]
 - !private ["So8NSObjectP", "cars"]
 - ["So8NSObjectP", "control"]
 - ["So8NSObjectP", "controlTextDidBeginEditing"]
@@ -638,8 +615,6 @@ depends-member:
 - ["So8NSObjectP", "v_onVorne"]
 - ["So8NSObjectP", "viewDidLoad"]
 - ["So8NSObjectP", "vonVorne"]
-- !private ["So19NSPasteboardReadingP", "black"]
-- !private ["So19NSPasteboardWritingP", "black"]
 - ["So11NSResponderC", "Bool"]
 - !private ["So11NSResponderC", "CGPoint"]
 - !private ["So11NSResponderC", "Int"]
@@ -680,7 +655,6 @@ depends-member:
 - ["So11NSResponderC", "v_onVorne"]
 - ["So11NSResponderC", "viewDidLoad"]
 - ["So11NSResponderC", "vonVorne"]
-- !private ["So14NSSecureCodingP", "black"]
 - ["So17NSSeguePerformingP", "Bool"]
 - !private ["So17NSSeguePerformingP", "CGPoint"]
 - !private ["So17NSSeguePerformingP", "Int"]
@@ -954,13 +928,11 @@ depends-member:
 - !private ["Sk", ""]
 - !private ["Sk", "count"]
 - !private ["Sk", "id"]
-- !private ["Sk", "randFarbe"]
 - !private ["Sk", "rechtEck"]
 - !private ["Sk", "subscript"]
 - !private ["Sm", ""]
 - !private ["Sm", "count"]
 - !private ["Sm", "id"]
-- !private ["Sm", "randFarbe"]
 - !private ["Sm", "rechtEck"]
 - !private ["Sm", "subscript"]
 - !private ["9Rush_Hour8RichtungO", "links"]
@@ -975,7 +947,6 @@ depends-member:
 - !private ["ST", "count"]
 - !private ["ST", "id"]
 - !private ["ST", "makeIterator"]
-- !private ["ST", "randFarbe"]
 - !private ["ST", "rechtEck"]
 - !private ["ST", "subscript"]
 - !private ["SZ", "init"]
@@ -1025,7 +996,6 @@ depends-member:
 - ["9Rush_Hour14ViewControllerC", "vonVorne"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "id"]
-- !private ["s14_ArrayProtocolP", "randFarbe"]
 - !private ["s14_ArrayProtocolP", "rechtEck"]
 - !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "contains"]
@@ -1034,7 +1004,6 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "y"]
 - !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "id"]
-- !private ["s24_DestructorSafeContainerP", "randFarbe"]
 - !private ["s24_DestructorSafeContainerP", "rechtEck"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
@@ -1042,7 +1011,6 @@ depends-member:
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
-- !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
@@ -1056,7 +1024,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "abs"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "aktuelleAutoID"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bewegungsRichtung"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cars"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "control"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "controlTextDidBeginEditing"]
@@ -1085,7 +1052,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "abs"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "aktuelleAutoID"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bewegungsRichtung"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "black"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cars"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "control"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "controlTextDidBeginEditing"]
@@ -1166,7 +1132,6 @@ depends-nominal:
 - !private "So29NSAnimatablePropertyContainerP"
 - !private "So25NSAppearanceCustomizationP"
 - "So8NSCodingP"
-- !private "So7NSColorC"
 - "So9NSControlC"
 - "So28NSControlTextEditingDelegateP"
 - !private "So9NSCopyingP"
@@ -1176,10 +1141,7 @@ depends-nominal:
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So19NSPasteboardReadingP"
-- !private "So19NSPasteboardWritingP"
 - "So11NSResponderC"
-- !private "So14NSSecureCodingP"
 - "So17NSSeguePerformingP"
 - "So30NSStandardKeyBindingRespondingP"
 - !private "So13NSTextContentP"
@@ -1213,7 +1175,6 @@ depends-nominal:
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s26_ExpressibleByColorLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"

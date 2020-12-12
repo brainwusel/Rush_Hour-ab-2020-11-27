@@ -701,6 +701,44 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="6i8-26-ipu">
+            <objects>
+                <windowController id="VQ4-Hq-ksh" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="fEf-cl-csV">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="249" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <view key="contentView" id="UXI-d7-J7Q">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="VQ4-Hq-ksh" id="4Tn-ut-zOH"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="yIe-ex-3nZ" kind="relationship" relationship="window.shadowedContentViewController" id="6gZ-Cz-w1h"/>
+                    </connections>
+                </windowController>
+                <customObject id="BPG-8m-llg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696" y="250"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="aal-JS-Alu">
+            <objects>
+                <viewController id="yIe-ex-3nZ" customClass="ViewController2" customModule="Rush_Hour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="prd-ZT-iIm">
+                        <rect key="frame" x="0.0" y="0.0" width="580" height="709"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="bUa-PP-9RK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="874.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -738,6 +776,17 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-QJ-ygI">
+                                <rect key="frame" x="1" y="604" width="104" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="AUFGABEN" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6UT-Qb-7ne">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="VQ4-Hq-ksh" kind="show" id="nPT-uZ-SnW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="KOo-WO-qP5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="2" id="htt-d4-S4F"/>

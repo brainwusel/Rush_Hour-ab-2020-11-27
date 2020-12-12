@@ -54,8 +54,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         let punkt = CGPoint(x: locationInView.x, y: locationInView.y)
         
         for i in 0...spiel.cars.count - 1 {
-            spiel.cars[i].randFarbe = .black
-            if spiel.cars[i].rechtEck.contains(punkt) {
+            if spiel.cars[i].rechtEck.contains(punkt)
+            {
                 aktuelleAutoID = spiel.cars[i].id
             }
         }
@@ -81,15 +81,17 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
-        if control == a_ufgabeNummer {
+        if control == a_ufgabeNummer
+        {
             let s = a_ufgabeNummer.stringValue
-            if let nr = Int(s) {
-                if nr >= 1 && nr <= 2 {
+            if let nr = Int(s)
+            {
+                if nr >= 1 && nr <= 2
+                {
                     spiel = Spiel(Aufgabe: nr)
                     updateView()
                 }
             }
-            
         }
         return true
     }

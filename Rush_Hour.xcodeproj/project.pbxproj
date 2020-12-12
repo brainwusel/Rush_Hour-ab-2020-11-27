@@ -15,6 +15,7 @@
 		1BCAE1742566BC9E0079C696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BCAE1722566BC9E0079C696 /* Main.storyboard */; };
 		1BCAE1802566BC9E0079C696 /* Rush_HourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCAE17F2566BC9E0079C696 /* Rush_HourTests.swift */; };
 		1BCAE18B2566BC9F0079C696 /* Rush_HourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCAE18A2566BC9F0079C696 /* Rush_HourUITests.swift */; };
+		1BD21BA2258520630051CA54 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD21BA1258520630051CA54 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		1BCAE1862566BC9F0079C696 /* Rush_HourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rush_HourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCAE18A2566BC9F0079C696 /* Rush_HourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rush_HourUITests.swift; sourceTree = "<group>"; };
 		1BCAE18C2566BC9F0079C696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD21BA1258520630051CA54 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				1BCAE16C2566BC9E0079C696 /* AppDelegate.swift */,
 				1BCAE16E2566BC9E0079C696 /* ViewController.swift */,
+				1BD21BA1258520630051CA54 /* ViewController2.swift */,
 				1B297B472568592800DE14EE /* Model.swift */,
 				1B8AD027256D036A00291471 /* myView.swift */,
 				1BCAE1702566BC9E0079C696 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD21BA2258520630051CA54 /* ViewController2.swift in Sources */,
 				1B8AD028256D036A00291471 /* myView.swift in Sources */,
 				1B297B482568592800DE14EE /* Model.swift in Sources */,
 				1BCAE16F2566BC9E0079C696 /* ViewController.swift in Sources */,

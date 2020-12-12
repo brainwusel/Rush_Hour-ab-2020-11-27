@@ -41,7 +41,7 @@ class MyView: NSView {
         
         // Basisquadrat
         
-        _ = erzeugeBasisQuadrat(füllFarbe: .white, randFarbe: .black, zeichnen: true, dirtyRect)
+        _ = erzeugeBasisQuadrat(füllFarbe: .black, randFarbe: .black, zeichnen: true, dirtyRect)
         
         // kleine Quadrate -> Grid
         
@@ -63,10 +63,10 @@ class MyView: NSView {
     
     func erzeugeBasisQuadrat (füllFarbe: NSColor, randFarbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
         
-        let basisQuadratSeitenlänge = min(dirtyRect.height,dirtyRect.width) - 50
+        let basisQuadratSeitenlänge = min(dirtyRect.height,dirtyRect.width - 100) - 50
         
         let basisQuadrat = NSRect(
-            x: (dirtyRect.width - basisQuadratSeitenlänge) / 2,
+            x: 50 + (dirtyRect.width - basisQuadratSeitenlänge) / 2,
             y: (dirtyRect.height - basisQuadratSeitenlänge) / 2,
             width: basisQuadratSeitenlänge,
             height: basisQuadratSeitenlänge)
@@ -85,12 +85,12 @@ class MyView: NSView {
         // Exit-Rechteck
         
         let exitRechteck = NSRect(
-            x: basisQuadrat.maxX - 6,
-            y: basisQuadrat.minY + basisQuadrat.height * 3 / 6 ,
-            width: 11, height: basisQuadrat.height / 6 + 2)
+            x: basisQuadrat.maxX - 10,
+            y: basisQuadrat.minY + basisQuadrat.height * 3 / 6 + 2,
+            width: 15, height: basisQuadrat.height / 6 - 6.5)
         let eR = NSBezierPath()
         eR.appendRect(exitRechteck)
-        NSColor.white.set()
+        NSColor.lightGray.set()
         eR.fill()
         
         
@@ -99,10 +99,10 @@ class MyView: NSView {
     
     func erzeugeKleinesQuadrat (waagerecht w: Int, senkrecht s: Int, farbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
         
-        let basisQuadratSeitenlängeInnen = min(dirtyRect.height,dirtyRect.width) - 65
+        let basisQuadratSeitenlängeInnen = min(dirtyRect.height,dirtyRect.width - 100) - 65
         
         let innenQuadrat = NSRect(
-            x: (dirtyRect.width - basisQuadratSeitenlängeInnen) / 2,
+            x: 50 + (dirtyRect.width - basisQuadratSeitenlängeInnen) / 2,
             y: (dirtyRect.height - basisQuadratSeitenlängeInnen) / 2,
             width: basisQuadratSeitenlängeInnen,
             height: basisQuadratSeitenlängeInnen)
