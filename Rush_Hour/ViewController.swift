@@ -10,16 +10,17 @@ import Cocoa
 class ViewController: NSViewController, NSTextFieldDelegate {
     
     var spiel = Spiel(Aufgabe: 1)
-    var aktuelleAutoID = " "
-    var aktuelleAufgabe = 1
+    var autoIDAktuell = " "
+    var aufgabeAktuell = 1
     var bewegungsRichtung: Richtung = .unbeweglich
     {
         didSet (newValue)
         {
-            spiel.move(autoID: aktuelleAutoID, wohin: newValue)
+            spiel.move(autoID: autoIDAktuell, wohin: newValue)
             updateView()
         }
     }
+    weak var viewContr2: ViewController2?
     
     @IBOutlet weak var myView: MyView!
     @IBOutlet weak var v_onVorne: NSButton!
@@ -31,6 +32,19 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var a_ufgabeNummer: NSTextField!
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        print ("VC prepare for segue")
+        print(segue)
+        if let destWindowController = segue.destinationController as? NSWindowController
+        {
+            if let viewContr2 = destWindowController.contentViewController as? ViewController2
+            {
+                viewContr2.data = aufgabeAktuell
+                print("prepareForSegue aufgabeAktuell = \(aufgabeAktuell)")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +53,11 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         a_ufgabeNummer.delegate = self
         updateView()
         
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.aufgabeAktualisieren),
+            name: Notification.Name(rawValue: "AufgabeAktualisieren"),
+            object: nil)
         
     }
     
@@ -56,7 +75,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         for i in 0...spiel.cars.count - 1 {
             if spiel.cars[i].rechtEck.contains(punkt)
             {
-                aktuelleAutoID = spiel.cars[i].id
+                autoIDAktuell = spiel.cars[i].id
             }
         }
     }
@@ -89,6 +108,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
                 if nr >= 1 && nr <= 2
                 {
                     spiel = Spiel(Aufgabe: nr)
+                    aufgabeAktuell = nr
                     updateView()
                 }
             }
@@ -101,6 +121,15 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         myView.cars = spiel.cars
     }
     
+    @objc func aufgabeAktualisieren () {
+        let nr = viewContr2?.aufgabeAusgewählt ?? 1
+        print("VC.ns aus viewController.aufgabeAusgewählt \(nr)")
+        if nr >= 1 && nr <= 2
+        {
+            spiel = Spiel(Aufgabe: nr)
+            updateView()
+        }
+    }
 }
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -730,14 +730,17 @@
         <scene sceneID="aal-JS-Alu">
             <objects>
                 <viewController id="yIe-ex-3nZ" customClass="ViewController2" customModule="Rush_Hour" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="prd-ZT-iIm">
-                        <rect key="frame" x="0.0" y="0.0" width="580" height="709"/>
+                    <view key="view" id="prd-ZT-iIm" customClass="MyView2" customModule="Rush_Hour" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="909" height="709"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
+                    <connections>
+                        <outlet property="myview2" destination="prd-ZT-iIm" id="2iO-SV-0dm"/>
+                    </connections>
                 </viewController>
                 <customObject id="bUa-PP-9RK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="874.5"/>
+            <point key="canvasLocation" x="1748.5" y="874.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -747,8 +750,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1497" height="709"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KOo-WO-qP5">
-                                <rect key="frame" x="8" y="685" width="74" height="19"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KOo-WO-qP5">
+                                <rect key="frame" x="6" y="688" width="52" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="RESET" bezelStyle="roundedRect" alignment="left" state="on" imageScaling="proportionallyDown" inset="2" id="uff-Cy-HiY">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="15"/>
@@ -758,39 +761,48 @@
                                     <action selector="vonVorne:" target="XfG-lQ-9wD" id="3Bw-Yt-Hru"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="682-MC-D9M">
-                                <rect key="frame" x="6" y="654" width="76" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="682-MC-D9M">
+                                <rect key="frame" x="4" y="657" width="76" height="19"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="AUFGABE" id="TeQ-Kf-AqA">
                                     <font key="font" metaFont="systemBold" size="15"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGm-II-1kT">
-                                <rect key="frame" x="88" y="654" width="38" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AGm-II-1kT">
+                                <rect key="frame" x="86" y="657" width="38" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Fwe-w5-l6p"/>
+                                    <constraint firstAttribute="height" constant="21" id="gjJ-iD-Wdo"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" drawsBackground="YES" id="lNA-bm-pDI">
                                     <font key="font" metaFont="systemBold" size="15"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-QJ-ygI">
-                                <rect key="frame" x="1" y="604" width="104" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-QJ-ygI">
+                                <rect key="frame" x="-1" y="583" width="104" height="32"/>
                                 <buttonCell key="cell" type="push" title="AUFGABEN" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6UT-Qb-7ne">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="VQ4-Hq-ksh" kind="show" id="nPT-uZ-SnW"/>
+                                    <segue destination="VQ4-Hq-ksh" kind="show" identifier="segueToVC2" id="nPT-uZ-SnW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="682-MC-D9M" firstAttribute="leading" secondItem="Khp-QJ-ygI" secondAttribute="leading" id="7tB-A9-96A"/>
+                            <constraint firstItem="682-MC-D9M" firstAttribute="leading" secondItem="KOo-WO-qP5" secondAttribute="leading" id="8f5-pt-TPB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KOo-WO-qP5" secondAttribute="trailing" constant="20" symbolic="YES" id="OXN-B8-BFa"/>
+                            <constraint firstItem="AGm-II-1kT" firstAttribute="leading" secondItem="682-MC-D9M" secondAttribute="trailing" constant="8" symbolic="YES" id="RDq-sc-L2R"/>
+                            <constraint firstItem="682-MC-D9M" firstAttribute="top" secondItem="KOo-WO-qP5" secondAttribute="bottom" constant="12" id="WI4-z3-oFQ"/>
+                            <constraint firstItem="Khp-QJ-ygI" firstAttribute="top" secondItem="682-MC-D9M" secondAttribute="bottom" constant="23" id="XzS-Ub-91o"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Khp-QJ-ygI" secondAttribute="trailing" constant="20" symbolic="YES" id="eh8-BV-9Wf"/>
                             <constraint firstItem="KOo-WO-qP5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="2" id="htt-d4-S4F"/>
                             <constraint firstItem="KOo-WO-qP5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="6" id="iR6-in-o8b"/>
+                            <constraint firstItem="682-MC-D9M" firstAttribute="bottom" secondItem="AGm-II-1kT" secondAttribute="bottom" id="nmL-gt-van"/>
                         </constraints>
                     </view>
                     <connections>

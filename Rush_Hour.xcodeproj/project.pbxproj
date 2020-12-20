@@ -16,6 +16,7 @@
 		1BCAE1802566BC9E0079C696 /* Rush_HourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCAE17F2566BC9E0079C696 /* Rush_HourTests.swift */; };
 		1BCAE18B2566BC9F0079C696 /* Rush_HourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCAE18A2566BC9F0079C696 /* Rush_HourUITests.swift */; };
 		1BD21BA2258520630051CA54 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD21BA1258520630051CA54 /* ViewController2.swift */; };
+		1BD21BA7258531FB0051CA54 /* MyView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD21BA6258531FB0051CA54 /* MyView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		1BCAE18A2566BC9F0079C696 /* Rush_HourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rush_HourUITests.swift; sourceTree = "<group>"; };
 		1BCAE18C2566BC9F0079C696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BD21BA1258520630051CA54 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		1BD21BA6258531FB0051CA54 /* MyView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				1B8AD027256D036A00291471 /* myView.swift */,
 				1BCAE1702566BC9E0079C696 /* Assets.xcassets */,
 				1BCAE1722566BC9E0079C696 /* Main.storyboard */,
+				1BD21BA6258531FB0051CA54 /* MyView2.swift */,
 				1BCAE1752566BC9E0079C696 /* Info.plist */,
 				1BCAE1762566BC9E0079C696 /* Rush_Hour.entitlements */,
 			);
@@ -265,6 +268,7 @@
 				1BD21BA2258520630051CA54 /* ViewController2.swift in Sources */,
 				1B8AD028256D036A00291471 /* myView.swift in Sources */,
 				1B297B482568592800DE14EE /* Model.swift in Sources */,
+				1BD21BA7258531FB0051CA54 /* MyView2.swift in Sources */,
 				1BCAE16F2566BC9E0079C696 /* ViewController.swift in Sources */,
 				1BCAE16D2566BC9E0079C696 /* AppDelegate.swift in Sources */,
 			);
