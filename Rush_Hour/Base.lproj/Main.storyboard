@@ -735,7 +735,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                     <connections>
-                        <outlet property="myview2" destination="prd-ZT-iIm" id="2iO-SV-0dm"/>
+                        <outlet property="myView2" destination="prd-ZT-iIm" id="2iO-SV-0dm"/>
                     </connections>
                 </viewController>
                 <customObject id="bUa-PP-9RK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

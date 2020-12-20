@@ -10,6 +10,9 @@ import Cocoa
 class MyView2: NSView {
 
     var aufgabeBild = " "
+    var rechtsPfeilRect = NSRect()
+    var linksPfeilRect = NSRect()
+    var zurückRect = NSRect()
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -35,18 +38,28 @@ class MyView2: NSView {
             
             let linksPfeilSeitenLänge = bildSeitenLänge / 4
             let x_linksPfeil = (x_bildRe - linksPfeilSeitenLänge) / 2
-           
             let y_linksPfeil = (dirtyRect.height - linksPfeilSeitenLänge) / 2
-            let bildLinksPfeil = NSImage(imageLiteralResourceName: "Linkspfeil")
-            bildLinksPfeil.draw(in: NSRect(x: x_linksPfeil, y: y_linksPfeil, width: linksPfeilSeitenLänge, height: linksPfeilSeitenLänge))
+            let linksPfeilBild = NSImage(imageLiteralResourceName: "Linkspfeil")
+            linksPfeilRect = NSRect(x: x_linksPfeil, y: y_linksPfeil, width: linksPfeilSeitenLänge, height: linksPfeilSeitenLänge)
+            linksPfeilBild.draw(in: linksPfeilRect)
             
             
             let rechtsPfeilSeitenLänge = linksPfeilSeitenLänge
             let x_rechtsPfeil = 0.5 * (w + x_bildRe + bildSeitenLänge - rechtsPfeilSeitenLänge)
             let y_rechtsPfeil = y_linksPfeil
-           
-            let bildRechtsPfeil = NSImage(imageLiteralResourceName: "Rechtspfeil")
-            bildRechtsPfeil.draw(in: NSRect(x: x_rechtsPfeil, y: y_rechtsPfeil, width: rechtsPfeilSeitenLänge, height: rechtsPfeilSeitenLänge))
+            rechtsPfeilRect = NSRect(x: x_rechtsPfeil, y: y_rechtsPfeil, width: rechtsPfeilSeitenLänge, height: rechtsPfeilSeitenLänge)
+            let rechtsPfeilBild = NSImage(imageLiteralResourceName: "Rechtspfeil")
+            rechtsPfeilBild.draw(in: rechtsPfeilRect)
+            
+            let zurückWidth = linksPfeilSeitenLänge
+            let zurückheight = zurückWidth / 3.1
+            let x_zurück: CGFloat = 0
+            let y_zurück = h - zurückheight
+            zurückRect = NSRect(x: x_zurück, y: y_zurück, width: zurückWidth, height: zurückheight)
+            let zurückBild = NSImage(imageLiteralResourceName: "zurück")
+            zurückBild.draw(in: zurückRect)
+            
+            
         }
 
     }

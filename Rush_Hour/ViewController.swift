@@ -37,9 +37,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         print(segue)
         if let destWindowController = segue.destinationController as? NSWindowController
         {
-            if let viewContr2 = destWindowController.contentViewController as? ViewController2
+            if let vc2 = destWindowController.contentViewController as? ViewController2
             {
-                viewContr2.data = aufgabeAktuell
+                viewContr2 = vc2
+                viewContr2!.data = aufgabeAktuell
                 print("prepareForSegue aufgabeAktuell = \(aufgabeAktuell)")
             }
         }
