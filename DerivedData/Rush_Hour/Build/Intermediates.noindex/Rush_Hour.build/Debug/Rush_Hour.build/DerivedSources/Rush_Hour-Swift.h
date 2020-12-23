@@ -262,10 +262,12 @@ SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 
 SWIFT_CLASS("_TtC9Rush_Hour15ViewController2")
 @interface ViewController2 : NSViewController
-@property (nonatomic, strong) IBOutlet MyView2 * _Null_unspecified myview2;
+@property (nonatomic, strong) IBOutlet MyView2 * _Null_unspecified myView2;
 - (void)prepareForSegue:(NSStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (void)viewDidLoad;
 - (void)viewWillAppear;
+- (void)viewWillDisappear;
+- (void)mouseDown:(NSEvent * _Nonnull)event;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

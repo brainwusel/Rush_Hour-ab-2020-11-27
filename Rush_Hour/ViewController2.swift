@@ -9,18 +9,6 @@ import Cocoa
 
 class ViewController2: NSViewController
 {
-    var data: Int?
-    var aufgabeAusgewählt = 0
-    {
-        willSet (newValue)
-        {
-            NotificationCenter.default.post(
-                name: Notification.Name(rawValue: "AufgabeAktualisieren"),
-                object: nil)
-            aufgabeBildAktualisieren(aufgabe: newValue)
-            print("willSet newValue \(newValue)")
-        }
-    }
     
     var viewControllerBasis: ViewController?
     
@@ -32,6 +20,26 @@ class ViewController2: NSViewController
         viewControllerBasis!.viewContr2 = self
     }
     
+    var data: Int?
+    var aufgabeAusgewählt = 0
+    {
+        willSet (newValue)
+        {
+            
+            aufgabeBildAktualisieren(aufgabe: newValue)
+            print("VC2 aufgabeAusgewählt willSet newValue \(newValue)")
+            viewControllerBasis?.aufgabeAktuell = newValue
+            
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: "AufgabeAktualisieren"),
+                object: nil)
+    
+        
+        }
+    }
+    
+   
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -41,6 +49,11 @@ class ViewController2: NSViewController
     override func viewWillAppear()
     {
         aufgabeAusgewählt = data ?? 1
+//        aufgabeBildAktualisieren(aufgabe: aufgabeAusgewählt)
+    }
+    
+    override func viewWillDisappear() {
+        viewControllerBasis?.aufgabeAktuell = aufgabeAusgewählt
     }
     
     func aufgabeBildAktualisieren (aufgabe nr: Int)
@@ -64,6 +77,16 @@ class ViewController2: NSViewController
         if myView2.zurückRect.contains(punkt)
         {
             myView2.window?.close()
+        }
+        
+        if myView2.linksPfeilRect.contains(punkt)
+        {
+            aufgabeAusgewählt = max(1, aufgabeAusgewählt - 1)
+        }
+        
+        if myView2.rechtsPfeilRect.contains(punkt)
+        {
+            aufgabeAusgewählt = min(2, aufgabeAusgewählt + 1)
         }
     }
 }

@@ -11,7 +11,12 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     var spiel = Spiel(Aufgabe: 1)
     var autoIDAktuell = " "
-    var aufgabeAktuell = 1
+    var aufgabeAktuell = 1 {
+        willSet (newValue) {
+            spiel = Spiel(Aufgabe: newValue)
+            updateView()
+        }
+    }
     var bewegungsRichtung: Richtung = .unbeweglich
     {
         didSet (newValue)
@@ -108,9 +113,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             {
                 if nr >= 1 && nr <= 2
                 {
-                    spiel = Spiel(Aufgabe: nr)
                     aufgabeAktuell = nr
-                    updateView()
                 }
             }
         }
@@ -123,12 +126,11 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     @objc func aufgabeAktualisieren () {
-        let nr = viewContr2?.aufgabeAusgewählt ?? 1
-        print("VC.ns aus viewController.aufgabeAusgewählt \(nr)")
+        let nr = viewContr2?.aufgabeAusgewählt ?? 0
+        print("VC nr aus viewController.aufgabeAusgewählt \(nr)")
         if nr >= 1 && nr <= 2
         {
-            spiel = Spiel(Aufgabe: nr)
-            updateView()
+            aufgabeAktuell = nr
         }
     }
 }
