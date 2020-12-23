@@ -29,11 +29,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var myView: MyView!
     @IBOutlet weak var v_onVorne: NSButton!
-    @IBAction func vonVorne (_ sender: NSButton)
-    {
-        spiel.zurückAufAnfang()
-        updateView()
-    }
+ 
     
     @IBOutlet weak var a_ufgabeNummer: NSTextField!
     
@@ -46,7 +42,6 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             {
                 viewContr2 = vc2
                 viewContr2!.data = aufgabeAktuell
-                print("prepareForSegue aufgabeAktuell = \(aufgabeAktuell)")
             }
         }
     }
@@ -83,6 +78,17 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             {
                 autoIDAktuell = spiel.cars[i].id
             }
+        }
+        
+        if myView.aufgabenRect.contains(punkt)
+        {
+            performSegue(withIdentifier: "segueToVC2", sender: myView)
+        }
+        
+        if myView.vonVorneRect.contains(punkt)
+        {
+            spiel.zurückAufAnfang()
+            updateView()
         }
     }
     
@@ -127,7 +133,6 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     @objc func aufgabeAktualisieren () {
         let nr = viewContr2?.aufgabeAusgewählt ?? 0
-        print("VC nr aus viewController.aufgabeAusgewählt \(nr)")
         if nr >= 1 && nr <= 2
         {
             aufgabeAktuell = nr

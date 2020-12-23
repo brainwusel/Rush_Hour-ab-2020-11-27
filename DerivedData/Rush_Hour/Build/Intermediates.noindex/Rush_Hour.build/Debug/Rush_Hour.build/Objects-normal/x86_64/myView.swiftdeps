@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["9Rush_Hour6MyViewC", ""]
 provides-dynamic-lookup:
+- "aufgabenRect"
 - "autosZeichnen"
 - "cars"
 - "draw"
@@ -13,6 +14,7 @@ provides-dynamic-lookup:
 - "erzeugeKleinesQuadrat"
 - "gewonnen"
 - "kleineQuadrate"
+- "vonVorneRect"
 depends-top-level:
 - !private "&&"
 - !private "*"
@@ -24,7 +26,7 @@ depends-top-level:
 - "AssignmentPrecedence"
 - "Bool"
 - "BooleanLiteralType"
-- !private "CGFloat"
+- "CGFloat"
 - "Car"
 - !private "FloatLiteralType"
 - "Int"
@@ -32,8 +34,11 @@ depends-top-level:
 - "MyView"
 - !private "NSBezierPath"
 - "NSColor"
+- !private "NSImage"
 - "NSRect"
 - "NSView"
+- !private "StringLiteralType"
+- !private "aufgabenRect"
 - !private "autosZeichnen"
 - !private "cars"
 - !private "display"
@@ -41,6 +46,7 @@ depends-top-level:
 - !private "erzeugeKleinesQuadrat"
 - !private "gewonnen"
 - !private "min"
+- !private "vonVorneRect"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
@@ -78,7 +84,7 @@ depends-member:
 - !private ["SB", "significandWidth"]
 - !private ["12CoreGraphics7CGFloatV", "init"]
 - !private ["So6CGRectV", "height"]
-- !private ["So6CGRectV", "init"]
+- ["So6CGRectV", "init"]
 - !private ["So6CGRectV", "maxX"]
 - !private ["So6CGRectV", "maxY"]
 - !private ["So6CGRectV", "minX"]
@@ -94,9 +100,11 @@ depends-member:
 - ["s7CVarArgP", "Car"]
 - !private ["s7CVarArgP", "NSBezierPath"]
 - !private ["s7CVarArgP", "NSColor"]
+- !private ["s7CVarArgP", "NSImage"]
 - ["s7CVarArgP", "NSRect"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "appendRect"]
+- !private ["s7CVarArgP", "aufgabenRect"]
 - !private ["s7CVarArgP", "autosZeichnen"]
 - !private ["s7CVarArgP", "black"]
 - !private ["s7CVarArgP", "brown"]
@@ -121,6 +129,7 @@ depends-member:
 - !private ["s7CVarArgP", "stroke"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "systemGreen"]
+- !private ["s7CVarArgP", "vonVorneRect"]
 - !private ["s7CVarArgP", "white"]
 - !private ["9Rush_Hour3CarC", "f\xFCllFarbe"]
 - !private ["9Rush_Hour3CarC", "image"]
@@ -156,9 +165,11 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "Car"]
 - !private ["s28CustomDebugStringConvertibleP", "NSBezierPath"]
 - !private ["s28CustomDebugStringConvertibleP", "NSColor"]
+- !private ["s28CustomDebugStringConvertibleP", "NSImage"]
 - ["s28CustomDebugStringConvertibleP", "NSRect"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "appendRect"]
+- !private ["s28CustomDebugStringConvertibleP", "aufgabenRect"]
 - !private ["s28CustomDebugStringConvertibleP", "autosZeichnen"]
 - !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "brown"]
@@ -192,6 +203,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "stroke"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "systemGreen"]
+- !private ["s28CustomDebugStringConvertibleP", "vonVorneRect"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
 - !private ["s28CustomDebugStringConvertibleP", "zellenBelegt"]
@@ -216,9 +228,11 @@ depends-member:
 - ["s23CustomStringConvertibleP", "Car"]
 - !private ["s23CustomStringConvertibleP", "NSBezierPath"]
 - !private ["s23CustomStringConvertibleP", "NSColor"]
+- !private ["s23CustomStringConvertibleP", "NSImage"]
 - ["s23CustomStringConvertibleP", "NSRect"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "appendRect"]
+- !private ["s23CustomStringConvertibleP", "aufgabenRect"]
 - !private ["s23CustomStringConvertibleP", "autosZeichnen"]
 - !private ["s23CustomStringConvertibleP", "black"]
 - !private ["s23CustomStringConvertibleP", "brown"]
@@ -247,6 +261,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "stroke"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "systemGreen"]
+- !private ["s23CustomStringConvertibleP", "vonVorneRect"]
 - !private ["s23CustomStringConvertibleP", "white"]
 - !private ["s23CustomStringConvertibleP", "zellenBelegt"]
 - ["10Foundation12DataProtocolP", ""]
@@ -290,9 +305,11 @@ depends-member:
 - ["SQ", "Car"]
 - !private ["SQ", "NSBezierPath"]
 - !private ["SQ", "NSColor"]
+- !private ["SQ", "NSImage"]
 - ["SQ", "NSRect"]
 - ["SQ", ""]
 - !private ["SQ", "appendRect"]
+- !private ["SQ", "aufgabenRect"]
 - !private ["SQ", "autosZeichnen"]
 - !private ["SQ", "black"]
 - !private ["SQ", "brown"]
@@ -326,6 +343,7 @@ depends-member:
 - !private ["SQ", "stroke"]
 - !private ["SQ", "subscript"]
 - !private ["SQ", "systemGreen"]
+- !private ["SQ", "vonVorneRect"]
 - !private ["SQ", "white"]
 - !private ["SQ", "width"]
 - !private ["SQ", "zellenBelegt"]
@@ -409,9 +427,11 @@ depends-member:
 - ["SH", "Car"]
 - !private ["SH", "NSBezierPath"]
 - !private ["SH", "NSColor"]
+- !private ["SH", "NSImage"]
 - ["SH", "NSRect"]
 - ["SH", ""]
 - !private ["SH", "appendRect"]
+- !private ["SH", "aufgabenRect"]
 - !private ["SH", "autosZeichnen"]
 - !private ["SH", "black"]
 - !private ["SH", "brown"]
@@ -440,6 +460,7 @@ depends-member:
 - !private ["SH", "stroke"]
 - !private ["SH", "subscript"]
 - !private ["SH", "systemGreen"]
+- !private ["SH", "vonVorneRect"]
 - !private ["SH", "white"]
 - !private ["SH", "zellenBelegt"]
 - !private ["SH", "zwei"]
@@ -470,8 +491,10 @@ depends-member:
 - ["9Rush_Hour6MyViewC", "Int"]
 - !private ["9Rush_Hour6MyViewC", "NSBezierPath"]
 - ["9Rush_Hour6MyViewC", "NSColor"]
+- !private ["9Rush_Hour6MyViewC", "NSImage"]
 - ["9Rush_Hour6MyViewC", "NSRect"]
 - ["9Rush_Hour6MyViewC", ""]
+- ["9Rush_Hour6MyViewC", "aufgabenRect"]
 - ["9Rush_Hour6MyViewC", "autosZeichnen"]
 - ["9Rush_Hour6MyViewC", "cars"]
 - ["9Rush_Hour6MyViewC", "deinit"]
@@ -483,14 +506,17 @@ depends-member:
 - ["9Rush_Hour6MyViewC", "init"]
 - ["9Rush_Hour6MyViewC", "kleineQuadrate"]
 - !private ["9Rush_Hour6MyViewC", "min"]
+- ["9Rush_Hour6MyViewC", "vonVorneRect"]
 - ["So22NSAccessibilityElementP", "Bool"]
 - !private ["So22NSAccessibilityElementP", "CGFloat"]
 - ["So22NSAccessibilityElementP", "Car"]
 - ["So22NSAccessibilityElementP", "Int"]
 - !private ["So22NSAccessibilityElementP", "NSBezierPath"]
 - ["So22NSAccessibilityElementP", "NSColor"]
+- !private ["So22NSAccessibilityElementP", "NSImage"]
 - ["So22NSAccessibilityElementP", "NSRect"]
 - ["So22NSAccessibilityElementP", ""]
+- ["So22NSAccessibilityElementP", "aufgabenRect"]
 - ["So22NSAccessibilityElementP", "autosZeichnen"]
 - ["So22NSAccessibilityElementP", "cars"]
 - !private ["So22NSAccessibilityElementP", "display"]
@@ -501,14 +527,17 @@ depends-member:
 - ["So22NSAccessibilityElementP", "init"]
 - ["So22NSAccessibilityElementP", "kleineQuadrate"]
 - !private ["So22NSAccessibilityElementP", "min"]
+- ["So22NSAccessibilityElementP", "vonVorneRect"]
 - ["So15NSAccessibilityP", "Bool"]
 - !private ["So15NSAccessibilityP", "CGFloat"]
 - ["So15NSAccessibilityP", "Car"]
 - ["So15NSAccessibilityP", "Int"]
 - !private ["So15NSAccessibilityP", "NSBezierPath"]
 - ["So15NSAccessibilityP", "NSColor"]
+- !private ["So15NSAccessibilityP", "NSImage"]
 - ["So15NSAccessibilityP", "NSRect"]
 - ["So15NSAccessibilityP", ""]
+- ["So15NSAccessibilityP", "aufgabenRect"]
 - ["So15NSAccessibilityP", "autosZeichnen"]
 - ["So15NSAccessibilityP", "cars"]
 - !private ["So15NSAccessibilityP", "display"]
@@ -519,14 +548,17 @@ depends-member:
 - ["So15NSAccessibilityP", "init"]
 - ["So15NSAccessibilityP", "kleineQuadrate"]
 - !private ["So15NSAccessibilityP", "min"]
+- ["So15NSAccessibilityP", "vonVorneRect"]
 - ["So29NSAnimatablePropertyContainerP", "Bool"]
 - !private ["So29NSAnimatablePropertyContainerP", "CGFloat"]
 - ["So29NSAnimatablePropertyContainerP", "Car"]
 - ["So29NSAnimatablePropertyContainerP", "Int"]
 - !private ["So29NSAnimatablePropertyContainerP", "NSBezierPath"]
 - ["So29NSAnimatablePropertyContainerP", "NSColor"]
+- !private ["So29NSAnimatablePropertyContainerP", "NSImage"]
 - ["So29NSAnimatablePropertyContainerP", "NSRect"]
 - ["So29NSAnimatablePropertyContainerP", ""]
+- ["So29NSAnimatablePropertyContainerP", "aufgabenRect"]
 - ["So29NSAnimatablePropertyContainerP", "autosZeichnen"]
 - ["So29NSAnimatablePropertyContainerP", "cars"]
 - !private ["So29NSAnimatablePropertyContainerP", "display"]
@@ -537,14 +569,17 @@ depends-member:
 - ["So29NSAnimatablePropertyContainerP", "init"]
 - ["So29NSAnimatablePropertyContainerP", "kleineQuadrate"]
 - !private ["So29NSAnimatablePropertyContainerP", "min"]
+- ["So29NSAnimatablePropertyContainerP", "vonVorneRect"]
 - ["So25NSAppearanceCustomizationP", "Bool"]
 - !private ["So25NSAppearanceCustomizationP", "CGFloat"]
 - ["So25NSAppearanceCustomizationP", "Car"]
 - ["So25NSAppearanceCustomizationP", "Int"]
 - !private ["So25NSAppearanceCustomizationP", "NSBezierPath"]
 - ["So25NSAppearanceCustomizationP", "NSColor"]
+- !private ["So25NSAppearanceCustomizationP", "NSImage"]
 - ["So25NSAppearanceCustomizationP", "NSRect"]
 - ["So25NSAppearanceCustomizationP", ""]
+- ["So25NSAppearanceCustomizationP", "aufgabenRect"]
 - ["So25NSAppearanceCustomizationP", "autosZeichnen"]
 - ["So25NSAppearanceCustomizationP", "cars"]
 - !private ["So25NSAppearanceCustomizationP", "display"]
@@ -555,6 +590,7 @@ depends-member:
 - ["So25NSAppearanceCustomizationP", "init"]
 - ["So25NSAppearanceCustomizationP", "kleineQuadrate"]
 - !private ["So25NSAppearanceCustomizationP", "min"]
+- ["So25NSAppearanceCustomizationP", "vonVorneRect"]
 - !private ["So12NSBezierPathC", "appendRect"]
 - !private ["So12NSBezierPathC", "fill"]
 - !private ["So12NSBezierPathC", "init"]
@@ -566,9 +602,11 @@ depends-member:
 - ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "NSBezierPath"]
 - ["So8NSCodingP", "NSColor"]
+- !private ["So8NSCodingP", "NSImage"]
 - ["So8NSCodingP", "NSRect"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "appendRect"]
+- ["So8NSCodingP", "aufgabenRect"]
 - ["So8NSCodingP", "autosZeichnen"]
 - !private ["So8NSCodingP", "black"]
 - !private ["So8NSCodingP", "brown"]
@@ -591,6 +629,7 @@ depends-member:
 - !private ["So8NSCodingP", "setFill"]
 - !private ["So8NSCodingP", "stroke"]
 - !private ["So8NSCodingP", "systemGreen"]
+- ["So8NSCodingP", "vonVorneRect"]
 - !private ["So8NSCodingP", "white"]
 - !private ["So7NSColorC", "black"]
 - !private ["So7NSColorC", "brown"]
@@ -620,8 +659,10 @@ depends-member:
 - ["So21NSDraggingDestinationP", "Int"]
 - !private ["So21NSDraggingDestinationP", "NSBezierPath"]
 - ["So21NSDraggingDestinationP", "NSColor"]
+- !private ["So21NSDraggingDestinationP", "NSImage"]
 - ["So21NSDraggingDestinationP", "NSRect"]
 - ["So21NSDraggingDestinationP", ""]
+- ["So21NSDraggingDestinationP", "aufgabenRect"]
 - ["So21NSDraggingDestinationP", "autosZeichnen"]
 - ["So21NSDraggingDestinationP", "cars"]
 - !private ["So21NSDraggingDestinationP", "display"]
@@ -632,17 +673,21 @@ depends-member:
 - ["So21NSDraggingDestinationP", "init"]
 - ["So21NSDraggingDestinationP", "kleineQuadrate"]
 - !private ["So21NSDraggingDestinationP", "min"]
+- ["So21NSDraggingDestinationP", "vonVorneRect"]
 - !private ["So7NSImageC", "draw"]
+- !private ["So7NSImageC", "init"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGFloat"]
 - ["So8NSObjectC", "Car"]
 - ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "NSBezierPath"]
 - ["So8NSObjectC", "NSColor"]
+- !private ["So8NSObjectC", "NSImage"]
 - ["So8NSObjectC", "NSRect"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "appendBezierPathWithRect"]
 - !private ["So8NSObjectC", "appendRect"]
+- ["So8NSObjectC", "aufgabenRect"]
 - ["So8NSObjectC", "autosZeichnen"]
 - !private ["So8NSObjectC", "bezierPath"]
 - !private ["So8NSObjectC", "bezierPathWithOvalInRect"]
@@ -662,6 +707,9 @@ depends-member:
 - !private ["So8NSObjectC", "fill"]
 - !private ["So8NSObjectC", "fillRect"]
 - ["So8NSObjectC", "gewonnen"]
+- !private ["So8NSObjectC", "imageNamed"]
+- !private ["So8NSObjectC", "imageWithSize"]
+- !private ["So8NSObjectC", "imageWithSystemSymbolName"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "kleineQuadrate"]
 - !private ["So8NSObjectC", "lightGray"]
@@ -673,6 +721,7 @@ depends-member:
 - !private ["So8NSObjectC", "stroke"]
 - !private ["So8NSObjectC", "strokeRect"]
 - !private ["So8NSObjectC", "systemGreen"]
+- ["So8NSObjectC", "vonVorneRect"]
 - !private ["So8NSObjectC", "white"]
 - ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CGFloat"]
@@ -680,10 +729,12 @@ depends-member:
 - ["So8NSObjectP", "Int"]
 - !private ["So8NSObjectP", "NSBezierPath"]
 - ["So8NSObjectP", "NSColor"]
+- !private ["So8NSObjectP", "NSImage"]
 - ["So8NSObjectP", "NSRect"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "appendBezierPathWithRect"]
 - !private ["So8NSObjectP", "appendRect"]
+- ["So8NSObjectP", "aufgabenRect"]
 - ["So8NSObjectP", "autosZeichnen"]
 - !private ["So8NSObjectP", "bezierPath"]
 - !private ["So8NSObjectP", "bezierPathWithOvalInRect"]
@@ -703,6 +754,9 @@ depends-member:
 - !private ["So8NSObjectP", "fill"]
 - !private ["So8NSObjectP", "fillRect"]
 - ["So8NSObjectP", "gewonnen"]
+- !private ["So8NSObjectP", "imageNamed"]
+- !private ["So8NSObjectP", "imageWithSize"]
+- !private ["So8NSObjectP", "imageWithSystemSymbolName"]
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "kleineQuadrate"]
 - !private ["So8NSObjectP", "lightGray"]
@@ -714,10 +768,12 @@ depends-member:
 - !private ["So8NSObjectP", "stroke"]
 - !private ["So8NSObjectP", "strokeRect"]
 - !private ["So8NSObjectP", "systemGreen"]
+- ["So8NSObjectP", "vonVorneRect"]
 - !private ["So8NSObjectP", "white"]
 - !private ["So19NSPasteboardReadingP", "black"]
 - !private ["So19NSPasteboardReadingP", "brown"]
 - !private ["So19NSPasteboardReadingP", "draw"]
+- !private ["So19NSPasteboardReadingP", "init"]
 - !private ["So19NSPasteboardReadingP", "lightGray"]
 - !private ["So19NSPasteboardReadingP", "red"]
 - !private ["So19NSPasteboardReadingP", "set"]
@@ -727,6 +783,7 @@ depends-member:
 - !private ["So19NSPasteboardWritingP", "black"]
 - !private ["So19NSPasteboardWritingP", "brown"]
 - !private ["So19NSPasteboardWritingP", "draw"]
+- !private ["So19NSPasteboardWritingP", "init"]
 - !private ["So19NSPasteboardWritingP", "lightGray"]
 - !private ["So19NSPasteboardWritingP", "red"]
 - !private ["So19NSPasteboardWritingP", "set"]
@@ -739,8 +796,10 @@ depends-member:
 - ["So11NSResponderC", "Int"]
 - !private ["So11NSResponderC", "NSBezierPath"]
 - ["So11NSResponderC", "NSColor"]
+- !private ["So11NSResponderC", "NSImage"]
 - ["So11NSResponderC", "NSRect"]
 - ["So11NSResponderC", ""]
+- ["So11NSResponderC", "aufgabenRect"]
 - ["So11NSResponderC", "autosZeichnen"]
 - ["So11NSResponderC", "cars"]
 - !private ["So11NSResponderC", "display"]
@@ -753,6 +812,7 @@ depends-member:
 - ["So11NSResponderC", "init"]
 - ["So11NSResponderC", "kleineQuadrate"]
 - !private ["So11NSResponderC", "min"]
+- ["So11NSResponderC", "vonVorneRect"]
 - !private ["So14NSSecureCodingP", "appendRect"]
 - !private ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "brown"]
@@ -773,8 +833,10 @@ depends-member:
 - ["So30NSStandardKeyBindingRespondingP", "Int"]
 - !private ["So30NSStandardKeyBindingRespondingP", "NSBezierPath"]
 - ["So30NSStandardKeyBindingRespondingP", "NSColor"]
+- !private ["So30NSStandardKeyBindingRespondingP", "NSImage"]
 - ["So30NSStandardKeyBindingRespondingP", "NSRect"]
 - ["So30NSStandardKeyBindingRespondingP", ""]
+- ["So30NSStandardKeyBindingRespondingP", "aufgabenRect"]
 - ["So30NSStandardKeyBindingRespondingP", "autosZeichnen"]
 - ["So30NSStandardKeyBindingRespondingP", "cars"]
 - !private ["So30NSStandardKeyBindingRespondingP", "display"]
@@ -787,14 +849,17 @@ depends-member:
 - ["So30NSStandardKeyBindingRespondingP", "init"]
 - ["So30NSStandardKeyBindingRespondingP", "kleineQuadrate"]
 - !private ["So30NSStandardKeyBindingRespondingP", "min"]
+- ["So30NSStandardKeyBindingRespondingP", "vonVorneRect"]
 - ["So18NSTouchBarProviderP", "Bool"]
 - !private ["So18NSTouchBarProviderP", "CGFloat"]
 - ["So18NSTouchBarProviderP", "Car"]
 - ["So18NSTouchBarProviderP", "Int"]
 - !private ["So18NSTouchBarProviderP", "NSBezierPath"]
 - ["So18NSTouchBarProviderP", "NSColor"]
+- !private ["So18NSTouchBarProviderP", "NSImage"]
 - ["So18NSTouchBarProviderP", "NSRect"]
 - ["So18NSTouchBarProviderP", ""]
+- ["So18NSTouchBarProviderP", "aufgabenRect"]
 - ["So18NSTouchBarProviderP", "autosZeichnen"]
 - ["So18NSTouchBarProviderP", "cars"]
 - !private ["So18NSTouchBarProviderP", "display"]
@@ -807,14 +872,17 @@ depends-member:
 - ["So18NSTouchBarProviderP", "init"]
 - ["So18NSTouchBarProviderP", "kleineQuadrate"]
 - !private ["So18NSTouchBarProviderP", "min"]
+- ["So18NSTouchBarProviderP", "vonVorneRect"]
 - ["So23NSUserActivityRestoringP", "Bool"]
 - !private ["So23NSUserActivityRestoringP", "CGFloat"]
 - ["So23NSUserActivityRestoringP", "Car"]
 - ["So23NSUserActivityRestoringP", "Int"]
 - !private ["So23NSUserActivityRestoringP", "NSBezierPath"]
 - ["So23NSUserActivityRestoringP", "NSColor"]
+- !private ["So23NSUserActivityRestoringP", "NSImage"]
 - ["So23NSUserActivityRestoringP", "NSRect"]
 - ["So23NSUserActivityRestoringP", ""]
+- ["So23NSUserActivityRestoringP", "aufgabenRect"]
 - ["So23NSUserActivityRestoringP", "autosZeichnen"]
 - ["So23NSUserActivityRestoringP", "cars"]
 - !private ["So23NSUserActivityRestoringP", "display"]
@@ -827,14 +895,17 @@ depends-member:
 - ["So23NSUserActivityRestoringP", "init"]
 - ["So23NSUserActivityRestoringP", "kleineQuadrate"]
 - !private ["So23NSUserActivityRestoringP", "min"]
+- ["So23NSUserActivityRestoringP", "vonVorneRect"]
 - ["So33NSUserInterfaceItemIdentificationP", "Bool"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "CGFloat"]
 - ["So33NSUserInterfaceItemIdentificationP", "Car"]
 - ["So33NSUserInterfaceItemIdentificationP", "Int"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "NSBezierPath"]
 - ["So33NSUserInterfaceItemIdentificationP", "NSColor"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "NSImage"]
 - ["So33NSUserInterfaceItemIdentificationP", "NSRect"]
 - ["So33NSUserInterfaceItemIdentificationP", ""]
+- ["So33NSUserInterfaceItemIdentificationP", "aufgabenRect"]
 - ["So33NSUserInterfaceItemIdentificationP", "autosZeichnen"]
 - ["So33NSUserInterfaceItemIdentificationP", "cars"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "display"]
@@ -845,14 +916,17 @@ depends-member:
 - ["So33NSUserInterfaceItemIdentificationP", "init"]
 - ["So33NSUserInterfaceItemIdentificationP", "kleineQuadrate"]
 - !private ["So33NSUserInterfaceItemIdentificationP", "min"]
+- ["So33NSUserInterfaceItemIdentificationP", "vonVorneRect"]
 - ["So6NSViewC", "Bool"]
 - !private ["So6NSViewC", "CGFloat"]
 - ["So6NSViewC", "Car"]
 - ["So6NSViewC", "Int"]
 - !private ["So6NSViewC", "NSBezierPath"]
 - ["So6NSViewC", "NSColor"]
+- !private ["So6NSViewC", "NSImage"]
 - ["So6NSViewC", "NSRect"]
 - ["So6NSViewC", ""]
+- ["So6NSViewC", "aufgabenRect"]
 - ["So6NSViewC", "autosZeichnen"]
 - ["So6NSViewC", "cars"]
 - !private ["So6NSViewC", "display"]
@@ -863,6 +937,7 @@ depends-member:
 - ["So6NSViewC", "init"]
 - ["So6NSViewC", "kleineQuadrate"]
 - !private ["So6NSViewC", "min"]
+- ["So6NSViewC", "vonVorneRect"]
 - !private ["Sj", "*"]
 - !private ["Sj", "*="]
 - !private ["Sj", ""]
@@ -931,7 +1006,7 @@ depends-member:
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "height"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "maxX"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "maxY"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "minX"]
@@ -952,6 +1027,7 @@ depends-member:
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "brown"]
@@ -962,6 +1038,7 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "systemGreen"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s26_ExpressibleByImageLiteralP", "draw"]
+- !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "first"]
 - ["s19_HasContiguousBytesP", "init"]
@@ -978,9 +1055,11 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "Car"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSBezierPath"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSImage"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "NSRect"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "appendRect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "aufgabenRect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "autosZeichnen"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "brown"]
@@ -1000,14 +1079,17 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setFill"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "stroke"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "systemGreen"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "vonVorneRect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Car"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSBezierPath"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSColor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSImage"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSRect"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "appendRect"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "aufgabenRect"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "autosZeichnen"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "black"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "brown"]
@@ -1027,6 +1109,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setFill"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stroke"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemGreen"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "vonVorneRect"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
@@ -1044,8 +1127,10 @@ depends-member:
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "Car"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSBezierPath"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSImage"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "NSRect"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "aufgabenRect"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "autosZeichnen"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "cars"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "display"]
@@ -1054,6 +1139,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "erzeugeKleinesQuadrat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "gewonnen"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "min"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "vonVorneRect"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - "Sa"
@@ -1061,7 +1147,7 @@ depends-nominal:
 - "SK"
 - !private "SB"
 - !private "12CoreGraphics7CGFloatV"
-- !private "So6CGRectV"
+- "So6CGRectV"
 - "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "9Rush_Hour3CarC"
@@ -1121,12 +1207,13 @@ depends-nominal:
 - "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
-- !private "s30_CustomPlaygroundQuickLookableP"
+- "s30_CustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
@@ -1151,6 +1238,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/AppKit.swiftmodule/x86_64-apple-macos.swiftmodule"
@@ -1173,4 +1261,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "913b797b9b74336003afeb526cb11be6"
+interface-hash: "a0368035bf62f4798a5634aac578ac20"

@@ -19,6 +19,8 @@ class MyView: NSView {
     }
     var gewonnen = false
     var kleineQuadrate = [[NSRect]]()
+    var vonVorneRect = NSRect()
+    var aufgabenRect = NSRect()
     
     override func draw(_ dirtyRect: NSRect) {
         
@@ -58,6 +60,30 @@ class MyView: NSView {
             autosZeichnen(dirtyRect)
             
         }
+        
+        // Button Aufgaben
+        
+        let faktor: CGFloat = 20
+        aufgabenRect = NSRect(
+            x: 10,
+            y: dirtyRect.height - 1.4 * dirtyRect.height / faktor,
+            width: 4 * dirtyRect.height / faktor,
+            height: dirtyRect.height / faktor)
+        let aufgabenButtonImage = NSImage(imageLiteralResourceName: "Aufgaben")
+        aufgabenButtonImage.draw(in: aufgabenRect)
+        
+        // Button von vorne
+        
+        vonVorneRect = NSRect(
+            x: 10,
+            y: dirtyRect.height - 3.4 * dirtyRect.height / faktor,
+            width: 4 * dirtyRect.height / faktor,
+            height: dirtyRect.height / faktor)
+        let vonVorneButtonImage = NSImage(imageLiteralResourceName: "vonvorne")
+        vonVorneButtonImage.draw(in: vonVorneRect)
+        
+        
+        
             
     }
     

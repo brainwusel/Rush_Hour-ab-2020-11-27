@@ -245,7 +245,6 @@ SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 @interface ViewController : NSViewController <NSTextFieldDelegate>
 @property (nonatomic, weak) IBOutlet MyView * _Null_unspecified myView;
 @property (nonatomic, weak) IBOutlet NSButton * _Null_unspecified v_onVorne;
-- (IBAction)vonVorne:(NSButton * _Nonnull)sender;
 @property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified a_ufgabeNummer;
 - (void)prepareForSegue:(NSStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (void)viewDidLoad;
@@ -266,7 +265,6 @@ SWIFT_CLASS("_TtC9Rush_Hour15ViewController2")
 - (void)prepareForSegue:(NSStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (void)viewDidLoad;
 - (void)viewWillAppear;
-- (void)viewWillDisappear;
 - (void)mouseDown:(NSEvent * _Nonnull)event;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;

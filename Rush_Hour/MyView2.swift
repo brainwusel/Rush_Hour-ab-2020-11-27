@@ -51,13 +51,15 @@ class MyView2: NSView {
             let rechtsPfeilBild = NSImage(imageLiteralResourceName: "Rechtspfeil")
             rechtsPfeilBild.draw(in: rechtsPfeilRect)
             
-            let zurückWidth = linksPfeilSeitenLänge
-            let zurückheight = zurückWidth / 3.1
-            let x_zurück: CGFloat = 0
-            let y_zurück = h - zurückheight
-            zurückRect = NSRect(x: x_zurück, y: y_zurück, width: zurückWidth, height: zurückheight)
-            let zurückBild = NSImage(imageLiteralResourceName: "zurück")
-            zurückBild.draw(in: zurückRect)
+            
+            let faktor: CGFloat = 20
+            zurückRect = NSRect(
+                x: 10,
+                y: dirtyRect.height - 1.4 * dirtyRect.height / faktor,
+                width: 3.1 * dirtyRect.height / faktor,
+                height: dirtyRect.height / faktor)
+            let zurückButtonImage = NSImage(imageLiteralResourceName: "zurück")
+            zurückButtonImage.draw(in: zurückRect)
             
             
         }

@@ -21,24 +21,18 @@ class ViewController2: NSViewController
     }
     
     var data: Int?
-    var aufgabeAusgewählt = 0
+    var aufgabeAusgewählt = 1
     {
-        willSet (newValue)
+        didSet
         {
-            
-            aufgabeBildAktualisieren(aufgabe: newValue)
-            print("VC2 aufgabeAusgewählt willSet newValue \(newValue)")
-            viewControllerBasis?.aufgabeAktuell = newValue
+            aufgabeBildAktualisieren(aufgabe: self.aufgabeAusgewählt)
             
             NotificationCenter.default.post(
                 name: Notification.Name(rawValue: "AufgabeAktualisieren"),
                 object: nil)
     
-        
         }
     }
-    
-   
     
     override func viewDidLoad()
     {
@@ -49,11 +43,6 @@ class ViewController2: NSViewController
     override func viewWillAppear()
     {
         aufgabeAusgewählt = data ?? 1
-//        aufgabeBildAktualisieren(aufgabe: aufgabeAusgewählt)
-    }
-    
-    override func viewWillDisappear() {
-        viewControllerBasis?.aufgabeAktuell = aufgabeAusgewählt
     }
     
     func aufgabeBildAktualisieren (aufgabe nr: Int)
