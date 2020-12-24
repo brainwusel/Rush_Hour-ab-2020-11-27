@@ -11,19 +11,14 @@ class MyView: NSView {
     
 //    let auto1Image = NSImage(imageLiteralResourceName: "Auto1")
     
-    
-    var cars = [Car]() {
-        didSet {
-            display()
-        }
-    }
+    var cars = [Car]() {didSet {display()}}
     var gewonnen = false
     var kleineQuadrate = [[NSRect]]()
     var vonVorneRect = NSRect()
     var aufgabenRect = NSRect()
     
-    override func draw(_ dirtyRect: NSRect) {
-        
+    override func draw(_ dirtyRect: NSRect)
+    {
         super.draw(dirtyRect)
         
         // Hintergrund
@@ -33,10 +28,12 @@ class MyView: NSView {
                                         y: 0,
                                         width: dirtyRect.width,
                                         height: dirtyRect.height))
-        if gewonnen {
+        if gewonnen
+        {
             NSColor.systemGreen.setFill()
         }
-        else {
+        else
+        {
             NSColor.brown.setFill()
         }
         hinterGrund.fill()
@@ -47,18 +44,22 @@ class MyView: NSView {
         
         // kleine Quadrate -> Grid
         
-        for w in 1 ... 6 {
-            for s in 1 ... 6 {
+        for w in 1 ... 6
+        {
+            for s in 1 ... 6
+            {
                 _ = erzeugeKleinesQuadrat(waagerecht: w, senkrecht: s, farbe: .lightGray, zeichnen: true, dirtyRect)
             }
         }
         
         // Autos
-        if cars.isEmpty {
-            return }
-        else {
+        if cars.isEmpty
+        {
+            return
+        }
+        else
+        {
             autosZeichnen(dirtyRect)
-            
         }
         
         // Button Aufgaben
@@ -81,14 +82,10 @@ class MyView: NSView {
             height: dirtyRect.height / faktor)
         let vonVorneButtonImage = NSImage(imageLiteralResourceName: "vonvorne")
         vonVorneButtonImage.draw(in: vonVorneRect)
-        
-        
-        
-            
     }
     
-    func erzeugeBasisQuadrat (füllFarbe: NSColor, randFarbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
-        
+    func erzeugeBasisQuadrat (füllFarbe: NSColor, randFarbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect
+    {
         let basisQuadratSeitenlänge = min(dirtyRect.height,dirtyRect.width - 100) - 50
         
         let basisQuadrat = NSRect(
@@ -97,7 +94,8 @@ class MyView: NSView {
             width: basisQuadratSeitenlänge,
             height: basisQuadratSeitenlänge)
         
-        if zeichnen {
+        if zeichnen
+        {
             let bQ = NSBezierPath()
             bQ.appendRect(basisQuadrat)
             füllFarbe.set()
@@ -119,12 +117,11 @@ class MyView: NSView {
         NSColor.lightGray.set()
         eR.fill()
         
-        
         return basisQuadrat
     }
     
-    func erzeugeKleinesQuadrat (waagerecht w: Int, senkrecht s: Int, farbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect {
-        
+    func erzeugeKleinesQuadrat (waagerecht w: Int, senkrecht s: Int, farbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect
+    {
         let basisQuadratSeitenlängeInnen = min(dirtyRect.height,dirtyRect.width - 100) - 65
         
         let innenQuadrat = NSRect(
@@ -139,19 +136,23 @@ class MyView: NSView {
             width: innenQuadrat.width / 6 - 4,
             height: innenQuadrat.height / 6 - 4)
         
-        if zeichnen {
+        if zeichnen
+        {
             let kQ = NSBezierPath()
             kQ.appendRect(kleinesQuadrat)
             farbe.set()
             kQ.fill()
         }
+        
         return kleinesQuadrat
     }
     
     
-    func autosZeichnen (_ dirtyRect: NSRect) {
+    func autosZeichnen (_ dirtyRect: NSRect)
+    {
         let dörtiRekt = dirtyRect
-        for i in 0...cars.count - 1 {
+        for i in 0...cars.count - 1
+        {
             let re_linksUnten = erzeugeKleinesQuadrat(
                 waagerecht: (cars[i].zellenBelegt.first?.w)!,
                 senkrecht: (cars[i].zellenBelegt.first?.s)!,
@@ -168,15 +169,16 @@ class MyView: NSView {
             
             var rechtEck = NSRect()
             
-            if gewonnen &&
-                cars[i].länge == .zwei &&
-                cars[i].füllFarbe == .red {
+            if gewonnen && cars[i].länge == .zwei && cars[i].füllFarbe == .red
+            {
                 rechtEck = NSRect(
                     x: re_linksUnten.minX + 10,
                     y: re_linksUnten.minY + 10,
                     width: (re_rechtsOben.maxX - re_linksUnten.minX) * 2 - 20,
                     height: re_rechtsOben.maxY - re_linksUnten.minY - 20)
-            } else {
+            }
+            else
+            {
                 rechtEck = NSRect(
                     x: re_linksUnten.minX + 10,
                     y: re_linksUnten.minY + 10,
@@ -191,11 +193,10 @@ class MyView: NSView {
             let füllFarbe = cars[i].füllFarbe
             füllFarbe.setFill()
             autoPath.fill()
-//            let randFarbe = cars[i].randFarbe
-//            randFarbe.setStroke()
             autoPath.lineWidth = 5
             autoPath.stroke()
-            if let bild = cars[i].image {
+            if let bild = cars[i].image
+            {
                 bild.draw(in: rechtEck)
             }
         }

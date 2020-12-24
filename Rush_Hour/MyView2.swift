@@ -7,14 +7,15 @@
 
 import Cocoa
 
-class MyView2: NSView {
-
+class MyView2: NSView
+{
     var aufgabeBild = " "
     var rechtsPfeilRect = NSRect()
     var linksPfeilRect = NSRect()
     var zurückRect = NSRect()
     
-    override func draw(_ dirtyRect: NSRect) {
+    override func draw(_ dirtyRect: NSRect)
+    {
         super.draw(dirtyRect)
 
         // Drawing code here.
@@ -60,10 +61,6 @@ class MyView2: NSView {
                 height: dirtyRect.height / faktor)
             let zurückButtonImage = NSImage(imageLiteralResourceName: "zurück")
             zurückButtonImage.draw(in: zurückRect)
-            
-            
         }
-
     }
-    
 }

@@ -233,7 +233,6 @@ SWIFT_CLASS("_TtC9Rush_Hour7MyView2")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSButton;
 @class NSTextField;
 @class NSStoryboardSegue;
 @class NSEvent;
@@ -244,7 +243,6 @@ SWIFT_CLASS("_TtC9Rush_Hour7MyView2")
 SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 @interface ViewController : NSViewController <NSTextFieldDelegate>
 @property (nonatomic, weak) IBOutlet MyView * _Null_unspecified myView;
-@property (nonatomic, weak) IBOutlet NSButton * _Null_unspecified v_onVorne;
 @property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified a_ufgabeNummer;
 - (void)prepareForSegue:(NSStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (void)viewDidLoad;
