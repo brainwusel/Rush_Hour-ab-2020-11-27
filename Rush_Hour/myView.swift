@@ -11,7 +11,13 @@ class MyView: NSView {
     
 //    let auto1Image = NSImage(imageLiteralResourceName: "Auto1")
     
-    var cars = [Car]() {didSet {display()}}
+    var cars = [Car]()
+    {
+        didSet
+        {
+            display()
+        }
+    }
     var gewonnen = false
     var kleineQuadrate = [[NSRect]]()
     var vonVorneRect = NSRect()
@@ -86,7 +92,7 @@ class MyView: NSView {
     
     func erzeugeBasisQuadrat (füllFarbe: NSColor, randFarbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect
     {
-        let basisQuadratSeitenlänge = min(dirtyRect.height,dirtyRect.width - 100) - 50
+        let basisQuadratSeitenlänge = min(dirtyRect.height - 50,dirtyRect.width  - 300)
         
         let basisQuadrat = NSRect(
             x: 50 + (dirtyRect.width - basisQuadratSeitenlänge) / 2,
@@ -122,7 +128,7 @@ class MyView: NSView {
     
     func erzeugeKleinesQuadrat (waagerecht w: Int, senkrecht s: Int, farbe: NSColor, zeichnen: Bool, _ dirtyRect: NSRect) -> NSRect
     {
-        let basisQuadratSeitenlängeInnen = min(dirtyRect.height,dirtyRect.width - 100) - 65
+        let basisQuadratSeitenlängeInnen = min(dirtyRect.height - 50,dirtyRect.width - 300) - 15
         
         let innenQuadrat = NSRect(
             x: 50 + (dirtyRect.width - basisQuadratSeitenlängeInnen) / 2,

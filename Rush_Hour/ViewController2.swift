@@ -9,28 +9,23 @@ import Cocoa
 
 class ViewController2: NSViewController
 {
-    
-    var viewControllerBasis: ViewController?
+    let aufgabenTotal = 2                   // Provisorium
     
     @IBOutlet var myView2: MyView2!
-    
-    override func prepare(for segue: NSStoryboardSegue, sender: Any?)
-    {
-        viewControllerBasis = segue.destinationController as? ViewController
-        viewControllerBasis!.viewContr2 = self
-    }
-    
+    @IBOutlet weak var aufgabeAusgewähltLabel: NSTextField!
     var data: Int?
+    
     var aufgabeAusgewählt = 1
     {
         didSet
         {
-            aufgabeBildAktualisieren(aufgabe: self.aufgabeAusgewählt)
+            myView2.aufgabeBild = "Aufgabe" + String(self.aufgabeAusgewählt)
+            myView2.display()
+            aufgabeAusgewähltLabel.stringValue = String(self.aufgabeAusgewählt)
             
             NotificationCenter.default.post(
                 name: Notification.Name(rawValue: "AufgabeAktualisieren"),
                 object: nil)
-    
         }
     }
     
@@ -43,20 +38,7 @@ class ViewController2: NSViewController
     override func viewWillAppear()
     {
         aufgabeAusgewählt = data ?? 1
-    }
-    
-    func aufgabeBildAktualisieren (aufgabe nr: Int)
-    {
-        switch nr
-        {
-        case 1:
-            myView2.aufgabeBild = "Aufgabe1"
-        case 2:
-            myView2.aufgabeBild = "Aufgabe2"
-        default:
-            return
-        }
-        myView2.display()
+        aufgabeAusgewähltLabel.stringValue = String(aufgabeAusgewählt)
     }
     
     override func mouseDown(with event: NSEvent) {
@@ -75,7 +57,7 @@ class ViewController2: NSViewController
         
         if myView2.rechtsPfeilRect.contains(punkt)
         {
-            aufgabeAusgewählt = min(2, aufgabeAusgewählt + 1)
+            aufgabeAusgewählt = min(aufgabenTotal, aufgabeAusgewählt + 1)
         }
     }
 }

@@ -236,20 +236,17 @@ SWIFT_CLASS("_TtC9Rush_Hour7MyView2")
 @class NSTextField;
 @class NSStoryboardSegue;
 @class NSEvent;
-@class NSControl;
-@class NSText;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 @interface ViewController : NSViewController <NSTextFieldDelegate>
 @property (nonatomic, weak) IBOutlet MyView * _Null_unspecified myView;
-@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified a_ufgabeNummer;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified aufgabeNummerLabel;
 - (void)prepareForSegue:(NSStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (void)viewDidLoad;
 @property (nonatomic) id _Nullable representedObject;
 - (void)mouseDown:(NSEvent * _Nonnull)event;
 - (void)mouseDragged:(NSEvent * _Nonnull)event;
-- (BOOL)control:(NSControl * _Nonnull)control textShouldEndEditing:(NSText * _Nonnull)fieldEditor SWIFT_WARN_UNUSED_RESULT;
 - (void)updateView;
 - (void)aufgabeAktualisieren;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -260,7 +257,7 @@ SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 SWIFT_CLASS("_TtC9Rush_Hour15ViewController2")
 @interface ViewController2 : NSViewController
 @property (nonatomic, strong) IBOutlet MyView2 * _Null_unspecified myView2;
-- (void)prepareForSegue:(NSStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified aufgabeAusgewähltLabel;
 - (void)viewDidLoad;
 - (void)viewWillAppear;
 - (void)mouseDown:(NSEvent * _Nonnull)event;

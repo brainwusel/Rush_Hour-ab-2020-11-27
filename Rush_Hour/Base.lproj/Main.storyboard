@@ -733,8 +733,23 @@
                     <view key="view" id="prd-ZT-iIm" customClass="MyView2" customModule="Rush_Hour" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="909" height="709"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-Ok-cph">
+                                <rect key="frame" x="766" y="628" width="125" height="61"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="L5n-Fd-rwi">
+                                    <font key="font" size="53" name="Baskerville"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kEq-Ok-cph" secondAttribute="trailing" constant="20" symbolic="YES" id="N8z-h2-WY4"/>
+                            <constraint firstItem="kEq-Ok-cph" firstAttribute="top" secondItem="prd-ZT-iIm" secondAttribute="top" constant="20" symbolic="YES" id="eYm-KY-Jea"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="aufgabeAusgewähltLabel" destination="kEq-Ok-cph" id="Y60-3Q-M3A"/>
                         <outlet property="myView2" destination="prd-ZT-iIm" id="2iO-SV-0dm"/>
                     </connections>
                 </viewController>
@@ -747,27 +762,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Rush_Hour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl" customClass="MyView" customModule="Rush_Hour" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="1497" height="709"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1497" height="708"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="682-MC-D9M">
-                                <rect key="frame" x="4" y="20" width="76" height="19"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="AUFGABE" id="TeQ-Kf-AqA">
-                                    <font key="font" metaFont="systemBold" size="15"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGm-II-1kT">
-                                <rect key="frame" x="86" y="20" width="38" height="24"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" drawsBackground="YES" id="lNA-bm-pDI">
-                                    <font key="font" metaFont="systemBold" size="15"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-QJ-ygI">
-                                <rect key="frame" x="1380" y="13" width="104" height="32"/>
+                                <rect key="frame" x="1380" y="12" width="104" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="AUFGABEN" bezelStyle="rounded" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="6UT-Qb-7ne">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -777,16 +776,22 @@
                                     <segue destination="VQ4-Hq-ksh" kind="show" identifier="segueToVC2" id="nPT-uZ-SnW"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EG2-lx-wem">
+                                <rect key="frame" x="1354" y="627" width="125" height="61"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="0UB-ML-kjb">
+                                    <font key="font" size="53" name="Baskerville"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="682-MC-D9M" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="6" id="Mjm-e0-35O"/>
-                            <constraint firstAttribute="bottom" secondItem="AGm-II-1kT" secondAttribute="bottom" constant="20" symbolic="YES" id="dAT-Q4-Drx"/>
-                            <constraint firstAttribute="bottom" secondItem="682-MC-D9M" secondAttribute="bottom" constant="20" symbolic="YES" id="kBe-bb-fJn"/>
-                            <constraint firstItem="AGm-II-1kT" firstAttribute="leading" secondItem="682-MC-D9M" secondAttribute="trailing" constant="8" symbolic="YES" id="leo-M0-Occ"/>
+                            <constraint firstItem="EG2-lx-wem" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="UjX-hC-Ded"/>
+                            <constraint firstAttribute="trailing" secondItem="EG2-lx-wem" secondAttribute="trailing" constant="20" symbolic="YES" id="ckq-SH-fKv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="a_ufgabeNummer" destination="AGm-II-1kT" id="vXJ-eu-uS7"/>
+                        <outlet property="aufgabeNummerLabel" destination="EG2-lx-wem" id="Nl0-BY-Qa4"/>
                         <outlet property="myView" destination="m2S-Jp-Qdl" id="5u2-ZC-W8g"/>
                     </connections>
                 </viewController>

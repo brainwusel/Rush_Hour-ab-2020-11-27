@@ -15,6 +15,7 @@ class ViewController: NSViewController, NSTextFieldDelegate
     {
         willSet (newValue) {
             spiel = Spiel(Aufgabe: newValue)
+            aufgabeNummerLabel.stringValue = String(newValue)
             updateView()
         }
     }
@@ -31,12 +32,10 @@ class ViewController: NSViewController, NSTextFieldDelegate
     weak var viewContr2: ViewController2?
     var win2array = [NSWindowController]()
     @IBOutlet weak var myView: MyView!
-    @IBOutlet weak var a_ufgabeNummer: NSTextField!
+    @IBOutlet weak var aufgabeNummerLabel: NSTextField!
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?)
     {
-        print ("VC prepare for segue")
-        print(segue)
         if let destWindowController = segue.destinationController as? NSWindowController
         {
             if let vc2 = destWindowController.contentViewController as? ViewController2
@@ -53,9 +52,9 @@ class ViewController: NSViewController, NSTextFieldDelegate
         
         // Do any additional setup after loading the view.
         
-        a_ufgabeNummer.delegate = self
-        
         updateView()
+        
+        aufgabeNummerLabel.stringValue = "1"
         
         NotificationCenter.default.addObserver(
             self,
@@ -123,21 +122,21 @@ class ViewController: NSViewController, NSTextFieldDelegate
         }
     }
     
-    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool
-    {
-        if control == a_ufgabeNummer
-        {
-            let s = a_ufgabeNummer.stringValue
-            if let nr = Int(s)
-            {
-                if nr >= 1 && nr <= 2
-                {
-                    aufgabeAktuell = nr
-                }
-            }
-        }
-        return true
-    }
+//    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool
+//    {
+//        if control == a_ufgabeNummer
+//        {
+//            let s = a_ufgabeNummer.stringValue
+//            if let nr = Int(s)
+//            {
+//                if nr >= 1 && nr <= 2
+//                {
+//                    aufgabeAktuell = nr
+//                }
+//            }
+//        }
+//        return true
+//    }
     
     @objc func updateView ()
     {
