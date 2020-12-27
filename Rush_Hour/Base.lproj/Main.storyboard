@@ -765,17 +765,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1497" height="708"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-QJ-ygI">
-                                <rect key="frame" x="1380" y="12" width="104" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="bevel" title="AUFGABEN" bezelStyle="rounded" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="6UT-Qb-7ne">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="VQ4-Hq-ksh" kind="show" identifier="segueToVC2" id="nPT-uZ-SnW"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EG2-lx-wem">
                                 <rect key="frame" x="1354" y="627" width="125" height="61"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="0UB-ML-kjb">
@@ -784,10 +773,22 @@
                                     <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button hidden="YES" autoresizesSubviews="NO" focusRingType="none" verticalHuggingPriority="750" mirrorLayoutDirectionWhenInternationalizing="never" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-QJ-ygI">
+                                <rect key="frame" x="20" y="672" width="74" height="16"/>
+                                <buttonCell key="cell" type="bevel" title="AUFGABEN" bezelStyle="rounded" alignment="center" enabled="NO" focusRingType="none" transparent="YES" imageScaling="proportionallyDown" inset="2" id="6UT-Qb-7ne">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="VQ4-Hq-ksh" kind="show" identifier="segueToVC2" id="nPT-uZ-SnW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="EG2-lx-wem" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="UjX-hC-Ded"/>
+                            <constraint firstItem="Khp-QJ-ygI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="Urr-gk-4j3"/>
                             <constraint firstAttribute="trailing" secondItem="EG2-lx-wem" secondAttribute="trailing" constant="20" symbolic="YES" id="ckq-SH-fKv"/>
+                            <constraint firstItem="Khp-QJ-ygI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="gzl-au-9VH"/>
                         </constraints>
                     </view>
                     <connections>

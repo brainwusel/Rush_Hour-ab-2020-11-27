@@ -10,27 +10,35 @@
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		SebmKulX2kQd5jPxSL922TUmhdo=
+		bFr47Lv6OSeN2DVAxngF7Wrw5iM=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		5aVu4ycKRxv1ElLJGsRztvoOEaI=
+		TVNhqXJAJmaKXnT/jvZH6IMk8R4=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<data>
-		kFaLt0/sMAIZsc4bwImglpmQJfU=
+		JvdsUaELSSQ1v7THvaG99Vkd8e4=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<data>
-		fYEmCdGPQmpeDiBPDDI7F/VE3yo=
+		bGYEoYlUs0blBtNXYohXuZazA/c=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/window2Controller.nib</key>
 		<data>
-		JPEey4zZg7fKDJ0SI0sFoXNcjE8=
+		51988nNAGmWDC8bQ1HRj2dGVejY=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/yIe-ex-3nZ-view-prd-ZT-iIm.nib</key>
 		<data>
-		5LfDtIB4HHYmVzRc487M7ZXk4U4=
+		HzvhnL6wC9fmC/RN7pGkWhOyNkc=
+		</data>
+		<key>Resources/aufgabe1.csv</key>
+		<data>
+		1dP3JrSerUPkHsc9BlU7StSpcXk=
+		</data>
+		<key>Resources/aufgabe2.csv</key>
+		<data>
+		o8KaNB7XJ/ZY/4LOqrEP80oeOyM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -46,42 +54,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sipuh0BMIw9NlewT+f4pmD5md/Ibjh8/kdFIr/n3mI4=
+			JEN885ky4TfUGltkqYW/OK2NfErzrazWCg9QGoU07pQ=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LjYBa6sTvq+GNO/jwm7e76ApalMtZ5ZiTiSKDlD5dNc=
+			/TKjm1+aNRNJnhPQ8kSNMupv6DEGkY70E6IEQcPirxk=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sm0L770L3ujvcXuh/EQGPC/Z+KIJf0xyKF9D+36EkdM=
+			nr4eL7ztJYNMSMH8qFnLmRCMvpJ5Ksl43FrluJS/aVQ=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vAShoH7gcSER0jIFoZnSZO3arha1AaK1G+aN55gXVns=
+			J+o1R8Bk3iEHnePhMn4PPm71WukruNruvFStvLNpMg4=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/window2Controller.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GprpHUn57uLOOdk8XeKGPNEbc61MudCja3G5yUj7ba0=
+			5vtlC01zch7q/LHy8edrtepBGrBzPih7gv+Z9Q+0cFA=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/yIe-ex-3nZ-view-prd-ZT-iIm.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uGnh5G8XCWrjFhUjdzJB+H82+bLQDCyuZVAXQNZQGmg=
+			bldyUrcow6ERiZFww+7Ti+fs/5+cg/8T/5kF5/VYZp0=
+			</data>
+		</dict>
+		<key>Resources/aufgabe1.csv</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fxO3+VjlmdplzPstuW7l0eYFZZE5m5/XLpGgsqhIk+o=
+			</data>
+		</dict>
+		<key>Resources/aufgabe2.csv</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			x8Y4Hixyas/udC3Q+oSX66Ax/QPqmYaftCZ/0uj1e1M=
 			</data>
 		</dict>
 	</dict>

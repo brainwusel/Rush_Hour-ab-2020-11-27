@@ -175,7 +175,7 @@ class MyView: NSView {
             
             var rechtEck = NSRect()
             
-            if gewonnen && cars[i].länge == .zwei && cars[i].füllFarbe == .red
+            if gewonnen && cars[i].länge == .zwei && cars[i].orientierung == .waagerecht
             {
                 rechtEck = NSRect(
                     x: re_linksUnten.minX + 10,
@@ -196,11 +196,14 @@ class MyView: NSView {
             
             let autoPath = NSBezierPath()
             autoPath.appendRect(rechtEck)
-            let füllFarbe = cars[i].füllFarbe
-            füllFarbe.setFill()
+            if i == 0
+            {
+                NSColor.red.setFill()
+            } else
+            {
+                NSColor.white.setFill()
+            }
             autoPath.fill()
-            autoPath.lineWidth = 5
-            autoPath.stroke()
             if let bild = cars[i].image
             {
                 bild.draw(in: rechtEck)
