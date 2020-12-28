@@ -175,7 +175,7 @@ class MyView: NSView {
             
             var rechtEck = NSRect()
             
-            if gewonnen && cars[i].länge == .zwei && cars[i].orientierung == .waagerecht
+            if gewonnen && cars[i].länge == .zwei && cars[i].orientierung == .waagerecht && cars[i].positionLinksUnten.w == 6
             {
                 rechtEck = NSRect(
                     x: re_linksUnten.minX + 10,

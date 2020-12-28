@@ -150,11 +150,11 @@ func aufgabeLaden (nummer: Int) -> [Car]
     
     print(carStrings!)
     
-    for i in 0 ... carStrings!.count - 1
+    for i in 1 ... carStrings!.count - 1
     {
         let carComponents = carStrings![i].components(separatedBy: ";")
         let l: Länge
-        switch carComponents[1]
+        switch carComponents[0]
         {
         case "2":
             l = .zwei
@@ -163,10 +163,10 @@ func aufgabeLaden (nummer: Int) -> [Car]
         default:
             l = .zwei
         }
-        let w = Int(carComponents[2])
-        let s = Int(carComponents[3])
+        let w = Int(carComponents[1])
+        let s = Int(carComponents[2])
         var o: Orientierung
-        switch carComponents[4]
+        switch carComponents[3]
         {
         case "w":
             o = .waagerecht
@@ -178,7 +178,6 @@ func aufgabeLaden (nummer: Int) -> [Car]
         let auto = Car(länge: l, positionLinksUnten: (w: w!, s: s!), richtung: o)
         autos.append(auto)
     }
-    
     return autos
 }
 

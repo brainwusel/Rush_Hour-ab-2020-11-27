@@ -19,7 +19,7 @@ class ViewController2: NSViewController
     {
         didSet
         {
-            myView2.aufgabeBild = "Aufgabe" + String(self.aufgabeAusgewählt)
+            myView2.aufgabeNummer = self.aufgabeAusgewählt
             myView2.display()
             aufgabeAusgewähltLabel.stringValue = String(self.aufgabeAusgewählt)
             
