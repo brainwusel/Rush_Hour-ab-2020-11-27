@@ -86,14 +86,6 @@ class ViewController: NSViewController, NSTextFieldDelegate
         if myView.aufgabenRect.contains(punkt)
         {
             performSegue(withIdentifier: "segueToVC2", sender: myView)
-            
-//            let segid = NSStoryboard.SceneIdentifier("window2Controller")
-//            if let winctrl = storyboard!.instantiateController (withIdentifier: segid) as? NSWindowController
-//            {
-//            winctrl.showWindow(self)
-//            win2array.append(winctrl) // sonst sofort wieder weg!
-//            }
-            
         }
         
         if myView.vonVorneRect.contains(punkt)
@@ -122,23 +114,7 @@ class ViewController: NSViewController, NSTextFieldDelegate
         }
     }
     
-//    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool
-//    {
-//        if control == a_ufgabeNummer
-//        {
-//            let s = a_ufgabeNummer.stringValue
-//            if let nr = Int(s)
-//            {
-//                if nr >= 1 && nr <= 2
-//                {
-//                    aufgabeAktuell = nr
-//                }
-//            }
-//        }
-//        return true
-//    }
-    
-    @objc func updateView ()
+    func updateView ()
     {
         myView.gewonnen = spiel.gewonnen
         myView.cars = spiel.cars
@@ -146,11 +122,7 @@ class ViewController: NSViewController, NSTextFieldDelegate
     
     @objc func aufgabeAktualisieren ()
     {
-        let nr = viewContr2?.aufgabeAusgewählt ?? 0
-        if nr >= 1 && nr <= 2
-        {
-            aufgabeAktuell = nr
-        }
+        aufgabeAktuell = viewContr2?.aufgabeAusgewählt ?? 1    
     }
 }
 

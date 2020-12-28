@@ -51,7 +51,6 @@ struct Bild: Hashable, Equatable {
     }
 }
 
-
 var bildContainer: Set <Bild> {
     var s = Set <Bild>()
     s.insert(Bild(Name: "w20", Orientierung: .waagerecht, Länge: .zwei))
@@ -72,7 +71,6 @@ var bildContainer: Set <Bild> {
     s.insert(Bild(Name: "s33", Orientierung: .senkrecht, Länge: .drei))
     return s
 }
-
 
 // einzelnes Auto - identifiziert durch Länge und Farbe in der computet prop. ID als String. Aus der Aufgabenstellung ergeben sich die Eigenschaften POSITIONLINKSOBEN und ORIENTIERUNG. Die Eigenschaft BEWEGUNGSOPTIONEN zeigt als Array von Richtungen an, wohin ein Auto bewegt werden könnte; sie wird zunächst mit einem Element .UNBEWEGLICH initialisiert und später durch die Methode SPIEL.BEWEGUNGSOPTIONENUPDATE aus den Positionsdaten aller Autos berechnet. Die Eigenschaft ZELLENBELEGT zeigt an, welche Zellen gerade von einem Auto im Grid belegt werden und wird berechnet aus der POSITIONLINKSOBEN, der LÄNGE und der ORIENTIERUNG des Autos; in der get-Funktion sind KEINE Überprüfungen der waagerechten oder senkrechten Limits enthalten - diese Aufgabe sollte vollständig von der Methode SPIEL.BEWEGUNSOPTIONENUPDATE übernommen werden
 
@@ -132,23 +130,16 @@ class Car {
 func aufgabeLaden (nummer: Int) -> [Car]
 {
     var autos = [Car]()
-    
     let path = Bundle.main.path(forResource: "aufgabe" + String(nummer), ofType: "csv")
-    print("path = \(String(describing: path))")
-    
     let aufgabeString = try? String(contentsOfFile: path!, encoding: .utf8)
-    print("csv = \(String(describing: aufgabeString))")
-    
     var carStrings = aufgabeString?.components(separatedBy: "\r\n")
     
-    print(carStrings!)
+    //    CAVE keine Fehlerabsicherung
     
     while carStrings?.last == ""
     {
         carStrings?.removeLast()
     }
-    
-    print(carStrings!)
     
     for i in 1 ... carStrings!.count - 1
     {

@@ -26,7 +26,6 @@ depends-top-level:
 - !private "-"
 - !private "..."
 - !private "<"
-- !private "<="
 - !private ">"
 - !private ">="
 - !private "??"
@@ -1498,4 +1497,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "2db8927082b1f50e8a7643227d8f14c8"
+interface-hash: "1e8f2448e6471493b6636a4c861dceab"

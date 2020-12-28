@@ -247,7 +247,6 @@ SWIFT_CLASS("_TtC9Rush_Hour14ViewController")
 @property (nonatomic) id _Nullable representedObject;
 - (void)mouseDown:(NSEvent * _Nonnull)event;
 - (void)mouseDragged:(NSEvent * _Nonnull)event;
-- (void)updateView;
 - (void)aufgabeAktualisieren;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
