@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B297B482568592800DE14EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B297B472568592800DE14EE /* Model.swift */; };
+		1B79F307259A65B1002745F7 /* aufgabe3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1B79F306259A65B1002745F7 /* aufgabe3.csv */; };
 		1B8AD028256D036A00291471 /* myView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8AD027256D036A00291471 /* myView.swift */; };
 		1BC590BF2597D1BC00FE99A8 /* aufgabe1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1BC590BE2597D1BC00FE99A8 /* aufgabe1.csv */; };
 		1BC590CE2597E9B900FE99A8 /* aufgabe2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1BC590CD2597E9B900FE99A8 /* aufgabe2.csv */; };
@@ -40,8 +41,9 @@
 
 /* Begin PBXFileReference section */
 		1B297B472568592800DE14EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1B79F306259A65B1002745F7 /* aufgabe3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aufgabe3.csv; sourceTree = "<group>"; };
 		1B8AD027256D036A00291471 /* myView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myView.swift; sourceTree = "<group>"; };
-		1BC590BE2597D1BC00FE99A8 /* aufgabe1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aufgabe1.csv; sourceTree = "<group>"; };
+		1BC590BE2597D1BC00FE99A8 /* aufgabe1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = aufgabe1.csv; path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/DerivedData/Rush_Hour/Build/Products/Debug/../../../../../Data/aufgabe1.csv"; sourceTree = "<absolute>"; };
 		1BC590CD2597E9B900FE99A8 /* aufgabe2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aufgabe2.csv; sourceTree = "<group>"; };
 		1BCAE1692566BC9E0079C696 /* Rush_Hour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rush_Hour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCAE16C2566BC9E0079C696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		1BCAE1862566BC9F0079C696 /* Rush_HourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rush_HourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCAE18A2566BC9F0079C696 /* Rush_HourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rush_HourUITests.swift; sourceTree = "<group>"; };
 		1BCAE18C2566BC9F0079C696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BD21BA1258520630051CA54 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		1BD21BA1258520630051CA54 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController2.swift; path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/ViewController2.swift"; sourceTree = "<absolute>"; };
 		1BD21BA6258531FB0051CA54 /* MyView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,9 +92,11 @@
 			children = (
 				1BC590BE2597D1BC00FE99A8 /* aufgabe1.csv */,
 				1BC590CD2597E9B900FE99A8 /* aufgabe2.csv */,
+				1B79F306259A65B1002745F7 /* aufgabe3.csv */,
 			);
-			path = Data;
-			sourceTree = "<group>";
+			name = Data;
+			path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Data";
+			sourceTree = "<absolute>";
 		};
 		1BCAE1602566BC9E0079C696 = {
 			isa = PBXGroup;
@@ -253,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B79F307259A65B1002745F7 /* aufgabe3.csv in Resources */,
 				1BCAE1712566BC9E0079C696 /* Assets.xcassets in Resources */,
 				1BCAE1742566BC9E0079C696 /* Main.storyboard in Resources */,
 				1BC590BF2597D1BC00FE99A8 /* aufgabe1.csv in Resources */,

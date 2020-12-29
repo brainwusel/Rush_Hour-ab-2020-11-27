@@ -40,6 +40,10 @@
 		<data>
 		6RxVEa1nWQI+VGxG88jT9tNPH18=
 		</data>
+		<key>Resources/aufgabe3.csv</key>
+		<data>
+		pIVd0pJCJGL9adWdYFkN9xkpWkk=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -104,6 +108,13 @@
 			<key>hash2</key>
 			<data>
 			OWCAcnC/J7lGMWpGcCTPQ08Pzso3/HcWgAK3M8Asa2E=
+			</data>
+		</dict>
+		<key>Resources/aufgabe3.csv</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TORQozlfPhQzSPrJLJAbvz4jvEEreVjWgu231HA93Aw=
 			</data>
 		</dict>
 	</dict>

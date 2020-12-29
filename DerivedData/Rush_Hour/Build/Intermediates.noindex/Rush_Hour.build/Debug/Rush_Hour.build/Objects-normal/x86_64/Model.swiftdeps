@@ -87,7 +87,6 @@ depends-top-level:
 - !private "min"
 - !private "orientierung"
 - !private "positionLinksUnten"
-- !private "print"
 - !private "~="
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]

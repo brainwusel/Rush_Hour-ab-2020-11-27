@@ -9,10 +9,20 @@ import Cocoa
 
 class ViewController2: NSViewController
 {
-    let aufgabenTotal = 2                   // Provisorium
+    var aufgabenTotal: Int
+    {
+        get
+        {
+            let fm = FileManager.default
+            let p = Bundle.main.bundlePath + "/Contents/Resources/"
+            let inhalt = try? fm.contentsOfDirectory(atPath: p)
+            return inhalt!.count - 2
+        }
+    }
     
     @IBOutlet var myView2: MyView2!
     @IBOutlet weak var aufgabeAusgewähltLabel: NSTextField!
+    
     var data: Int?
     
     var aufgabeAusgewählt = 1
