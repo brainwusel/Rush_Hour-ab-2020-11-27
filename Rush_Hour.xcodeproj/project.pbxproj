@@ -45,11 +45,13 @@
 
 /* Begin PBXFileReference section */
 		1B297B472568592800DE14EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		1B79F306259A65B1002745F7 /* aufgabe3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aufgabe3.csv; sourceTree = "<group>"; };
+		1B79F306259A65B1002745F7 /* aufgabe3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = aufgabe3.csv; path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Data/aufgabe3.csv"; sourceTree = "<absolute>"; };
 		1B86DC6D259E4D1E00B2A620 /* MyView3Rechts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView3Rechts.swift; sourceTree = "<group>"; };
+		1B86DC75259FAC4600B2A620 /* aufgabe4.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = aufgabe4.csv; path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Data/aufgabe4.csv"; sourceTree = "<absolute>"; };
+		1B86DC76259FAC4A00B2A620 /* aufgabe5.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = aufgabe5.csv; path = Data/aufgabe5.csv; sourceTree = SOURCE_ROOT; };
 		1B8AD027256D036A00291471 /* myView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myView.swift; sourceTree = "<group>"; };
 		1BC590BE2597D1BC00FE99A8 /* aufgabe1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = aufgabe1.csv; path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/DerivedData/Rush_Hour/Build/Products/Debug/../../../../../Data/aufgabe1.csv"; sourceTree = "<absolute>"; };
-		1BC590CD2597E9B900FE99A8 /* aufgabe2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aufgabe2.csv; sourceTree = "<group>"; };
+		1BC590CD2597E9B900FE99A8 /* aufgabe2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = aufgabe2.csv; path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Data/aufgabe2.csv"; sourceTree = "<absolute>"; };
 		1BCAE1692566BC9E0079C696 /* Rush_Hour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rush_Hour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCAE16C2566BC9E0079C696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BCAE16E2566BC9E0079C696 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,8 @@
 				1BC590BE2597D1BC00FE99A8 /* aufgabe1.csv */,
 				1BC590CD2597E9B900FE99A8 /* aufgabe2.csv */,
 				1B79F306259A65B1002745F7 /* aufgabe3.csv */,
+				1B86DC75259FAC4600B2A620 /* aufgabe4.csv */,
+				1B86DC76259FAC4A00B2A620 /* aufgabe5.csv */,
 			);
 			name = Data;
 			path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Data";

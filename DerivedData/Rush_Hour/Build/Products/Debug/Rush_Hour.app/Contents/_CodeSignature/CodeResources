@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		cm/4uGOs6doKr7xq/l/H+aHNvQk=
+		UGT2Wk8ucqFgWIoMoL4HGTD4vXU=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -52,6 +52,14 @@
 		<data>
 		pIVd0pJCJGL9adWdYFkN9xkpWkk=
 		</data>
+		<key>Resources/aufgabe4.csv</key>
+		<data>
+		9NoEPkgXiEUvUc+XxDTOWiRYVjg=
+		</data>
+		<key>Resources/aufgabe5.csv</key>
+		<data>
+		3gf6Y0tWVicOvqnIEA4A8oErj5E=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -59,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3rpIVo3E9Oiqr7GGapC60LA8WThGju0d5lTxy/56ozQ=
+			qZs4+7u6CvGVsw4UYinHIyuofyvOs6OWik1SW8DR55E=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
@@ -137,6 +145,20 @@
 			<key>hash2</key>
 			<data>
 			TORQozlfPhQzSPrJLJAbvz4jvEEreVjWgu231HA93Aw=
+			</data>
+		</dict>
+		<key>Resources/aufgabe4.csv</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vB43jSNsX3KtetfFvzTjxxX+djGP/56KalBGQdY+pno=
+			</data>
+		</dict>
+		<key>Resources/aufgabe5.csv</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4h0VWgV+18Ek+dh9dunqJGwSVkq9/3CfL9GdqmD/Tm8=
 			</data>
 		</dict>
 	</dict>

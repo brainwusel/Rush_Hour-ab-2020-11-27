@@ -15,8 +15,11 @@ class ViewController2: NSViewController
         {
             let fm = FileManager.default
             let p = Bundle.main.bundlePath + "/Contents/Resources/"
+            print("p = \(p)")
             let inhalt = try? fm.contentsOfDirectory(atPath: p)
-            return inhalt!.count - 2
+            
+           return inhalt!.count - 2
+           
         }
     }
     

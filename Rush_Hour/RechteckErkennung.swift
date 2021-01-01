@@ -32,12 +32,12 @@ class RectDetect
         return erkenneRechtecke(picture: pic)
     }
     
-    var optionMaximumObservations: Int = 0
-    var optionMinimumAspectRatio: Float = 0.2
-    var optionMaxiumAspectRatio: Float = 0.48
+    var optionMaximumObservations: Int = 20
+    var optionMinimumAspectRatio: Float = 0.1
+    var optionMaxiumAspectRatio: Float = 0.4
     var optionMinimumSize: Float = 0.1
-    var optionQuadratureTolerance: Float = 10
-    var optionMinimumConfidence: Float = 0.5
+    var optionQuadratureTolerance: Float = 45
+    var optionMinimumConfidence: Float = 0.0
     
     func erkenneRechtecke (picture: CGImage) -> [NSRect]
     {

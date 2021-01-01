@@ -24,6 +24,7 @@ enum Länge {
 enum Orientierung {
     case waagerecht
     case senkrecht
+    case unbestimmt
 }
 
 // Bewegungsrichtung: Optionen für Autos bzw. Input über Maus / Taste
@@ -51,24 +52,24 @@ struct Bild: Hashable, Equatable {
     }
 }
 
-var bildContainer: Set <Bild> {
-    var s = Set <Bild>()
-    s.insert(Bild(Name: "w20", Orientierung: .waagerecht, Länge: .zwei))
-    s.insert(Bild(Name: "w21", Orientierung: .waagerecht, Länge: .zwei))
-    s.insert(Bild(Name: "w22", Orientierung: .waagerecht, Länge: .zwei))
-    s.insert(Bild(Name: "w23", Orientierung: .waagerecht, Länge: .zwei))
-    s.insert(Bild(Name: "w30", Orientierung: .waagerecht, Länge: .drei))
-    s.insert(Bild(Name: "w31", Orientierung: .waagerecht, Länge: .drei))
-    s.insert(Bild(Name: "w32", Orientierung: .waagerecht, Länge: .drei))
-    s.insert(Bild(Name: "w33", Orientierung: .waagerecht, Länge: .drei))
-    s.insert(Bild(Name: "s20", Orientierung: .senkrecht, Länge: .zwei))
-    s.insert(Bild(Name: "s21", Orientierung: .senkrecht, Länge: .zwei))
-    s.insert(Bild(Name: "s22", Orientierung: .senkrecht, Länge: .zwei))
-    s.insert(Bild(Name: "s23", Orientierung: .senkrecht, Länge: .zwei))
-    s.insert(Bild(Name: "s30", Orientierung: .senkrecht, Länge: .drei))
-    s.insert(Bild(Name: "s31", Orientierung: .senkrecht, Länge: .drei))
-    s.insert(Bild(Name: "s32", Orientierung: .senkrecht, Länge: .drei))
-    s.insert(Bild(Name: "s33", Orientierung: .senkrecht, Länge: .drei))
+var bildContainer: Array <Bild> {
+    var s = Array <Bild>()
+    s.append(Bild(Name: "w20", Orientierung: .waagerecht, Länge: .zwei))
+    s.append(Bild(Name: "w21", Orientierung: .waagerecht, Länge: .zwei))
+    s.append(Bild(Name: "w22", Orientierung: .waagerecht, Länge: .zwei))
+    s.append(Bild(Name: "w23", Orientierung: .waagerecht, Länge: .zwei))
+    s.append(Bild(Name: "w30", Orientierung: .waagerecht, Länge: .drei))
+    s.append(Bild(Name: "w31", Orientierung: .waagerecht, Länge: .drei))
+    s.append(Bild(Name: "w32", Orientierung: .waagerecht, Länge: .drei))
+    s.append(Bild(Name: "w33", Orientierung: .waagerecht, Länge: .drei))
+    s.append(Bild(Name: "s20", Orientierung: .senkrecht, Länge: .zwei))
+    s.append(Bild(Name: "s21", Orientierung: .senkrecht, Länge: .zwei))
+    s.append(Bild(Name: "s22", Orientierung: .senkrecht, Länge: .zwei))
+    s.append(Bild(Name: "s23", Orientierung: .senkrecht, Länge: .zwei))
+    s.append(Bild(Name: "s30", Orientierung: .senkrecht, Länge: .drei))
+    s.append(Bild(Name: "s31", Orientierung: .senkrecht, Länge: .drei))
+    s.append(Bild(Name: "s32", Orientierung: .senkrecht, Länge: .drei))
+    s.append(Bild(Name: "s33", Orientierung: .senkrecht, Länge: .drei))
     return s
 }
 
@@ -206,24 +207,37 @@ class Spiel {
         }
     }
     
-    func bilderZuordnen () {
+    func bilderZuordnen ()
+    {
         var bc = bildContainer
-        for bild in bc {
-            if bild.name == "w20" {
-                cars[0].image = NSImage(imageLiteralResourceName: "w20")
-                bc.remove(bild)
-            }
-        }
-        for c in 1...cars.count - 1
+        
+        for c in 0...cars.count - 1
         {
-            while bc.isEmpty == false
+            if cars[c].positionLinksUnten.s == 4 && cars[c].orientierung == .waagerecht
             {
-                let bild = bc.randomElement()
-                if cars[c].orientierung == bild!.orientierung && cars[c].länge == bild!.länge
+                for b in 0 ... bc.count - 1
                 {
-                    cars[c].image = NSImage(imageLiteralResourceName: bild!.name)
-                    bc.remove(bild!)
-                    break
+                    if bc[b].name == "w20"
+                    {
+                        cars[c].image = NSImage(imageLiteralResourceName: "w20")
+                        bc[b].orientierung = .unbestimmt
+                        break
+                    }
+                }
+            }
+            else
+            {
+                for b in 0 ... bc.count - 1
+                {
+                    if bc[b].name != "w20"
+                    {
+                        if cars[c].länge == bc[b].länge && cars[c].orientierung == bc[b].orientierung
+                        {
+                            cars[c].image = NSImage(imageLiteralResourceName: bc[b].name)
+                            bc[b].orientierung = .unbestimmt
+                            break
+                        }
+                    }
                 }
             }
         }

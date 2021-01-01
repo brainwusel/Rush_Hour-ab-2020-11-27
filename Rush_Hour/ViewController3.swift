@@ -17,7 +17,7 @@ extension CGImage {
 class ViewController3: NSViewController {
 
     
-    var bildAnalysieren = NSImage(imageLiteralResourceName: "Aufgabe2")
+    var bildAnalysieren = NSImage(imageLiteralResourceName: "testimport")
     
     var bildZeigen = NSImage(imageLiteralResourceName: "w20") {
         didSet {

@@ -1,14 +1,14 @@
 version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
 options: "bbcafb5d1bb315e37e40003b9c54d6a0"
-build_time: [1609524934, 319758000]
+build_time: [1609541608, 532479000]
 inputs:
-  "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/ViewController2.swift": [1609249141, 212415873]
+  "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/ViewController2.swift": [1609532554, 315289024]
   "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/myView.swift": [1609093702, 837971673]
-  "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/ViewController3.swift": [1609524330, 77700615]
-  "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/Model.swift": [1609248645, 946372871]
+  "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/ViewController3.swift": [1609526522, 674726919]
+  "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/Model.swift": [1609541608, 406508520]
   "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/MyView2.swift": [1609173664, 975421102]
   "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/MyView3.swift": [1609435397, 130729435]
   "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/ViewController.swift": [1609249141, 199938814]
-  "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/RechteckErkennung.swift": [1609524934, 242386196]
+  "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/RechteckErkennung.swift": [1609527514, 879017506]
   "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/AppDelegate.swift": [1606205544, 0]
   "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/MyView3Rechts.swift": [1609516871, 110428341]
