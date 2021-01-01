@@ -783,6 +783,17 @@
                                     <segue destination="VQ4-Hq-ksh" kind="show" identifier="segueToVC2" id="nPT-uZ-SnW"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lE9-uy-OYu">
+                                <rect key="frame" x="13" y="13" width="183" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="RECHTECKERKENNUNG" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fPy-bg-HyD">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="r66-YL-wjM" kind="show" id="cB8-zJ-8aJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="EG2-lx-wem" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="UjX-hC-Ded"/>
@@ -799,6 +810,71 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="486.5" y="874.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="T5j-zi-IY4">
+            <objects>
+                <windowController id="r66-YL-wjM" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="dBh-BN-p7C">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="249" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <view key="contentView" id="C59-1X-6U0">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="r66-YL-wjM" id="dyN-Jc-tu4"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="SUv-Xm-INE" kind="relationship" relationship="window.shadowedContentViewController" id="zeC-dO-CZM"/>
+                    </connections>
+                </windowController>
+                <customObject id="YSY-fj-QLg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="1650"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="Xn1-wX-910">
+            <objects>
+                <viewController id="SUv-Xm-INE" customClass="ViewController3" customModule="Rush_Hour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="wnf-TI-aUz" customClass="MyView3" customModule="Rush_Hour" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1491" height="741"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIR-SM-aM6">
+                                <rect key="frame" x="36" y="95" width="577" height="577"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="C9O-we-7Fs"/>
+                            </imageView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A6w-j1-wTD" customClass="MyView3Rechts" customModule="Rush_Hour" customModuleProvider="target">
+                                <rect key="frame" x="769" y="95" width="577" height="577"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l9l-BB-DGS">
+                                <rect key="frame" x="992" y="30" width="148" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Erkenne Rechtecke" bezelStyle="rounded" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O5D-Yp-UsU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="rechteckErkennen:" target="SUv-Xm-INE" id="awA-BS-NfX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="myView3" destination="wnf-TI-aUz" id="1X1-pe-YQq"/>
+                        <outlet property="myView3Links" destination="uIR-SM-aM6" id="TNL-7I-1G3"/>
+                        <outlet property="myView3Rechts" destination="A6w-j1-wTD" id="1Ld-t0-IMl"/>
+                    </connections>
+                </viewController>
+                <customObject id="iQT-3K-gXq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.5" y="1850.5"/>
         </scene>
     </scenes>
 </document>

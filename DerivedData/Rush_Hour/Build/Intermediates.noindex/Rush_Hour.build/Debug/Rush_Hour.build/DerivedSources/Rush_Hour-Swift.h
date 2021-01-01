@@ -233,6 +233,23 @@ SWIFT_CLASS("_TtC9Rush_Hour7MyView2")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC9Rush_Hour7MyView3")
+@interface MyView3 : NSView
+- (void)drawRect:(NSRect)dirtyRect;
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC9Rush_Hour13MyView3Rechts")
+@interface MyView3Rechts : NSView
+- (void)drawRect:(NSRect)dirtyRect;
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 @class NSTextField;
 @class NSStoryboardSegue;
 @class NSEvent;
@@ -260,6 +277,21 @@ SWIFT_CLASS("_TtC9Rush_Hour15ViewController2")
 - (void)viewDidLoad;
 - (void)viewWillAppear;
 - (void)mouseDown:(NSEvent * _Nonnull)event;
+- (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSImageView;
+@class NSButton;
+
+SWIFT_CLASS("_TtC9Rush_Hour15ViewController3")
+@interface ViewController3 : NSViewController
+@property (nonatomic, weak) IBOutlet MyView3 * _Null_unspecified myView3;
+@property (nonatomic, weak) IBOutlet NSImageView * _Null_unspecified myView3Links;
+@property (nonatomic, weak) IBOutlet MyView3Rechts * _Null_unspecified myView3Rechts;
+- (IBAction)rechteckErkennen:(NSButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)viewDidAppear;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

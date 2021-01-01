@@ -3,6 +3,7 @@
 <plist version="1.0">
 <array>
 	<string>XCTest</string>
+	<string>Vision</string>
 	<string>AppKit</string>
 	<string>Rush</string>
 	<string>CoreData</string>

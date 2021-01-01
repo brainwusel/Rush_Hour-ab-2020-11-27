@@ -152,7 +152,7 @@ depends-member:
 - !private ["Sl", "rechtEck"]
 - !private ["Sl", "subscript"]
 - !private ["Sl", "zellenBelegt"]
-- ["SL", ""]
+- !private ["SL", ""]
 - !private ["SL", "init"]
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["10Foundation15ContiguousBytesP", "first"]
@@ -372,16 +372,16 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "rechtEck"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "zellenBelegt"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
-- ["s32ExpressibleByStringInterpolationP", ""]
-- ["s26ExpressibleByStringLiteralP", ""]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "*"]
 - !private ["SF", "*="]
 - !private ["SF", "+"]
@@ -478,7 +478,7 @@ depends-member:
 - !private ["SH", "white"]
 - !private ["SH", "zellenBelegt"]
 - !private ["SH", "zwei"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["9Rush_Hour008Lnge_loaO", ""]
 - !private ["9Rush_Hour008Lnge_loaO", "zwei"]
 - ["SM", ""]
@@ -614,7 +614,6 @@ depends-member:
 - ["So8NSCodingP", "Bool"]
 - !private ["So8NSCodingP", "CGFloat"]
 - ["So8NSCodingP", "Car"]
-- ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "NSBezierPath"]
 - ["So8NSCodingP", "NSColor"]
 - !private ["So8NSCodingP", "NSImage"]
@@ -627,7 +626,6 @@ depends-member:
 - !private ["So8NSCodingP", "brown"]
 - ["So8NSCodingP", "cars"]
 - !private ["So8NSCodingP", "display"]
-- !private ["So8NSCodingP", "displayRect"]
 - ["So8NSCodingP", "draw"]
 - ["So8NSCodingP", "drawRect"]
 - ["So8NSCodingP", "erzeugeBasisQuadrat"]
@@ -712,7 +710,6 @@ depends-member:
 - !private ["So8NSObjectC", "brown"]
 - ["So8NSObjectC", "cars"]
 - !private ["So8NSObjectC", "display"]
-- !private ["So8NSObjectC", "displayRect"]
 - ["So8NSObjectC", "draw"]
 - !private ["So8NSObjectC", "drawAtPoint"]
 - !private ["So8NSObjectC", "drawInRect"]
@@ -741,7 +738,6 @@ depends-member:
 - ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CGFloat"]
 - ["So8NSObjectP", "Car"]
-- ["So8NSObjectP", "Int"]
 - !private ["So8NSObjectP", "NSBezierPath"]
 - ["So8NSObjectP", "NSColor"]
 - !private ["So8NSObjectP", "NSImage"]
@@ -759,7 +755,6 @@ depends-member:
 - !private ["So8NSObjectP", "brown"]
 - ["So8NSObjectP", "cars"]
 - !private ["So8NSObjectP", "display"]
-- !private ["So8NSObjectP", "displayRect"]
 - ["So8NSObjectP", "draw"]
 - !private ["So8NSObjectP", "drawAtPoint"]
 - !private ["So8NSObjectP", "drawInRect"]
@@ -818,7 +813,6 @@ depends-member:
 - ["So11NSResponderC", "autosZeichnen"]
 - ["So11NSResponderC", "cars"]
 - !private ["So11NSResponderC", "display"]
-- !private ["So11NSResponderC", "displayRect"]
 - ["So11NSResponderC", "draw"]
 - ["So11NSResponderC", "drawRect"]
 - ["So11NSResponderC", "erzeugeBasisQuadrat"]
@@ -845,7 +839,6 @@ depends-member:
 - ["So30NSStandardKeyBindingRespondingP", "Bool"]
 - !private ["So30NSStandardKeyBindingRespondingP", "CGFloat"]
 - ["So30NSStandardKeyBindingRespondingP", "Car"]
-- ["So30NSStandardKeyBindingRespondingP", "Int"]
 - !private ["So30NSStandardKeyBindingRespondingP", "NSBezierPath"]
 - ["So30NSStandardKeyBindingRespondingP", "NSColor"]
 - !private ["So30NSStandardKeyBindingRespondingP", "NSImage"]
@@ -855,7 +848,6 @@ depends-member:
 - ["So30NSStandardKeyBindingRespondingP", "autosZeichnen"]
 - ["So30NSStandardKeyBindingRespondingP", "cars"]
 - !private ["So30NSStandardKeyBindingRespondingP", "display"]
-- !private ["So30NSStandardKeyBindingRespondingP", "displayRect"]
 - ["So30NSStandardKeyBindingRespondingP", "draw"]
 - ["So30NSStandardKeyBindingRespondingP", "drawRect"]
 - ["So30NSStandardKeyBindingRespondingP", "erzeugeBasisQuadrat"]
@@ -868,7 +860,6 @@ depends-member:
 - ["So18NSTouchBarProviderP", "Bool"]
 - !private ["So18NSTouchBarProviderP", "CGFloat"]
 - ["So18NSTouchBarProviderP", "Car"]
-- ["So18NSTouchBarProviderP", "Int"]
 - !private ["So18NSTouchBarProviderP", "NSBezierPath"]
 - ["So18NSTouchBarProviderP", "NSColor"]
 - !private ["So18NSTouchBarProviderP", "NSImage"]
@@ -878,7 +869,6 @@ depends-member:
 - ["So18NSTouchBarProviderP", "autosZeichnen"]
 - ["So18NSTouchBarProviderP", "cars"]
 - !private ["So18NSTouchBarProviderP", "display"]
-- !private ["So18NSTouchBarProviderP", "displayRect"]
 - ["So18NSTouchBarProviderP", "draw"]
 - ["So18NSTouchBarProviderP", "drawRect"]
 - ["So18NSTouchBarProviderP", "erzeugeBasisQuadrat"]
@@ -891,7 +881,6 @@ depends-member:
 - ["So23NSUserActivityRestoringP", "Bool"]
 - !private ["So23NSUserActivityRestoringP", "CGFloat"]
 - ["So23NSUserActivityRestoringP", "Car"]
-- ["So23NSUserActivityRestoringP", "Int"]
 - !private ["So23NSUserActivityRestoringP", "NSBezierPath"]
 - ["So23NSUserActivityRestoringP", "NSColor"]
 - !private ["So23NSUserActivityRestoringP", "NSImage"]
@@ -901,7 +890,6 @@ depends-member:
 - ["So23NSUserActivityRestoringP", "autosZeichnen"]
 - ["So23NSUserActivityRestoringP", "cars"]
 - !private ["So23NSUserActivityRestoringP", "display"]
-- !private ["So23NSUserActivityRestoringP", "displayRect"]
 - ["So23NSUserActivityRestoringP", "draw"]
 - ["So23NSUserActivityRestoringP", "drawRect"]
 - ["So23NSUserActivityRestoringP", "erzeugeBasisQuadrat"]
@@ -1010,8 +998,8 @@ depends-member:
 - !private ["Sx", "advanced"]
 - !private ["Sx", "distance"]
 - !private ["Sx", "init"]
-- ["s16TextOutputStreamP", ""]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "first"]
 - !private ["s14_ArrayProtocolP", "image"]
@@ -1046,11 +1034,11 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "zellenBelegt"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
-- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "brown"]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
@@ -1174,7 +1162,7 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "9Rush_Hour3CarC"
 - "Sl"
-- "SL"
+- !private "SL"
 - "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
@@ -1184,15 +1172,15 @@ depends-nominal:
 - "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - !private "9Rush_Hour008Lnge_loaO"
 - "SM"
 - "10Foundation19MutableDataProtocolP"
@@ -1225,19 +1213,19 @@ depends-nominal:
 - "ST"
 - !private "s13SignedNumericP"
 - !private "Sx"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - "s30_CustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
-- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - "s19_HasContiguousBytesP"
@@ -1250,16 +1238,21 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/simd.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Metal.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Vision.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
@@ -1270,16 +1263,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/xpc/XPC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"

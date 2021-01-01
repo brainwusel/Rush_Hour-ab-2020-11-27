@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B297B482568592800DE14EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B297B472568592800DE14EE /* Model.swift */; };
 		1B79F307259A65B1002745F7 /* aufgabe3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1B79F306259A65B1002745F7 /* aufgabe3.csv */; };
+		1B86DC6E259E4D1E00B2A620 /* MyView3Rechts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B86DC6D259E4D1E00B2A620 /* MyView3Rechts.swift */; };
 		1B8AD028256D036A00291471 /* myView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8AD027256D036A00291471 /* myView.swift */; };
 		1BC590BF2597D1BC00FE99A8 /* aufgabe1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1BC590BE2597D1BC00FE99A8 /* aufgabe1.csv */; };
 		1BC590CE2597E9B900FE99A8 /* aufgabe2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1BC590CD2597E9B900FE99A8 /* aufgabe2.csv */; };
@@ -20,6 +21,9 @@
 		1BCAE18B2566BC9F0079C696 /* Rush_HourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCAE18A2566BC9F0079C696 /* Rush_HourUITests.swift */; };
 		1BD21BA2258520630051CA54 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD21BA1258520630051CA54 /* ViewController2.swift */; };
 		1BD21BA7258531FB0051CA54 /* MyView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD21BA6258531FB0051CA54 /* MyView2.swift */; };
+		1BF91633259C736F006FEF4E /* RechteckErkennung.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF91632259C736F006FEF4E /* RechteckErkennung.swift */; };
+		1BF91638259C8381006FEF4E /* MyView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF91637259C8381006FEF4E /* MyView3.swift */; };
+		1BF9163D259C83D1006FEF4E /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9163C259C83D1006FEF4E /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,7 @@
 /* Begin PBXFileReference section */
 		1B297B472568592800DE14EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1B79F306259A65B1002745F7 /* aufgabe3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aufgabe3.csv; sourceTree = "<group>"; };
+		1B86DC6D259E4D1E00B2A620 /* MyView3Rechts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView3Rechts.swift; sourceTree = "<group>"; };
 		1B8AD027256D036A00291471 /* myView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myView.swift; sourceTree = "<group>"; };
 		1BC590BE2597D1BC00FE99A8 /* aufgabe1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = aufgabe1.csv; path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/DerivedData/Rush_Hour/Build/Products/Debug/../../../../../Data/aufgabe1.csv"; sourceTree = "<absolute>"; };
 		1BC590CD2597E9B900FE99A8 /* aufgabe2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aufgabe2.csv; sourceTree = "<group>"; };
@@ -60,6 +65,9 @@
 		1BCAE18C2566BC9F0079C696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BD21BA1258520630051CA54 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController2.swift; path = "/Users/Ulrich/Documents/Misc/Xcode/Rush_Hour-c248daee990d10e2aeb63e40be23a088a636328c/Rush_Hour/ViewController2.swift"; sourceTree = "<absolute>"; };
 		1BD21BA6258531FB0051CA54 /* MyView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView2.swift; sourceTree = "<group>"; };
+		1BF91632259C736F006FEF4E /* RechteckErkennung.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechteckErkennung.swift; sourceTree = "<group>"; };
+		1BF91637259C8381006FEF4E /* MyView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView3.swift; sourceTree = "<group>"; };
+		1BF9163C259C83D1006FEF4E /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,10 @@
 				1BD21BA6258531FB0051CA54 /* MyView2.swift */,
 				1BCAE1752566BC9E0079C696 /* Info.plist */,
 				1BCAE1762566BC9E0079C696 /* Rush_Hour.entitlements */,
+				1BF9163C259C83D1006FEF4E /* ViewController3.swift */,
+				1BF91637259C8381006FEF4E /* MyView3.swift */,
+				1B86DC6D259E4D1E00B2A620 /* MyView3Rechts.swift */,
+				1BF91632259C736F006FEF4E /* RechteckErkennung.swift */,
 			);
 			path = Rush_Hour;
 			sourceTree = "<group>";
@@ -288,10 +300,14 @@
 			files = (
 				1BD21BA2258520630051CA54 /* ViewController2.swift in Sources */,
 				1B8AD028256D036A00291471 /* myView.swift in Sources */,
+				1BF9163D259C83D1006FEF4E /* ViewController3.swift in Sources */,
 				1B297B482568592800DE14EE /* Model.swift in Sources */,
 				1BD21BA7258531FB0051CA54 /* MyView2.swift in Sources */,
+				1BF91638259C8381006FEF4E /* MyView3.swift in Sources */,
 				1BCAE16F2566BC9E0079C696 /* ViewController.swift in Sources */,
+				1BF91633259C736F006FEF4E /* RechteckErkennung.swift in Sources */,
 				1BCAE16D2566BC9E0079C696 /* AppDelegate.swift in Sources */,
+				1B86DC6E259E4D1E00B2A620 /* MyView3Rechts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
