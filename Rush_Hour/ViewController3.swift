@@ -17,7 +17,7 @@ extension CGImage {
 class ViewController3: NSViewController {
 
     
-    var bildAnalysieren = NSImage(imageLiteralResourceName: "testimport")
+    var bildAnalysieren = NSImage(imageLiteralResourceName: "testimportsw")
     
     var bildZeigen = NSImage(imageLiteralResourceName: "w20") {
         didSet {
@@ -44,12 +44,33 @@ class ViewController3: NSViewController {
     
     
     
+    
+    @IBOutlet weak var maxObserv: NSTextField!
+    
+    @IBOutlet weak var minAspRatio: NSTextField!
+    
+    @IBOutlet weak var maxAspRatio: NSTextField!
+    
+    @IBOutlet weak var minSize: NSTextField!
+    
+    @IBOutlet weak var quadratToler: NSTextField!
+    
+    @IBOutlet weak var minConfid: NSTextField!
+    
+    
+    
     @IBAction func rechteckErkennen(_ sender: NSButton) {
         
         let bildNSImage = rectDetect.pic.nsImage
         print("bildNSImage: \(String(describing: bildNSImage))")
         bildZeigen = bildNSImage!
         
+        rectDetect.optionMaximumObservations = Int(maxObserv.intValue)
+        rectDetect.optionMinimumAspectRatio = minAspRatio.floatValue
+        rectDetect.optionMaxiumAspectRatio = maxAspRatio.floatValue
+        rectDetect.optionMinimumSize = minSize.floatValue
+        rectDetect.optionQuadratureTolerance = quadratToler.floatValue
+        rectDetect.optionMinimumConfidence = minConfid.floatValue
     
         let autoRe = rectDetect.erkannteRekts
         
@@ -66,8 +87,6 @@ class ViewController3: NSViewController {
             pfade.append(NSBezierPath(rect: reSkaliert))
         }
         
-        
-        
     }
     
     override func viewDidLoad() {
@@ -76,6 +95,14 @@ class ViewController3: NSViewController {
         
         myView3Links.image = bildAnalysieren
         rectDetect = RectDetect(bild: bildAnalysieren)
+        
+        maxObserv.intValue = 0
+        minAspRatio.floatValue = 0.1
+        maxAspRatio.floatValue = 0.5
+        minSize.floatValue = 0.1
+        quadratToler.floatValue = 30
+        minConfid.floatValue = 0.5
+        
         
     }
     

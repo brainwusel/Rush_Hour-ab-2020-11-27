@@ -289,6 +289,12 @@ SWIFT_CLASS("_TtC9Rush_Hour15ViewController3")
 @property (nonatomic, weak) IBOutlet MyView3 * _Null_unspecified myView3;
 @property (nonatomic, weak) IBOutlet NSImageView * _Null_unspecified myView3Links;
 @property (nonatomic, weak) IBOutlet MyView3Rechts * _Null_unspecified myView3Rechts;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified maxObserv;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified minAspRatio;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified maxAspRatio;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified minSize;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified quadratToler;
+@property (nonatomic, weak) IBOutlet NSTextField * _Null_unspecified minConfid;
 - (IBAction)rechteckErkennen:(NSButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)viewDidAppear;

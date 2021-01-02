@@ -32,7 +32,7 @@ class RectDetect
         return erkenneRechtecke(picture: pic)
     }
     
-    var optionMaximumObservations: Int = 20
+    var optionMaximumObservations: Int = 0
     var optionMinimumAspectRatio: Float = 0.1
     var optionMaxiumAspectRatio: Float = 0.4
     var optionMinimumSize: Float = 0.1
