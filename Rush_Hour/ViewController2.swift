@@ -13,13 +13,10 @@ class ViewController2: NSViewController
     {
         get
         {
-            let fm = FileManager.default
-            let p = Bundle.main.bundlePath + "/Contents/Resources/"
-            print("p = \(p)")
-            let inhalt = try? fm.contentsOfDirectory(atPath: p)
-            
-           return inhalt!.count - 2
-           
+            let p = Bundle.main.path(forResource: "aufgaben", ofType: "csv")
+            let aufgabenAlleString = try! String(contentsOfFile: p!, encoding: .utf8)
+            let aufgabenAlleStringArray = aufgabenAlleString.components(separatedBy: "#")
+            return aufgabenAlleStringArray.count - 1           
         }
     }
     

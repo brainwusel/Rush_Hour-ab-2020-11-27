@@ -131,12 +131,13 @@ class Car {
 func aufgabeLaden (nummer: Int) -> [Car]
 {
     var autos = [Car]()
+    var aufgabenAlleString = String()
     var aufgabeString = String()
-    let path = Bundle.main.path(forResource: "aufgabe" + String(nummer), ofType: "csv")
-    aufgabeString = try! String(contentsOfFile: path!, encoding: .utf8)
+    let p = Bundle.main.path(forResource: "aufgaben", ofType: "csv")
+    aufgabenAlleString = try! String(contentsOfFile: p!, encoding: .utf8)
+    let aufgabenAlleStringArray = aufgabenAlleString.components(separatedBy: "#")
+    aufgabeString = aufgabenAlleStringArray[nummer]
     var carStrings = aufgabeString.components(separatedBy: "\r\n")
-    
-    //    CAVE keine Fehlerabsicherung
     
     while carStrings.last == ""
     {
