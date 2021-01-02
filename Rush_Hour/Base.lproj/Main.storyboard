@@ -735,9 +735,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-Ok-cph">
-                                <rect key="frame" x="766" y="628" width="125" height="61"/>
+                                <rect key="frame" x="812" y="651" width="79" height="38"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="L5n-Fd-rwi">
-                                    <font key="font" size="53" name="Baskerville"/>
+                                    <font key="font" size="33" name="Baskerville"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -766,9 +766,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EG2-lx-wem">
-                                <rect key="frame" x="1354" y="627" width="125" height="61"/>
+                                <rect key="frame" x="1400" y="650" width="79" height="38"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="0UB-ML-kjb">
-                                    <font key="font" size="53" name="Baskerville"/>
+                                    <font key="font" size="33" name="Baskerville"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

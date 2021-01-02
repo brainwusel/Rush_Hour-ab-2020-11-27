@@ -15,7 +15,8 @@ class ViewController: NSViewController, NSTextFieldDelegate
     {
         willSet (newValue) {
             spiel = Spiel(Aufgabe: newValue)
-            aufgabeNummerLabel.stringValue = String(newValue)
+//            aufgabeNummerLabel.stringValue = String(newValue)
+            aufgabeNummerLabel.stringValue = spiel.aufgabeID
             updateView()
         }
     }
@@ -54,7 +55,7 @@ class ViewController: NSViewController, NSTextFieldDelegate
         
         updateView()
         
-        aufgabeNummerLabel.stringValue = "1"
+        aufgabeNummerLabel.stringValue = "beginner1"
         
         NotificationCenter.default.addObserver(
             self,

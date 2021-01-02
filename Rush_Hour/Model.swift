@@ -128,52 +128,7 @@ class Car {
 
 //  Aufgabe 1 aus ScreenShot - "Zweier" rot ist das Exit-Auto
 
-func aufgabeLaden (nummer: Int) -> [Car]
-{
-    var autos = [Car]()
-    var aufgabenAlleString = String()
-    var aufgabeString = String()
-    let p = Bundle.main.path(forResource: "aufgaben", ofType: "csv")
-    aufgabenAlleString = try! String(contentsOfFile: p!, encoding: .utf8)
-    let aufgabenAlleStringArray = aufgabenAlleString.components(separatedBy: "#")
-    aufgabeString = aufgabenAlleStringArray[nummer]
-    var carStrings = aufgabeString.components(separatedBy: "\r\n")
-    
-    while carStrings.last == ""
-    {
-        carStrings.removeLast()
-    }
-    
-    for i in 1 ... carStrings.count - 1
-    {
-        let carComponents = carStrings[i].components(separatedBy: ";")
-        let l: Länge
-        switch carComponents[0]
-        {
-        case "2":
-            l = .zwei
-        case "3":
-            l = .drei
-        default:
-            l = .zwei
-        }
-        let w = Int(carComponents[1])
-        let s = Int(carComponents[2])
-        var o: Orientierung
-        switch carComponents[3]
-        {
-        case "w":
-            o = .waagerecht
-        case "s":
-            o = .senkrecht
-        default:
-            o = .waagerecht
-        }
-        let auto = Car(länge: l, positionLinksUnten: (w: w!, s: s!), richtung: o)
-        autos.append(auto)
-    }
-    return autos
-}
+
 
 
 class Spiel {
@@ -181,10 +136,12 @@ class Spiel {
     var cars: [Car] 
     var gewonnen: Bool
     var aufgabeNummer: Int
+    var aufgabeID = " "
     
     init (Aufgabe nr: Int) {
         self.gewonnen = false
         self.aufgabeNummer = nr
+        self.cars = [Car]()
         self.cars = aufgabeLaden(nummer: aufgabeNummer)
         bilderZuordnen()
     }
@@ -311,6 +268,61 @@ class Spiel {
         self.cars = aufgabeLaden(nummer: aufgabeNummer)
         bilderZuordnen()
     }
+    
+    
+    func aufgabeLaden (nummer: Int) -> [Car]
+    {
+        var autos = [Car]()
+        var aufgabenAlleString = String()
+        var aufgabeString = String()
+        let p = Bundle.main.path(forResource: "aufgaben", ofType: "csv")
+        aufgabenAlleString = try! String(contentsOfFile: p!, encoding: .utf8)
+        let aufgabenAlleStringArray = aufgabenAlleString.components(separatedBy: "#")
+        aufgabeString = aufgabenAlleStringArray[nummer]
+        
+        var carStrings = aufgabeString.components(separatedBy: "\r\n")
+        
+        while carStrings.last == ""
+        {
+            carStrings.removeLast()
+        }
+        
+        aufgabeID = carStrings[0]
+        while aufgabeID.first == "#" {aufgabeID.removeFirst()}
+        while aufgabeID.last == ";" {aufgabeID.removeLast()}
+        print (aufgabeID)
+        
+        for i in 1 ... carStrings.count - 1
+        {
+            let carComponents = carStrings[i].components(separatedBy: ";")
+            let l: Länge
+            switch carComponents[0]
+            {
+            case "2":
+                l = .zwei
+            case "3":
+                l = .drei
+            default:
+                l = .zwei
+            }
+            let w = Int(carComponents[1])
+            let s = Int(carComponents[2])
+            var o: Orientierung
+            switch carComponents[3]
+            {
+            case "w":
+                o = .waagerecht
+            case "s":
+                o = .senkrecht
+            default:
+                o = .waagerecht
+            }
+            let auto = Car(länge: l, positionLinksUnten: (w: w!, s: s!), richtung: o)
+            autos.append(auto)
+        }
+        return autos
+    }
+    
 }
 
 

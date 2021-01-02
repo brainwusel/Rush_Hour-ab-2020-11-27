@@ -31,7 +31,8 @@ class ViewController2: NSViewController
         {
             myView2.aufgabeNummer = self.aufgabeAusgewählt
             myView2.display()
-            aufgabeAusgewähltLabel.stringValue = String(self.aufgabeAusgewählt)
+//            aufgabeAusgewähltLabel.stringValue = String(self.aufgabeAusgewählt)
+            aufgabeAusgewähltLabel.stringValue = myView2.spielView2.aufgabeID
             
             NotificationCenter.default.post(
                 name: Notification.Name(rawValue: "AufgabeAktualisieren"),
@@ -48,7 +49,8 @@ class ViewController2: NSViewController
     override func viewWillAppear()
     {
         aufgabeAusgewählt = data ?? 1
-        aufgabeAusgewähltLabel.stringValue = String(aufgabeAusgewählt)
+//        aufgabeAusgewähltLabel.stringValue = String(aufgabeAusgewählt)
+        aufgabeAusgewähltLabel.stringValue = myView2.spielView2.aufgabeID
     }
     
     override func mouseDown(with event: NSEvent) {
